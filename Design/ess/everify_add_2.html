@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Everify - Select Applicant Documents</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>Everify</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="everify_add.html">STEP 1 - Enter Applicant Data</a></li>
+<li class="active"><a href="everify_add_2.html">STEP 2 - Select Applicant Documents</a></li>
+<li><a href="everify_add_3.html" >STEP 3 - Verify Applicant Documents</a></li>
+
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body" >
+<p>You must verify either one document from List A, or one document from both List B and List C</p>
+<div class="clear"></div>
+
+<div class="span3">
+<table class="table"  style="border:1px solid #e5e5e5">
+<thead>
+<tr>
+<th class="textaligncenter">LIST A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="controls">
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option1"></span></div>US Passport or Passport Card</label>
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option2"></span></div>Option 2</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option3"></span></div>Option 3</label>  
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><!--end span-->
+<div class="span1 textaligncenter bluetext" style="  margin-top: 2%;">OR</div>
+
+<div class="span7">
+<table class="table"  style="border:1px solid #e5e5e5">
+<thead>
+<tr>
+<th class="textaligncenter">LIST B</th>
+<th class="span3 textaligncenter bluetext">AND</th>
+<th class="textaligncenter">LIST C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="controls">
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option1"></span></div>US Passport or Passport Card1</label>
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option2"></span></div>Social Security Card</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option3"></span></div>ID Card Issued by US</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option4"></span></div>Certification of Report of Birth (form 1234)</label>
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option5"></span></div>Option 5</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option6"></span></div>Option 6</label>  
+</div>
+</td>
+<td></td>
+<td><div class="controls">
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option1"></span></div>US Passport or Passport Card1</label>
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option2"></span></div>Social Security Card</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option3"></span></div>ID Card Issued by US</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option4"></span></div>Certification of Report of Birth (form 1234)</label>
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option5"></span></div>Option 5</label>  
+<label class="radio line"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option6"></span></div>Option 6</label>  
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><!--end span-->
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="everify_add.html" class="bluebtn">  Back</a> 
+<a href="everify_add_3.html" class="greenbtn">  Next</a> 
+</div>
+</div>
+</div><!--end box-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

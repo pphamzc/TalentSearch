@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Supplier Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<script type="text/javascript">
+$("[data-toggle=popover]")
+.popover({html:true})
+</script>
+
+<style type="text/css">
+.dataTables_scrollBody::-webkit-scrollbar { width: 5px;}
+.dataTables_scrollBody::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
+.dataTables_scrollBody::-webkit-scrollbar-thumb { background-color: #707070;}
+
+/*.dataTables_scrollHeadInner{width:auto!important}*/
+.dataTable {margin-top: 0;}
+.table.table-full-width {margin: 0; }
+.k-chart-tooltip td{padding:0 12px 0 0!important;}
+.k-chart-tooltip th{text-align:left!important}
+
+</style>
+
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/kendo.all.min.js"></script>
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="breadcrumb">
+                            <li><i class="icon-home"></i>Home</a> </li>
+                        </ul>
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW PAGE HEADER-->
+
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box ">
+<div class="portlet-title blue2border">
+  <div class="caption">Open Invoices</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<div class="chart-wrapper">
+<div id="supinvoice"></div>
+</div>
+
+<div class="clear"></div>
+</div><!--end body-->
+</div><!--end box-->
+</div><!--end span6-->
+ 
+ 
+ <div class="span6">
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+  <div class="caption">Timesheets</div>
+  <div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_1" data-toggle="tab">Missing Timesheets</a></li>
+<li><a href="#tab_1_2" data-toggle="tab">Timesheet Status</a></li>
+</ul>
+
+<div class="tab-content">
+
+<!--tab_1_1-->
+<div class="tab-pane active row-fluid" id="tab_1_1" >
+<div id="timechasing"></div>
+<!--<img src="../assets/img/timesheets.png" alt="" />-->
+</div><!--end tab-pane-->
+
+<!--tab_1_2-->
+<div class="tab-pane row-fluid" id="tab_1_2">
+<div id="timestatus" ></div>
+<span class="inlinebtn">Graph is showing timesheet ending period within last 45 days</span>
+</div><!--end tab-pane-->
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+<div class="clear"></div>
+</div><!--end body-->
+</div><!--end box-->
+
+</div><!--end span6-->
+
+</div><!--end row-->
+
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orange3border">
+  <div class="caption">Current Workforce</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_1">
+  <thead>
+<tr>
+<th > Name </th>
+<th > Accepted Offers</th>
+<th >Available In</th>
+<th >Desired Pay</th>
+<th >Matching Jobs</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+        <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>1</td>
+      <td>25 Days</td>
+      <td>120.00 USD (Hourly)</td>
+      <td>3  - <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a><br/>Requsistion Name <a href='#'>(12345678)</a>"> View</a></td>
+    </tr>
+
+
+  </tbody>
+</table>
+<!--END TABLE-->
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+</div><!--end span-->
+
+
+ 
+ 
+ <div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title blue4border">
+  <div class="caption">Open Requisitions</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_2">
+  <thead>
+<tr>
+<th>Requisition</th>
+<th>Start Date</th>
+<th>Est Days</th>
+<th>Target Rate</th>
+<th>Subimt</th>
+<th>Matching</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td><!--<a href="#" class="tooltips" data-container="body" data-placement="top" data-original-title="Candidates who have been hired to this same job type in the past">3</a>-->3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+        <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+    <tr>
+      <td>Req Name <a href="requisitions_summary.html">(12345)</a></td>
+      <td>03-Sep-14</td>
+      <td>15</td>
+      <td>70.00 USD (Hourly)</td>
+       <td>15</td>
+      <td>3  -  <a href="javascript:void(0);" class="popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="<a href='#'>John Doe</a><br/><a href='#'>Susie Smith</a><br/><a href='#'>Jane Johnson</a>"> View</a></td>
+    </tr>
+
+  </tbody>
+</table>
+<!--END TABLE-->
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="engagements_view.html" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span-->
+             
+</div><!--end row-->
+
+
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+  <div class="caption">Engagements Ready for Invoicing</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width"  id="example_3">
+  <thead>  
+<tr>
+<th>Engagement Name</th>
+<th>Status</th>
+<th>End Date</th>
+<th>Approved</th>
+<th>Billed</th>
+<th>Actions</th>
+
+</tr>
+  </thead>
+  <tbody>
+  
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+<tr>
+<td>Some Engagement Name  <a href="engagements_view_details.html">(12345)</a></td>
+<td>Active</td>
+<td>08-Den-14</td>
+<td>1,000.00 USD</td>
+<td>100.00 USD</td>
+<td><a href="#"><i class="icon-plus"></i> Service Invoice</a></td>
+</tr>
+
+</tbody>
+</table>
+<!--END TABLE-->
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="engagements_view.html" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span-->
+
+
+ 
+ 
+ <div class="span6 ">
+ <div class="portlet box ">
+<div class="portlet-title blue2border">
+  <div class="caption">Invoice Pay Status</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width"  id="example_7">
+  <thead>
+<tr>
+<th>Invoice</th>
+<th>Description</th>
+<th>Status</th>
+<th>Due Date</th>
+
+</tr>
+  </thead>
+  <tbody>
+  
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Processing</td>
+<td>08-Dec-14</td>
+</tr>
+<tr>
+<td>12345 <a href="#">(12345)</a></td>
+<td>Invoice description goes here</td>
+<td>Waiting For Client Payment</td>
+<td>08-Dec-14</td>
+</tr>
+
+
+  </tbody>
+</table>
+<!--END TABLE-->
+</div><!--end body-->
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span-->
+             
+</div><!--end row-->
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+  <div class="caption">Service Provider Workers</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width"  id="example_4">
+  <thead>
+<tr>
+<th>Name</th>
+<th>On Engagement</th>
+<th>Engagement</th>
+
+</tr>
+  </thead>
+  <tbody>
+  
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+<tr>
+<td>Garth Brooks  <a href="#">(1234567890)</a></td>
+<td><a class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Engagement Name  - Provisioned Status" data-original-title="Engagements"></i>
+Yes</a></td>
+<td><a href='engagements_view.html'><i class='icon-search'></i>  Assign to Engagement</a> </td>
+</tr>
+
+
+</tbody>
+</table>
+<!--END TABLE-->
+</div><!--end body-->
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn"><i class="icon-plus submiticon"></i>Add</a> 
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span-->
+
+
+ 
+ 
+ <div class="span6 ">
+ 
+<div class="portlet box ">
+<div class="portlet-title blue3border">
+<div class="caption">Pending Requisitions</div><div class="tools"><a href="javascript:;" class="collapse"></a></div></div>
+
+<div class="portlet-body">
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_3" data-toggle="tab">Pending Evaluation <span class="badge">11</span></a></li>
+<li><a href="#tab_1_4" data-toggle="tab">Pending RFP's <span class="badge">16</span></a></li>
+</ul>
+
+<div class="tab-content">
+
+<!--tab_1_3-->
+<div class="tab-pane active row-fluid" id="tab_1_3" >
+    <table width="100%" class="table table-striped table-bordered table-hover table-full-width" id="example_5s">
+    <thead>
+    <tr>
+    <th>Requisition Name</th>
+    <th>Customer</th>
+    <th>Est. Start</th>
+    <th>Est. End</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-question-sign"></i>  Complete Questionairre</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-info-sign"></i>  Enter Business Information</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-upload"></i>  Upload Documents</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-question-sign"></i>  Complete Questionairre</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-info-sign"></i>  Enter Business Information</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-upload"></i>  Upload Documents</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-question-sign"></i>  Complete Questionairre</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-info-sign"></i>  Enter Business Information</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-upload"></i>  Upload Documents</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-question-sign"></i>  Complete Questionairre</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-info-sign"></i>  Enter Business Information</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="requisitions_sow.html"><i class="icon-upload"></i>  Upload Documents</a></td>
+    </tr>
+  </tbody> 
+
+    </table>
+
+</div><!--end tab-pane-->
+
+<!--tab_1_4-->
+<div class="tab-pane row-fluid" id="tab_1_4">
+    <table width="100%" class="table table-striped table-bordered table-hover table-full-width" id="example_6s">
+    <thead>
+    <tr>
+    <th>Requisition Name</th>
+    <th>Customer</th>
+    <th>Bid Close</th>
+    <th>Est. Start</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+        <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+    <tr>
+    <td>Req Name Here <a href="#">(12345)</a></td>
+    <td>IBM</td>
+    <td>01-Jan-14</td>
+    <td>01-Jan-14</td>
+    <td><a href="#"><i class="icon-share-alt"></i> Respond to RFP</a></td>
+    </tr>
+
+  </tbody> 
+
+    </table>
+</div><!--end tab-pane-->
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+</div><!--end body-->
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span6-->
+</div><!--end row-->
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_ticket.html" -->
+        <!--#include file="_save_as.html" -->
+
+<!--kendo-->
+<script>$.noConflict();
+jQuery( document ).ready(function( $ ) {
+function createChart() {
+	
+$("#timechasing").kendoChart({
+                legend: {visible: false },
+                seriesDefaults: {type: "bar" },
+                series: [{
+                    name: "Submitted",
+                    data: [6, 11, 4, 18, 8],
+					  labels: {visible: true, position: "insideEnd" }
+                }, ],
+				 chartArea: {height: 250},
+                valueAxis: {
+                    max: 20,
+                    line: {visible: true},
+                    minorGridLines: {visible: true},
+					title: {text: "Number Missing", color: "#525252", font: "12px sans-serif"}
+
+                },
+                categoryAxis: {
+                    categories: ["01-Jan-14", "14-Jan-14", "07-Jan-14", "21-Jan-14", "28-Jan-14" ],
+                    majorGridLines: {visible: false }, 
+					title: {text: "Timesheet Ending Date", color: "#525252", font: "12px sans-serif"},
+					padding: {right: 15}
+                },
+								
+                tooltip: {
+                  visible: true,
+                  background: "#f7f7f7",
+                  border: {color: "#ebebeb", width:"2"},
+                  template: "<a href='http://qaui.zcdev.net/mocks/supplier/projects_list.html'>Click to add timesheets</a> ", 
+                }
+});
+			
+$("#timestatus").kendoChart({
+                 title: {
+                    position: "top",
+                    //text: "Timesheet Status",
+					color:"#525252"
+                },
+                //legend: {visible: false},
+				chartArea: {height: 230},
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category #: \n #= value#%"
+                    }
+                },
+				legend: { background: "transparent",  position: "right",
+				labels: { font: "14px sans-serif", color: "#525252"}
+				 },
+
+				
+                series: [{
+                    type: "pie",
+                    startAngle: 150,
+                    data: [{
+                        category: "In Progress",
+                        value: 53.8,
+                        color: "#9de219"
+                    },{
+                        category: "Processing",
+                        value: 16.1,
+                        color: "#90cc38"
+                    },{
+                        category: "Rejected",
+                        value: 11.3,
+                        color: "#068c35"
+                    },{
+                        category: "Waiting for Manager Approval",
+                        value: 9.6,
+                        color: "#006634"
+                    },{
+                        category: "Waiting for ZC Processing",
+                        value: 8.8,
+                        color: "#004d38"
+                    }]
+                }],
+                tooltip: {
+                  visible: true,
+                  format: "{0}%",
+                  background: "#f7f7f7",
+                  border: {color: "#ebebeb", width:"2"},
+                     template: "Approved - <a href='http://qaui.zcdev.net/mocks/supplier/timesheet_view.html'>Click to view list </a> ", 
+                }
+});
+			
+$("#supinvoice").kendoChart({
+                title: {
+                    position: "top",
+                    //text: "Timesheet Status",
+					color:"#525252"
+                },
+                //legend: {visible: false},
+				chartArea: {height: 310},
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category #: \n #= value#%"
+                    }
+                },
+				legend: { background: "transparent",  position: "right",
+				labels: { font: "14px sans-serif", color: "#525252"}
+				 },
+
+                series: [{
+                    type: "pie",
+                    startAngle: 150,
+                    data: [{
+                        category: "Waiting for Client Payment",
+                        value: 32,
+                        color: "#007DCC"
+                    },{
+                        category: "Processing",
+                        value: 15,
+                        color: "#006282"
+                    },{
+                        category: "Partially Paid",
+                        value: 11,
+                        color: "#004E7F"
+                    },{
+                        category: "Partially Applied",
+                        value: 42,
+                        color: "#002740"
+                    }]
+                }],
+                tooltip: {
+                  visible: true,
+                  format: "{0}%",
+                  background: "#f7f7f7",
+                  border: {color: "#ebebeb", width:"2"},
+                  template: "<h4>Pie Piece Header</h4><table><thead><th>Invoice</th><th>Amount</th><th>Date</th></thead><tr><td><a href=''>987654321</a></td><td>70.00 USD</td><td>04-Aug-14</td></tr><tr><td><a href=''>123454321</a></td><td>10,000.00 USD</td><td>31-Dec-14</td></tr><tr><td><a href=''>987654321</a></td><td>10.00 USD</td><td>22-Jan-14</td></tr></table><br/><a href='http://qaui.zcdev.net/mocks/supplier/invoices_supplier_view.html'>View More</a>", 
+                },
+});
+
+$("#spinvoice").kendoChart({
+                title: {
+                    position: "top",
+                    //text: "Timesheet Status",
+					color:"#525252"
+                },
+                //legend: {visible: false},
+				chartArea: {height: 310},
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category #: \n #= value#%"
+                    }
+                },
+				legend: { background: "transparent",  position: "right",
+				labels: { font: "14px sans-serif", color: "#525252"},
+				 },
+                series: [{
+                    type: "pie",
+                    startAngle: 150,
+                    data: [{
+                        category: "Waiting for Client Payment",
+                        value: 32,
+                        color: "#007DCC"
+                    },{
+                        category: "Processing",
+                        value: 15,
+                        color: "#006282"
+                    },{
+                        category: "Partially Paid",
+                        value: 11,
+                        color: "#004E7F"
+                    },{
+                        category: "Partially Applied",
+                        value: 42,
+                        color: "#002740"
+                    }]
+                }],
+                tooltip: {
+                  visible: true,
+                  format: "{0}%",
+                  background: "#f7f7f7",
+                  border: {color: "#ebebeb", width:"2"},
+                  template: "<h4>Pie Piece Header</h4><table><thead><th>Invoice</th><th>Amount</th><th>Date</th></thead><tr><td><a href=''>987654321</a></td><td>70.00 USD</td><td>04-Aug-14</td></tr><tr><td><a href=''>123454321</a></td><td>10,000.00 USD</td><td>31-Dec-14</td></tr><tr><td><a href=''>987654321</a></td><td>10.00 USD</td><td>22-Jan-14</td></tr></table><br/><a href='http://qaui.zcdev.net/mocks/supplier/invoices_supplier_view.html'>View More</a>", 
+                }
+});
+
+}
+$(document).ready(createChart);
+$(document).bind("kendo:skinChange", createChart);
+});
+$(window).on("resize", function() {
+kendo.resize($(".chart-wrapper"));
+});
+</script>
+
+<!--end kendo-->
+
+
+</div><!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

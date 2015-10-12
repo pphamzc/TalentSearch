@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add SOW Requisition - Service Provider</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"   />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+
+<!--service provider -->
+<style type="text/css">
+.spbtn, #div1, #div2 {display: none;}
+</style>
+
+<script type="text/javascript" src="../assets/plugins/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+$('input[type="radio"]').click(function(){
+if($(this).attr("value")=="createsp"){
+$(".spbtn").hide();
+$(".createsp").show();
+}
+if($(this).attr("value")=="selectsp"){
+$(".spbtn").hide();
+$(".selectsp").show();
+}
+});
+
+$("#btn1").on('click', function() {
+$("#div1").show();
+$("#div2").hide();
+});
+$("#btn2").on('click', function() {
+$("#div1").hide();
+$("#div2").show();
+});
+$("#btn3").on('click', function() {
+$("#div1").show();
+$("#div2").hide();
+});
+
+});
+
+</script>
+<!--end service provider-->
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<form action="#" class="form-horizontal" id="form_sample_1">
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Progress</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul id="progressbar">
+<li class="sowli visited bar"><a href="requisitions_add_sow.html">Specifiy Requisition Details</a></li>
+<li class="sowli visited bar"><a href="requisitions_add_sow_2.html">Add Track Codes</a></li>
+<li class="sowli active"><a href="requisitions_add_sow_3.html">Add Service Provider</a></li>
+<li class="sowli next"><a href="requisitions_add_sow_4.html">Attach SOW</a></li>
+<li class="sowli next"><a href="requisitions_add_sow_5.html">Take Questionaire</a></li>
+<li class="sowli next"><a href="">Review & Submit</a></li>
+</ul>
+<div class="clear"></div>
+
+ </div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+           
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requistion Name (ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Requsition Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Evaluation Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Service Class:</span>some class here</li>
+<li class="span3 no-margin"><span>Business Unit:</span>1some unit</li>
+<li class="span3 no-margin"><span>Engagement Name:</span>Request for Proposal</li>
+<li class="span3 no-margin"><span>Estimated Cost:</span>40,000.00 USD</li>
+<li class="span3 no-margin"><span>Requisition Type Group:</span>SOW</li>
+<li class="span3 no-margin"><span>Location of Project:</span>CA US</li>
+<li class="span3 no-margin"><span>Estimated Start Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Estimated End Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Service Provider:</span>provider name</li>
+<li class="span3 no-margin"><span>ZeroChaos Contact:</span>John Doe</li>
+<div class="clear"></div>
+</ul>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="requisitions_add_sow.html">Requisitions</a></li>
+<li><a href="requisitions_add_sow_2.html">Track Codes</a></li>
+<li class="active"><a href="requisitions_add_sow_3.html">Service Provider</a></li>
+<li><a href="requisitions_add_sow_4.html">Attachments</a></li>
+<li><a href="requisitions_add_sow_5.html">Questionnaire</a></li>
+<li><a href="requisitions_add_sow_6.html">Approvals</a></li>
+<li><a href="requisitions_add_sow_7.html">Supporting Documents</a></li>
+<li><a href="requisitions_add_sow_8.html">Evaluation Notes</a></li>
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Please select a Service Provider option below</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+<div class="alert alert-alert">
+*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+            
+<ul class="unstyled">
+<li><label class="radio"><span><input type="radio" name="optionsRadios1" value="selectsp" ></span> I have a specific Service Provider I want to use.</label></li>
+<li><label class="radio"><span><input type="radio" name="optionsRadios1" value="createsp"></span>I want to create and send to multiple Service Providers.</label>  </li>
+</ul>
+<div class="clear"></div>
+</div><!--end porlet body-->
+
+<div class="form-actions">
+<div class="pull-right">
+<button  type="button" class="greenbtn createsp spbtn" id="btn1">Create RFP</button>
+<button  type="button" class="greenbtn selectsp spbtn" id="btn2">Select Service Provider</button>
+</div>
+</div>
+</div><!--end portlet box-->
+
+<div id="div1">
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Add New Service Provider</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Contact First Name<span class="required">*</span></span><br><input type="text" name="" class="m-wrap span10"></li>
+<li class="span4 no-margin"><span>Contact Last Name<span class="required">*</span></span><br><input type="text" name="" class="m-wrap span10"></li>
+
+<li class="span4 no-margin"><span>E-mail<span class="required">*</span></span><br><input type="text" name="" class="m-wrap span10"></li>
+<li class="span4 no-margin"><span>Company</span><br><input type="text" name="" class="m-wrap span10"></li>
+
+<li class="span4 no-margin"><span>Phone<span class="required">*</span></span><br>
+<input type="text" name="" class="m-wrap span7"> 
+<select class="m-wrap span3" tabindex="1">
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+</li>
+<li class="span4 no-margin"><span>Alternate Phone<span class="required">*</span></span><br>
+<input type="text" name="" class="m-wrap span7"> 
+<select class="m-wrap span3" tabindex="1">
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+</li>
+
+<div class="clear"></div>
+</ul>
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<button  type="button" class="bluebtn">Back</button><button  type="button" class="greenbtn">Add</button>
+</div>
+</div>
+</div><!--end portlet box-->
+</div><!--end div1-->
+
+
+<div id="div2">
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Selected Service Provider</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Agreement ID</th>
+<th>Service Provider Name</th>
+<th>Contact Name</th>
+<th>Email</th>
+<th>State / Province</th>
+<th>Country</th>
+<th>Status</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12345</td>
+<td>Media LLC</td>
+<td>John Doe</td>
+<td><a href="mailto:#">name@company.com</a></td>
+<td>California</td>
+<td> United States</td>
+<td>Approved</td>
+<td><a href='#'><i class='icon-trash'></i> Remove</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Search Service Providers</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="11">Agreement ID</option>
+<option value="12">Service Provider Name</option>
+<option value="13">Contact Name</option>
+<option value="14">Email</option>
+<option value="15">State / Province</option>
+<option value="16">Country</option>
+<option value="17">Status</option>
+
+
+</select>
+</li>
+</ul>
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="11" class="hiddenMenu">
+<li class="span3 no-margin"><span>Agreement ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="12" class="hiddenMenu">
+<li class="span3 no-margin"><span>Service Provider Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="13" class="hiddenMenu">
+<li class="span3 no-margin"><span>Contact Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ <div id="14" class="hiddenMenu">
+<li class="span3 no-margin"><span>Email</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+ <div id="15" class="hiddenMenu">
+<li class="span3 no-margin"><span>State / Province</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ <div id="16" class="hiddenMenu">
+<li class="span3 no-margin"><span>Country</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ <div id="17" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END boX-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Service Providers</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn"><a href="#" class="greenbtn_sm" id="btn3"> Add New Service Provider</a></div>
+</div>
+<div class="portlet-body"> 
+
+<table class="table table-striped table-bordered table-hover table-full-width" id="engage_2">
+<thead>
+<tr>
+<th>Agreement ID</th>
+<th>Service Provider Name</th>
+<th>Contact Name</th>
+<th>Email</th>
+<th>State / Province</th>
+<th>Country</th>
+<th>Status</th>
+<th class="no-sort">Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12345</td>
+<td>Media LLC</td>
+<td>John Doe</td>
+<td><a href="mailto:#">name@company.com</a></td>
+<td>California</td>
+<td> United States</td>
+<td>Approved</td>
+<td><a href='#'><i class='icon-plus'></i> Select</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>Media LLC</td>
+<td>John Doe</td>
+<td><a href="mailto:#">name@company.com</a></td>
+<td>California</td>
+<td> United States</td>
+<td>Approved</td>
+<td><a href='#'><i class='icon-plus'></i> Select</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>Media LLC</td>
+<td>John Doe</td>
+<td><a href="mailto:#">name@company.com</a></td>
+<td>California</td>
+<td> United States</td>
+<td>Approved</td>
+<td><a href='#'><i class='icon-plus'></i> Select</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>Media LLC</td>
+<td>John Doe</td>
+<td><a href="mailto:#">name@company.com</a></td>
+<td>California</td>
+<td> United States</td>
+<td>Approved</td>
+<td><a href='#'><i class='icon-plus'></i> Select</a></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+</div><!--end div2-->
+
+
+
+<div class="clear"></div>
+<div class="alert alert-error hide">
+<button class="close" data-dismiss="alert"></button>You have some form errors. Please check above.
+</div>
+
+<div class="alert alert-success hide">
+<button class="close" data-dismiss="alert"></button>Your form validation is successful!
+</div>
+
+</div><!--end portlet box-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="requisitions_add_sow_2.html"><button  type="button" class="bluebtn">Back</button></a>
+<button  type="button" class="greenbtn">Save</button>
+<a href="requisitions_add_sow_4.html"><button  type="button" class="bluebtn">Next</button></a>
+<button  type="button" class="bluebtn" data-toggle="modal" href="#cancelreq">Cancel Requisition</button>
+<button  type="submit" class="greenbtn">Submit Requisition</button>
+</div>
+</div>
+
+</div><!--end portlet body-->
+
+</form>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_cancelreq.html" -->
+
+<!--#include file="_closereq.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

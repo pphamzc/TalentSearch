@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Supplier Add Service Invoice</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+   
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+<link href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+
+
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Invoice</li>
+</ul>
+</div><!--END SPAN--> 
+</div><!-- END ROW PAGE HEADER--> 
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+  <div class="caption">Service Invoice</div>
+  </div>
+<div class="portlet-body"> 
+
+<div class="span4" >
+<h4>Create Invoice</h4>
+
+<ul class="unstyled no-margin">
+<li><span>Select Customer:</span>   <br/>
+<select name="select" tabindex="1" >
+    <option value="">Select...</option>
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select>
+</li>
+<li><span>Select Engagement:</span><br/>
+  <select name="select" tabindex="1" >
+    <option value="">Select...</option>
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select>
+</li>
+</ul>
+</div><!--END SPAN--> 
+
+<div class="span8">
+<h4>Select For Invoicing</h4>
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>PO Number</th>
+        <th>PO Description</th>
+        <th>Available For Invoicing</th>
+        <th>Select</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1234</td>
+        <td>1234</td>
+        <td>Change Strategy</td>
+        <td>28,151,234.56 USD</td>
+        <td><label class="checkbox in-line"><input type="radio" value="2" name="option2"/> </label></td>
+        </tr>
+      <tr>
+        <td>4567</td>
+        <td>4567</td>
+        <td>Update Strategy</td>
+        <td>12,1212.00</td>
+        <td><label class="checkbox in-line"><input type="radio" value="2" name="option2"/> </label></td>
+        </tr>
+    </tbody>
+  </table>
+</div><!--END SPAN--> 
+<div class="clear"></div>
+
+</div><!-- END PORLET BODY--> 
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="submitbtn">Create Service Invoice</a> 
+</div>
+</div>
+
+</div><!--END PORTLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Engagement Name (Engagement ID)</div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled no-margin">
+<li class="span6"><span>Engagement Description:</span>Office of the Future Change Management plus some engagement description here some engagement description here some engagement description here some engagement description here some engagement description here some engagement description here</li>
+<li class="span3"><span>Requisition ID:</span>12345678</li>
+<li class="span3"><span>Engagement Status:</span> <span class="status">Open</span></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View Engagement Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Approved Budget:</span>10,000</li>
+<li class="span3 no-margin"><span>PO Number:</span>9876543</li>
+<li class="span3 no-margin"><span>PO Description:</span>Some Description Here</li>
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>Business Classification:</span> Service Vendor</li>
+<li class="span3 no-margin"><span>Customer:</span> NetApp</li>
+<li class="span3 no-margin"><span>Customer Manager:</span> John Doe</li>
+<li class="span3 no-margin"><span>Service Provider:</span> IBM</li>
+<li class="span3 no-margin"><span>Service Provider Contact:</span> Jane Doe</li>
+<li class="span3 no-margin"><span>Track Code:</span> 1234567890987654321</li>
+<li class="span3 no-margin"><span>Start Date:</span> 05-Jul-14</li>
+<li class="span3 no-margin"><span>End Date:</span>  05-Jul-14</li>
+<li class="span3 no-margin"><span>Project Country:</span>US</li>
+<li class="span3 no-margin"><span>Project State:</span> FL</li>
+<li class="span3 no-margin"><span>Project Postal Code:</span>12345</li>
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+</div><!-- END PORLET BODY--> 
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Detail</div></div>
+<div class="portlet-body">
+
+<ul class="unstyled no-margin">
+<li class="span6 no-margin"><span>Enter Your Invoice #:<span class="required">*</span></span><i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Use this field to enter an invoice # from your invoicing system. If this does not apply to you, select the checkbox" data-original-title="Enter Invoice #"></i>&nbsp;<input type="text"  class="m-wrap"/>&nbsp;&nbsp;<span>N/A:</span><input type="checkbox" value=""></li>
+<li class="span3"><span>ZeroChaos ID #:</span>12345</li>
+<li class="span3"><span>Service Invoice Status:</span><span class="status">Open</span></li>
+</ul>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Invoice Types</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Time</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn"><a href="#" class="greenbtn_sm">Enter Custom Invoice</a>
+<a href="#" class="greenbtn_sm">Enter Standard Invoice</a>
+</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th >Milestone Line Item</th>
+        <th >Description</th>
+        <th >Invoice Line Description</th>
+        <th class="span3">Service Category</th>
+        <th>Rate ID</th>
+        <th>Category Description</th>
+        <th>Worker</th>
+        <th class="span1">Rate</th>
+        <th class="span1">Units</th>
+        <th>Line Items</th>
+        <th>Postal Code</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td ><select name="select2" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>Descritopn Text</td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><select name="select9" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1 - this is an example of some really long category text</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+
+<td> John Doe </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><select name="select13" tabindex="1" class="span12" >
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1,234.56</td>
+       <td class="toppadding">
+        <a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/> 
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a> <br/> 
+ <a data-toggle='modal' href='#add-worker'><i class='icon-plus'></i> Add / Edit Worker</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+      <tr>
+        <td><select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>Descritopn Text</td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><select name="select10" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td>John Doe </td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td> Hourly</td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a> <br/> 
+ <a data-toggle='modal' href='#add-worker'><i class='icon-plus'></i> Add / Edit Worker</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+     
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span7">
+<ul class="unstyled">
+<li class="span4"><span>Time SubTotal:</span> 1,234.56 USD</li>
+<li class="span4"><span>Time Tax:</span>  1,234.56 USD</li>
+<li class="span4"><span>Time Total:</span> 1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Fixed</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="#" class="greenbtn_sm">Enter Fixed Line</a>
+</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th>Milestone Line Item</th>
+        <th>Description</th>
+        <th>Invoice Line Description</th>
+        <th>Category Description</th>
+        <th>Amount</th>
+        <th class="span1">Units</th>
+        <th>Tax %</th>
+        <th>Postal Code</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > 
+         <select cname="select" tabindex="1" class="span12 chosen" data-placeholder="Choose a Category">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+          </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><select name="select14" tabindex="1" class="span12" >
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<!--tic 4874 jun 5
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Fixed Time SubTotal:</span> 1,234.56 USD</li>
+<li><span>Fixed Time Tax:</span>  1,234.56 USD</li>
+
+<li><span>Fixed Time Total:</span> 1,234.56 USD</li>
+</ul>
+-->
+
+<div class="pull-right span7">
+<ul class="unstyled">
+<li class="span4"><span>Fixed Time SubTotal:</span> 1,234.56 USD</li>
+<li class="span4"><span>Fixed Time Tax:</span>  1,234.56 USD</li>
+<li class="span4"><span>Fixed Time Total:</span> 1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Materials</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="#" class="greenbtn_sm">Enter Custom Materialse</a>
+<a href="#" class="greenbtn_sm">Enter Standard Materials</a>
+</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th >Milestone Line Item</th>
+        <th>Description</th>
+        <th >Invoice Line Description</th>
+        <th class="span3">Material Category</th>
+        <th>Rate ID</th>
+        <th>Category Description</th>
+        <th>Cost Per Unit</th>
+        <th class="span1">Units</th>
+        <th>Tax %</th>
+        <th>Postal Code</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td ><select name="select4" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td> <select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>12345</td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><select name="select11" tabindex="1" class="span12" >
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+      <tr>
+        <td><select name="select5" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td> <select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>12345</td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td> Hourly</td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+      
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span7">
+<ul class="unstyled">
+<li class="span4"><span>Materials SubTotal:</span> 1,234.56 USD</li>
+<li class="span4"><span>Materials Tax:</span>  1,234.56 USD</li>
+<li class="span4"><span>Materials Total:</span> 1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Tasks</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+<div class="pull-right copybtn">
+<a href="#import-task"  data-toggle="modal" class="bluebtn_sm">Import Tasks</a>
+<a href="#" class="greenbtn_sm">Name.xls</a>
+<a href="#" class="greenbtn_sm">Name.xlsd</a>
+
+<a href="#" class="greenbtn_sm">Enter Custom Tasks</a>
+<a href="#" class="greenbtn_sm">Enter Standard Tasks</a>
+</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th>Milestone Line Item</th>
+        <th>Description</th>
+        <th>Invoice Line Description</th>
+        <th class="span3">Task Category</th>
+        <th>Rate ID</th>
+        <th>Category Description</th>
+        <th class="span1">Rate</th>
+        <th class="span1">Units</th>
+        <th>Tax %</th>
+        <th>Postal Code</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td ><select name="select6" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td> <select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1 - this is an example of some really long category text</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><select name="select12" tabindex="1" class="span12" >
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+      <tr>
+        <td><select name="select7" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td> <select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td> Hourly</td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+        </tr>
+      
+      
+    </tbody>
+  </table>
+  
+  <div class="clear"></div>
+
+<hr/>
+<div class="pull-right span7">
+<ul class="unstyled ">
+<li class="span4"><span>Tasks SubTotal:</span> 1,234.56 USD</li>
+<li class="span4"><span>Tasks Tax:</span>  1,234.56 USD</li>
+<li class="span4"><span>Tasks Total:</span> 1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Expenses</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="#" class="greenbtn_sm">Enter Expense</a>
+</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th>Milestone Line Item</th>
+        <th>Description</th>
+        <th>Invoice Line Description</th>
+        <th class="span3">Expense Category</th>
+        <th>Amount</th>
+        <th class="span1">Units</th>
+        <th>Tax %</th>
+        <th>Postal Code</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><select name="select8" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/> </td>
+        <td> <select name="select3" class="span12 chosen" tabindex="1" data-placeholder="Choose a Category" cname="select">
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1 - this is an example of some really long category text</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><input type="text"  class="m-wrap span12"/></td>
+        <td><select name="select15" tabindex="1" class="span12" >
+          <option value="">Select...</option>
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1,234.56</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+ <a href='#'><i class='icon-trash trashsmall'></i> Delete</a> <br/>
+ <a data-toggle='modal' href='#track_code'><i class='icon-edit'></i>  Edit Track Code</a>" 
+ data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span7">
+<ul class="unstyled ">
+<li class="span4"><span>Expenses SubTotal:</span> 1,234.56 USD</li>
+<li class="span4"><span>Expenses Tax:</span>  1,234.56 USD</li>
+<li class="span4"><span>Expenses Total:</span> 1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Invoice SubTotal:</span> 1,234.56 USD</li>
+<li><span>Expense Total:</span> 1,234.56 USD</li>
+<li><span>Invoice Tax Total:</span>1,234.56 USD</li>
+<li><span>Invoice Total:</span>1,234.56 USD</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="clear"></div>
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Attachments </div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<ul class="unstyled">
+<li class="span5 no-margin"><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach span4">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+<li class="span7 no-margin"><span>Description</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>File Name</th>
+<th>Description</th>
+<th>Date Uploaded</th>
+<th>Uploaded By</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Update</a>
+</div>
+</div>
+<div class="clear"></div>
+
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Notes</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Add Notes</span><br><textarea class="m-wrap span12" rows="3"></textarea></li>
+<div class="clear"></div>
+</ul>
+<!--tic 4855 jun 15
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some random note goes here</td>
+<td>John Doe</td>
+<td>06-Jun-14</td>
+<td><a href="" ><i class='icon-trash'></i> Delete</a></td>
+</tr>
+
+</tbody>
+</table>-->
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+
+<!--<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Add Note</a> 
+</div>
+</div>-->
+</div><!--end portlet box-->
+
+
+
+
+<div class="portlet box">
+<div class="form-actions">
+<div class="alert alert-error">
+<button class="close" data-dismiss="alert"></button>
+This engagement has a remaining amount left for invoicing.  Once the final invoice is submitted, you are confirming that this engagement can be closed.  No additional billing will be allowed once the enagement is closed. 
+<br/>
+Please hit Submit to confirm this to be the final invoice or hit Cancel to return to the service invoice page. 
+</div>
+
+<div class="pull-left">
+<ul class="unstyled">
+<li><span>Is this the final invoice for the engagement?</span>
+<div class="controls inline">
+<label class="radio"><div class="radio"><input type="radio" value="option1" ></div>Yes</label>
+<label class="radio"><div class="radio"><input type="radio"  value="option2" ></div>No</label>  
+</div>
+</li>
+</ul>
+</div><!--end left-->
+
+<div class="pull-right">
+<button type="button" class="bluebtn">Print </button>
+<button type="button" class="bluebtn">Save As Draft</button>
+<button  type="submit" class="greenbtn">Submit For Approval</button>
+</div> <!--end right-->
+</div><!--end actions-->
+
+</div><!--end portlet box-->
+
+ </div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--add worker modal-->
+<div id="add-worker" class="modal hide fade" tabindex="-1" >
+<form class="form-horizontal">
+<div class="modal-header"><h3>Select A Worker</h3></div>
+<div class="modal-body">
+
+
+<ul class="unstyled">
+<li class="span8"><span>Select a Worker</span><br/>
+<select name="select" tabindex="1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</select>
+</li>
+<li class="span3"><br/><a href="#" class="greenbtn_sm">Add Worker</a></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Role</th>
+        <th>UOM</th>
+        <th>Rate</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Doe</td>
+        <td>John</td>
+        <td>Manager</td>
+        <td>Hourly</td>
+        <td>1,234.56 USD</td>
+        <td> <a href="#"> Remove</a></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>Service provider added successfully</div>
+
+
+<div class="modal-footer">
+<button type="button" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!-- end body-->
+</form>
+</div><!--end modal-->
+
+
+<!--import tasks modal-->
+<div id="import-task" class="modal hide fade" tabindex="-1" >
+<form class="form-horizontal">
+<div class="modal-header"><h3>Import Tasks</h3></div>
+<div class="modal-body">
+
+<ul class="unstyled span11">
+<li><span>PO Line Item</span><br/>
+<select name="select" tabindex="1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</select>
+</li>
+<li class="margin-top-10"><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new  no-margin" data-provides="fileupload">
+<div class="input-append span12">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+</ul>
+
+<div class="clear"></div>
+<hr/>
+<div class="clear"></div>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>Task added successfully</div>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>Pass filetype</div>
+<div class="alert alert-error"><button class="close" data-dismiss="alert"></button>Fail Filetype</div>
+
+
+<div class="modal-footer">
+<button type="button" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn" >Import</button>
+</div>
+
+</div><!-- end body-->
+</form>
+</div><!--end modal-->
+
+<!--track_code-->
+<div id="track_code" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Add / Edit Track Code</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span8 no-margin"><span>Track Code Name<span class="required">*</span></span><br>
+<select class="m-wrap  span11">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span8 no-margin"><span>Tax Track Code Name<span class="required">*</span></span><br>
+<select class="m-wrap  span11">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+	<script>
+		jQuery(document).ready(function() {   
+		   // initiate layout and plugins
+		   App.init();
+		   FormValidation.init();
+		});
+	</script>
+
+<!--#include file="_footer.html" -->

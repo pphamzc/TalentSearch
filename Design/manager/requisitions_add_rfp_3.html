@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add RFP Requisition - Confirm &amp; Submit</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"   />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+        <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition #12345 - Review</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Details</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="project_details_edit.html" class="bluebtn_sm">Edit</a>
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="no-margin"><span>RFP Title:</span>Request for proposal title</li>
+<li class="no-margin"><span>Description:</span>Request for proposal description </li>
+<li class="span4 no-margin"><span>Expected Start Date:</span>20-Aug-2015 </li>
+<li class="span4 no-margin"><span>Expected End Date:</span>20-Aug-2015 </li>
+<li class="span4 no-margin"><span>RFP Due Date:</span>20-Aug-2015 </li>
+<li class="span4 no-margin"><span>Deadline for Questions:</span>20-Aug-2015 </li> 
+<li class="span4 no-margin"><span>Bid Type:</span>Fixed</li>
+<li class="span12 no-margin"><span>Service Location:</span>California, USA</li>
+<li class="span4 no-margin"><span>Estimated Budget:</span>$10,000 USD</li>
+</ul>
+
+<div class="clear"><hr></div>
+<h4>Documents</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Primary</th>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Uploaded</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option1"></span></div></label> </td>
+<td>12345678976543211234567890.doc</td>
+<td>some description goes here.</td>
+<td>PNG</td>
+<td>06-Jun-14</td>
+</tr>
+<tr>
+<td><label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option2" checked=""></span></div></label> </td>
+<td>123456789099876543211234567890.doc</td>
+<td>some long description goes here.</td>
+<td>PDF</td>
+<td>06-Jun-14</td>
+</tr>
+<tr>
+<td><label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios2" value="option3" ></span></div> </label></td>
+<td>12345678909981234567890.doc</td>
+<td>some long description goes here.</td>
+<td>DOC</td>
+<td>06-Jun-14</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!--END PORTLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Competencies</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="project_details_edit.html" class="bluebtn_sm">Edit</a>
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Service Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Comp Name Here</td>
+<td>Some Service Class Here</td>
+</tr>
+<tr>
+<td>Some Comp Name Here</td>
+<td>Some Service Class Here</td>
+</tr>
+
+<tr>
+<td>Some Comp Name Here</td>
+<td>Some Service Class Here</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Service Providers</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="project_details_edit.html" class="bluebtn_sm">Edit</a>
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Service Provider Name</th>
+<th>Legal Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Name Here</td>
+<td>Some Legal Name Here</td>
+</tr>
+<tr>
+<td>Some Name Here</td>
+<td>Some Legal Name Here</td>
+</tr>
+
+<tr>
+<td>Some Name Here</td>
+<td>Some Legal Name Here</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+</div><!--END PORTLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Cancel</a> 
+<a href="requisitions_add_rfp_2.html" class="bluebtn">Back</a> 
+<a href="#" class="greenbtn">Send</a> 
+</div>
+</div>
+</div><!-- END PORLET BOX-->
+
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

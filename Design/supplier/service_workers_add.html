@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add Service Provider Workers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="service_workers_view.html">Service Provider Workers</a> <i class="icon-angle-right"></i></li>
+<li>Add Service Provider Workers</li>
+</ul> 
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Service Provider Workers Details</div>
+</div><!--end title-->
+
+<div class="portlet-body form">
+<!-- BEGIN FORM-->
+<form action="#" class="form-horizontal" id="form_sample_1">
+
+<ul class="unstyled span12">
+<li class="span3 no-margin"><span>Service Provider:</span>My Company Consulting</li>
+<li class="span3 no-margin"><span>Service Provider Worker:</span>John Doe</li>
+<li class="span3 no-margin"><span>Active:</span><input type="checkbox" value=""></li>
+</ul>
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>First Name<span class="required">*</span></span><br><input type="text" class="m-wrap span10" ></li>
+<li class="span3 no-margin"><span>Middle Name</span><br><input type="text" class="m-wrap span10" ></li>
+<li class="span3 no-margin"><span>Last Name<span class="required">*</span></span><br><input type="text" class="m-wrap span10"></li>
+<li class="span3 no-margin"><span>Email<span class="required">*</span></span><br><input type="text" class="m-wrap span10" ></li>
+<li class="span3 no-margin"><span>Phone Number<span class="required">*</span></span><br><input type="text" class="m-wrap span10"></li>
+
+<li class="span3 no-margin"><span>How Paid<span class="required">*</span></span><br>
+<select class="m-wrap span10">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Worker Number:</span><br/><input type="text" class="m-wrap span10" /></li>
+<div class="clear"></div>
+</ul>
+
+<div class="form-actions">
+<div class="pull-right">
+<button  type="submit" class="submitbtn">Save</button>
+</div>
+</div>
+
+</form>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Engagements</div>
+
+<div class="pull-right copybtn">
+<a href="engagements_view.html" class="greenbtn_sm">Assign To Engagements</a>
+</div>
+</div><!--end title-->
+
+<div class="portlet-body ">
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label><input type="checkbox" checked data-column="0">Engagement Summary</label>
+<label><input type="checkbox" checked data-column="1">Customer</label>
+<label><input type="checkbox" checked data-column="2">Manager</label>
+<label><input type="checkbox" checked data-column="3">Service Provider</label>
+<label><input type="checkbox" checked data-column="4">Engagement Amount</label>
+<label><input type="checkbox" checked data-column="5">Approved Budget</label>
+<label><input type="checkbox" checked data-column="6">Available for Invoicing</label>
+<label><input type="checkbox"		     data-column="7">Total Spend %</label>
+<label><input type="checkbox" checked data-column="8">Start Date</label>
+<label><input type="checkbox" checked data-column="9">End Date</label>
+<label><input type="checkbox"  		  data-column="10">Updated</label>
+<label><input type="checkbox" checked data-column="11">Status</label>
+<label><input type="checkbox" checked data-column="12">Actions</label>
+
+                                           
+</div>
+
+</div><!--END buttons/actions-->
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+    <tr>
+      <th>Engagement Summary</th>
+      <th>Customer</th>
+<th>Manager</th>
+      <th>Service Provider</th>
+      <th>Engagement Amount</th>
+	  <th>Approved Budget</th>
+      <th>Available for Invoicing</th>      
+     <th class="hidden-default" >Total Spend %</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th class="hidden-default" >Updated</th>
+      <th>Status</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+<td><a href="engagement_view_details.html">Engagement Name</a> (<a href="#">397098</a>)</td>
+<td>Customer Name</td>
+
+<td>Manager Name</td>
+      <td>IBM</td>
+      <td>1,000.00 USD</td>
+      <td>1,000.00 USD</td>
+   	  <td>1,000.00 USD</td>
+      <td>100%</td>
+      <td>21-May-2014</td>
+      <td>30-Jan-2015</td>
+      <td class="hidden-default">30-Jan-2015</td>
+      <td>Active</td>
+      </tr>
+  </tbody>
+</table>
+<!--END TABLE-->
+     
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX BLUE-->
+
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+</div><!--end page container-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div>  <!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

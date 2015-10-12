@@ -1,0 +1,982 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add Candidate</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    
+        <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link href="../assets/plugins/select2/select2_zc.css" rel="stylesheet" type="text/css"/>
+   	<link href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" />
+
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <style type="text/css">
+.chzn-container {width: 85%!important;}
+i .popovers {width:500px!important}
+</style>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Candidate</li>
+</ul> 
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Personal Information</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div><!--end title-->
+
+<div class="portlet-body form">
+<!-- BEGIN FORM-->
+
+
+<ul class="unstyled">
+<li class="span12 no-margin"><span>Candidate Summary<span class="required">*</span></span><br/><textarea class="m-wrap span11 wysihtml5" rows="3" value ></textarea>
+</li>
+
+<li class="span3 no-margin"><span>First Name<span class="required">*</span></span><br/><input type="text" name="name"  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Middle Name</span><br/><input type="text" class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Last Name<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<!--tic 3844 may 31<li class="span3 no-margin"><span>Customer Name<span class="required">*</span></span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>-->
+
+<li class="span3 no-margin"><span>Last 5 of National ID<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Month of Birth<span class="required">*</span></span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Day of Birth<span class="required">*</span></span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>
+
+
+<li class="span3 no-margin"><span>E-mail<span class="required">*</span></span><br/><input type="text" name="name"  class="m-wrap span10"/></li>
+
+<li class="span3 no-margin"><span>Phone<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap span11"/> </li>
+<li class="span3 no-margin"><span>Phone Type / Extension </span><br>
+<select class="m-wrap span6" tabindex="1">
+<option value="">Select...</option>
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+<input type="text" name="" class="m-wrap span4" placeholder="Ext">  
+</li>
+
+<li class="span3 no-margin"><span>Alternate Phone<span class="required">*</span></span><br/>
+<input type="text" name=""  class="m-wrap span11"/> 
+</li>
+<li class="span3 no-margin"><span>Alternate Phone Type / Extension </span><br>
+<select class="m-wrap span6" tabindex="1">
+<option value="">Select...</option>
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+<input type="text" name="" class="m-wrap span4" placeholder="Ext">  
+</li>
+<li class="span3 no-margin"><span>Address 1</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Address 2</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Postal Code</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>City</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Country<span class="required">*</span></span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>State<span class="required">*</span></span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+
+
+<div class="clear"></div>
+</ul>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Employment</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div><!--end title-->
+
+<div class="portlet-body form">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Status</span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select></li>
+<li class="span3 no-margin"><span>Date Available</span><br/><input class="m-wrap date-picker span10" type="text" value="" /></li>
+<li class="span3 no-margin"><span>Employee ID</span><br/><input type="text" class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Preferred Job/Skill</span><br/><input type="text" class="m-wrap span10"/></li>
+<!--<li class="span12 no-margin"></li>
+
+<li class="span1 no-margin"><span>Available</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Former FTE</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Former Contractor</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Former Sub Contractor</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Travel</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Open to Direct Hire</span><input type="checkbox" value=""></li>
+<li class="span2 no-margin"><span>Relocate</span><input type="checkbox" value=""></li>-->
+
+<li class="span3 no-margin"><span>Choose all that apply</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Available</option>
+<option value="Category 2">Former FTE</option>
+<option value="Category 3">Former Contractor</option>
+<option value="Category 4">Former Sub Contractor</option>
+<option value="Category 5">Travel</option>
+<option value="Category 6">Open to Direct Hire</option>
+<option value="Category 7">Relocate</option>
+</select></li>
+<li class="span3 no-margin"><span>Notes</span><br/><input type="text" class="m-wrap span10"/></li>
+
+<div class="clear"></div>
+</ul>
+
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Rates</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div><!--end title-->
+
+<div class="portlet-body form">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Pay Rate<span class="required">*</span></span><br/><input type="text" name="name"  class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Bill Rate</span><br/><input type="text" class="m-wrap span10"/></li>
+<li class="span3 no-margin"><span>Currency<span class="required">*</span></span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Units<span class="required">*</span></span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Custom Fields</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>UDF1:</span> <br/><input type="text" class="m-wrap span11" /></li>
+<li class="span3 no-margin"><span>UDF2:</span><br/> <select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span3 no-margin"><span>UDF3:</span> <br/>
+<input class="m-wrap span11 m-ctrl-medium date-picker"  type="text"  /></li>
+<li class="span3 no-margin"><span>UDF4:</span> <br/> <input type="checkbox" value="">  Checkbox 1</li>
+</ul>
+
+
+<ul class="unstyled span12 no-margin">
+<li><span>UDF5:</span><br/>
+<textarea class="m-wrap span11" rows="3"></textarea></li>
+</ul>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Resume</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div><!--end title-->
+
+<div class="portlet-body">
+<textarea class="m-wrap span11 wysihtml5" rows="6" value ></textarea>
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Attachments </div> 
+
+<i class="icon-question-sign popovers leftmargin" data-trigger="hover" data-container="body" data-placement="bottom" data-html="true" data-content="
+<ul>
+<li>Once resume has been uploaded, Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolor sit amet, consectetur adipiscing elit.</li>
+<li>Valid File Types: .xls, .xlsx, .doc, .docx, .pdf, .txt, .csv, .htm, .html, .ppt, .vsd, .rtf, .efx, .jfx</li>
+<li>Valid File Sizes: (3) MBs per individual file; (10) MBs per upload request; (25) MBs per candidate. (800) KB & (30) pages per resume.</li>
+<li>Valid File Name: The file's name cannot exceed 150 characters.</li>
+</ul>" data-original-title="Attachment Help"></i>
+
+
+
+
+
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<ul class="unstyled">
+<li class="span5 no-margin"><span>Attach A File</span> <br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach span4">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+
+
+</div>
+</div>
+</li>
+
+<li class="span5 no-margin"><span>Description</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span2 no-margin"><br/><span>Is Resume</span><input type="checkbox" value=""></li>
+</ul>
+
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>File Name</th>
+<th>Description</th>
+<th>Date Uploaded</th>
+<th>Uploaded By</th>
+<th>Resume</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td>Yes</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td>No</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Update</a>
+</div>
+</div>
+<div class="clear"></div>
+
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Notes</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+<li class="no-margin span3"><span>Share with Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>Share with Manager</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Manager</span><input type="checkbox" value=""></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some random note goes here</td>
+<td>John Doe</td>
+<td>06-Jun-14</td>
+<td><a href="" ><i class='icon-trash'></i> Delete</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Send Note</a> 
+</div>
+</div>
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Competencies</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+<ul class="unstyled">
+<li class="span8">
+<select class="chosen"  multiple="multiple" cname="select" data-placeholder="Select all competencies that apply" >
+
+<optgroup label="Group Type 1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 2">
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+</optgroup>
+
+<optgroup label="Group Type 3">
+<option value="Category 8">Second one - random string of text and letters </option>
+</optgroup>
+
+<optgroup label="Group Type 4">
+<option value="Category 1">Another Option 1</option>
+<option value="Category 2">Another Option 2</option>
+<option value="Category 3">Another Option 3</option>
+<option value="Category 4">Another Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 5">
+<option value="Category 5">Red</option>
+<option value="Category 6">Yellow</option>
+<option value="Category 7">Green</option>
+<option value="Category 7">blue</option>
+</optgroup>
+
+<optgroup label="Group Type 6">
+<option value="Category 8">Another random string of text and letters </option>
+</optgroup>
+
+</select>
+</li>
+
+<li>
+<a href="#competencies" data-toggle="modal"><i class="icon-search greenicon tooltips"  data-placement="top" data-original-title="View Full List of Competencies"></i></a>
+<a href="#"><i class="icon-trash greenicon tooltips"  data-placement="top" data-original-title="Clear All"></i></a>
+<a href="#"><i class="icon-plus blueicon tooltips"  data-placement="top" data-original-title="Add Selected"></i></a>
+</li>
+
+
+</ul>
+<div class="clear"></div>
+
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Minimum Years Experience</th>
+<th><strong>Competency Level</strong></th>
+<th>Required</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Comp Name Here</td>
+<td><input type="text" name="input"  class="m-wrap  span11"/></td>
+<td>
+  <select name="select3" class="m-wrap  span11">
+    <option value="">Select...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</td>
+<td class="aligncenter"> <input type="checkbox" value=""></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#history' data-toggle='modal'><i class='icon-rotate-left'></i> View History</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td>Some Comp Name Here</td>
+<td>5</td>
+<td>Expert</td>
+<td class="aligncenter"><input type="checkbox" value="" checked disabled></td>
+<td><a href='#history' data-toggle='modal'><i class='icon-rotate-left'></i>View History</a></td>
+</tr>
+</tbody>
+</table>                                                  
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"> <i class="icon-save saveicon"></i> Update</a> 
+</div>
+</div>
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Certifications</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+<ul class="unstyled">
+<li class="span8">
+<select class="chosen"  multiple="multiple" cname="select" data-placeholder="Select all Certifications that apply" >
+
+<optgroup label="Group Type 1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 2">
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+</optgroup>
+
+<optgroup label="Group Type 3">
+<option value="Category 8">Second one - random string of text and letters </option>
+</optgroup>
+
+<optgroup label="Group Type 4">
+<option value="Category 1">Another Option 1</option>
+<option value="Category 2">Another Option 2</option>
+<option value="Category 3">Another Option 3</option>
+<option value="Category 4">Another Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 5">
+<option value="Category 5">Red</option>
+<option value="Category 6">Yellow</option>
+<option value="Category 7">Green</option>
+<option value="Category 7">blue</option>
+</optgroup>
+
+<optgroup label="Group Type 6">
+<option value="Category 8">Another random string of text and letters </option>
+</optgroup>
+
+</select>
+</li>
+<li>
+<a href="#certifications" data-toggle="modal"><i class="icon-search greenicon tooltips"  data-placement="top" data-original-title="View Full List of Certifications"></i></a>
+<a href="#"><i class="icon-trash greenicon tooltips"  data-placement="top" data-original-title="Clear All"></i></a>
+<a href="#"><i class="icon-plus blueicon tooltips"  data-placement="top" data-original-title="Add Selected"></i></a>
+</li>
+
+</ul>
+<div class="clear"></div>
+
+<hr/>
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+
+ 
+ 
+<th>Certification Name</th>
+<th>Effective Date</th>
+<th>Issuing Authority</th>
+<th>Certification Number</th>
+<th>Certification Attachment</th>
+<th>Issued Date</th>
+<th>Expiration Date</th>
+<th>Verification Status</th>
+<th>Required</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Cert Name Here</td>
+<td>08-Aug-14</td>
+<td>Some Name Here</td>
+<td>12345</td>
+<td><a href="#">attachment.pdf</a></td>
+
+<td>08-Aug-14</td>
+<td>08-Aug-15</td>
+<td>status</td>
+<td>required</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-trash'></i>  Remove</a><br/>
+<a data-toggle='modal' href='#cert_history'><i class='icon-search'></i>  View History</a><br/>
+<a href='#'><i class='icon-save'></i>  Save</a><br/>
+<a data-toggle='modal' href='#add_cert'><i class='icon-edit'></i>  Add / Edit</a><br/>
+<a href='#'><i class='icon-search'></i>  View Certifictions</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"> <i class="icon-save saveicon"></i> Update</a> 
+</div>
+</div>
+</div><!--END PORTLET BOX --> 
+
+
+
+<div class="portlet-box">
+<div class="portlet-body">
+
+<div class="form-actions">
+<div class="pull-right">
+<button  type="submit" class="greenbtn">Save</button>
+<button  type="submit" class="greenbtn">Save & Submit</button>
+
+</div>
+</div>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+</div><!--end page container-->
+
+<!--MOdals-->
+<!--track history-->
+<div id="track_history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Track History</h3></div>
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+     <th>Competency Name</th>
+        <th>Modified Date</th>
+        <th>Modified By</th>
+        <th>Created Date</th>
+        <th>Created By</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>comp name here</td>
+        <td>14-Jun-14</td>
+        <td>John Doe</td>
+        <td>14-Jun-14</td>
+        <td>John Doe</td>
+      </tr>
+    </tbody>
+  </table>
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+
+
+<!--cert history-->
+<div id="cert_history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Certification History</h3></div>
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>Cadidate</span>John Doe</li>
+<li class="no-margin"><span>Certification</span>CISSP</li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+     <th>Certification Attachment</th>
+        <th>Certification Number</th>
+        <th>Expiration Date</th>
+        <th>Status</th>
+        <th>Modified By</th>
+        <th>Modified On</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><a href="#">somerandomdocname.doc</a></td>
+        <td>123456789</td>
+        <td>14-Jun-14</td>
+        <td>Pending</td>
+        <td>John Doe</td>
+        <td>14-Jun-14</td>
+      </tr>
+    </tbody>
+  </table>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Export to Excel</button>
+</div>
+</div><!--end modal-->
+
+<!--add_cert-->
+<div id="add_cert" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Add / Edit Certification</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>Certification Name:</span> Some name here</li>
+<li class="no-margin"><span>Effective Date:</span> 11-Jun-!4</li>
+<li class="no-margin"><span>Issuing Authority</span><br>
+<input type="text" class="m-wrap span8" /></li>
+<li class="no-margin"><span>Certificaiton Number</span><br>
+<input type="text" class="m-wrap span8" /></li>
+
+<li><span>Certfication Attachment</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+<span style="font-size:10px">Valid file types are .doc  .pdf  .docx  .htm  .rtf  .efx  .jfx</span>
+</li>
+
+<li class="no-margin"><span>Issued Date</span><br>
+<input type="text" class="m-wrap datepicker span8" placeholder="DD-MM-YYYY" /></li>
+<li class="span8 no-margin"><span>Never Expires</span><input type="checkbox" value=""></li>
+<li class="no-margin"><span>Expiration Date</span><br>
+<input type="text" class="m-wrap datepicker span8" placeholder="DD-MM-YYYY" /></li>
+
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="bluebtn">Add New</button>
+
+<button type="submit" class="greenbtn">Update</button>
+</div>
+
+</div><!--end modal-->
+
+
+<!--Certifications modal-->
+<div id="certifications" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Certifications</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+
+<!--Competencies modal-->
+<div id="competencies" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Competencies</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+<hr/>
+<ul class="unstyled">
+<li class="span12">Minimum Years Experience (for all selected)&nbsp; <input type="text" name="input2"  class="m-wrap  span3"/></li>
+</ul>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div>  <!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

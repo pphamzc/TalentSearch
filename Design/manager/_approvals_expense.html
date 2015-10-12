@@ -1,0 +1,207 @@
+<div class="portlet box">
+<div class="portlet-title blueborder">
+<div class="caption"><h4>Search Expense Reports</h4></div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+                    <option value="27">Resource Name</option>
+                    <option value="28">Resource ID</option>
+                    <option value="29">Project Name </option>
+                    <option value="30">Project ID</option>
+                    <option value="31">Expense Description</option>
+                    <option value="32">Expense Date</option>
+                    <!--<option value="33">Status</option> -->  
+                    <option value="34">Pay Amount</option> 
+                    <option value="35">Will Pay Amount</option>  
+                    <!--<option value="36">Total Pay</option>  -->
+</select>
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="27" class="hiddenMenu">
+<li class="span3 no-margin"><span>Resource Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="28" class="hiddenMenu">
+<li class="span3 no-margin"><span>Resource ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="29" class="hiddenMenu">
+<li class="span3 no-margin"><span>Project Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="30" class="hiddenMenu">
+<li class="span3 no-margin"><span>Project ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="31" class="hiddenMenu">
+<li class="span3 no-margin"><span>Expense Description</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="32" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="33" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="34" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="35" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="36" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+
+<div class="clear"></div>
+
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+</div><!--END PORTLET BOX-->
+
+<div class="clear"></div>
+<hr/>
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="approve_2">
+<thead>
+<tr>
+<th>Resource Name (ID)</th>
+<th>Project Name (ID)</th>
+<th>Expense Description</th>
+<th>Expense Date</th>
+<th>Pay Amount</th>
+<th>Will Pay Amount</th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-ok gicn tooltips" data-placement="top" data-original-title="Approve"></i> <br><input type="checkbox" value=""> </th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-remove ricn tooltips" data-placement="top" data-original-title="Decline"></i> <br>  <input type="checkbox" value=""> </th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-question-sign bicn tooltips" data-placement="top" data-original-title="Request More Info"></i> <br> <input type="checkbox" value=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Doe <a href="#">(12345)</a></td>
+<td>My sample project <a href="#">(12345)</a></td>
+<td><a href="">Some description here</a></td>
+<td>01-Jun-14</td>
+<td>55.00 USD</td>
+<td>40.00 USD</td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+</tr>
+
+</tbody>
+</table><!--END TABLE-->
+
+<div class="clear"><br/></div>
+
+<div class="form-actions">
+<div class="pull-right">
+<a data-toggle="modal" href="#actions" class="greenbtn">Apply</a> 
+</div>
+</div>
+

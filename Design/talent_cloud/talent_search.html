@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Talent Search</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"  type="text/css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+<style type="text/css">
+.talent_profile{ max-height: 100px; width: auto;}
+.row_border{border-bottom: 2px solid #ddd!important; }
+
+.talent_table, .talent_table td, .talent_table tr, .talent_table tbody {border: none }
+.talent_table h1 {font-size:18px; display:inline}
+.talent_list {list-style-type: none;  margin: 0;   padding: 0;}
+.talent_list li {display: inline;     margin-right: 10px;}
+.talent_list span {font-weight:bold;}
+.talent-tags {color: #555;    background: #f7f7f7;   padding: 5px!important; }
+</style>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed page-sidebar-closed ">
+
+    <!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Search For Talent</li>
+
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Talent Search</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<div class="row-fluid">
+
+<div class="span3">
+
+<ul class="unstyled">
+<li><span>Resource</span><br/>
+<select class="m-wrap" name="">
+<option value="">Select...</option>
+<option value="1">Show All</option>
+<option value="2">Supplier Sourced Candidates</option>
+<option value="3">Service Vendors</option>
+<option value="4">Staffing Suppliers</option>
+</select>
+</li>
+
+
+<li><span>Job Classification</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Yes</option>
+<option value="Category 2">No</option>
+</select></li>
+<li><span>Job Category</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Yes</option>
+<option value="Category 2">No</option>
+</select></li>
+<li><span>Competencies</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Yes</option>
+<option value="Category 2">No</option>
+</select></li>
+<li><span>Certifications</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Yes</option>
+<option value="Category 2">No</option>
+</select></li>
+<li><span>Country</span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li><span>City</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Yes</option>
+<option value="Category 2">No</option>
+</select></li>
+
+<li><span>State</span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+
+<li><span>Zip Code</span><br/><input type="text" name="name"  class="m-wrap"/></li>
+<li><span>Within X MIles</span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> Within 50 miles</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+
+<li><span>Zendex</span><br/>
+<select class="m-wrap" name="">
+<option value="">Select...</option>
+<option value="1">Top 10%</option>
+<option value="2">Top 25%</option>
+</select>
+</li>
+<li><span>Feedback Score</span><br/>
+<select class="m-wrap" name="">
+<option value="">Select...</option>
+<option value="1">At least 3 stars</option>
+<option value="2">At least 4 stars</option>
+<option value="3">At least 5 stars</option>
+</select>
+</li>
+
+<li><span>Reviews</span><br/>
+<select class="m-wrap" name="">
+<option value="">Select...</option>
+<option value="1">At least 3 </option>
+<option value="2">At least 4</option>
+<option value="3">At least 5 </option>
+</select>
+</li>
+
+<li><span>Number of Projects</span><br/><input type="text" name="name"  class="m-wrap span5" >-<input type="text" name="name"  class="m-wrap span5" ></li>
+
+<li><span>Hourly Rate</span><br/><input type="text" name="name"  class="m-wrap" ></li>
+
+</ul>
+<div class="clear"></div>
+</div><!--end span-->
+
+<div class="span9">
+<ul class="breadcrumb">
+<li><a href="#">All</a> <i class="icon-angle-right"></i></li>
+<li>IT & Programming (385,000)</li>
+</ul>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save Search</a> </div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Sort By <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+</ul>
+</div>
+
+
+<table class="table talent_table toppadding" id="engage_2">
+<thead><th colspan="6">IT & Programming </th></thead>
+<tbody>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+<tr class="row_border">
+<td class="span2"><a href="dossier.html"><img src="../assets/img/avatar.jpg" class="talent_profile"></a></td>
+<td>
+
+
+<!--start inner table-->
+<table class="table talent_table">
+<tbody>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><h1><a href="dossier.html">John Doe</a></h1>,</li>
+<li>Universal Studios,</li>
+<li>Senior System Analyst  </li>
+<li class="pull-right  toppadding"><a href="#" class="bluebtn_sm">Request</a></li>
+<li class="pull-right toppadding"><a href="#" class="bluebtn_sm">Save to Watchlist</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Russia</td>
+<td>Rate: 20 USD</td>
+<td>IT &amp; Programming</td>
+<td><a href="#">4 Projects</a></td>
+<td class="redtext">Zendex: 100</td>
+<td>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list ">
+<li><span>Skills:</span></li>
+<li class="talent-tags">Skill 1</li>
+<li class="talent-tags">Another Skill 2 </li>
+<li class="talent-tags">Skill 2 </li>
+<li class="talent-tags">Skill</li>
+<li class="talent-tags">Another Skill 3</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="6">
+<ul class="talent_list">
+<li><span>Certifications:</span></li>
+<li class="talent-tags">Cert 1</li>
+<li class="talent-tags">Another cert 2 </li>
+<li class="talent-tags">Cert 2 </li>
+<li class="talent-tags">Cert </li>
+<li class="talent-tags">Another Cert 3</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!--end inner table-->
+</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--end span-->
+
+</div><!--end row-->
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+<!---------------------MOdals--------------------->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+<!--#include file="_save_as" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

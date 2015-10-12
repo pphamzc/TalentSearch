@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Everify - Enter Applicant Data</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>Everify</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li  class="active"><a href="everify_add.html">STEP 1 - Enter Applicant Data</a></li>
+<li><a href="everify_add_2.html">STEP 2 - Select Applicant Documents</a></li>
+<li><a href="everify_add_3.html" >STEP 3 - Verify Applicant Documents</a></li>
+
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body" >
+
+<br/>
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Select Account</span><br/>
+<select class="m-wrap span11">
+<option value="">Select ...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Social Security Number <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+
+<li class="span3 no-margin"><span>Date Of Birth <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+
+<li class="span3 no-margin"><span>E-mail <span class="required">*</span></span><br><input type="text" class="m-wrap span11" ></li>
+
+
+<li class="span3 no-margin"><span>First Name <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>Middle Name </span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>Last Name <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>Other Names on Record</span><br/><input type="text" class="m-wrap span11"/></li>
+
+<li class="span3 no-margin"><span>Address 1<span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>Address 2</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>City<span class="required">*</span></span><br/><input type="text" class="m-wrap span11" ></li>
+<li class="span3 no-margin"><span>Country</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span3 no-margin"><span>State <span class="required">*</span></span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span3 no-margin"><span>Postal Code <span class="required">*</span></span><br><input type="text" class="m-wrap span11" ></li>
+
+<li class="span3 no-margin"><span>Employment Start Date</span><br><input class="m-wrap date-picker span11" type="text" placeholder="DD/MM/YYYY" /></li>
+
+<li class="span3 no-margin"><span>Employee Citizen/Resident Type</span><br>
+<select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Cost Center</span><br><input type="text" class="m-wrap span11" ></li>
+<li class="span3 no-margin"><span>Department Code</span><br><input type="text" class="m-wrap span11" ></li>
+
+<li class="span12 no-margin"><hr/></li>
+<li class="span12 no-margin"><span>Preparer and/or Translator Certification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</span></li>
+<li class="span12 no-margin"><input type="checkbox" value="">  I attest under penalty Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+
+
+<li class="span3 no-margin"><span>Preparer / Translator Name<span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+
+<li class="span3 no-margin"><span>Phone Number<span class="required">*</span></span><br/>
+<input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>Address</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span3 no-margin"><span>City<span class="required">*</span></span><br/><input type="text" class="m-wrap span11" ></li>
+<li class="span3 no-margin"><span>Country</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span3 no-margin"><span>State <span class="required">*</span></span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span3 no-margin"><span>Postal Code <span class="required">*</span></span><br><input type="text" class="m-wrap span11" ></li>
+
+</ul>
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="everify_add_2.html" class="greenbtn">  Next</a> 
+</div>
+</div>
+</div><!--end box-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Dossier</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+
+
+	<link rel="shortcut icon" href="../favicon.ico" />
+<style type="text/css">
+.chzn-container {width: 99%!important;}
+</style>
+<!--expand details-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">  
+        $(document).ready(function(){
+            $("#report tr:odd").addClass("odd");
+            $("#report tr:not(.odd)").hide();
+            $("#report tr:first-child").show();
+            
+            $("#report tr.odd").click(function(){
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });
+    </script>        
+
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Dossier </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<div class="row-fluid profile">
+<div class="span12">
+
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1" data-toggle="tab">My Dossier</a></li>
+<li><a href="#tab_2" data-toggle="tab">Edit Dossier</a></li>
+<li><a href="#tab_3" data-toggle="tab">Password</a></li>
+<li><a href="#tab_4" data-toggle="tab">Manage ESS Notifications</a></li>
+<li><a href="#tab_5" data-toggle="tab">Confirm ESS E-mail</a></li>
+</ul>
+
+<div class="tab-content">
+<!--tab_1-->
+<div class="tab-pane row-fluid active" id="tab_1">
+
+<div class="tab-pane profile-classic row-fluid">
+
+<div class="span3"><img src="../assets/img/avatar.jpg" alt="" class="avatar" /></div>
+
+<ul class="unstyled span9">
+<li class="span4 no-margin"><span>First Name:</span> John</li>
+<li class="span4 no-margin"><span>Last Name:</span> John</li>
+<li class="span4 no-margin"><span>User ID:</span>ID 12345</li>
+<li class="span4 no-margin"><span>Phone:</span> 123-456-7890</li>
+<li class="span4 no-margin"><span>Phone Type:</span>work</li>
+<li class="span4 no-margin"><span>Phone Ext:</span>123</li>
+<li class="span4 no-margin"><span>Phone:</span> 123-456-7890</li>
+<li class="span4 no-margin"><span>Phone Type:</span>work</li>
+<li class="span4 no-margin"><span>Receive SMS:</span>123</li>
+<li class="span4 no-margin"><span>Address 1:</span> 123 My Street</li>
+<li class="span4 no-margin"><span>Address 2:</span> Suite 300</li>
+<li class="span4 no-margin"><span>City:</span>Orlando</li>
+<li class="span4 no-margin"><span>Country:</span> USA</li>
+<li class="span4 no-margin"><span>State / Province:</span>FL</li>
+<li class="span4 no-margin"><span>Postal Code:</span>32792</li>
+<li class="span4 no-margin"><span>County:</span>32792</li>
+<li class="span4 no-margin"><span>Preferred Time Zone:</span>EST</li>
+<li class="span4 no-margin"><span>Preferred Language:</span>English</li>
+<li class="span4 no-margin"><span>Security Question:</span>What city were you born in?</li>
+<li class="span4 no-margin"><span>Security Answer:</span>Tampa</li>
+<li class="span4 no-margin"><span>Password:</span>*********</li>
+
+</ul>
+</div><!--end row-->
+</div><!--end tab-->
+
+<!--tab_2-->
+<div class="tab-pane row-fluid profile-account" id="tab_2">
+
+<ul class="unstyled span3">
+<li><img src="../assets/img/avatar.jpg" class="avatar"></li>
+<li><span>Upload Image</span><br/>
+<div class="fileupload fileupload-new  no-margin" data-provides="fileupload">
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div></li>
+</ul>
+
+
+
+<ul class="unstyled span9">
+<li class="span4 no-margin"><span>First Name:</span> John</li>
+<li class="span4 no-margin"><span>Last Name:</span> John</li>
+<li class="span4 no-margin"><span>User ID:</span>ID 12345</li>
+<!--<li class="span12 no-margin"><span>Role</span>Customer Supervisor<br/></li>-->
+
+<li class="span4 no-margin"><span> Phone</span><br/><input type="text"  class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Phone Type</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span4 no-margin"><span>Extension</span><input type="text"  class="m-wrap span11"  /></li>
+
+
+<li class="span4 no-margin"><span> Phone</span><br/><input type="text"  class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Phone Type</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span4 no-margin"><span> Can be used to receive SMS messaging?</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Yes</option>
+<option value="Category 1">No</option>
+
+</select></li>
+</li>
+
+<li class="span4 no-margin"><span>Address 1</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Address 2</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>City</span><br/><input type="text" class="m-wrap span11" ></li>
+<li class="span4 no-margin"><span>Country</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span4 no-margin"><span>State / Province</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+<li class="span4 no-margin"><span>Postal Code </span><br><input type="text" class="m-wrap span11" ></li>
+<li class="span4 no-margin"><span>County </span><br><input type="text" class="m-wrap span11" ></li>
+
+<li class="span4 no-margin"><span>Preferred Time Zone </span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+
+<li class="span4 no-margin"><span>Preferred Language</span><br><select class="m-wrap span11">
+<option value="Category 0">Select...</option>
+<option value="Category 1">Option 1</option>
+</select></li>
+
+<!--removed 4.6.2015 tic 3536
+<li class="span4 no-margin"><span>E-mail <span class="required">*</span></span><br><input type="text" class="m-wrap span11" ></li>
+<li class="span4 no-margin"><span>Mobile Phone</span><br/>
+<input type="text"  class="m-wrap span11" /><br/>
+<input type="checkbox" value="" class="rightmargin"> Can be used to receive SMS messaging</li>
+</li>
+<li class="span4 no-margin"><span>Work Phone</span><br/>
+<input type="text"  class="m-wrap span9" />
+<input type="text"  class="m-wrap span2" placeholder="Ext" /></li>
+<li class="span4 no-margin"><span>Segment</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Division</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Location</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Location Number</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Support Docs E-mail</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>First Name <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Last Name <span class="required">*</span></span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Username <span class="required">*</span></span><br><input type="text" class="m-wrap span11" ></li>
+-->
+
+</ul>
+ 
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-save saveicon"></i> Save</a> 
+<a href="#" class="submitbtn"><i class="icon-ban-circle submiticon"></i>Cancel</a> 
+</div>
+</div>
+</div><!--end tab-pane-->
+
+<!--tab_3-->
+<div class="tab-pane row-fluid profile-account" id="tab_3">
+<ul class="unstyled">
+<li class="span8 no-margin"><span>Current Password</span><br/><input type="password" class="m-wrap span6" /></li>
+<li class="span8 no-margin"><span>New Password</span><br/><input type="password" class="m-wrap span6" /></li>
+<li class="span8 no-margin"><span>Re-type New Password</span><br/><input type="password" class="m-wrap span6" /></li>
+
+</ul>
+<div class="clear"></div>
+<br/>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-save saveicon"></i> Save Password</a> 
+<a href="#" class="submitbtn"><i class="icon-ban-circle submiticon"></i>Cancel</a> 
+</div>
+</div>
+</div><!--end tab-pane-->
+
+
+<!--tab_4-->
+<div class="tab-pane row-fluid profile-account" id="tab_4">
+<ul class="unstyled">
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+<li><input type="checkbox" value="" class="rightmargin"> Click here to E-mail eos qui ratione voluptatem sequi nesciunt</li>
+
+</ul>
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-save saveicon"></i> Update</a> 
+</div>
+</div>
+
+</div><!--end tab-pane-->
+
+
+
+<!--tab_5-->
+<div class="tab-pane row-fluid profile-account" id="tab_5">
+<ul class="unstyled">
+<li class="span8 no-margin"><span>E-mail</span><br/><input type="text" class="m-wrap span7"/></li>
+<li class="span8 no-margin"><span>E-mail</span><br/><input type="text" class="m-wrap span7"/></li>
+
+</ul>
+<div class="clear"></div>
+<br/>
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Cancel</a> 
+<a href="#" class="greenbtn"> Confirm</a> 
+</div>
+</div>
+</div><!--end tab-pane-->
+
+
+</div><!--END TABContent--> 
+</div><!-- end tabbale-->
+</div><!--end span-->
+</div><!--end row-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

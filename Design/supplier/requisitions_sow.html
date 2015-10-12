@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Requisition SOW</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"   />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<form action="#" class="form-horizontal" id="form_sample_1">
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Progess</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+
+<div class="portlet-body ">
+<ul id="progressbar">
+<li class="sowli2 next"><a href="">Submit Business Information</a></li>
+<li class="sowli2 next"><a href="">Submit Questionnaires</a></li>
+<li class="sowli2 next"><a href="">Submit Documents</a></li>
+</ul>
+<div class="clear"></div>
+
+ </div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+           
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Summary - {Req Name (ID)}</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+
+<li class="span3 no-margin"><span>Requsition Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Evaluation Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Service Class:</span>some class here</li>
+<li class="span3 no-margin"><span>Business Unit:</span>1some unit</li>
+
+<li class="span3 no-margin"><span>Customer Name</span>Net App</li>
+<li class="span3 no-margin"><span>Engagement Name:</span>Request for Proposal</li>
+<li class="span3 no-margin"><span>Requisition Type Group:</span>SOW</li>
+<li class="span3 no-margin"><span>Location of Project:</span>CA US</li>
+
+<li class="span3 no-margin"><span>Estimated Start Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Estimated End Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Service Provider:</span>provider name</li>
+<li class="span3 no-margin"><span>ZeroChaos Contact:</span>John Doe</li>
+<div class="clear"></div>
+
+</ul>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li class="active"><a href="requisitions_sow.html">Requisitions</a></li>
+<li><a href="requisitions_sow_2.html">Business Information</a></li>
+<li><a href="requisitions_sow_3.html">Questionnaire</a></li>
+<li><a href="requisitions_sow_4.html">Supporting Documents</a></li>
+<li><a href="requisitions_sow_5.html">Evaluation Notes</a></li>
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<!------------------------------------------->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Engagement Desription</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Notes</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some random note goes here</td>
+<td>John Doe</td>
+<td>06-Jun-14</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr>
+
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br><textarea class="m-wrap span12" rows="3"></textarea></li>
+</ul>
+
+<div class="clear"></div>
+</div><div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Send Note</a>
+</div>
+</div>
+</div><!--END PORTLET BOX--> 
+
+
+
+
+<!------------------------------------------->
+
+<div class="clear"></div>
+</div><!--end portlet box-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#"><button type="button" class="greenbtn">Back</button></a>
+</div>
+</div>
+
+</div><!--end portlet body-->
+
+</form>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--confirm-->
+<div id="confirm" class="modal hide fade"  tabindex="-1" >
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Confirm Requisition</h3>
+</div>
+<div class="modal-body" >
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Continue</button>
+</div>
+</div><!--end modal-->
+<!--#include file="_upload.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+<!--#include file="_footer.html" -->

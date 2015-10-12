@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Add Milestone Monthly Timesheet</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+     <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+
+
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb ">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Timesheet </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<form action="#"  >
+
+<!-- DYNAMIC BOX BASED ON USER-->
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Select Resource & Project</div></div>
+
+<div class="portlet-body"> 
+<ul class="unstyled">
+<li class="span5 no-margin>"><span>Select Resource:</span><br/> <select class="m-wrap">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span5 no-margin>"><span>Select Project:</span><br/> <select class="m-wrap">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+</ul>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+
+</div><!--END DYNAMIC PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Milestone Timesheet Entry for Project Name (<a href="#">Project ID</a>)</div>
+<div class="pull-right copybtn"><a href="#">Copy Previous Timesheet<i class="icon-paste greenicon"></i></a></div>
+</div>
+
+
+<div class="portlet-body"> 
+<div class="row-fluid">
+
+<ul class="unstyled">
+<li class="span3"><span>Period End Date:</span> 
+<select class="periodending" tabindex="1">
+<option value="Category 1">02/01/2014</option>
+<option value="Category 2">02/07/2014</option>
+<option value="Category 3">02/14/2014</option>
+<option value="Category 4">02/21/2014</option>
+</select>
+</li>
+<li class="span3"><span>Check If Last Timesheet:</span>  <input type="checkbox" value="1"></li>
+
+<li class="span4"><span>Track Code</span>
+<select class="span6" >
+<option value="Category 0">Choose Track Code</option>
+<option value="Category 1">TC1234</option>
+<option value="Category 2">TC123456</option>
+<option value="Category 3">TC12345678</option>
+<option value="Category 4">TC098765</option>
+</select> 
+<a href="#" class="inlinebtn tooltips" data-placement="left" data-original-title="Assign Track Codes"><i class="icon-plus greenicon"></i></a>
+<a href="#" class="inlinebtn popovers tooltips" data-toggle="popover" data-placement="left" data-html="true" 
+data-original-title="Unassign Track Codes" data-content="
+<label class='checkbox'><div class='checker'><span><input type='checkbox' value=''></span></div> 1234567890</label>
+<label class='checkbox'><div class='checker'><span><input type='checkbox' value=''></span></div> 1234567890</label>
+<label class='checkbox'><div class='checker'><span><input type='checkbox' value=''></span></div> 1234567890</label>
+<label class='checkbox'><div class='checker'><span><input type='checkbox' value=''></span></div> 1234567890</label>
+<label class='checkbox'><div class='checker'><span><input type='checkbox' value=''></span></div> 1234567890</label>
+<div class='btn-group'><a class='btn' href='#'>Unassign Selected</a></div> 
+">
+<i class="icon-minus greenicon"></i></a>
+</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width ">
+  <thead>
+<tr>
+<th>Track Code</th>
+<th>Pay Code</th>
+<th>Units</th>
+<th width="12%">Rate</th>
+<th width="12%">Total Units</th>
+<th width="12%">TotalSupplier Pay </th>
+</tr>
+</thead>
+  <tbody>
+<tr>
+  <td>HFTRO579NFUNGUSD</td>
+  <td>Regular Time</td>
+  <td>Hourly</td>
+  <td>&nbsp;</td>
+  <td><input type="text" class="m-wrap xsmall" /></td>
+  <td><input type="text" class="m-wrap xsmall" />
+    USD</td>
+</tr>
+<tr>
+  <td>HFTRO579NFUNGUSD</td>
+  <td>Over Time</td>
+  <td>Hourly</td>
+  <td>&nbsp;</td>
+  <td><input type="text" class="m-wrap xsmall" /></td>
+  <td><input type="text" class="m-wrap xsmall" />
+    USD</td>
+</tr>
+<tr>
+  <td>HFTRO579NFUNGUSD</td>
+  <td>Double Time</td>
+  <td>Hourly</td>
+  <td>&nbsp;</td>
+  <td><input type="text" class="m-wrap xsmall" /></td>
+  <td><input type="text" class="m-wrap xsmall" />
+    USD</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+<td class="totals">TOTAL</td>
+<td class="totals">20.00</td>
+  </tr>
+  </tbody>
+</table>
+<!--END TABLE--> 
+
+
+<div class="clear"></div>
+<hr/>
+<h4>Customer Defined Fields</h4>
+<ul class="unstyled">
+<li class="span3 no-margin"><span>UDF1:</span> <br/><input type="text" class="m-wrap xsmall" /></li>
+<li class="span3 no-margin"><span>UDF2:</span><br/> <select class="m-wrap xsmall">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span3 no-margin"><span>UDF3:</span> <br/>
+<input class="m-wrap xsmall m-ctrl-medium date-picker"  type="text"  /></li>
+<li class="span3 no-margin"><span>UDF4:</span> <br/> <input type="checkbox" value="">  Checkbox 1</li>
+</ul>
+
+
+<ul class="unstyled span12 no-margin">
+<li><span>UDF5:</span><br/>
+<textarea class="m-wrap span12" rows="3"></textarea></li>
+</ul><div class="clear"></div>
+<hr/>
+<ul class="unstyled span5 no-margin">
+<li><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+
+</li>
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li> 
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+ 
+</ul>
+
+<ul class="unstyled span6 no-margin">
+<li><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<ul class="unstyled">
+<li class="span5  no-margin"><span>Approval Manager:</span><br/>
+<select class="m-wrap" data-placeholder="Select" tabindex="1" >
+<option value="">Select...</option>
+<option value="Category 1">Suzie Smith</option>
+<option value="Category 2">John Doe</option>
+<option value="Category 3">Michael Smith</option>
+<option value="Category 4">Bob Sagat</option>
+</select>
+</li>
+<li class="span11 mini no-margin ">If your manager is not listed or your assignment has changed, please contact your service group at 877-937-6242, opt 1 or electronically by clicking <a href="#"> here</a></li>
+</ul>
+</div><!--END ROW-->
+</div><!-- END PORLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-save saveicon"></i>  Save As Draft</a> 
+<a href="#" class="submitbtn"><i class="icon-check submiticon"></i>Submit For Payment</a> 
+</div>
+</div>
+</div><!--END PORTLET BOX --> 
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Miscellaneous Information</div>
+</div>
+
+<div class="portlet-body"> 
+
+<div class="row-fluid">
+
+<ul class="unstyled">
+<li class="span2 no-margin"><span>Resource Name:</span> John Doe (12345)</li>
+<li class="span2 no-margin"><span>Resource Email:</span> myemail@mycompany.com</li>
+<li class="span2 no-margin"><span>PO Number:</span> 123456</li>
+<li class="span2 no-margin"><span>External ID:</span> 32792</li>
+<li class="span2 no-margin"><span>First Day:</span> 20-Feb-2013</li>
+<li class="span2 no-margin"><span>Approval Manager:</span> Suzie Smith</li>
+<li class="span2 no-margin"><span>Submit Date:</span> 02-Jun-20144</li>
+<li class="span2 no-margin"><span>Approval Date:</span> 02-Feb-2014</li>
+<li class="span2 no-margin"><span>Project Start Date:</span> 02-Jan-2014</li>
+<li class="span2 no-margin"><span>Project End Date:</span> 02-Feb-2014</li>
+<li class="span2 no-margin"><span>Amount:</span> 0.00 USD</li>
+<li class="span2 no-margin"><span>Region:</span> US / CA/ Fresno</li>
+</ul>
+<div class="clear"></div>
+
+</div><!--end row-->
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+
+<div class="portlet box">
+<div class="portlet-title">
+  <div class="caption">Custom Defined Field</div></div>
+
+<div class="portlet-body">
+
+<ul class="unstyled no-margin">
+<li class="span11 no-margin"><span>UDF 1:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 2:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 3:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 4:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 5:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+</ul>
+
+
+<div class="clear"></div>
+</div>
+</div></form>
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Engagements Details - Service Invoices</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"  type="text/css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="engagements_view.html">Engagements</a></li>
+<li>Engagement Details</li>
+
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Engagement Details</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="#modify" class="greenbtn_sm">Modify Engagement</a>&nbsp;
+<a href="#" class="greenbtn_sm">Close Engagement</a>&nbsp;
+
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Engagement:</span>Engagement Name <a href="#">(12345)</a></li>
+<li class="span3 no-margin"><span>Service Provider:</span>True North</li>
+<li class="span3 no-margin"><span>Status:</span><span class="status">Pending</span></li>
+<li class="span3 no-margin"><span>Requisition ID:</span><a href="#">12345</a></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View More Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled no-margin">
+<li class="span3 no-margin"><span>Description:</span>Epic Video Productions</li>
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>Service Class:</span>Contractor</li>
+<li class="span3 no-margin"><span>Customer Manager:</span>John Doe (12345)</li>
+<li class="span3 no-margin"><span>Service Provider Contact:</span>Suzie Smith</li>
+<li class="span3 no-margin"><span>Track Code Name:</span>1234567890-098765</li>
+<li class="span3 no-margin"><span>Start Date:</span>01-Jun-14</li>
+<li class="span3 no-margin"><span>End Date:</span>03-Jun-2014</li>
+<li class="span3 no-margin"><span>Approved Budget:</span>10,000.00 USD</li>
+<li class="span3 no-margin"><span>Project Location:</span>Timbucktoo</li>
+<li class="span3 no-margin"><span>Country:</span>US</li>
+<li class="span3 no-margin"><span>State:</span>Alaska</li>
+<li class="span3 no-margin"><span>Postal Code:</span>12345</li>
+<div class="clear"></div>
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="engagements_view_details.html" >Details</a></li>
+<li><a href="engagements_view_details_1.html" >Engagement Owners</a></li>
+<li><a href="engagements_view_details_2.html" >Approvals</a></li>
+<li><a href="engagements_view_details_3.html" >Milestones</a></li>
+<li><a href="engagements_view_details_4.html" >Notes & Attachments</a></li>
+<li><a href="engagements_view_details_5.html" >Track Codes</a></li>
+<li><a href="engagements_view_details_6.html" >History</a></li>
+<li class="active"><a href="engagements_view_details_7.html" >Service Invoices</a></li>
+<li><a href="engagements_view_details_8.html" >Workers</a></li>
+<li><a href="engagements_view_details_9.html" >Service Invoice Admin</a></li>
+<li><a href="engagements_view_details_10.html" >Reductions</a></li>
+<li><a href="engagements_view_details_11.html" >Accruals</a></li>
+
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<!------------------------------------------->
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Totals</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Invoiced:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Approved:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Amount Pending Approval:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Amount Available for Invoicing:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Amount Rejected:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Approved Expenses:</span>100.00 USD</li>
+<li class="span3 no-margin"></li>
+</ul>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Activity</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<table class="table table-striped table-bordered table-hover table-full-width" id="engage_2">
+<thead>
+<tr>
+<th>ID</th>
+<th>Invoice Number</th>
+<th>Engagement Item ID</th>
+<th>PO Number</th>
+<th>Description</th>
+<th>Invoice Amount</th>
+<th>Approved Amount</th>
+<th>Status</th>
+<th>Line Item Vetos</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td><a href="invoice_service_details.html">12345</a></td>
+      <td>12345</td>
+      <td>12345</td>
+      <td>Net App</td>
+     <td>Some decription here</td>
+     <td>100.00 USD</td>
+     <td>100.00 USD</td>
+     <td>Approved</td>
+     <td><a data-toggle="modal" href="#veto">0</a></td>
+  </tr>
+      <tr>
+    <td><a href="invoice_service_details.html">12345</a></td>
+      <td>12345</td>
+      <td>12345</td>
+      <td>Net App</td>
+     <td>Some decription here</td>
+     <td>100.00 USD</td>
+     <td>100.00 USD</td>
+     <td>Waiting for Approval</td>
+     <td><a data-toggle="modal" href="#veto">0</a></td>
+  </tr>
+
+  </tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+<!---------------------------------------->
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+<!---------------------MOdals--------------------->
+<!--modify-->
+<div id="modify" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Modify Engagement</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+
+<li class="span6 no-margin"><span>Start Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap  span11 date-picker"  placeholder="DD/MM/YYYY"></li>
+
+<li class="span6 no-margin"><span>End Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap  span11 date-picker"   placeholder="DD/MM/YYYY"></li>
+
+<li class="span6 no-margin"><span>Additional Funds Request</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span6 no-margin"><span>Business Unit<span class="required">*</span></span><br>
+<select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="span6 no-margin"><span>Service Class</span><br>
+<select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span6 no-margin"><span>Address 1</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Address 2</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>City</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Postal Code</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Country</span><br/>
+<select class="m-wrap span11" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+
+<li class="span6 no-margin"><span>State / Province</span><br/>
+<select class="m-wrap span11" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+
+
+<li class="no-margin span11 "><span>Justification<span class="required">*</span> </span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Please Confirm</strong></h4>
+<div class="alert alert-info">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+<div class="clear"></div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">OK</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+
+<!--veto-->
+<div id="veto" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Line Item Vetos</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" id="engage_3">
+<thead>
+<tr>
+<th>Type</th>
+<th>Title</th>
+<th>Description</th>
+<th>Invoice Line Description</th>
+<th>Category</th>
+<th>ID</th>
+<th>Amount</th>
+<th>Units</th>
+<th>Unit of Measure</th>
+<th>Total</th>
+<th>Veto Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>title</td>
+<td>description</td>
+<td>line description</td>
+<td>category</td>
+<td>12345</td>
+<td>100.00 USD</td>
+<td>1</td>
+<td>1</td>
+<td>100.00</td>
+<td>reason</td>
+</tr>
+<tr>
+<td>type</td>
+<td>title</td>
+<td>description</td>
+<td>line description</td>
+<td>category</td>
+<td>12345</td>
+<td>100.00 USD</td>
+<td>1</td>
+<td>1</td>
+<td>100.00</td>
+<td>reason</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>title</td>
+<td>description</td>
+<td>line description</td>
+<td>category</td>
+<td>12345</td>
+<td>100.00 USD</td>
+<td>1</td>
+<td>1</td>
+<td>100.00</td>
+<td>reason</td>
+</tr>
+
+  </tbody>
+</table>
+
+
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

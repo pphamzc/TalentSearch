@@ -1,0 +1,1607 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Investigations</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugin s/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+				
+				
+</script>
+
+<!--show/hide everify-->
+<script type="text/javascript" language="JavaScript"><!--
+
+//--></script>
+
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>View Investigatons</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Search Investigations</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Account</option>
+<option value="2">Sub-account</option>
+<option value="3">Applicant</option>
+<option value="4">SSN</option>
+
+<option value="9">Component</option>
+<option value="10">Component Status</option>
+
+<option value="5">Investigation Start</option>
+<option value="6">Investigation Completion</option>
+<option value="7">Status </option>
+<option value="8">Outcome</option>
+
+</select>
+
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Account</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Sub-account</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Applicant</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>SSN</span><br /><input type="password" class="m-wrap small" placeholder="Enter last 4 of applicant's SSN"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Outcome</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+  
+  <div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Component</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>Component Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">View Investigations</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li><a href="#">Timesheet View 1</a></li>
+<li><a href="#">Timesheet View 2</a></li>
+<li><a href="#">Timesheet View 3</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1">Sub-account</label>
+<label><input type="checkbox" checked data-column="2">Applicant</label>
+<label><input type="checkbox" checked data-column="3">SSN</label>
+<label><input type="checkbox" checked data-column="4">Investigation Components</label>
+<label><input type="checkbox" checked data-column="5">Investigation Start</label>
+<label><input type="checkbox" checked data-column="6">Investigation Completion</label>
+<label><input type="checkbox" checked data-column="7">Status</label>
+<label><input type="checkbox"		checked data-column="8">Result</label>
+<label><input type="checkbox" checked data-column="9">Actions</label>
+                                         
+</div>
+
+</div><!--END buttons/actions-->
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+    <tr>
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="collapse_expande_all" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+      <th>Sub-account</th>
+      <th>Applicant</th>
+      <th>SSN</th>
+      <th>Investigation Components</th>
+      <th>Investigation Start</th>
+	  				<th>Investigation Completion</th>
+      <th>Status</th>      
+    	 <th>Outcome</th>
+      <th class="no-sort">Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+<td class="aligncenter">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+<i class='icon-chevron-down arrow'></i></a>
+</div>
+</div>
+</td>
+
+<td>On Assignment Corp</td>
+<td>John Doe <a data-toggle="modal" href="#edit_applicant" class="pull-right"><i class="icon-edit bicn"></i>Edit</a></td>
+<td>*** ** 6890</td>
+<td>
+<div class="accordion-group2">
+<div class="accordion-heading2">Component (5) </div>
+<div id="collapse_1" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>Component Name:</span>Component Status</li>
+<li><span>Criminal County Report 7 Year:</span>Not Clear</li>
+<li><span>Drug Test:</span> Clear</li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+
+<td>01-Jan-2015</td>
+<td>01-Jan-2015</td>
+<td>Completed</td>
+<td>Not Clear</td>
+<td  class="toppadding" >
+<div class="actions-collapsed in">
+<a href="javascript:void(0);" class= "popovers " data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#client_report'><i class='icon-search rightmargin5'></i>View Client Report</a><br/>
+<a data-toggle='modal' href='#view_documents'><i class='icon-search rightmargin5'></i>Add / View Documents</a><br/>
+<a data-toggle='modal' href='#result_adverse_action'><i class='icon-plus rightmargin5'></i>Start Adverse Action</a><br/>
+<a data-toggle='modal' href='#change_outcome'><i class='icon-edit rightmargin5'></i>Override Outcome</a><br/>
+<a data-toggle='modal' href='#note'><i class='icon-user rightmargin5'></i>Contact Us</a><br/>
+<a data-toggle='modal' href='#application'><i class='icon-search rightmargin5'></i>View Application</a><br/>
+<a data-toggle='modal' href='#stop_adverse'><i class='icon-remove-circle rightmargin5'></i> Stop Adverse Action</a><br/>
+<a data-toggle='modal' href='#print_pre_adverse'><i class='icon-print rightmargin5'></i> Print Pre-Adverse Action Letter</a><br/>
+<a data-toggle='modal' href='#print_adverse'><i class='icon-print rightmargin5'></i> Print Adverse Action Letter</a><br/>
+<a data-toggle='modal' href='#print_fcra'><i class='icon-print rightmargin5'></i> Print FCRA Document</a><br/>
+<a href='../assets/img/I9.png' target='_blank'><i class='icon-search rightmargin5'></i> View I9 Form</a><br/>
+<a  data-toggle='modal' href='#everify'><i class='icon-search rightmargin5'></i> View Everify Form</a>
+" data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a>
+</div>
+
+<div class="actions-expanded hide actioncol">
+<a data-toggle='modal' href='#client_report'><i class='icon-search rightmargin5'></i>View Client Report</a><br/>
+<a data-toggle='modal' href='#view_documents'><i class='icon-search rightmargin5'></i>Add / View Documents</a><br/>
+<a data-toggle='modal' href='#result_adverse_action'><i class='icon-plus rightmargin5'></i>Start Adverse Action</a><br/>
+<a data-toggle='modal' href='#change_outcome'><i class='icon-edit rightmargin5'></i>Override Outcome</a><br/>
+<a data-toggle='modal' href='#note'><i class='icon-user rightmargin5'></i>Contact Us</a><br/>
+<a data-toggle='modal' href='#application'><i class='icon-search rightmargin5'></i>View Application</a><br/>
+<a data-toggle='modal' href='#adverse'><i class='icon-remove-circle rightmargin5'></i> Stop Adverse Action</a><br/>
+<a data-toggle='modal' href='#print_pre_adverse'><i class='icon-print rightmargin5'></i> Print Pre-Adverse Action Letter</a><br/>
+<a data-toggle='modal' href='#print_adverse'><i class='icon-print rightmargin5'></i> Print Adverse Action Letter</a><br/>
+<a data-toggle='modal' href='#print_fcra'><i class='icon-print rightmargin5'></i> Print FCRA Document</a><br/>
+<a href='../assets/img/I9.png' target='_blank'><i class='icon-search rightmargin5'></i> View I9 Form</a><br/>
+<a  data-toggle='modal' href='#everify'><i class='icon-search rightmargin5'></i> View Everify Form</a>
+
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE-->
+
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--Modals-->
+<!--result_adverse_action_-->
+<div id="result_adverse_action" class="modal hide fade" tabindex="-1" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Adverse Action</h3>
+</div>
+<div class="modal-body">
+<p>Initiate the pre-adverse action process for John Doe? </p>
+<div class="clear"></div>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>
+<strong>Success!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Submit</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--note / contact -->
+<div id="note" class="modal hide fade" tabindex="-1">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Send Note</h3>
+</div>
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Recruiter Name:</span> John Doe</li>
+<li class="span6 no-margin"><span>Recruiter Phone:</span> 123-456-7890</li>
+<li class="span6 no-margin"><span>Recruiter Fax:</span> 123-456-7890</li>
+<li class="span6 no-margin"><span>Recruiter Email:</span><a href="mailto:#">name@company.com</a></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<p> Enter notes for ZeroChaos below, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+<ul class="unstyled">
+<li><span>Applicant Name:</span> Suzie Smith</li>
+<li><span>Pre-Defined Note:</span>
+<select class="m-wrap span6" >
+<option value="0">Select...</option>
+<option value="1">Option 1</option>
+</select>
+</li>
+<li><span>Notes / Comments</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+<li class="no-margin"><span>Share with Client</span><div class="checker"><span><input type="checkbox" value=""></span></div></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Notes History</h4>
+<table class="table table-striped table-bordered table-hover table-full-width ">
+<thead>
+<tr>
+<th>Note</th>
+<th class="span2">Created By</th>
+<th class="span2">Create On</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi </td>
+<td>John Doe</td>
+<td>14-Jun-14</td>
+</tr>
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Send</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--edit_applicant / update information -->
+<div id="edit_applicant" class="modal hide fade" tabindex="-1" style="width:60%; left:35%; max-height: 500px;
+    overflow-y: auto;" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Update Applicant Information</h3>
+</div>
+<div class="modal-body">
+<p>To update the applicant's information, modify any of the fields below and click Sav</p>
+
+ <ul class="unstyled">
+ <li class="span4 no-margin"><span>First Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="John"/></li>
+	 <li class="span4 no-margin"><span>Middle Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Alexander"/></li>
+<li class="span4 no-margin"><span>Last Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Smith"/></li>
+ <li class="span4 no-margin"><span>Suffix:</span><br/><input type="text" class="m-wrap span11"  placeholder="Mr."/></li>
+ <li class="span4 no-margin"><span>Maiden / Former Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Smith"/></li>
+ <li class="span4 no-margin"><span>SSN:</span><br/><input type="text" class="m-wrap span11"  placeholder="*** ** 6789"/></li>
+ <li class="span4 no-margin"><span>Date of Birth:</span><br/><input type="text" class="m-wrap span11 datepicker" placeholder="06/Jan/1965" /></li>
+ <li class="span4 no-margin"><span>Address:</span><br/><input type="text" class="m-wrap span11"  placeholder="123 My Street"/></li>
+ <li class="span4 no-margin"><span>Address 2:</span><br/><input type="text" class="m-wrap span11"  placeholder="Suit 123"/></li>
+ <li class="span4 no-margin"><span>City:</span><br/><input type="text" class="m-wrap span11"  placeholder="Orlando"/></li>
+ <li class="span4 no-margin"><span>State:</span><br/><select class="m-wrap span11">
+<option value="1"> Florida</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+ <li class="span4 no-margin"><span>Postal Code:</span><br/><input type="text" class="m-wrap span11"  placeholder="12345"/></li>
+ <li class="span4 no-margin"><span>Driver's License #:</span><br/><input type="text" class="m-wrap span11"  placeholder="1234567890"/></li>
+ <li class="span4 no-margin"><span>Driver's License State:</span><br/><select class="m-wrap span11">
+<option value="1"> Florida</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+ <li class="span4 no-margin"><span>Additional Information:</span><br/><textarea class="m-wrap span11" rows="2"  placeholder="Additional Information Goes Here"></textarea></li
+></ul>
+<!-- update tic 3915 4.13
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th class="span3">Applicant Info</th>
+<th>Current</th>
+<th>Update To</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>First Name</b></td>
+<td>John</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Last Name</b></td>
+<td>Doe</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Suffix</b></td>
+<td>Mr.</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Maiden / Former Name</b></td>
+<td>John Smith</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>SSN</b></td>
+<td>123-45-6789</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Date of Birth</b></td>
+<td>01-Jan-1980</td>
+<td><input type="text" class="m-wrap datepicker" placeholder="DD/MM/YYYY" /></td>
+</tr>
+
+<tr>
+<td><b>Address</b></td>
+<td>12345 My Street</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Address2</b></td>
+<td>Suite 123</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+
+<tr>
+<td><b>City</b></td>
+<td>Orlando</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>State</b></td>
+<td>FL</td>
+<td><select class="m-wrap">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></td>
+</tr>
+
+<tr>
+<td><b>Postal Code Code</b></td>
+<td>12345</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Driver's License #</b></td>
+<td>1234567890DL</td>
+<td><input type="text" class="m-wrap" /></td>
+</tr>
+
+<tr>
+<td><b>Driver's License State</b></td>
+<td>FL</td>
+<td><select class="m-wrap">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></td>
+</tr>
+
+<tr>
+<td><b>Additional Information</b></td>
+<td>Mattis erat pede donec non lacinia, semper est.</td>
+<td><textarea class="m-wrap" rows="2"></textarea></td>
+</tr>
+</tbody>
+</table>
+-->
+<div class="clear"></div>
+<hr/>
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Update History</div>
+<div class="tools"><a href="javascript:;" class="expand"></a></div>
+</div>
+<div class="portlet-body" style="display:none">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th class="span3">Applicant Info</th>
+<th>Prior Value</th>
+<th>Current</th>
+<th class="span3">Update Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>First Name</b></td>
+<td>Will</td>
+<td>John</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Last Name</b></td>
+<td>Smith</td>
+<td>Doe</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Suffix</b></td>
+<td></td>
+<td>Mr.</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Maiden / Former Name</b></td>
+<td></td>
+<td>John Smith</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>SSN</b></td>
+<td></td>
+<td>*** ** 6890</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Date of Birth</b></td>
+<td></td>
+<td>01-Jan-1980</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Address</b></td>
+<td></td>
+<td>12345 My Street</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Address2</b></td>
+<td></td>
+<td>Suite 123</td>
+<td>01-Jan-2015</td>
+</tr>
+
+
+<tr>
+<td><b>City</b></td>
+<td></td>
+<td>Orlando</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>State</b></td>
+<td></td>
+<td>FL</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Postal Code Code</b></td>
+<td></td>
+<td>12345</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Driver's License #</b></td>
+<td></td>
+<td>1234567890DL</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Driver's License State</b></td>
+<td></td>
+<td>FL</td>
+<td>01-Jan-2015</td>
+</tr>
+
+<tr>
+<td><b>Additional Information</b></td>
+<td></td>
+<td>Mattis erat pede donec non lacinia, semper est.</td>
+<td>01-Jan-2015</td>
+</tr>
+</tbody>
+</table>
+</div><!--end body-->
+</div><!--end box-->
+
+<div class="clear"></div>
+<div class="alert alert-error"><button class="close" data-dismiss="alert"></button>
+<strong>Error!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Request Update</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Save</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--view_documents -->
+<div id="view_documents" class="modal hide fade" tabindex="-1">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Investigation Documents</h3>
+</div>
+<div class="modal-body">
+
+<ul class="unstyled">
+<li><span>Upload Documents</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach span3">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+<li><span>Document Type</span><br><select class="m-wrap span6">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li><span>Comments</span><br><textarea class="m-wrap spann11" rows="2"></textarea></li>
+
+</ul>
+<div class="clear"></div>
+<hr/>
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>File Name</th>
+<th>Document Type</th>
+<th>Comments</th>
+<th>Uploaded On</th>
+<th>Uploaded By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="">123456789099876543211234567890.doc</a></td>
+<td>Public</td>
+<td>some comment goes here</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Save</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--change outcome -->
+<div id="change_outcome" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Change Outcome</h3>
+</div>
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Component</th>
+<th>Outcome</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verification - Employment</td>
+<td>
+<div class="controls">
+<label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios1" value="option1"></span></div>Clear</label>
+<label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios1" value="option2" checked=""></span></div>Not Clear</label>  
+</div></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Approved By (First Name)<span class="required">*</span></span><br><input type="text" class="m-wrap span11" /></li>
+<li class="span6 no-margin"><span>Approved By (Last Name)<span class="required">*</span></span><br><input type="text" class="m-wrap span11" /></li>
+</ul>
+<div class="clear"></div>
+
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Component</th>
+<th>Outcome</th>
+<th>Approved By</th>
+<th>Approved Date</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verification - Employment</td>
+<td>Not Clear</td>
+<td>John Doe</td>
+<td>03-May-2015</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<div class="clear"><br/></div>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>
+<strong>Success!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Update Outcome</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--application -->
+<div id="application" class="modal hide fade" tabindex="-1" style="width:75%; left:35%; max-height: 500px;
+    overflow-y: auto;" >
+<div class="modal-header">
+<div class="pull-right"><img src="../assets/img/logo.png" alt="logo"  style="width:100px!important"/></div>
+<h3>Application</h3>
+</div>
+<div class="modal-body">
+<div class="floatright"><a href="#">Print</a></div>
+<div class="clear"></div>
+<b>On Assignemnet Corp is an equal oppourtunity employer sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</b>
+<div class="clear"></div>
+<hr/>
+
+<h4>Instructions</h4>
+<ol>
+<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
+<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque omnis iste natus error sit.</li>
+<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</li>
+<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <u>accusantium doloremqueomnis iste natus</u> error sit voluptatem accusantium doloremque laudantium</li>
+</ol>
+<div class="clear"></div>
+<hr/>
+
+<h4>Personal Information</h4>
+<ul class="unstyled">
+<li class="span3 no-margin"><span>SSN:</span>123 45 6789</li>
+<li class="span3 no-margin"><span>Date of Birth:</span>01-Jan-1980</li>
+<li class="span3 no-margin"><span>Last Name:</span>Doe</li>
+<li class="span3 no-margin"><span>First Name:</span>John</li>
+<li class="span3 no-margin"><span>Other Name:</span></li>
+<li class="span3 no-margin"><span>Address:</span>12345 My Street Suite 100</li>
+<li class="span3 no-margin"><span>City / State:</span>Orlando, FL</li>
+<li class="span3 no-margin"><span>Postal Code:</span>12345</li>
+<li class="span3 no-margin"><span>Home Phone:</span>123-456-7890</li>
+<li class="span3 no-margin"><span>Alternate Phone:</span>123-456-7890</li>
+<li class="span3 no-margin"><span>Business Phone:</span></li>
+<li class="span3 no-margin"><span>E-mail:</span>myemail@mycompany.com</li>
+</ul>
+
+<div class="clear"></div>
+<hr/>
+<h4>Education</h4>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>High School, College, and other Institutions</th>
+<th>City / State</th>
+<th>Phone</th>
+<th># of Full School Years</th>
+<th>Diploma, Degree, or Certificate Earned</th>
+<th>Major</th>
+<th>GPA</th>
+<th>Graduation Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purdue University</td>
+<td>Lafayette, IN</td>
+<td>123-456-7890</td>
+<td>4</td>
+<td>BA</td>
+<td>Business</td>
+<td>3.7</td>
+<td>06-Jun-14</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+<hr/>
+<h4>Employment History</h4>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Current Employer</th>
+<th>May we Contact</th>
+<th>Employer Name</th>
+<th>Address</th>
+<th>City / State</th>
+<th>Phone</th>
+<th>Dates Employed</th>
+<th>Last Position Held</th>
+<th>Last Supervisor's Name</th>
+<th>Last Base Salary</th>
+<th>Bonus / Commission</th>
+<th>Reason For Leaving</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yes</td>
+<td>Yes</td>
+<td>Disney</td>
+<td>1234 My Street</td>
+<td>Orlando, FL</td>
+<td>123-456-7890</td>
+<td>01-Jan-2014 - 01-Jan-2015</td>
+<td>Manager</td>
+<td>John Doe</td>
+<td>100,000 USD</td>
+<td>50,000 USD</td>
+<td>Meh</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+<hr/>
+<h4>Business References</h4>
+Do not list relatives. 
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Name</th>
+<th>Title</th>
+<th>Relationship</th>
+<th>Phone</th>
+<th>Years Known</th>
+<th>Business or School Name</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Smith</td>
+<td>Supervisor</td>
+<td>Supervisor</td>
+<td>123-456-7890</td>
+<td>5</td>
+<td>Disney</td>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+<hr/>
+
+
+
+<h4>Applicant Statement</h4>
+<p>I herby affirm the the information sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>
+
+<p><b>If I am hired by On Assignement Corped ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</b></p>
+
+<p>I understand sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>
+
+<ul class="unstyled">
+<li class="span8">Signature:________________________________________________________________________________________________</li>
+<li class="span3">Date:____________________________________</li>
+<li class="span12 no-margin">This Employment Application will be considered valid for 30 days from the date of your application. If you wish to be considered for employment after 30 days, please submit a new application.</li>
+</ul>
+
+<div class="clear"></div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Print</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--client_report -->
+<div id="client_report" class="modal hide fade" tabindex="-1" style="width:75%; left:35%; max-height: 500px;
+    overflow-y: auto;">
+<div class="modal-header">
+<div class="pull-right"><img src="../assets/img/logo.png" alt="logo"  style="width:100px!important"/></div>
+<h3>Background Investigation Report</h3>
+
+</div>
+<div class="modal-body">
+<div class="floatright"><a href="#">Print</a></div>
+<div class="clear"></div>
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Prepared For:</span>ZeroChaos Admin</li>
+<li class="span6 no-margin"><span>Prepared Date:</span> Thursday 01-Jan-2014 03:45 PM EST</li>
+<li class="span4 no-margin"><span>Applicant Name:</span>John Doe</li>
+<li class="span4 no-margin"><span>Applicant SSN:</span>*** ** 6789</li>
+<li class="span4 no-margin"><span>Applicant DOB:</span>01-Jan-1980</li>
+<li class="span4 no-margin"><span>Requested By:</span>Suzie Smith</li>
+<li class="span4 no-margin"><span>Phone:</span>123-456-7890</li>
+<li class="span4 no-margin"><span>E-mail:</span>myemail@mycompany.com</li>
+<li class="span4 no-margin"><span>Cost Center:</span>100 - Lab Support</li>
+<li class="span4 no-margin"><span>Contract terms:</span>Billable</li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Summary</h4> 
+<ul class="unstyled span9">
+<li class="span6 no-margin"><span>Initiated On:</span>Thursday 01-Jan-2014 03:45 PM EST</li>
+<li class="span6 no-margin"><span>Prepared by:</span> ZeroChaos</li>
+<li class="span6 no-margin"><span>Address:</span>1234 My Street  Orlando, FL 12345</li>
+<li class="span6 no-margin"><span>Phone:</span>123-456-7890</li>
+</ul>
+<div class="result_box span2"><h5>RESULT</h5><span class="redtext">NOT CLEAR</span></div>
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Component</th>
+<th>Status</th>
+<th>Result</th>
+<th>Date Initiated</th>
+<th>Date Completed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="">Verification - Employment</a></td>
+<td>Complete</td>
+<td><span class="redtext">NOT CLEAR</span></td>
+<td>01-Jan-2014 03:45 PM EST</td>
+<td>01-Jan-2014 03:45 PM EST</td>
+</tr>
+<tr>
+<td><a href="">Criminal County Report 7 Yea</a>r</td>
+<td>Complete</td>
+<td><span class="greentext">CLEAR</span></td>
+<td>01-Jan-2014 03:45 PM EST</td>
+<td>01-Jan-2014 03:45 PM EST</td>
+</tr>
+<tr>
+<td><a href="">Verification - Employment</a></td>
+<td>Complete</td>
+<td><span class="redtext">NOT CLEAR</span></td>
+<td>01-Jan-2014 03:45 PM EST</td>
+<td>01-Jan-2014 03:45 PM EST</td>
+</tr>
+<tr>
+<td><a href="">Criminal County Report 7 Year</a></td>
+<td>Complete</td>
+<td><span class="greentext">CLEAR</span></td>
+<td>01-Jan-2014 03:45 PM EST</td>
+<td>01-Jan-2014 03:45 PM EST</td>
+</tr>
+
+</tbody>
+</table>
+
+<hr/>
+
+<h4>Verification - Employment</h4>
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Component Status:</span>Complete</li>
+<li class="span4 no-margin"><span>Component Result:</span><span class="redtext">NOT CLEAR</span></li>
+<li class="span4 no-margin"><span>Last Updated:</span>01-Jan-2014 03:45 PM EST</li>
+</ul>
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>EMPLOYMENT 1</th>
+<th>Applicant Stated</th>
+<th>Investigation Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Current Employer</th>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<th>May we Contact</th>
+<td>Yes</td>
+<td>Yes (Sed ut perspiciatis unde omnis iste natus error sit voluptatem)</td>
+</tr>
+<tr>
+<th>Employer Name</th>
+<td>Pizza Hut</td>
+<td>Pizza Hut <span class="greentext">(No Variance)</span></td>
+</tr>
+<tr>
+<th>City / State</th>
+<td>Orlando, FL</td>
+<td>Orlando, FL</td>
+</tr>
+<tr>
+<th>Phone</th>
+<td>123-456-7890</td>
+<td>123-456-7890</td>
+</tr>
+<tr>
+<th>Dates Employed</th>
+<td>01-Jan-2014 - 01-Jan-2015</td>
+<td>01-Jan-2014 - 01-Jan-2015 <span class="greentext">(No Variance)</span></td>
+</tr>
+<tr>
+<th>Job Title</th>
+<td>Manager</td>
+<td>Manager <span class="greentext">(No Variance)</span></td>
+</tr>
+<tr>
+<th>Supervisor</th>
+<td>John Doe</td>
+<td>John Doe</td>
+</tr>
+<tr>
+<th>Salary</th>
+<td></td>
+<td><span class="redtext">Could Not Verify</span></td>
+</tr>
+<tr>
+<th>Bonus</th>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>Verified By</th>
+<td></td>
+<td>John Doe</td>
+</tr>
+
+<tr>
+<th>Date Verified</th>
+<td></td>
+<td>01-Jan-2014</td>
+</tr>
+<tr>
+<th>Reason For Leaving</th>
+<td></td>
+<td><span class="redtext">Could Not Verify</span></td>
+</tr>
+<tr>
+<th>Eligible for Rehire</th>
+<td></td>
+<td>N/A per company policy</td>
+</tr>
+<tr>
+<th>Comments</th>
+<td></td>
+<td>Sed ut perspiciatis unde omnis iste natus</td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+<hr/>
+<h4 style="display:inline">Criminal County Report 7 Year</h4><div class="pull-right"><a href="#">View Criminal Glossary</a></div>
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Component Status:</span>Complete</li>
+<li class="span4 no-margin"><span>Component Result:</span><span class="redtext">NOT CLEAR</span></li>
+<li class="span4 no-margin"><span>Last Updated:</span>01-Jan-2014 03:45 PM EST</li>
+</ul>
+<div class="clear"></div>
+<div class="span6 no-margin">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>RECORD 1</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Offense</th>
+<td>No</td>
+</tr>
+<tr>
+<th>Jursidiction</th>
+<td>Orange County Florida</td>
+</tr>
+<tr>
+<th>Charge</th>
+<td>DUI - 2nd Offence</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="span6">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>RECORD 2</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Disposition Date</th>
+<td>01-Jan-2014</td>
+</tr>
+
+<tr>
+<th>Disposition</th>
+<td>Guilty</td>
+</tr>
+
+<tr>
+<th>Charge Type</th>
+<td>Misdemeanor</td>
+</tr>
+
+<tr>
+<th>Disclosed On</th>
+<td>Unknown</td>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>DOB, Name</td>
+</tr>
+
+<tr>
+<th>Offense</th>
+<td>Yes</td>
+</tr>
+<tr>
+<th>Jursidiction</th>
+<td>Orange County Florida</td>
+</tr>
+
+<tr>
+<th>Case #</th>
+<td>CR 123456789</td>
+</tr>
+
+<tr>
+<th>Date of Infraction</th>
+<td>01-Jan-2014</td>
+</tr>
+
+<tr>
+<th>Charge</th>
+<td>DUI - 2nd Offense  
+<div class="accordion-group2 pull-right">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_11">
+<i class='icon-chevron-down arrow'></i></a>
+</div>
+</div>
+<div class="accordion-group2">
+<div id="collapse_11" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>Guilty</span></li>
+<li><span>Misd</span></li>
+<li><span>Sentence Includes:</span>
+      <ul class="unstyled">
+      <li>State Fine of <div class="pull-right">100.00 USD</div></li>
+      <li>Probation Fine of <div class="pull-right">100.00 USD</div></li>
+      <li>Jail Sentence<div class="pull-right">90 Days</div></li>
+      <li>State Fine of <div class="pull-right">100.00 USD</div></li>
+      </ul>
+</li>
+<li><span>Name and DOB Match</span></li>
+
+</ul>
+</div>
+</div>
+</div>
+
+</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+<div class="clear"></div>
+<hr/>
+<p><b>Please Note:</b>  Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde omnis iste natus Sed ut perspiciatis unde omnis iste natus</p>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Print</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--stop adverse -->
+<div id="stop_adverse" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Adverse Action</h3>
+</div>
+<div class="modal-body">
+<p>Click 'Stop Adverse Action Process' if the applicant's issue is resolved.</p>
+<ul class="unstyled">
+<li><span>Resolution Reason</span><br><textarea class="m-wrap spann11" rows="2"></textarea></li>
+</ul>
+<div class="clear"></div>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>
+<strong>Success!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button data-dismiss="modal" aria-hidden="true"  class="bluebtn">Cancel</button>
+<button type="submit "class="greenbtn">Stop Adverse Action Process</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--print adverse -->
+<div id="print_adverse" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Print Pre-Adverse Action Letter</h3>
+</div>
+<div class="modal-body">
+<p>
+12-Mar-2015<br/>
+John Doe<br/>
+1234 My Street<br/>
+My City, FL 12345<br/>
+</p>
+
+<p>Dear John Doe</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <b>sunt in culpa qui officia deserunt mollit anim id est laborum</b>.
+</p>
+
+
+<p>
+You may contact us ipsum dolor sit amet, consectetur adipiscing elit<br/>
+sed do eiusmod tempor incididunt<br/>
+ut labore et dolore magna aliqua<br/>
+enim ad minim veniam<br/>
+</p>
+
+<p>
+Sincerely, <br/>
+ZeroChaos Sub Account
+</p>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button class="greenbtn">Print</button>
+</div>
+</div><!--end modal-->
+
+<!--print pre adverse -->
+<div id="print_pre_adverse" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Print Pre-Adverse Action Letter</h3>
+</div>
+<div class="modal-body">
+<p>
+12-Mar-2015<br/>
+John Doe<br/>
+1234 My Street<br/>
+My City, FL 12345<br/>
+</p>
+
+<p>Dear John Doe</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <b>sunt in culpa qui officia deserunt mollit anim id est laborum</b>.
+</p>
+
+
+<p>
+You may contact us ipsum dolor sit amet, consectetur adipiscing elit<br/>
+sed do eiusmod tempor incididunt<br/>
+ut labore et dolore magna aliqua<br/>
+enim ad minim veniam<br/>
+</p>
+
+<p>
+Sincerely, <br/>
+ZeroChaos Sub Account
+</p>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button class="greenbtn">Print</button>
+</div>
+</div><!--end modal-->
+
+
+<!--print fcra -->
+<div id="print_fcra" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Print Pre-Adverse Action Letter</h3>
+</div>
+<div class="modal-body">
+<p>
+12-Mar-2015<br/>
+John Doe<br/>
+1234 My Street<br/>
+My City, FL 12345<br/>
+</p>
+
+<p>Dear John Doe</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <b>sunt in culpa qui officia deserunt mollit anim id est laborum</b>.
+</p>
+
+
+<p>
+You may contact us ipsum dolor sit amet, consectetur adipiscing elit<br/>
+sed do eiusmod tempor incididunt<br/>
+ut labore et dolore magna aliqua<br/>
+enim ad minim veniam<br/>
+</p>
+
+<p>
+Sincerely, <br/>
+ZeroChaos Sub Account
+</p>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button class="greenbtn">Print</button>
+</div>
+</div><!--end modal-->
+
+
+<!--I9 -->
+<div id="i9" class="modal hide fade" tabindex="-1" style="width:40%">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>View I9 Form</h3>
+</div>
+<div class="modal-body">
+<img src="../assets/img/I9.png" alt=""/>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<!--<button type="submit" class="bluebtn">Cancel</button>
+<button  data-dismiss="modal" aria-hidden="true" class="greenbtn">Send</button>-->
+</div>
+</form>
+</div><!--end modal-->
+
+
+<!--everify -->
+<div id="everify" class="modal hide fade" tabindex="-1">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Everify Case Manager</h3>
+</div>
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6"><span>Name:</span>John Doe</li>
+<li class="span6"><span>Case Number:</span>12345</li>
+
+</ul>
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Status</th>
+<th>Changed By</th>
+<th>Staus Changed On</th>
+</tr>
+</thead>
+  <tbody>
+    <tr>
+      <td>Active</td>
+      <td>USCIS E-Verify</td>
+      <td>08-Jun-14</td>
+  </tr>
+  </tbody>
+</table>
+<div class="clear"></div>
+This case has been deferred to DHS.
+<p><b>You must print out</b> lorem ipsum dolor sit amet,<a href="#" target="_blank"> consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#" target="_blank">nisi</a> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button class="greenbtn">Print</button>
+</div>
+</div><!--end modal-->
+
+<!--#include file="_advanced_search.html" -->
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

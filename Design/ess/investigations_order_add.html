@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Order Additional Investigation - Select Investigation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugin s/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>Order Additional Investigaton</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<ul class="nav nav-tabs approvals">
+<li class="active"><a href="investigations_order_add.html">STEP 1 - Select Investigation</a></li>
+<li><a href="investigations_order_add_2.html">STEP 2 - Select Components</a></li>
+<li><a href="investigations_order_add_3.html" >STEP 3 - Enter Component Details</a></li>
+<li><a href="investigations_order_add_4.html" >STEP 4 - Submit Order</a></li>
+</ul>
+
+
+<div class="portlet box">
+<div class="portlet-body">
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Important Message</div>
+</div>
+
+<div class="portlet-body">
+<p>Components can only be added to investigations that were created within the prior 30 days. You will be unable to add components to investigations older than 30 days. Instead, please create a new investigation</p>
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+</div><!-- END body-->
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Search Investigations</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Account</option>
+<option value="2">Sub-account</option>
+<option value="3">Applicant Name</option>
+<option value="4">SSN (last 4)</option>
+<option value="5">Date of Birth</option>
+<option value="6">Investigation Components</option>
+<option value="7">Order ID</option>
+<option value="8">Date Added</option>
+</select>
+
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Account</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Sub-account</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Applicant Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>SSN</span><br /><input type="password" class="m-wrap small" placeholder="Enter last 4 of applicant's SSN"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Investigation Components</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Order ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+  
+<div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+</ul><!--end hidden ul-->
+
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption"> Investigations</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+<div class="portlet-body">
+
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+    <tr>
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="collapse_expande_all" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+      <th>Account</th>
+      <th>Sub-account</th>
+      <th>Applicant Name</th>
+      <th>Investigation Components</th>
+      <th>Order ID</th>      
+    	 <th>Date Added</th>
+      <th class="no-sort">Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+<td class="aligncenter">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+<i class='icon-chevron-down arrow'></i></a>
+</div>
+</div>
+</td>
+<td>On Assignment Corp</td>
+<td>On Assignment Corp</td>
+<td>
+<div class="accordion-group2">
+<div class="accordion-heading2">John Doe <a data-toggle="modal" href="#edit_applicant" class="pull-right"><i class="icon-edit bicn"></i>Edit</a></div>
+<div id="collapse_1" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>SSN:</span>*** ** 6890</li>
+<li><span>DOB:</span>01-Jan-1950</li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="actions-collapsed in">
+Component (5) 
+</div>
+<div class="actions-expanded hide actioncol">
+<ul class="unstyled">
+<li>Component (5)</li>
+<li><span>Component Name:</span>Component Status</li>
+<li><span>Criminal County Report 7 Year:</span>Not Clear</li>
+<li><span>Drug Test:</span> Clear</li>
+</ul>
+</div>
+</td>
+<td>123ABC</td>
+<td>01-Jan-2015</td>
+<td><a href="investigations_order_add_2.html"><i class="icon-plus rightmargin5"></i>Add Component</a></td>
+</tr>
+</tbody>
+</table>
+
+
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX-->
+
+
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="investigations_add_2.html" class="greenbtn">  Next</a> 
+</div>
+</div>
+</div><!--end box-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_glossary.html" -->
+<!--#include file="_advanced_search.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

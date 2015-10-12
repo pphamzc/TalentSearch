@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Supplier Invoice</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+ 
+ <!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+   
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>View Supplier Invoice</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box ">
+<div class="portlet-title">
+<div class="caption">Search Supplier Invoice</div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+                    <option value="0">Select...</option>
+                    <option value="1">Invoice Num</option>
+                    <option value="2">Invoice Description</option>
+                    <option value="3">Invoice Date</option>
+                    <option value="4">Amount</option>
+                    <option value="5"> Remittance Details</option>
+					  <option value="6">Resource Name </option>
+
+                    <option value="7">Check Date</option>
+					  <option value="8">Est Due Date</option>
+                    <option value="9">Updated Due Date</option>
+                    <option value="10">Period Ending Date</option>
+             		  <option value="11">Service Invoice ID</option>
+					  <option value="12">Service Invoice Num</option>
+              		  <option value="13">Status</option>
+					<option value="14">Supplier Invoice</option>
+
+</select>
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Invoice Num</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Invoice Description</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Remittance Details</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Resource Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+
+</div>
+
+
+
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ 
+ 
+ <div id="8" class="hiddenMenu">
+ <li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  
+  <div id="11" class="hiddenMenu">
+  <li class="span3 no-margin"><span>Service Invoice ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+  <div id="12" class="hiddenMenu">
+  <li class="span3 no-margin"><span>Service Invoice Num</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="13" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="14" class="hiddenMenu">
+  <li class="span3 no-margin"><span>Supplier Invoice</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+
+
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+
+
+<div class="row-fluid">
+<div class="span12">
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">View Payment</div>
+</div><!--end title-->
+
+<div class="portlet-body ">
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li><a href="#">Timesheet View 1</a></li>
+<li><a href="#">Timesheet View 2</a></li>
+<li><a href="#">Timesheet View 3</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1">Invoice Num</label>
+<label><input type="checkbox" checked data-column="2">Invoice Description</label>
+<label><input type="checkbox" checked data-column="3">Invoice Date</label>
+<label><input type="checkbox" checked data-column="4">Amount</label>
+<label><input type="checkbox" checked data-column="5">Remittance Details</label>
+<label><input type="checkbox" 		  data-column="6">Resource Name</label>
+<label><input type="checkbox" checked data-column="7">Check Date</label>
+<label><input type="checkbox" checked data-column="8">Est Due Date</label>
+<label><input type="checkbox" checked data-column="9">Updated Due Date</label>
+<label><input type="checkbox" 		  data-column="10">Period Ending Date</label>
+<label><input type="checkbox" 		  data-column="11">Service Invoice ID</label>
+<label><input type="checkbox" 		  data-column="12">Service Invoice Num</label>
+<label><input type="checkbox" checked data-column="13">Status</label>
+<label><input type="checkbox" checked data-column="14">Supplier Invoice</label>  
+<label><input type="checkbox" checked data-column="15">Actions</label>                                        
+                                      
+</div>
+</div><!--END buttons/actions-->
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+<thead>
+<tr>                                          
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="collapse_expande_all" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+<th>Invoice Num</th>
+<th>Invoice Description</th>
+<th>Invoice Date</th>
+<th>Amount</th>                                            
+<th>Remittance Details</th>                                                                                     
+<th class="hidden-default">Resource Name</th>                                            
+<th>Check Date</th>  
+<th>Est Due Date</th>
+<th> Updated Due Date</th>
+<th class="hidden-default">Period Ending Date</th>
+<th class="hidden-default">Service Invoice ID</th> 
+<th class="hidden-default">Service Invoice Num </th>                                            
+<th>Status</th>   
+<th>Supplier Invoice</th>                                            
+<th class="no-sort span2">Action</th>                                            
+</tr>
+
+</thead>
+<tbody>
+                                        
+<tr>
+<td class="aligncenter">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+<i class='icon-chevron-down arrow'></i> </a>
+</div>
+</div>
+</td>
+
+<td>
+<div class="accordion-group2">
+<div class="accordion-heading2"><a href="#">ZNST04451594</a>
+<a data-toggle="modal" href="#rapidpay"  class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Eligible for Rapid Pay - Click to Submit"><i class="icon-bolt ricn"></i></a> <i class="icon-asterisk ricn popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Rapid Pay Submitted for Approval" ></i> </div>
+<div id="collapse_1" class="accordion-body2 collapse"></div>
+<div id="collapse_1" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>Timesheet ID:</span> <a href="../supplier/timesheet_view.html">9301145</a></li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+
+<td>6/29/2014 Dreon,Vivian</td>
+<td>28-Jun-14</td>
+<td>1,094.80 USD</td>
+
+<td>
+<div class="actions-collapsed in">EFTGJ01933971</div>
+<div class="actions-expanded hide">EFTGJ01933971 <br/> 20-Jul-14</div>
+</td>
+
+<td>John Doe</td>
+<td>08-Jul-14</td>
+<td>08-Jul-14</td>
+<td>20-Jul-14</td> 
+<td>07-Jul-14</td>
+<td><a href="../supplier/timesheet_view.html">9301145</a></td>
+<td>Generic_123_May_2014</td>                                      
+<td>Waiting for Client Payment</td>
+<td><input type="text" value="" class="m-wrap small"></td>                                            
+ <td  class="toppadding" >
+<div class="actions-collapsed in">
+<a href="javascript:void(0);" class= "popovers " data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-save bicn'></i>  Save</a><br/>
+<a href='#'><i class='icon-edit gicn'></i>  Edit</a><br/>
+" data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a>
+</div>
+
+<div class="actions-expanded hide">
+<a href='#'><i class='icon-save bicn'></i>  Save</a><br/>
+<a href='#'><i class='icon-ok gicn'></i>  Edit</a><br/>
+</div>
+</td>
+                                          
+</tr>                                        
+                                       
+</tbody>
+</table><!--END TABLE-->
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX BLUE-->
+
+</div><!--END SPAN-->
+</div><!-- END ROW -->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        
+        <!--rapid pay-->
+<div id="rapidpay" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Rapid Pay</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th></th>
+<th>Terms</th>
+<th>Daily Factor</th>
+<th>Original Pay Amount</th>
+<th>Fee Amount</th>
+<th>Pay Amount</th>
+<th>Updated Due Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><label class="radio"><div class="radio"><span class=""><input type="radio" name="optionsRadios2" value="option1" ></span></div></label></td>
+<td>Immediate</td>
+<td>0.1581%</td>
+<td>1,000.00 USD</td>
+<td>1,000.00 USD</td>
+<td>1,000.00 USD</td>
+<td>01-Jun-14</td>
+</tr>
+<tr>
+<td><label class="radio"><div class="radio"><span class=""><input type="radio" name="optionsRadios2" value="option2"></span></div></label></td>
+<td>10 Days</td>
+<td>0.1581%</td>
+<td>1,000.00 USD</td>
+<td>1,000.00 USD</td>
+<td>1,000.00 USD</td>
+<td>01-Jun-14</td>
+</tr>
+
+  </tbody>
+</table>
+<hr/>
+<h4>RAPID PAY OPTIONS - Reduced Payment Terms for Additional Fee</h4>
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+<div class="control-group">
+<div class="controls">
+<label class="radio"><div class="radio"><span class=""><input type="radio" name="optionsRadios1" value="option1" ></span></div>Accept</label>
+<label class="radio"><div class="radio"><span class="checked"><input type="radio" name="optionsRadios1" value="option2" ></span></div>Decline</label>  
+</div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Submit</button>
+</div>
+
+
+</div><!--end modal-->
+
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_save_as.html" -->
+        <!--#include file="_edit_views.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

@@ -1,0 +1,1224 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Requisition Candidate Details</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"  type="text/css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<style type="text/css">
+.dataTables_scrollBody::-webkit-scrollbar { width: 5px;}
+.dataTables_scrollBody::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
+.dataTables_scrollBody::-webkit-scrollbar-thumb { background-color: #707070;}
+
+/*.dataTables_scrollHeadInner{width:auto!important}*/
+.dataTable {margin-top: 0;}
+.table.table-full-width {margin: 0; }
+</style>
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span8">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Requisition Candidate Details</li>
+</ul>
+</div><!--END SPAN-->
+
+<div class="span4">
+<ul class="breadcrumb pull-right">
+<li><a href="../talent_cloud/dossier.html" class="bluebtn">My Dossier</a></li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Detail</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+
+<li class="span3 no-margin"><span>Req Name:</span> ABCDEFG Name <a href="#">(12345)</a></li>
+<li class="span3 no-margin"><span>Project Name:</span>ABCDEFG Name  </li>
+<li class="span3 no-margin"><span>Start Date:</span>04-Oct-14</li>
+<li class="span3 no-margin"><span>End Date:</span>04-Oct-15</li>
+
+<li class="span3 no-margin"><span>Work Location:</span>Louisville KY</li>
+<li class="span3 no-margin"><span>Target Bill Rate:</span>10.00 USD (Hourly)</li>
+<li class="span3 no-margin"><span>Max Bill Rate:</span>10.00 USD (Hourly)</li>
+<li class="span3 no-margin"><span>Lowest Bill Rate Submitted:</span>10.00 USD</li>
+<li class="span3 no-margin"><span>Estimated Spend:</span>1,000.00 USD </li>
+
+</ul>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Candidate Detail</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="../supplier/resource_add_candidates.html" class="greenbtn_sm rightmargin ">Edit Candidate</a>
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span12 no-margin"><span>Candidate Summary:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+<li class="span3 no-margin"><span>First Name:</span> Suzie</li>
+<li class="span3 no-margin"><span>Middle Name:</span> Sam</li>
+<li class="span3 no-margin"><span>Last Name:</span>Smith</li>
+<li class="span3 no-margin"><span>Customer Name:</span>Net App</li>
+</ul>
+
+<div class="clear"></div>
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View More Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Last 5 of National ID:</span>12345</li>
+<li class="span3 no-margin"><span>Month of Birth:</span>Aug</li>
+<li class="span3 no-margin"><span>Date of Birth:</span>1</li>
+<li class="span3 no-margin"><span>E-mail:</span>email@company.com</li>
+<li class="span3 no-margin"><span>Phone:</span>123-456-7890</li>
+<li class="span3 no-margin"><span>Alternate Phone:</span>098-765-4321</li>
+<li class="span3 no-margin"><span>Address 1:</span>111 My Street</li>
+<li class="span3 no-margin"><span>Address 2:</span></li>
+<li class="span3 no-margin"><span>Postal Code:</span>12345</li>
+<li class="span3 no-margin"><span>City:</span>My City</li>
+<li class="span3 no-margin"><span>State:</span>MN</li>
+<li class="span3 no-margin"><span>Country:</span>US</li>
+<li class="span3 no-margin"><span>Status:</span><span class="status">Submitted</span></li>
+<li class="span3 no-margin"><span>Date Available:</span>01-Jun-14</li>
+<li class="span3 no-margin"><span>Employee ID:</span>12345</li>
+<li class="span3 no-margin"><span>Preferred Job / Skill:</span>Net Admin</li>
+<li class="span3 no-margin"><span>Pay Rate:</span>10.00 USD (Hourly)</li>
+<li class="span3 no-margin"><span>Bill Rate Submitted:</span>10.00 USD </li>
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span3 no-margin"><span>UDF 1:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 2:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 3:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 4:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 5:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 6:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 7:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 8:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 9:</span> some text here</li>
+<li class="span3 no-margin"><span>UDF 10:</span> some text here</li>
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Tenure</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Current Length of Service (Days)</th>
+<th>Days Since Client Last Assignment</th>
+<th>Division</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>10</td>
+<td>Division Name here</td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+<table class="table table-full-width">
+<tbody>
+<tr>
+<td><br><b>Available</b>&nbsp;<input type="checkbox" value="" checked disabled></td>
+<td><br><b>Former FTE</b>&nbsp;<input type="checkbox" value="" disabled></td>
+<td><br><b>Former Contractor</b>&nbsp;<input type="checkbox" value="" checked disabled></td>
+<td><br><b>Former Sub Contractor</b>&nbsp;<input type="checkbox" value="" disabled></td>
+<td><br><b>Travel</b>&nbsp;<input type="checkbox" value="" disabled></td>
+<td><br><b>Open to Direct Hire</b>&nbsp;<input type="checkbox" value="" checked disabled></td>
+<td><br><b>Relocate</b>&nbsp;<input type="checkbox" value="" disabled></td>
+</tr></tbody>
+</table>
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Resume</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Resume:</span><a href="#">myresume.doc</a></li>
+</ul>
+<div class="clear"></div>
+<div class="scroller" style="height:150px;" data-always-visible="1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+<br/><br/>
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+<br/><br/>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+<br/><br/>
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+<br/><br/>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
+               
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Attachments </div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>File Name</th>
+<th>Description</th>
+<th>Date Uploaded</th>
+<th>Uploaded By</th>
+<th>Resume</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td>Yes</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td>123456789099876543211234567890.doc</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
+<td>06-Jun-14</td>
+<td>John Doe</td>
+<td>No</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> View</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Notes</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some random note goes here</td>
+<td>John Doe</td>
+<td>06-Jun-14</td>
+<td><a href="" ><i class='icon-trash'></i> Delete</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Submissions</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_1">
+<thead>
+<tr>
+<th>Customer</th>
+<th>Req ID</th>
+<th>Req Name</th>
+<th>Project Name</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Target Rate</th>
+<th>Unit</th>
+<th>Client OT Rate</th>
+<th>Status</th>
+<th>Interview</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+<td>Net App</td>
+<td><a href="#">12345</a></td>
+<td><a href="#">req name 123abc</a></td>
+<td>project name 123abc</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>10.00 USD</td>
+<td>Hourly</td>
+<td>10.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td ><a href="#interview" data-toggle="modal">Yes</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#activity' data-toggle='modal'>Track Activities</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#'>Extend Offer</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+<!--<hr/>
+<h4>Submission History</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Status</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Reason</th>
+<th>Notes</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cancelled</td>
+<td>02-Aug-14 1:06:31 AM EST</td>
+<td>John Doe</td>
+<td>Some reason here</td>
+<td>Some notes here</td>
+</tr>
+<tr>
+<td>Pending</td>
+<td>02-Aug-14 1:06:31 AM EST</td>
+<td>John Doe</td>
+<td>Some reason here</td>
+<td>Some notes here</td>
+</tr>
+
+</tbody>
+</table>-->
+<div class="clear"></div>
+
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Competencies</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Minimum Years Experience</th>
+<th>Competency Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Comp Name Here</td>
+<td>2 yrs</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>                                                  
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Certifications</div><div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Certification Name</th>
+<th>Issuing Authority</th>
+<th>Certification Number</th>
+<th>Issue Date</th>
+<th>Expiration Date</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Cert Name Here</td>
+<td>Some Name Here</td>
+<td>12345</td>
+<td>08-Aug-14</td>
+<td>08-Aug-15</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'>View Attachment</a><br/>
+<a href='#cert_history' data-toggle='modal'>View History</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>                                                  
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Approval Steps</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Order</th>
+<th>Step Name</th>
+<th>Approver</th>
+<th>Status</th>
+<th>Approved By</th>
+<th>Approved On</th>
+<th>Actions</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>Finance</td>
+      <td><select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></td>
+      <td>Notified</td>
+      <td>Misc </td>
+      <td>08-Jun-14 1:00:00 PM EST</td>
+<td class="toppadding"><a href="javascript:void(0);" class= "popovers " data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#approve'><i class='icon-ok gicn'></i>  Approve</a><br/>
+<a data-toggle='modal' href='#decline'><i class='icon-remove ricn'></i>  Decline</a><br/>
+<a data-toggle='modal' href='#need_more'><i class='icon-question-sign bicn'></i>  Need More Info</a><br/>
+<a  href='#'><i class='icon-share bicn'></i>  Resend</a><br/>
+<a  href='#'><i class='icon-save gicn'></i>  Save</a>
+" data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+  </tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Approval History</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Step Name</th>
+<th>Status</th>
+<th>Name</th>
+<th>Email</th>
+<th>Approval Method</th>
+<th>Approved On</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>Finance</td>
+      <td>Pending</td>
+      <td>Notified</td>
+      <td><a href="mailto:#">myname@myemail.com</a></td>
+<td><a href="#" class="popovers" data-trigger="hover" data-container="body" data-placement="top" data-html="true" data-content="<ul class='unstyled'>
+      <li><span>Division Name:</span> 12345678</li>
+      <li><span>Division IP:</span> 12345678</li>
+      <li><span>Division Platform:</span> Win</li>
+      <li><span>Browser String:</span> Mozilla</li>
+      <li><span>Browser Language:</span> En-US</li>
+       <li><span>Browser Type:</span> Firefox</li>
+      <li><span>Browser Version:</span> 10</li>
+						<li><span>Status Change On:</span> 10-May-2015</li>
+      </ul>" >Portal</a></td>
+      <td>08-Jun-14 1:00:00 PM EST</td>
+      </tr>
+  </tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX --> 
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--submission-->
+<div id="submission" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Submission History</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Status</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Reason</th>
+<th>Notes</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>Submitted</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>Some Reason Here</td>
+<td>Misc note goes here</td>
+  </tr>
+
+  </tbody>
+</table>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--interview-->
+<div id="interview" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Interview</h3></div>
+
+<div class="modal-body">
+<h4>Interview Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Type</th>
+<th>Date / Time</th>
+<th>Duration</th>
+<th>Location / Phone</th>
+<th>Interviewer Name</th>
+<th>Notes</th>
+<th>Last Modified</th>
+<th>Status</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Person</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>60 Minutes</td>
+<td>Main St Office 122L</td>
+<td>John Doe</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Client requested</td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr/>
+
+<h4>Counter Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Proposed Rate</th>
+<th>Notes</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100.00 USD</td>
+<td>Some misc notes go here</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> Actions not provided</a><br/>
+<a href='#'><i class='icon-trash'></i> Need Actions</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr/>
+
+<h4>Request Interview</h4>
+<ul class="unstyled">
+<li class="no-margin"><span>Interviewer Name<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="no-margin"><span>Interview Type<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+
+<li class="span6 no-margin"><span>Interview Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap date-picker" name="text2"   placeholder="DD/MM/YYYY"></li>
+
+<li class="no-margin"><span>Interview Duration</span><br/><input type="text" name=""  class="m-wrap"/></li>
+
+<li class="no-margin"><span>Interview Time</span><br/><input type="text" name=""  class="m-wrap"/></li>
+
+<li class="no-margin"><span>Interview Time Zone<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="no-margin"><span>Interview Location / Phone</span><br/><input type="text" name=""  class="m-wrap "/></li>
+<li class="no-margin"><span>Notes</span><br/><textarea class="m-wrap span6" rows="3"></textarea></li>
+
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Please Confirm</strong></h4>
+<div class="alert alert-info">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Interview Date:</span> 13-Aug-14</li>
+<li class="span3 no-margin"><span>Interview Time:</span> 1:00 AM</li>
+<li class="span3 no-margin"><span>Interview Time Zone:</span> EST</li>
+<li class="span3 no-margin"><span>Interview Type:</span>In Person</li>
+</ul>
+<div class="clear"></div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Reset</button>
+<button type="submit" class="greenbtn">Send</button>
+<button type="submit" class="greenbtn">OK</button>
+</div>
+
+</div><!--end modal-->
+<!--counter-->
+<div id="counter" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Counter Offer</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>New Proposed Rate</span><br/><input type="text" name="text1"  class="m-wrap"/></li>
+<li class="no-margin"><span>Notes</span><br/><textarea class="m-wrap span5" rows="3"></textarea></li>
+
+</ul>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Send</button>
+</div>
+
+</div><!--end modal-->
+<!--activity-->
+<div id="activity" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>View Transaction Activity</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Req Name:</span>Project Coordinator</li>
+<li class="span6 no-margin"><span>Project Name:</span>Micron DIMM</li>
+<li class="span6 no-margin"><span>Start Date:</span>14-Jun-14</li>
+<li class="span6 no-margin"><span>End Date:</span>14-Jun-15</li>
+<li class="span6 no-margin"><span>Work Location:</span>Sunnydale, CA</li>
+<li class="span6 no-margin"><span>Supplier:</span>TalentBurst</li>
+<li class="span6 no-margin"><span>Candidate Name:</span>John Doe</li>
+<li class="span6 no-margin"><span>Target Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Max Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Lowest Bill Rate Submitted:</span>35.00 USD</li>
+<li class="span6 no-margin"><span>Max Markeup:</span>38.00%</li>
+<li class="span6 no-margin"><span>Markup:</span>35.00%</li>
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--notes-->
+<div id="notes" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Add Notes</h3></div>
+
+<div class="modal-body">
+<h4>View Notes</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="span5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td><a href="#"><i class="icon-trash bicn"></i> Delete</a></td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+<hr/>
+<h4>Add Notes</h4>
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span5" rows="3"></textarea></li>
+
+<li class="no-margin span3"><span>Share with Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>Share with Manager</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Manager</span><input type="checkbox" value=""></li>
+
+</ul>
+<div class="clear"></div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+<!--cert history-->
+<div id="cert_history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Certification History</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin span3"><span>Candidate:</span>John Doe</li>
+<li class="no-margin span3"><span>Certification:</span>Some Name here</li>
+</ul>
+
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Certification Number</th>
+<th>Expiration Date</th>
+<th>Status</th>
+<th>Modified By</th>
+<th>Modified Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12344</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Active</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+<tr>
+<td>12344</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Active</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+<tr>
+<td>12344</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Active</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+<tr>
+<td>12344</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Active</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Certification Attachment</th>
+<th>Modification Date</th>
+<th>Modified Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#">1234567890.pdf</a></td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+
+
+<!--#include file="_action_decline.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+	<script src="../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="../assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+
+
+    <!--#include file="_footer.html" -->

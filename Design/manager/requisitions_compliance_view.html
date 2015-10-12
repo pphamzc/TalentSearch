@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Compliance Requisitions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Compliance Requisitions </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box ">
+<div class="portlet-title blue3border">
+<div class="caption">Search Compliance Requisitions</div>
+</div>
+
+<div class="portlet-body ">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Requisition Summary</option>
+<option value="2">Requisition Name </option>
+<option value="3">Requisition ID</option>
+<option value="4">Estimated Cost</option>
+<option value="5">Updated Date</option>
+<option value="6">Service Provider</option>
+<option value="7">Start Date</option>
+<option value="8">End Date</option>
+<option value="9">Compliance Required</option>
+<option value="10">Status</option>
+<option value="11">Evaluation Status</option>
+</select>
+</li>
+</ul>
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Requsition Summary</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Requsition Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Requsition ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Service Provider</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="7" class="hiddenMenu">
+ <li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="8" class="hiddenMenu">
+ <li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Compliance Required</span><br />
+<select class="m-wrap"  >
+<option value="0">Select...</option>
+<option value="1">True</option>
+<option value="2">False</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>  
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="11" class="hiddenMenu">
+<li class="span3 no-margin"><span>Evaulation Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>  
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Compliance Requisitions</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li><a href="#">Timesheet View 1</a></li>
+<li><a href="#">Timesheet View 2</a></li>
+<li><a href="#">Timesheet View 3</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1" >Requisition Summary</label>
+<label><input type="checkbox" 		  data-column="2" >Updated Date</label>
+<label><input type="checkbox" checked data-column="3" >Service Provider</label>
+<label><input type="checkbox" checked data-column="4" >Start Date</label>
+<label><input type="checkbox" 		  data-column="5" >End Date</label>
+<label><input type="checkbox" checked data-column="6" >Compliance Required</label>
+<label><input type="checkbox" checked data-column="7" >Status</label>
+<label><input type="checkbox" checked data-column="8" >Evaluation Status</label>
+
+</div>
+</div><!--END buttons/actions-->
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+<thead>
+<tr>
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="collapse_expande_all" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+
+<th>Requisition Summary</th>
+<th class="hidden-default">Updated Date</th>
+<th>Service Provider</th>
+<th>Start Date</th>
+<th class="hidden-default">End Date</th>
+<th>Compliance Required</th>
+<th>Status</th>
+<th>Evaluation Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+
+<td class="aligncenter">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+<i class='icon-chevron-down arrow'></i></a>
+</div>
+</div>
+</td>
+<td>
+<div class="accordion-group2">
+<div class="accordion-heading2">Lorem ipsum dolor <a href="#">(397098)</a></div>
+<div id="collapse_1" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>Estimated Cost:</span> 1,000.00 USD</li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+<td>10-Aug-14</td>
+<td>Lorem ipsum dolor</td>
+<td>30-May-14</td>
+<td>13-Jul-16</td>
+<td>Lorem ipsum dolor</td>
+<td>Active</td>
+<td>Active</td>
+</tr>
+                                       
+</tbody>
+</table>
+<!--END TABLE-->
+
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX BLUE-->
+
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+         <!--#include file="_action_approve.html" -->
+         <!--#include file="_action_decline.html" -->
+         <!--#include file="_action_need_more.html" -->
+
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_save_as.html" -->
+        <!--#include file="_edit_views.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

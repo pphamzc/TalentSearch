@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Batch Investigation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugin s/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>Batch Investigaton</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Batch Investigations</div>
+<div class="pull-right copybtn">
+<a href="#glossary" data-toggle="modal "><i class="icon-question-sign blueicon"></i>  Glossary</a>
+<a href="#"> <i class="icon-download greenicon"></i> Download Batch Template</a></div> 
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Main Account</span><br/>
+<select class="m-wrap">
+<option value="">Select ...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span4 no-margin"><span>Sub-Account</span><br/>
+<select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<!-- remove jun 12 tic 1372
+<li class="span4 no-margin"><span>Bundle</span><br/>
+<select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3--></option>
+</select></li>
+<li class="span12 no-margin"><hr/></li>
+</ul>
+<div class="clear"></div>
+<h4>Pre-selected Components</h4>
+<ul class="unstyled">
+<li class="span4 no-margin"><input type="checkbox" value="">Bundle Component 1</li>
+<li class="span4 no-margin"><input type="checkbox" value="">Bundle Component 2</li>
+<li class="span4 no-margin"><input type="checkbox" value="">Bundle Component 3</li>
+<li class="span4 no-margin"><input type="checkbox" value="">Bundle Component 4</li>
+<li class="span4 no-margin"><input type="checkbox" value="">Bundle Component 5</li>
+<li class="span12 no-margin"><hr/></li>
+
+</ul>
+<div class="clear"></div>
+<!-- remove jun 12 tic 1372
+<h4>Add More Components</h4>
+
+<ul class="unstyled">
+<li class="span7">
+<select data-placeholder="Click To Select More Components" class="chosen span11" multiple="multiple" tabindex="" >
+<option value="">You may choose one from each Group</option>
+<optgroup label="Option Group 1">
+<option value="1" >Option 1 </option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+<option value="4">Option 4</option>
+	</optgroup>
+ <optgroup label="Option Group 2"> 
+<option value="5">Apple</option>
+<option value="6">Corndog</option>
+<option value="7">Test This</option>
+<option value="8">Second one - random string of text </option>
+	</optgroup>
+ <optgroup label="Option Group 3">
+<option value="9">Red</option>
+<option value="10">Yellow</option>
+<option value="11">Green</option>
+<option value="12">Blue</option>
+	</optgroup>
+</select>
+</li>
+<li class="span4"><a href="#glossary" data-toggle="modal"><i class="icon-question-sign"></i>  Glossary</a></li>
+</ul>
+<div class="clear"></div>
+<hr/>-->
+<h4>Upload</h4>
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach span4">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+
+<li  class="span6 no-margin"><br/>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+</ul>
+<div class="clear"></div>
+
+<hr/>
+<div class="alert alert-error">
+<strong>Error!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit
+<ul class="unstyled">
+<li>Line item 1</li>
+<li>Line item 2</li>
+</ul>
+</div>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>LIne</th>
+<th class="redtext">name</th>
+<th>name</th>
+<th>name</th>
+<th class="redtext">name</th>
+<th>name</th>
+<th>name</th>
+<th class="redtext">name</th>
+<th>name</th>
+<th class="redtext">name</th>
+<th>name</th>
+
+</tr>
+<tr>
+<td>1</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+<td>name</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td><select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+<td>name</td>
+<td>name</td>
+<td><select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+<td>name</td>
+<td>name</td>
+<td><select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+<td>name</td>
+<td><select class="m-wrap">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+<td>name</td>
+</tr>
+<tr>
+<td>2</td>
+<td><input type="text" class="m-wrap" ></td>
+<td>name</td>
+<td>name</td>
+<td><input type="text" class="m-wrap" ></td>
+<td>name</td>
+<td>name</td>
+<td><input type="text" class="m-wrap" ></td>
+<td>name</td>
+<td><input type="text" class="m-wrap" ></td>
+<td>name</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">  Save</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_glossary.html" -->
+<!--#include file="_advanced_search.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->
+

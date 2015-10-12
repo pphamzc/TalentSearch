@@ -1,0 +1,454 @@
+
+/* wizard css */
+#rootwizard .radial-progress .circle{  width: 45px; height: 45px; float:left; position:relative; }
+#rootwizard .radial-progress {
+margin: 0 auto;
+  width: 46px;
+  height: 46px;
+  background-color: #d6dadc;
+  border-radius: 50%;
+  float:none;
+}
+#rootwizard .radial-progress .circle .mask,
+#rootwizard .radial-progress .circle .fill,
+#rootwizard .radial-progress .circle .shadow {
+  width: 46px;
+  height: 45px;
+  position: absolute;
+  border-radius: 50%;
+}
+#rootwizard .radial-progress .circle .shadow {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+#rootwizard .radial-progress .circle .mask,
+#rootwizard .radial-progress .circle .fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+#rootwizard .radial-progress .circle .mask {
+  clip: rect(0px, 46px, 46px, 23px);
+}
+#rootwizard .radial-progress .circle .mask .fill {
+  clip: rect(0px, 23px, 46px, 0px);
+  background-color: #927452;
+}
+#rootwizard .radial-progress .inset {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#rootwizard .radial-progress .inset .percentage {
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  line-height: 16px;
+  text-align: center;
+  color: #0073ae;
+  font-weight: 800;
+  font-size: 14px;
+  text-align:center;
+}
+#rootwizard .filled  .radial-progress[data-progress="0"] .circle .mask.full, .filled .radial-progress[data-progress="0"] .circle .fill {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#rootwizard .filled  .radial-progress[data-progress="0"] .circle .fill.fix {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#rootwizard .filled  .radial-progress[data-progress="0"] .inset .percentage:before {
+  
+}
+#rootwizard .filled  .radial-progress[data-progress="100"] .circle .mask.full, .filled  .radial-progress[data-progress="100"] .circle .fill {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#rootwizard .filled  .radial-progress[data-progress="100"] .circle .fill.fix {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+#rootwizard .filled  .radial-progress[data-progress="100"] .inset .percentage:before {
+}
+
+#rootwizard .filled .radial-progress .circle .mask .fill {
+   background-color: #0e90d2;
+}
+
+#rootwizard .active.radial-progress[data-progress="0"] .circle .mask.full, .active .radial-progress[data-progress="0"] .circle .fill {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#rootwizard .active  .radial-progress[data-progress="0"] .circle .fill.fix {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#rootwizard .active .radial-progress[data-progress="0"] .inset .percentage:before {
+  
+}
+#rootwizard .active  .radial-progress[data-progress="100"] .circle .mask.full, .active  .radial-progress[data-progress="100"] .circle .fill {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#rootwizard .active  .radial-progress[data-progress="100"] .circle .fill.fix {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+#rootwizard .active  .radial-progress[data-progress="100"] .inset .percentage:before {
+}
+
+#rootwizard .active .radial-progress .circle .mask .fill {
+   background-color:#f48026;
+}
+
+#rootwizard .progress.active .bar {
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+#rootwizard .progress-striped .bar {
+background-color: #149bdf;
+background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,0.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,0.15)),color-stop(0.75,rgba(255,255,255,0.15)),color-stop(0.75,transparent),to(transparent));
+background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+background-image: -moz-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+background-image: -o-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+-webkit-background-size: 40px 40px;
+-moz-background-size: 40px 40px;
+-o-background-size: 40px 40px;
+background-size: 40px 40px;
+}
+#rootwizard .progress .bar {
+float: left;
+width: 0;
+height: 100%;
+font-size: 12px;
+color: #fff;
+text-align: center;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+background-color: #0e90d2;
+    background-repeat: repeat-x;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: width .6s ease;
+    -moz-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+    background-image: linear-gradient(to bottom,#149bdf,#0480be);
+}
+
+#rootwizard  { float: left; width: 100%; display: block; position:relative }
+#rootwizard .navbar .navbar-inner{ background:none !important; filter:none; border:0px none; box-shadow: none;   padding: 0;} 
+#rootwizard  .navbar{ position:relative; width: 100%; z-index: 999; margin-bottom:0; margin-left: 0%;}
+#rootwizard  .navbar .containers{  width:100%}
+#rootwizard  .navbar ul.nav li{ width: 11.11%; margin-left:0}
+#rootwizard  .navbar ul.nav{ width: 100%;}
+#rootwizard  .navbar ul.nav li a{ padding: 0; height:100%; float:left; width:100%; position:relative; text-align:center}
+#rootwizard  .navbar ul.nav li a .arrow_tic{ height:30px; width:100%; text-align:center; margin-top:4px;   }
+#rootwizard  .navbar ul.nav  .active a .arrow_tic{  }
+#rootwizard  .navbar ul.nav  .filled  a .arrow_tic{ background:url(../img/arrow_filled.png) center center   no-repeat; }
+#rootwizard  .navbar ul.nav li.active a,#rootwizard  .navbar ul.nav li:hover a{ background:none; box-shadow:none;}
+#rootwizard  .progress{margin-top:32px; height: 6px;  margin-bottom: 42px; width: 86%;  float: left; position: absolute; z-index: 0; left: 0; margin-left: 7%; padding: 0; top:0; }
+#rootwizard  .navbar ul.nav li a .name_wizard {color: #0073ae; position: relative; margin-top:10px; float:left; width: 100%; margin-left: 0; text-align: center; font-size: 12px;  }
+#rootwizard   .tab-content>.active, .pill-content>.active { height: auto; }
+.wizard{ list-style:none; padding:0;}
+.wizard li{width:50%; float:left;} 
+.wizard li a{display: block; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 11px; margin-top: 48px; text-align: center; width: 60px; text-decoration: none;}
+#wizard  .tab-content{ float: left; width: 100%; margin-bottom: 0px; }
+.percent_show{
+color: #0073ae;
+font-weight: 800;
+font-size: 14px;
+}
+.error {border-color: #9F000F !important;}
+.success {border-color: #348017 !important;}
+
+
+/* updates */
+.completed{ color:#999999; font-size:12px; line-height: 25px; padding: 2px 10px; 0}
+.disabled .radial-progress .inset{background-color: #ffffff; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
+.disabled .radial-progress {background-color: #F8F8F8 !important;}
+
+/* 18-6-2014 */
+.select{width:215px; }
+.emp {
+    width: 46.718% !important;
+    float:left !important;
+}
+.emp-doc{
+    width: 30.624%!important; /*span4*/
+}
+.emp-doc span.alpha {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom:10px;
+}
+.margin-left{margin-left: 2.5641%!important; }
+
+.progress .bar{ filter:none !important}
+
+#rootwizard  .portlet-body{min-height: 74px; position:relative}
+
+#rootwizard  #mainProgressBar {
+	margin: 0px ; 
+	height: 20px ; 
+	text-align: center; 
+	position: relative; 
+	background: -webkit-linear-gradient(to bottom, #ccc, #bbb) #bbb; /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(to bottom, #ccc, #bbb) #bbb; /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(to bottom, #ccc, #bbb) #bbb; /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #ccc, #bbb) #bbb; /* Standard syntax */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#bbbbbb', GradientType=0);
+}
+
+#rootwizard  #mainProgressBar  #percentBar {
+	width: 100%; 
+	float: left; 
+	position: absolute; 
+	left: 0px; 
+	top: 0px; 
+	color:#fff;
+}
+.discstyle{ margin-left:40px; list-style-type:disc}
+
+
+@media screen and (max-width:640px){
+#mainProgressBar{ margin-top:0px !important;}
+#rootwizard .portlet-body{ padding-bottom:00px !important;}
+#rootwizard .progress{
+top: auto;
+bottom: 10px;
+}
+.radial-progress , .radial-progress .circle .mask, .radial-progress .circle .fill, .radial-progress .circle .shadow{ width: 30px !important; height: 30px !important;}
+.radial-progress{ float:left !important}
+.radial-progress .inset{ width:20px !important; height:20px !important; margin-left: 5px !important; margin-top: 5px !important;}
+.radial-progress .circle { width: 30px !important; height: 30px !important;}
+.radial-progress .circle .mask { clip: rect(0px, 30px, 30px, 15px) !important;	}
+.radial-progress .circle .mask .fill {clip: rect(0px, 15px, 30px, 0px) !important; }
+#rootwizard .navbar ul.nav li a{ float:left !important; width:100% !important}
+#rootwizard .navbar ul.nav li a .name_wizard{ display: block; width: 68% !important; position: relative !important; bottom:auto !important; line-height: 12px; margin-left: 5px !important; margin-top: 5px; text-align: left !important; float: left;}
+#rootwizard .navbar .navbar-inner{padding-right: 10px; padding-left: 10px; }
+#rootwizard .navbar ul.nav li{ width:49% !important}
+#rootwizard .navbar ul.nav li:last-child{ display:none;}
+#rootwizard .navbar ul.nav {margin-right: 0;}
+#rootwizard .navbar ul.nav li a .arrow_tic { height: 13px !important; margin-top: 5px !important; background-size:100% !important}
+
+
+}
+
+
+/* 25062014 */
+
+#rootwizard .unstyledimg img{width:65%; }
+/*#rootwizard .unstyled textarea {width:199px; resize:none; }*/
+
+#rootwizard div.radio span input[type="radio"]{margin-left:0px !important; }
+
+
+#rootwizard .fa-wrench:before {
+    content: "";
+}
+#rootwizard .fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 16px;
+    margin-right: 5px;
+    text-align: right;
+    width: auto;
+}
+
+#rootwizard .glyphicon-print:before {
+    content: "";
+}
+#rootwizard .bs-glyphicons .glyphicon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#rootwizard .glyphicon {
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+    width:32px;
+}
+#rootwizard table#paymentTable tr td a{width:auto; text-decoration:none; margin-left:5px; }
+#rootwizard .pagesize{width:100%; margin:5px auto !important; }
+#rootwizard .entry{padding-top:5px !important; float:right !important; }
+#rootwizard .unstyled .chkbox{margin-left:10px; }
+#rootwizard .enroll {
+    max-height: 165px !important;
+    overflow-y: auto !important;
+}
+#rootwizard .step{font-size:20px; margin-top:20px; }
+#rootwizard .describe{width:100%; padding:0px; margin:0px 0px 20px 0px; }
+#rootwizard .download{margin:0px 0px 20px 0px; }
+#rootwizard .topmargin{margin-top:110px; }
+#rootwizard .navbar ul.nav li:last-child{ display:block !important; }
+
+#rootwizard div.radio {margin-left:6px; margin-right:2px;}
+
+#tab7 ul {
+	margin-bottom:0px;
+}
+
+#comments {width:35.5% !important;}
+
+
+/* ************************1 July,2014*********************** */
+
+
+div .container_ext {
+    height: 26px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: 100px;
+}
+
+.page-content_ext {
+    min-height: 850px;
+}
+
+.percentBar {
+    margin-left: -2px;
+}
+.percentBar_div {
+    width:0%;
+}
+
+.portlet-body ul li .portlet-body_txtarea {
+    width: 61.812% !important;
+
+}
+
+.span12_ext {
+    margin-left:0px !important;
+}
+
+.form-actions .form-actions_ext {
+    padding-top: 15px; 
+    padding-bottom: 10px;
+}
+.form-actions .button-next_ext {
+    float: right !important; 
+    line-height: 1 !important;
+
+}
+.form-actions .pull-right .button-next_ext_a {
+    height: 12px;
+    
+
+}
+.row-fluid .span2_ext {
+    margin-left: -3% !important;
+}
+.row-fluid .span2_ext .radio_ext {
+    margin-right:40px !important;
+}
+table thead tr .th_ext {
+    text-align: center !important;
+}
+table tbody tr .td_ext {
+    text-align: center !important;
+}
+table tbody tr .td_ext_width {
+    width:52%;
+}
+.row-fluid .span12_ext {
+    margin-top:15px !important;
+}
+.row-fluid .unstyled .li_margin_bottom {
+    margin-bottom:14px !important;
+}
+
+.row-fluid .unstyled .li_margin_top {
+    margin-top: 55px !important;
+}
+.tab-pane .portlet .portlet-body_ext {
+    border-radius: 6px;
+}
+
+.datepicker_ext {
+    background-repeat: no-repeat !important ;
+    background-image: url('../assets/img/calendar-16.png');
+    background-position: 98% center !important;
+}
+/*.unstyled li.span_normal {
+    font-weight:normal !important;
+        
+}*/
+.note_normal {
+    font-weight:normal !important;
+        
+}
+.margin-left_sub{ font-weight:normal !important; }
+
+.marginLeft40 {margin-left:40px;}
+
+input[type="text"].error{ background: url("../img/cross_normal2.png ") center right no-repeat #fee !important; }
+input[type="text"].success{ background: url("../img/arrow_filled2.png") center right no-repeat #fff !important; }
+div.error {background: url("../img/cross_normal2.png ") center right no-repeat #fee !important; }
+
+.checkimage{ position:relative;}
+.checkimage img{ position:relative; float:left; width: 342px; margin-bottom: 10px;}
+.bankname, .checknumber, .digitroutingnumber, .accountnumber{ position:absolute; top:0; left:0; z-index: 99;
+height:auto; display:block; border: 1px solid #FF6161; background: rgba(255, 218, 218, 0.83); color: #070000; font-size: 12px; padding: 2px 5px; text-align:center; line-height: 14px; display:block}
+.infoshow .bankname,.infoshow  .checknumber,.infoshow  .digitroutingnumber,.infoshow  .accountnumber{ display:none}
+.bankname{ top: 110px; left: 25px;}
+.checknumber{ left: 290px; top:10px;}
+.digitroutingnumber{ top: 148px; left:45px;}
+.accountnumber{ top:154px; left: 156px;}
+.toggleInfo{ margin:0 auto; text-align:center; border:1px solid #eeeeee; margin-top:10px;}
+a .icon-question-sign{ color: #666!important; text-decoration:none}
+
+/*16thJuly2014*/
+.error_textpop {
+    color:#FF0000;
+    display:inline-block;
+    font-weight:normal !important;
+}
+
+.chkbx_attest {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 4px;
+    padding-top: 4px;
+    position: absolute;
+    width: 98% !important;
+}
+
+.checkbx_spn {
+    float: left;
+    position: relative;
+}

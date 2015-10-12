@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Criminal Provider Records</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugin s/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+				
+				
+</script>
+
+<!--show/hide everify-->
+<script type="text/javascript" language="JavaScript"><!--
+
+//--></script>
+
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>View Criminal Provider Records</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder">
+<div class="caption">Search Records</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Applicant</label>
+<option value="2">SSN</label>
+<option value="3">DOB</label>
+<option value="4">County</label>
+<option value="5">State</label>
+<option value="6">District</label>
+<option value="7">Type</label>
+<option value="8">Date Requested</label>
+<option value="9">Status</label> 
+<option value="10">User Assigned</label>
+<option value="11">Court Website</label>
+</select>
+
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Applicant</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>SSN </span><br/><input type="text" class="m-wrap"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>DOB</span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>County</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>State</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>District</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Type</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+  
+  
+  <div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>User Assigned</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="11" class="hiddenMenu">
+<li class="span3 no-margin"><span>Court Wesbite</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+</ul><!--end hidden ul-->
+
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">View Records</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li><a href="#">Timesheet View 1</a></li>
+<li><a href="#">Timesheet View 2</a></li>
+<li><a href="#">Timesheet View 3</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1">Clear</label>
+<label><input type="checkbox" checked data-column="2">Applicant</label>
+<label><input type="checkbox" checked data-column="3">County</label>
+<label><input type="checkbox" checked data-column="4">State</label>
+<label><input type="checkbox" checked data-column="5">District</label>
+<label><input type="checkbox" checked data-column="6">Type</label>
+<label><input type="checkbox" checked data-column="7">Date Requested</label>
+<label><input type="checkbox" checked data-column="8">Status</label> 
+<label><input type="checkbox" checked data-column="9">User Assigned</label>
+<label><input type="checkbox" checked data-column="10">Court Website</label>
+<label><input type="checkbox" checked data-column="11">Actions</label>
+                                         
+</div>
+
+</div><!--END buttons/actions-->
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+    <tr>
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="collapse_expande_all" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+<th class="no-sort">Clear</th>
+<th>Applicant</th>
+<th>County</th>
+<th>State</th>
+<th>District</th>
+<th>Type</th>
+<th>Date Requested</th>
+<th>Status</th>      
+<th>User Assigned</th>
+<th>Court Website</th>
+<th class="no-sort">Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+<td class="aligncenter">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+<i class='icon-chevron-down arrow'></i></a>
+</div>
+</div>
+</td>
+<td><input type="checkbox" value=""></td>
+<td>
+<div class="accordion-group2">
+<div class="accordion-heading2">John Doe</div>
+<div id="collapse_1" class="accordion-body2 collapse">
+<div class="accordion-inner" style="padding-left: 0px !important">
+<ul class="unstyled">
+<li><span>SSN:</span>*****1234</li>
+<li><span>DOB:</span>05-Jan-1960</li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+
+<td>Orange County</td>
+<td>FL</td>
+<td></td>
+<td>County</td>
+<td>01-Jan-2015</td>
+<td>Completed</td>
+<td><select class="m-wrap">
+<option value="">Select ...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+</td>
+<td><a href="#">www.mysite.com</a>
+<div class="actions-expanded hide">
+<ul class="unstyled" style="border-top: 1px solid #e5e5e5;">
+<li><span>Records:</span> 100</li>
+<li><span>E-mail:</span> myemail@mycompany.com</li>
+
+</ul></div>
+</td>
+
+<td  class="toppadding" >
+<div class="actions-collapsed in">
+<a href="javascript:void(0);" class= "popovers " data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#edit_applicant'><i class='icon-edit rightmargin5'></i>Edit Applicant</a><br/>
+<a data-toggle='modal' href='#email_applicant'><i class='icon-envelope rightmargin5'></i>E-Mail Applicant</a><br/>
+<a href='criminal_record_edit_report.html' target='_blank'><i class='icon-edit rightmargin5'></i>Edit County</a><br/>
+<a href='criminal_record_edit_report.html' target='_blank'><i class='icon-edit rightmargin5'></i>Edit State</a><br/>
+<a data-toggle='modal' href='#court_sites'><i class='icon-plus rightmargin5'></i>Manage Court Sites</a><br/>
+
+" data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a>
+</div>
+
+<div class="actions-expanded hide actioncol">
+<a data-toggle='modal' href='#edit_applicant'><i class='icon-edit rightmargin5'></i>Edit Applicant</a><br/>
+<a data-toggle='modal' href='#email_applicant'><i class='icon-envelope rightmargin5'></i>E-Mail Applicant</a><br/>
+<a href='criminal_record_edit_report.html' target='_blank'><i class='icon-edit rightmargin5'></i>Edit County</a><br/>
+<a href='criminal_record_edit_report.html' target='_blank'><i class='icon-edit rightmargin5'></i>Edit State</a><br/>
+<a data-toggle='modal' href='#court_sites'><i class='icon-plus rightmargin5'></i>Manage Court Sites</a><br/>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE-->
+
+
+<div class="clear"></div>
+<br/>
+<div class="alert alert-success"><button class="close" data-dismiss="alert"></button>
+<strong>Success!</strong> The search reassignments have been saved!</div>
+<div class="clear"></div>
+
+</div><!-- END PORLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Reassign Searches On This Page</a> 
+<a data-toggle='modal' href='#clear' class="greenbtn">Set to Clear</a> 
+</div>
+</div>
+</div><!--END PORTLET BOX-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--Modals-->
+<!--edit_applicant  -->
+<div id="edit_applicant" class="modal hide fade" tabindex="-1" style="width:60%; left:35%;" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Update Applicant Information</h3>
+</div>
+<div class="modal-body">
+<p>To update the applicant's information, modify any of the fields below and click Save</p>
+
+ <ul class="unstyled">
+ <li class="span3 no-margin"><span>First Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="John"/></li>
+	 <li class="span3 no-margin"><span>Middle Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Alexander"/></li>
+<li class="span3 no-margin"><span>Last Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Smith"/></li>
+ <li class="span3 no-margin"><span>Suffix:</span><br/><input type="text" class="m-wrap span11"  placeholder="Mr."/></li>
+ <li class="span3 no-margin"><span>Maiden / Former Name:</span><br/><input type="text" class="m-wrap span11"  placeholder="Smith"/></li>
+ <li class="span3 no-margin"><span>SSN:</span><br/><input type="text" class="m-wrap span11"  placeholder="*** ** 6789"/></li>
+ <li class="span3 no-margin"><span>Date of Birth:</span><br/><input type="text" class="m-wrap span11 datepicker" placeholder="06/Jan/1965" /></li>
+ <li class="span3 no-margin"><span>Address:</span><br/><input type="text" class="m-wrap span11"  placeholder="123 My Street"/></li>
+ <li class="span3 no-margin"><span>Address 2:</span><br/><input type="text" class="m-wrap span11"  placeholder="Suit 123"/></li>
+ <li class="span3 no-margin"><span>City:</span><br/><input type="text" class="m-wrap span11"  placeholder="Orlando"/></li>
+ <li class="span3 no-margin"><span>State:</span><br/><select class="m-wrap span11">
+<option value="1"> Florida</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+ <li class="span3 no-margin"><span>Postal Code:</span><br/><input type="text" class="m-wrap span11"  placeholder="12345"/></li>
+ <li class="span3 no-margin"><span>Country:</span><br/><select class="m-wrap span11">
+<option value="1"> Florida</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+ 
+ <li class="span3 no-margin"><span>E-mail:</span><br/><input type="text" class="m-wrap span11"/></li>
+ 
+ <li class="span3 no-margin"><span>Home Phone Number</span><br/>
+<input type="text"  class="m-wrap span8" />
+<select class="m-wrap span3" tabindex="1">
+<option value="">Type</option>
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Work Phone Number</span><br/>
+<input type="text"  class="m-wrap span8" />
+<select class="m-wrap span3" tabindex="1">
+<option value="">Type</option>
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select></li>
+ <li class="span3 no-margin"><span>Cost Center:</span><br/><input type="text" class="m-wrap span11"/></li>
+ <li class="span3 no-margin"><span>Department:</span><br/><input type="text" class="m-wrap span11"/></li>
+ <li class="span3 no-margin"><span>Specimen ID:</span><br/><input type="text" class="m-wrap span11"/></li>
+ <li class="span3 no-margin"><span>Customer API Unique ID:</span><br/><input type="text" class="m-wrap span11"/></li>
+
+ <li class="span12 no-margin"><span>Billing Notes:</span><br/><textarea class="m-wrap span11" rows="2"  placeholder="Additional Information Goes Here"></textarea></li>
+ <li class="span6 no-margin"><input type="checkbox" value="">Rush this Investigation</li>
+
+
+ </ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Update</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--email_applicant -->
+<div id="email_applicant" class="modal hide fade" tabindex="-1" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Email Applicant</h3>
+</div>
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Subject:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span6 no-margin"><span>E-mail:</span><br/><input type="text" class="m-wrap span11"/></li>
+
+ <li class="span12 no-margin"><span>Message:</span><br/><textarea class="m-wrap span11" rows="2" ></textarea></li>
+ </ul>
+
+ <div class="clear"><hr/></div>
+<h4>E-mail History</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Applicant</th>
+<th>Subject</th>
+<th>Email</th>
+<th>Message</th>
+</tr>
+</thead>
+  <tbody>
+    <tr>
+<td>John Doe</td>
+<td>Testing</td>
+<td>myemail@mycompany.com</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Send E-mail to Applicant</button>
+</div>
+</form>
+</div><!--end modal-->
+
+<!--court sites -->
+<div id="court_sites" class="modal hide fade" tabindex="-1" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Manage Court Sites</h3>
+</div>
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Row ID</th>
+<th>Website</th>
+<th>Username</th>
+<th>Password</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+  <tbody>
+    <tr>
+<td>1234</td>
+<td>www.mysite.com</td>
+<td>myusername</td>
+<td>mypassword</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-edit'></i> Edit</a><br/>
+<a href='#'><i class='icon-trash '></i> Remove</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr/>
+<ul class="unstyled">
+<li class="span6 no-margin"><span> County:</span>Orange</li>
+<li class="span6 no-margin"><span> State:</span>FL</li>
+<li class="span6 no-margin"><span> Report Type State:</span>FL</li>
+<li class="span6 no-margin"><span> District:</span>abc</li>
+</ul>
+
+<ul class="unstyled">
+<li class="span12 no-margin"><span>URL:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span6 no-margin"><span>Username:</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Password:</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span6 no-margin"><input type="checkbox" value="">Dead Link?</li>
+ </ul>
+
+ <div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Update</button>
+<button type="submit" class="greenbtn">Add New Website</button>
+</div>
+</form>
+</div><!--end modal-->
+
+
+<!--clear-->
+<div id="clear" class="modal hide fade"  tabindex="-1" >
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Set To Clear</h3>
+</div>
+<div class="modal-body" >
+
+<p>ALERT!  Are you sure you want to set the selected applicant to clear? </p>
+
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<a href="#" class="bluebtn">Cancel</a> 
+<a href="#" class="greenbtn">OK</a> 
+</div>
+</form>
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_save_as.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

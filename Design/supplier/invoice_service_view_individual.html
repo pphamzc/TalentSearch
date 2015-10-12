@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Supplier View Individual Service Invoice</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+   
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb ">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Invoice</li>
+</ul>
+</div><!--END SPAN--> 
+</div><!-- END ROW PAGE HEADER--> 
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Engagement #123</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Name:</span> Name of Project</li>
+<li class="span3 no-margin"><span>Status:</span> <span class="status">Open</span></li>
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>Business Classification:</span> Service Vendor</li>
+<li class="span3 no-margin"><span>Customer:</span> NetApp</li>
+<li class="span3 no-margin"><span>Customer Manager:</span> John Doe</li>
+<li class="span3 no-margin"><span>Service Provider:</span> IBM</li>
+<li class="span3 no-margin"><span>Service Provider Contact:</span> Jane Doe</li>
+<li class="span3 no-margin"><span>Track Code:</span> 1234567890987654321</li>
+<li class="span3 no-margin"><span>Start Date:</span> 05-Jul-14</li>
+<li class="span3 no-margin"><span>End Date:</span>  05-Jul-14</li>
+<li class="span3 no-margin"><span>Project Location:</span>  Nowhere</li>
+<li class="span3 no-margin"><span>State:</span>  California</li>
+<li class="span3 no-margin"><span>Country:</span>  United States</li>
+<li class="span3 no-margin"><span>Postal Code:</span>  90210</li>
+</ul>
+
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY--> 
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Detail</div>
+
+<div class="pull-right copybtn">
+<a href="#">Print <i class="icon-print blueicon"></i></a> 
+<a href="#approval_history" data-toggle="modal">Approval History  <i class="icon-list-alt blueicon"></i></a> 
+</div>
+
+</div>
+<div class="portlet-body">
+
+<ul class="unstyled no-margin">
+<li class="span4 no-margin"><span>Invoice #:</span><span class="required">*</span><br/>
+<input type="text"  class="m-wrap" placeholder="123456" disabled=""/></li>
+<li class="span4 no-margin "><br/><span>ID:</span>12345</li>
+<li class="span4 no-margin "><br/><span>Status:</span><span class="status">Open</span></li>
+</ul>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Invoice Types</div></div>
+<div class="portlet-body">
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Time</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th width="15%">Line Item Title</th>
+        <th width="15%">Invoice Line Description</th>
+        <th width="15%">Service Category</th>
+        <th width="15%">Worker</th>
+        <th>Rate</th>
+        <th>Units</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > <select name="select" tabindex="1"  placeholder="Option 1" disabled="">
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/> </td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+
+<td> 
+<select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select>
+ </td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/></td>
+        <td><input type="text"  class="m-wrap small"/> </td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  class="span12">
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td>0.00</td>
+      <td><a href="#"> Edit</a></td>
+        </tr>
+      <tr>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/> </td>
+        <td> Hourly</td>
+        <td>0.00 </td>
+      <td><a href="#"> Edit</a></td>
+        </tr>
+     
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Time Total:</span> 0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Fixed</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th width="35%">Line Item Title</th>
+        <th width="35%">Invoice Line Description</th>
+        <th>Amount</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+          </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/></td>
+        <td>0.00</td> <td><a href="#"> Edit</a></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Fixed Time Total:</span> 0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Materials</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th width="15%">Line Item Title</th>
+        <th width="15%">Invoice Line Description</th>
+        <th width="15%">Material Category</th>
+        <th>Cost Per Unit</th>
+        <th>Units</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/> </td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  class="span12">
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td>0.00</td> <td><a href="#"> Edit</a></td>
+        </tr>
+      <tr>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/> </td>
+        <td> Hourly</td>
+        <td>0.00 </td> <td><a href="#"> Edit</a></td>
+        </tr>
+      
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Materials Total:</span> 0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Tasks</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th width="15%">Line Item Title</th>
+        <th width="15%">Invoice Line Description</th>
+        <th width="15%">Task Category</th>
+        <th>Rate</th>
+        <th>Units</th>
+        <th>UOM</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/> </td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  class="span12">
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td>0.00</td> <td><a href="#"> Edit</a></td>
+        </tr>
+      <tr>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+    <option value="Category 1">Option 1</option>
+    <option value="Category 2">Option 2</option>
+    <option value="Category 3">Option 3</option>
+    <option value="Category 4">Option 4</option>
+  </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td>1.00</td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/> </td>
+        <td> Hourly</td>
+        <td>0.00 </td> <td><a href="#"> Edit</a></td>
+        </tr>
+      
+      
+    </tbody>
+  </table>
+  
+  <div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Tasks Total:</span> 0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+
+<div class="portlet box">
+<div class="portlet-title greyborder"><div class="caption">Expenses</div>
+</div>
+<div class="portlet-body">
+
+  <table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+        <th width="25%">Line Item Title</th>
+        <th width="25%">Invoice Line Description</th>
+        <th width="25%">Expense Category</th>
+        <th>Amount</th>
+        <th>Total</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td > <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+          </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="Line Item Description Goes Here" disabled=""/></td>
+        <td> <select name="select" tabindex="1"  placeholder="Option 1" disabled=""  >
+          <option value="Category 1">Option 1</option>
+          <option value="Category 2">Option 2</option>
+          <option value="Category 3">Option 3</option>
+          <option value="Category 4">Option 4</option>
+        </select></td>
+        <td><input type="text"  class="m-wrap small" placeholder="1.00" disabled=""/></td>
+        <td>0.00</td> <td><a href="#"> Edit</a></td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Expenses Total:</span> 0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+<div class="clear"></div>
+
+<hr/>
+<div class="pull-right span3">
+<ul class="unstyled serviceinvoicetotals">
+<li><span>Invoice Line Total:</span> 0.00</li>
+<li><span>Expenses Total:</span>0.00</li>
+<li><span>Invoice Total:</span>0.00</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="clear"></div>
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Notes &amp; Attachments</div></div>
+  
+<div class="portlet-body">                                    
+  
+<ul class="unstyled">
+<li><span>Attachments</span>
+<ul>
+<li class="span4"><a href="#">1234567890963.pdf</a></li> 
+<li class="span4"><a href="#">123456789099876543211234567890.doc</a> </li>    
+<li class="span4"><a href="#">asdfghjkl;'lkjhgfds.xls</a></li>  
+<li class="span4"><a href="#">qwertyuiopoiuyt.png</a></li> 
+<li class="span4"><a href="#">mnbvcxzlkjhgfdsapoiuytrewq.doc</a> </li>    
+<li class="span4"><a href="#">anotherone.xls</a> </li>  
+<li class="span4"><a href="#">andonemore.png</a></li> 
+
+</ul>
+</li>
+</ul>
+                                                
+<div class="clear"></div>
+
+<ul class="unstyled span10 no-margin">
+<li><span>Notes</span><br/><textarea class="m-wrap fullwidthtextbox" rows="3"  placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" disabled=""></textarea>
+</li>
+</ul>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn">Print</a> 
+<a href="#approval_history" data-toggle="modal"  class="submitbtn">Approval History</a> 
+</div>
+</div>
+
+</div><!--end portlet box-->
+
+ 
+</form>
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+
+<!--MOdals-->
+<!--approval history modal-->
+<div id="approval_history" class="modal hide fade" tabindex="-1" >
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Approval History</h3>
+</div>
+<div class="modal-body">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Step Name</th>
+<th>Status</th>
+<th>Name</th>
+<th>Email</th>
+<th>Approval Method</th>
+<th>Approved On</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>Finance</td>
+      <td>Pending</td>
+      <td>Notified</td>
+      <td><a href="mailto:#">myname@myemail.com</a></td>
+      <td>Portal</td>
+      <td>08-Jun-14 1:00:00 PM EST</td>
+      </tr>
+  </tbody>
+</table>
+</div><!-- end body-->
+
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

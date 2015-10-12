@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Signed Documents</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/wizard/css/wizard.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>View Required Documents</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+
+<div class="portlet box">
+<div class="portlet-title orange3border">
+<div class="caption">Documents to Sign</div>
+</div>
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span4 no-margin"><input type="checkbox" value="" disabled="true" checked="true"><a href="#">WFL Articles of  Incorporation FAQ</a></li>
+<li class="span4 no-margin"><input type="checkbox" value="" disabled="true" checked="true"><a href="#">WFL Articles of  Insurance FAQ</a></li>
+<li class="span4 no-margin"><input type="checkbox" value="" disabled="true" checked="true"><a href="#">HMH Offer Letter</a></li>
+<li class="span4 no-margin"><input type="checkbox" value="" disabled="true" checked="true"><a href="#">EFT Election Document</a></li>
+<li class="span4 no-margin">
+<input type="checkbox" value="" disabled="true" checked="true"><a href="#">Vendor Classification Form</a></li>
+</ul>
+<div class="clear"></div>
+</div><!-- END PORLET BOX-->
+</div><!-- END PORLET BODY-->
+
+
+<div class="portlet box">
+<div class="portlet-title orange3border">
+<div class="caption">Signed Documents</div>
+</div>
+<div class="portlet-body">
+
+<table class="table table-bordered table-hover table-full-width" id="Alldocumentgrid">
+<thead>
+<tr>
+<th>Document Name</th>
+<th>Type</th>
+<th>Signed Date</th>
+<th>Signed</th>
+<th>Is Signed By Docusign</th>
+<th>Signed By</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#">Vendor Classification Form</a></td>
+<td></td>
+<td>15-Feb-2011</td>
+<td><input type="checkbox" checked="true" disabled="true" value=""></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#">Form W-9</a></td>
+<td></td>
+<td>15-Feb-2011</td>
+<td><input type="checkbox" checked="true" disabled="true" value=""></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#">EFT Election Document</a></td>
+<td></td>
+<td>15-Feb-2011</td>
+<td><input type="checkbox" checked="true" disabled="true" value=""></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div>
+<!-- END PORLET BODY-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn"><i class="icon-download-alt saveicon"></i>Download All</a>
+</div>
+</div>
+
+</div>
+
+ <div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Attach Documents</div>
+</div>
+                           
+<div class="portlet-body"> 
+
+<ul class="unstyled span5 rightmargin">
+<li><span>Type</span><br />
+<select class="m-wrap span6">
+<option value="0">Select...</option>
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+</select>
+<br/><br/>
+<li><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+
+</li>
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li> 
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+ 
+</ul>
+
+<ul class="unstyled span6 no-margin">
+<li><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+</ul>
+
+<div class="clear"></div>
+
+<table class="table table-bordered table-hover table-full-width" id="attachedfiles">
+<thead>
+<tr>
+<th>Document</th>
+<th>Type</th>
+<th>Description</th>
+<th>Origin</th>
+<th>Uploaded By</th>
+<th>Upload Date</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MATRIX Certificate of Insurance.pdf</td>
+<td>WFL Articles of  Insurance FAQ</td>
+<td></td>
+<td></td>
+<td>Elaina Dickerson</td>
+<td>26-Mar-2014</td>
+<td><i class="icon-search"></i>  <a href="#">View</a></td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-save saveicon"></i>Save</a>
+</div>
+</div>
+
+</div><!--end box-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        <!--#include file="_save_as.html" -->
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

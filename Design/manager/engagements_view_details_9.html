@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Engagements Details - Service Invoice Admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"  type="text/css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="engagements_view.html">Engagements</a></li>
+<li>Engagement Details</li>
+
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Engagement Details</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="#modify" class="greenbtn_sm">Modify Engagement</a>&nbsp;
+<a href="#" class="greenbtn_sm">Close Engagement</a>&nbsp;
+
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Engagement:</span>Engagement Name <a href="#">(12345)</a></li>
+<li class="span3 no-margin"><span>Service Provider:</span>True North</li>
+<li class="span3 no-margin"><span>Status:</span><span class="status">Pending</span></li>
+<li class="span3 no-margin"><span>Requisition ID:</span><a href="#">12345</a></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View More Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled no-margin">
+<li class="span3 no-margin"><span>Description:</span>Epic Video Productions</li>
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>Service Class:</span>Contractor</li>
+<li class="span3 no-margin"><span>Customer Manager:</span>John Doe (12345)</li>
+<li class="span3 no-margin"><span>Service Provider Contact:</span>Suzie Smith</li>
+<li class="span3 no-margin"><span>Track Code Name:</span>1234567890-098765</li>
+<li class="span3 no-margin"><span>Start Date:</span>01-Jun-14</li>
+<li class="span3 no-margin"><span>End Date:</span>03-Jun-2014</li>
+<li class="span3 no-margin"><span>Approved Budget:</span>10,000.00 USD</li>
+<li class="span3 no-margin"><span>Project Location:</span>Timbucktoo</li>
+<li class="span3 no-margin"><span>Country:</span>US</li>
+<li class="span3 no-margin"><span>State:</span>Alaska</li>
+<li class="span3 no-margin"><span>Postal Code:</span>12345</li>
+<div class="clear"></div>
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="engagements_view_details.html" >Details</a></li>
+<li><a href="engagements_view_details_1.html" >Engagement Owners</a></li>
+<li><a href="engagements_view_details_2.html" >Approvals</a></li>
+<li><a href="engagements_view_details_3.html" >Milestones</a></li>
+<li><a href="engagements_view_details_4.html" >Notes & Attachments</a></li>
+<li><a href="engagements_view_details_5.html" >Track Codes</a></li>
+<li><a href="engagements_view_details_6.html" >History</a></li>
+<li><a href="engagements_view_details_7.html" >Service Invoices</a></li>
+<li><a href="engagements_view_details_8.html" >Workers</a></li>
+<li class="active"><a href="engagements_view_details_9.html" >Service Invoice Admin</a></li>
+<li><a href="engagements_view_details_10.html" >Reductions</a></li>
+<li><a href="engagements_view_details_11.html" >Accruals</a></li>
+
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<!------------------------------------------->
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Service Invoice Settings</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled span5 text-right">
+
+<li><span>Require % complete for releasing of invoicing funds</span><input type="checkbox" value=""></li>
+<li><span>Do not allow invoicing before milestone start date</span><input type="checkbox" value=""></li>
+<li><span>Do not allow invoicing before estimated milestone end date</span><input type="checkbox" value=""></li>
+<li><span>Do not allow invoicing before actual milestone end date</span><input type="checkbox" value=""></li>
+<li><span>Allow service providers to upload attachemnts on invoice</span><input type="checkbox" value=""></li>
+<li><span>Allow line item veto</span><input type="checkbox" value=""></li>
+<li><span>Activate last invoice rule on service invoice page </span><input type="checkbox" value=""></li>
+</ul>
+
+<ul class="unstyled span4 text-right">
+<li><span>Service Invoicing Type</span>
+<li><span>Fixed</span><input type="checkbox" value=""></li>
+<li><span>Tasked</span><input type="checkbox" value=""></li>
+<li><span>Material</span><input type="checkbox" value=""></li>
+<li><span>Time</span><input type="checkbox" value=""></li>
+<li><span>Expense</span><input type="checkbox" value=""></li>
+</ul>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Division Invoice Settings</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Contract  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Address Rule  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Division  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Markup Matrix  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Invoicing Consolidation Type  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+
+<li class="span3 no-margin"><span>Invoicing Consolidation Type  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Invoicing Consolidation Type  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+<li class="span3 no-margin"><span>Invoicing Consolidation Type  </span><br/>
+<select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+</li>
+
+</ul>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+<!---------------------MOdals--------------------->
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

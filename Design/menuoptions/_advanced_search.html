@@ -1,0 +1,156 @@
+<!--BEGIN MODAL CONTENT-->
+<div id="advancedsearch" class="modal hide fade" tabindex="-1" style="width:40%" >
+<div class="modal-header"><h3>Search</h3></div>
+<div class="modal-body">
+<div class="row-fluid">
+
+<div class="span12">
+
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_1" data-toggle="tab">Resources</a></li>
+<li><a href="#tab_1_2" data-toggle="tab">Requisitions</a></li>
+<li><a href="#tab_1_3" data-toggle="tab">Timesheets</a></li>
+<li><a href="#tab_1_4" data-toggle="tab">Expenses</a></li>
+<li><a href="#tab_1_5" data-toggle="tab">Supplier Invoices</a></li>
+<li><a href="#tab_1_6" data-toggle="tab">Service Invoices</a></li>
+</ul>
+<div class="tab-content advancedsearch">
+
+<!--resource-->
+<div class="tab-pane active" id="tab_1_1"> 
+<ul class="unstyled">                                  
+<li>Employee Name<br/> <input type="text" class="m-wrap span6"></li>
+<li>Resource Status<br/>
+<select class="span6">
+<option value="Category 1">Active</option>
+<option value="Category 2">Declined</option>
+<option value="Category 3">Holding</option>
+<option value="Category 4">On-Boarding</option>
+<option value="Category 5">Terminated</option>
+</select></li>
+</ul>
+</div><!--end tab-->
+
+<!--req-->
+<div class="tab-pane" id="tab_1_2">
+<ul class="unstyled">   
+<li>Customer Name <br/>
+<select class="span6">
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+<option value="4">Option 4</option>
+</select>
+</li>
+<li>Start Date <br/><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+<li>End Date<br /><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+ <li>Requisition Type <br/>
+<select class="span6">
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+<option value="4">Option 4</option>
+</select>
+</li>
+                         
+<li>Requisition Name<br/> <input type="text" class="m-wrap span6"></li>
+<li>Requisition ID<br/><input type="text" class="m-wrap span6"></li>
+<li>Requisition Status <br/>
+<select class="span6">
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+<option value="4">Option 4</option>
+</select></li>
+</ul>
+</div><!--end tab-->
+
+
+<!--timesheet-->
+<div class="tab-pane" id="tab_1_3">
+<ul class="unstyled">                                  
+<li>Project Name<br/><input type="text"  class="m-wrap span6"></li>
+<li>Project ID<br/><input type="text"  class="m-wrap span6"></li>
+<li>Resource Name<br/><input type="text"  class="m-wrap span6"></li>
+
+<li>Status <br/>
+<select class="span6">
+<option value="Category 1">Status 1</option>
+<option value="Category 2">Status 2</option>
+<option value="Category 3">Status 3</option>
+<option value="Category 4">Status 4</option>
+</select>
+</li>
+<li>Period Ending <br/><input type="text" class="m-wrap small date-picker span6" placeholder="DD/MMM/YY"></li>
+<li>Submit Date<br /><input type="text" class="m-wrap small date-picker span6" placeholder="DD/MMM/YY"></li>
+</ul>
+</div><!--end tab-->
+
+<!--expense-->
+<div class="tab-pane" id="tab_1_4">
+<ul class="unstyled">                                  
+<li>Project Name<br/><input type="text" class="m-wrap span6"></li>
+<li>Resource Name<br/><input type="text"  class="m-wrap span6"></li>
+<li>Expense Status <br/>
+<select class="span6">
+<option value="Category 1">Status 1</option>
+<option value="Category 2">Status 2</option>
+<option value="Category 3">Status 3</option>
+<option value="Category 4">Status 4</option>
+</select>
+</li>
+<li>Start Date <br/><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+<li>End Date<br /><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+<li>Submit Date<br /><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+</ul>
+</div><!--end tab-->
+
+<!--supplier invoice-->
+<div class="tab-pane" id="tab_1_5">
+<ul class="unstyled"> 
+<li>Invoice ID<br/>
+<select class="span6">
+<option value="Category 1">Status 1</option>
+<option value="Category 2">Status 2</option>
+<option value="Category 3">Status 3</option>
+<option value="Category 4">Status 4</option>
+</select>
+</li>
+                                 
+<li>Resource<br/><input type="text" class="m-wrap span6"></li>
+<li>Period Ending Date <br/>
+<input type="text" class="m-wrap small span3 date-picker" placeholder="Date From">
+&nbsp;- &nbsp;
+<input type="text" class="m-wrap small span3 date-picker" placeholder="Date To"></li>
+<li>Payment Reference Number<br/><input type="text" class="m-wrap span6"></li>
+<li>Supplier Invoice<br/><input type="text" class="m-wrap span6"></li>
+</ul>
+</div><!--end tab-->
+
+<!--service invoice-->
+<div class="tab-pane" id="tab_1_6">
+<ul class="unstyled">                                  
+<li>Resource<br/><input type="text" class="m-wrap span6"></li>
+<li>Period Ending<br /><input type="text" class="m-wrap span6 date-picker" placeholder="DD/MMM/YY"></li>
+<li>Payment Reference Number<br/><input type="text" class="m-wrap span6"></li>
+<li>Supplier Invoice<br/><input type="text" class="m-wrap span6"></li>
+</ul>
+</div><!--end tab-->
+
+
+</div><!--end content-->
+
+</div><!--END TABS-->
+
+
+</div><!--end span-->
+
+</div><!-- end row-->
+</div><!--END MODAL CONTENT--> 
+<div class="modal-footer">
+<a href="#" class="submitbtn"><i class="icon-search submiticon"></i>Search</a> 
+</div>
+
+</div><!--END MODAL--> 

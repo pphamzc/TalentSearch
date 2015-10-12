@@ -1,0 +1,1389 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add Requisition</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+
+<style type="text/css">
+.flip-container {perspective: 1000; clear:both; margin-bottom:40px;}
+.flip-container:hover .flipper, .flip-container.hover .flipper {	transform: rotateY(180deg);}
+.flip-container, .front, .back {	height: 120px; width:120px;   border: 4px solid transparent;}
+.flipper { transition: 0.6s; transform-style: preserve-3d;	 position: relative;}
+.front, .back { backface-visibility: hidden;position: absolute;	top: 0;	left: 0;}
+.front {z-index: 2; transform: rotateY(0deg);  }
+.back {transform: rotateY(180deg); }
+.front-tile {  font-size: 20px;  color: #ffffff;  text-align: center;	vertical-align: middle;line-height: 120px;  }
+.back-title {margin:6px 5px;	background-color: #FFF;  opacity: .70;  text-align: center;	height:50px;}
+.back-title .number {	  font-size: 25px;			padding-top:5px;}
+
+.tile{  width: 175px !important;}
+.tile .tile-body { padding:20px 5px 5px 5px!important; font-weight: normal!important; text-align: left!important; }
+.tile .tile-object > .number {text-align:right!important;  font-size: 19px!important }
+</style>
+
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Name (ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="#">Print<i class="icon-print blueicon rightmargin"></i></a>
+<a href="#">Open<i class="icon-folder-open blueicon rightmargin"></i></a>
+<a href="#">Close<i class="icon-remove-circle blueicon rightmargin"></i></a>
+<a href="#">Cancel<i class="icon-remove-sign blueicon rightmargin"></i></a>
+<a href="#">Filled<i class="icon-reorder blueicon rightmargin"></i></a>
+<a href="#">On-hold<i class="icon-pause blueicon rightmargin"></i></a>
+<a href="#">Approve<i class="icon-ok greenicon rightmargin"></i></a>
+<a data-toggle="modal" href="#decline">Decline<i class="icon-remove redicon rightmargin"></i></a>&nbsp;
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Status:</span><!-- change x3 from static to select tic 3593 <select class="m-wrap  span7" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>--><span class="status">Pending</span></li>
+<li class="span3 no-margin"><span>Division:</span>divsision name here</li>
+<li class="span3 no-margin"><span>Job Classification:</span>Network Admin</li>
+<li class="span3 no-margin"><span>Category Name:</span>Some category name here</li>
+
+
+<li class="span3 no-margin"><span>Project Name:</span>abcdef</li>
+<li class="span3 no-margin"><span>Work Location:</span>KY</li>
+<li class="span3 no-margin"><span>Start Date:</span>04-Oct-15</li>
+<li class="span3 no-margin"><span>End Date:</span>04-Oct-15</li>
+<li class="span3 no-margin"><span>Estimated Spend:</span>100.00 USD</li>
+<li class="span3 no-margin" style="color:#990000"><span>Target Bill Rate:</span>100.00 USD</li>
+<li class="span3 no-margin" style="color:#990000"><span>Max Bill Rate:</span>100.00 USD</li>
+<li class="span3 no-margin" style="color:#990000"><span>Lowest Bill Rate Submitted:</span>100.00 USD</li>
+
+
+
+
+<li class="span3 no-margin"><span>WC Code:</span>12345</li>
+<li class="span3 no-margin"><span>EEOC Code:</span>2</li>
+<li class="span3 no-margin"><span>Rejection Reason:</span>Some reason here</li>
+<li class="span3 no-margin"><span>Rejection Note:</span>Some note here</li>
+<li class="span3 no-margin"><span>Supply Ratio:</span>
+
+<i class="icon-caret-down ricn icon-large tooltips" data-container="body" data-placement="top" data-original-title="Less than 1.5"></i>
+<i class="icon-caret-right yicn icon-large tooltips" data-container="body" data-placement="top" data-original-title="Between 1.5 - 3.0"></i>
+<i class="icon-caret-up gicn icon-large tooltips" data-container="body" data-placement="top" data-original-title="Greater than 3.0"></i>
+</li>
+<li class="span3 no-margin" style="color:#990000"><span>Best Match Score: </span>100 <i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Help body goes here! Help body goes here!" data-original-title="Help header"></i></li>
+<li class="span3 no-margin" style="color:#990000"><span>Average Match Score:</span>80 <i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Help body goes here! Help body goes here!" data-original-title="Help header"></i></li>
+
+</ul>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+           
+<ul class="nav nav-tabs approvals">
+<li><a href="requisitions_add.html">Requisition</a></li>
+<li><a href="requisitions_add_2.html">Distribution</a></li>
+<li class="active"><a href="requisitions_add_3.html" >Talent Match</a></li>
+<li><a href="requisitions_add_4.html" >Manage Candidates</a></li>
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<!-------------------------------->
+
+<div class="tiles">
+
+<a href="">
+<div class="tile bg-blue">
+<div class="tile-body">
+<ul class="unstyled">
+<li><span>Candidates:</span>5</li>
+<li><span>Best Match Score:</span>7</li>
+<li><span>Top 10 Score Avg::</span>4</li>
+</ul>
+</div>
+<div class="tile-object"><div class="number" >In Network</div></div>
+</div>
+</a>
+
+
+<a href="">
+<div class="tile bg-orange">
+<div class="tile-body">
+<ul class="unstyled">
+<li><span>Candidates:</span>1</li>
+<li><span>Best Match Score:</span>7</li>
+<li><span>Top 10 Score Avg:</span>4</li>
+</ul>
+</div>
+<div class="tile-object"><div class="number">Global Network</div></div>
+</div>
+</a>
+
+</div><!--end tiles-->
+
+<!--flip
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+
+<div class="flipper">
+<div class="front green"><div class="front-tile">MSP</div></div>
+<div class="back green">
+<div class="back-title">
+Candidates<br/>
+<span class="number"> 5</span>
+</div>
+<div class="back-title">
+Match Scorees<br/>
+<span class="number"> 5</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="flipper">
+<div class="front green"><div class="front-tile">ZC Sourced</div></div>
+<div class="back green">
+<div class="back-title">
+Candidates<br/>
+<span class="number"> 5</span>
+</div>
+<div class="back-title">
+Match Scorees<br/>
+<span class="number"> 5</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="flipper">
+<div class="front green"><div class="front-tile">Global MSP</div></div>
+<div class="back green">
+<div class="back-title">
+Candidates<br/>
+<span class="number"> 5</span>
+</div>
+<div class="back-title">
+Match Scorees<br/>
+<span class="number"> 5</span>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+end flip-->
+
+
+<div class="clear"></div>
+
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Search Candidates</div>
+</div>
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Candidate Name</option>
+<option value="2">Match Score	</option>
+<option value="3">Supplier	</option>
+<option value="4">Availability	</option>
+<option value="5">Active Projects</option>
+<option value="6">Previous Projects</option>
+	<option value="7">Avg Rating	</option>
+<option value="8">Candidate Score	</option>
+<option value="9">Bill Rate</option>
+<option value="10">Supplier Markup	</option>
+<option value="11">Status	</option>
+<option value="12">Actions</option>
+
+
+</select>
+</li>
+</ul><!--end hidden ul-->
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Candidate Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Supplier</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>Availability</span>
+<select class="m-wrap small">
+<option value="">Select...</option>
+<option value="2"> Option 1</option>
+<option value="3"> Options 2</option>
+</select></li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="11" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Actions</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="12" class="hiddenMenu">
+<li class="span3 no-margin"><span>Action</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+</ul><!--end hidden ul-->
+<div class="clear"></div>
+</div><!--END PORTLET BOX-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Candidates</div>
+</div>
+
+<div class="portlet-body">
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download DOC</a></li>
+</ul>
+</div>
+
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li><a href="#">Timesheet View 1</a></li>
+<li><a href="#">Timesheet View 2</a></li>
+<li><a href="#">Timesheet View 3</a></li>
+</ul>
+</div>
+
+<div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+
+
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">  
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1">Candidate Name</label>
+<label><input type="checkbox" checked data-column="2">Match Score</label>
+<label><input type="checkbox" checked data-column="3">Supplier</label>
+<label><input type="checkbox" checked data-column="4">Availability</label>
+<label><input type="checkbox" checked data-column="5">Active Projects</label>
+<label><input type="checkbox" checked data-column="6">Previous Projects</label>
+	<label><input type="checkbox" checked data-column="7">Avg Rating</label>
+<label><input type="checkbox" checked data-column="8">Candidate Score	</label>
+<label><input type="checkbox" checked data-column="9">Bill Rate	</label>
+<label><input type="checkbox" checked data-column="10">Supplier Markup	</label>
+<label><input type="checkbox" checked data-column="11">Status	</label>
+<label><input type="checkbox" checked data-column="12">Actions</label>
+
+</div>
+</div>
+
+<!--END buttons/actions-->
+
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+<thead>
+<tr>
+<th class="no-sort aligncenter "><a href="#" class="tooltips" data-placement="top" data-original-title="Select All"><input type="checkbox" value=""></a></th>
+<th>Candidate Name</th>
+<th>Match Score	</th>
+<th>Supplier	Type</th>
+<th>Availability</th>
+<th>Active Projects</th>
+<th>Previous Projects</th>
+	<th>Avg Rating	</th>
+<th> Candidate Score	</th>
+<th> Bill Rate	</th>
+<th> Status	</th>
+<th class="no-sort">Actions</th>
+</tr>
+  </thead>
+  <tbody>
+<tr>
+
+<td class="aligncenter"><input type="checkbox" value=""></td>
+<td><a href="requisitions_candidate_details.html">John Doe</a></td>
+<td>100</td>
+ <td><a href="#">In Network</a></td>
+<td>Available</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>
+	<i class="icon-star ricn"></i>
+	<i class="icon-star ricn"></i>
+	<i class="icon-star-half ricn"></i>
+	<i class="icon-star-empty ricn"></i>
+	<i class="icon-star-empty ricn"></i>
+</td>
+<td>99%</td>
+<td>100.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'>Approve</a><br/>
+<a href='#'>Approve Markup</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#'>Extend Offer</a><br/>
+<a href='#'>Counter Offer</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#'>Confirm Rate</a><br/>
+<a href='#rescind' data-toggle='modal' >Rescind Offer</a><br/>
+<a href='#resume' data-toggle='modal'>View Resume</a><br/>
+<a href='#'>View Attachment</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#'>E-mail </a><br/>
+<a href='#history' data-toggle='modal'>History Track</a><br/>
+<a href='#'>Remove DNR Flag</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td class="aligncenter"><input type="checkbox" value=""></td>
+<td><a href="requisitions_candidate_details.html">John Doe</a></td>
+<td>90</td>
+ <td><a href="#">Out Of Network</a></td>
+<td>04-May-2015</td>
+<td>1</td>
+<td>1</td>
+<td><i class="icon-star ricn"></i> <i class="icon-star ricn"></i> <i class="icon-star ricn"></i> <i class="icon-star-half ricn"></i> <i class="icon-star-empty ricn"></i></td>
+<td>99%</td>
+<td>100.00 USD</td>
+<td ><a href="#submission" data-toggle="modal">Submitted</a></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'>Approve</a><br/>
+<a href='#'>Approve Markup</a><br/>
+<a href='#decline' data-toggle='modal'>Decline</a><br/>
+<a href='#interview' data-toggle='modal'>Interview</a><br/>
+<a href='#'>Extend Offer</a><br/>
+<a href='#'>Counter Offer</a><br/>
+<a href='#counter' data-toggle='modal'>Request Counter</a><br/>
+<a href='#'>Confirm Rate</a><br/>
+<a href='#rescind' data-toggle='modal' >Rescind Offer</a><br/>
+<a href='#resume' data-toggle='modal'>View Resume</a><br/>
+<a href='#'>View Attachment</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+<a href='#'>E-mail </a><br/>
+<a href='#history' data-toggle='modal'>History Track</a><br/>
+<a href='#'>Remove DNR Flag</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td class="aligncenter"><input type="checkbox" value=""></td>
+<td><a href="requisitions_candidate_details.html">John Doe</a></td>
+<td>180</td>
+ <td><a href="#">Out Of Network</a></td>
+<td>Not Available</td>
+<td>no</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>99%</td>
+<td>&nbsp;</td>
+<td >Not Submitted</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#resume' data-toggle='modal'>View Resume</a><br/>
+<a href='#'>Request</a><br/>
+<a href='#'>Submit</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td class="aligncenter"><input type="checkbox" value=""></td>
+<td><a href="requisitions_candidate_details.html">John Doe</a></td>
+<td>70</td>
+ <td><a href="#">In Network</a></td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>99%</td>
+<td>&nbsp;</td>
+<td>Not Submitted</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#resume' data-toggle='modal'>View Resume</a><br/>
+<a href='#'>Request</a><br/>
+<a href='#'>Submit</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+
+</tbody>
+
+</table>
+<div class="clear"></div>
+</div><!--end portlet box-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn"> Compare</a> 
+<a href="#" class="greenbtn"> Approve</a> 
+</div>
+</div>
+</div><!--end portlet body-->
+
+
+<!-------------------------------->
+
+
+
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+<!--MOdals-->
+<!--Competencies modal-->
+<div id="competencies" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Competencies</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+<hr/>
+<ul class="unstyled">
+<li class="span12">Minimum Years Experience (for all selected)&nbsp; <input type="text" name="input2"  class="m-wrap  span3"/></li>
+</ul>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+<!--Certifications modal-->
+<div id="certifications" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Certifications</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+<!--confirm modal-->
+<div id="confirm" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<form class="form-horizontal">
+<div class="modal-header"><h3>Confrim</h3></div>
+<div class="modal-body">
+<p>This requisition requires approval. Do you want to initate the aprroval workflow? </p>
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<button type="button" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">OK</button>
+</div>
+</form>
+</div><!--end modal-->
+<!--landscape-->
+<div id="landscape" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Market Rate Calculator</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Job Category:</span>Some category here</li>
+<li class="span6 no-margin"><span>Location:</span>CA US</li>
+<li class="span6 no-margin"><span>Customer Target Rate:</span>10.00 USD</li>
+<li class="span6 no-margin"><span>Customer Max Rate:</span>10.00 USD</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span12 no-margin"><span>Enter a Supplier Markup</span><br/><input type="text" name=""  class="m-wrap  span5 rightmargin5"/>% <a href="#"><i class='icon-refresh bicn'></i>Refresh Graph</a></li>
+<li class="span12 no-margin"><hr/></li>
+</ul>
+<div class="clear"></div>
+
+<div id="landscapechart"><div class="clear"></div></div>
+
+<!--<p class="aligncenter"><br/><img src="../assets/img/graph.png" style="width:500px;"/> </p>-->
+<hr/>
+<h4>Local Stats for this Job Category</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Total Current Job Seekers</th>
+<th>Total Current Open Positions</th>
+<th>This Area's Supply Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr >
+<td class="aligncenter redtext">77</td>
+<td class="aligncenter">6</td>
+<td class="aligncenter bluetext">1.17</td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+<br/><h4>Best Supply Regions for this Job Category</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Phoenix</th>
+<th>Anchorage</th>
+<th>Waco</th>
+</tr>
+</thead>
+<tbody>
+<tr >
+<td class="aligncenter redtext">4.5</td>
+<td class="aligncenter yellowtext">4.65</td>
+<td class="aligncenter">2.88</td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+
+</div><!--end modal body-->
+<!--<div class="modal-footer">
+<button type="submit" class="bluebtn">Refresh Graph</button>
+</div>-->
+
+</div><!--end modal-->
+<!--history-->
+<div id="history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:40%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>History Track</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Modified By</th>
+<th>Modified Date</th>
+<th>Created By</th>
+<th>Created Date</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name here</td>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+</tbody>
+</table>
+
+<!-- changed 2.25 ticket 3661
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th>Name</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Created On</th>
+<th>Created By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+</tr>
+<tr>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+</tr>
+
+</tbody>
+</table>
+-->
+
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--score-->
+<div id="score" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Candidate Score</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Competency</th>
+<th>Required</th>
+<th>Req Minimum Experience (years)</th>
+<th>Req Minimum Skill Level</th>
+<th>Candidate Experience (years)</th>
+<th>Candidate Skill Level</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>LPN Correction</td>
+<td>Optional</td>
+<td>1</td>
+<td>Novice</td>
+<td>8</td>
+<td>Intermediate</td>
+  </tr>
+
+  </tbody>
+</table>
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Certification / Document</th>
+<th>Required</th>
+<th>Document Type</th>
+<th>Candidate Document Status</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>Net App</td>
+<td>Required </td>
+<td>ASP Worker Document</td>
+<td>Not Recieved</td>
+  </tr>
+    <tr>
+<td>Net App</td>
+<td>Required </td>
+<td>ASP Worker Document</td>
+<td>Not Recieved</td>
+  </tr>
+
+    <tr>
+<td>Net App</td>
+<td>Required </td>
+<td>ASP Worker Document</td>
+<td>Not Recieved</td>
+  </tr>
+
+    <tr>
+<td>Net App</td>
+<td>Required </td>
+<td>ASP Worker Document</td>
+<td>Not Recieved</td>
+  </tr>
+
+  </tbody>
+</table>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--submission-->
+<div id="submission" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Submission History</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Status</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Reason</th>
+<th>Notes</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>Submitted</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>Some Reason Here</td>
+<td>Misc note goes here</td>
+  </tr>
+
+  </tbody>
+</table>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--resume-->
+<div id="resume" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Candidate Resume</h3></div>
+
+<div class="modal-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+<div class="clear"></div>
+<a href="#" class="pull-right">Download</a>
+<div class="clear"></div>
+
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--counter-->
+<div id="counter" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Counter Offer</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>New Proposed Rate</span><br/><input type="text" name="text1"  class="m-wrap  span11"/></li>
+<li class="no-margin"><span>Notes</span><br/><textarea class="m-wrap span11" rows="3"></textarea></li>
+
+</ul>
+<div class="clear"><hr/></div>
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Proposed Rate</th>
+<th>Notes</th>
+<th>Modified By</th>
+<th>Modified On</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>some notes here</td>
+<td>John Doe</td>
+<td>19-Aug-14 02:24:33 PM EST</td>
+</tr>
+</tbody>
+</table>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Send</button>
+</div>
+</div><!--end modal-->
+<!--activity-->
+<div id="activity" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>View Transaction Activity</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Req Name:</span>Project Coordinator</li>
+<li class="span6 no-margin"><span>Project Name:</span>Micron DIMM</li>
+<li class="span6 no-margin"><span>Start Date:</span>14-Jun-14</li>
+<li class="span6 no-margin"><span>End Date:</span>14-Jun-15</li>
+<li class="span6 no-margin"><span>Work Location:</span>Sunnydale, CA</li>
+<li class="span6 no-margin"><span>Supplier:</span>TalentBurst</li>
+<li class="span6 no-margin"><span>Candidate Name:</span>John Doe</li>
+<li class="span6 no-margin"><span>Target Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Max Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Lowest Bill Rate Submitted:</span>35.00 USD</li>
+<li class="span6 no-margin"><span>Max Markeup:</span>38.00%</li>
+<li class="span6 no-margin"><span>Markup:</span>35.00%</li>
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--interview-->
+<div id="interview" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:75%; left:35%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Interview</h3></div>
+
+<div class="modal-body">
+<!-- change request 2.25 ticket 3661
+<hr/>
+<h4>Counter Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Proposed Rate</th>
+<th>Notes</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100.00 USD</td>
+<td>Some misc notes go here</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> Actions not provided</a><br/>
+<a href='#'><i class='icon-trash'></i> Need Actions</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>-->
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Interview Type<span class="required">*</span></span><br>
+<select class="m-wrap  span11" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span4 no-margin"><span>Interview Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap  span11 date-picker" name="text2"   placeholder="DD/MM/YYYY"></li>
+<li class="span4 no-margin"><span>Interview Time</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+<li class="span4 no-margin"><span>Interview Time Zone<span class="required">*</span></span><br>
+<select class="m-wrap  span11" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span4 no-margin"><span>Interview Duration (minutes)</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+
+<li class="span4 no-margin"><span>Interview Location / Phone</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+<li class="span4 no-margin"><span>Interviewer Name<span class="required">*</span></span><br>
+<select class="m-wrap  span11" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span4 no-margin"><span>Contact Information</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+
+
+
+
+
+
+</ul>
+<div class="clear"></div>
+<hr/>
+
+<h4>Interview Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Type</th>
+<th>Date / Time</th>
+<th>Duration</th>
+<th>Location / Phone</th>
+<th>Interviewer Name</th>
+<th>Contact Information</th>
+
+<th>Notes</th>
+<th>Last Modified</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Person</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>60 Minutes</td>
+<td>Main St Office 122L</td>
+<td>John Doe</td>
+<td>Lorem ipsum dolot.</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Client requested</td>
+<td><a href="">Cancel</a>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+<br/>
+<div class="alert alert-success" style="padding: 20px;" >
+<strong>Alert</strong>&nbsp;-&nbsp; Are you sure you want to cancel?
+<div class="pull-right">
+<a href="#" class="greenbtn"> <i class="icon-save saveicon"></i> Save</a> 
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Extend Offer</button>
+<button type="submit" class="bluebtn">Decline</button>
+<button type="submit" class="bluebtn">Complete</button>
+<button type="submit" class="bluebtn">Accept</button>
+<button type="submit" class="bluebtn">Re-Interview</button>
+<button type="submit" class="bluebtn">Reset</button>
+<button type="submit" class="greenbtn">Send</button>
+<button type="submit" class="greenbtn">OK</button>
+</div>
+
+</div><!--end modal-->
+<!--notes-->
+<div id="notes" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:50%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Add Notes</h3></div>
+
+<div class="modal-body">
+<h4>Add Notes</h4>
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+<li class="no-margin span3"><span>Share with Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>Share with Manager</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Manager</span><input type="checkbox" value=""></li>
+
+</ul>
+<div class="clear"></div>
+<br/>
+<div class="alert alert-success" style="padding: 20px;" >
+<strong>Confirm</strong>&nbsp;-&nbsp; Are you sure you want to save?
+<div class="pull-right">
+<a href="#" class="greenbtn"> <i class="icon-save saveicon"></i> Save</a> 
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<hr/>
+<h4>View Notes</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="span5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td><a href="#"><i class="icon-trash bicn"></i> Delete</a></td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+<!--rescind-->
+<div id="rescind" class="modal hide fade"  tabindex="-1" >
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Rescind Offer</h3>
+</div>
+<div class="modal-body" >
+
+<ul class="unstyled">
+<li ><span>Status Change Reason<span class="required">*</span></span><br/>
+<select class="m-wrap span5" tabindex="1">
+<option value="Category 1">Something</option>
+<option value="Category 2">Something else</option>
+<option value="Category 3">Another reason</option>
+</select></li>
+<li><br/></li>
+<li><span>Additional Comment<span class="required">*</span></span><br/>
+<textarea class="span12 m-wrap" rows="3"></textarea></li>
+
+</ul>
+
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<button class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">OK</button>
+
+</div>
+</form>
+</div><!--end modal-->
+<!--admin_fee-->
+<div id="admin_fee" class="modal hide fade"  tabindex="-1" >
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Edit Division Bill Rate</h3>
+</div>
+<div class="modal-body" >
+
+<div class="control-group">
+<div class="controls"><b>Markup Adjustment Type:</b>    
+<label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios1" value="option1"></span></div>Percentage</label>
+<label class="radio"><div class="radio"><span><input type="radio" name="optionsRadios1" value="option2" checked=""></span></div>Fixed Amount</label>  
+</div>
+</div>
+         
+         
+<br/>
+<table class="table table-full-width">
+<thead>
+<tr>
+<th class="span3 aligncenter">Bill Rate</th>
+<th class="span1"></th>
+<th class="span3 aligncenter">Markup</th>
+<th class="span1 aligncenter"></th>
+<th class="span3 aligncenter">Customer Rate</th>
+<th class="span1 aligncenter"></th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="aligncenter">22.00 USD</td>
+<td class="aligncenter">+</td>
+<td class="aligncenter"><input type="text" name="name"  class="span6 m-wrap"/>  %</td>
+<td class="aligncenter">=</td>
+<td class="aligncenter"><input type="text" name="name"  class="span6 m-wrap" placeholder="22.00" disabled/>  USD</td>
+</tr>
+
+</tbody>
+</table>
+
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<button class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Save</button>
+
+</div>
+</form>
+</div><!--end modal-->
+
+<!--#include file="_managers.html" -->
+<!--#include file="_action_decline.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

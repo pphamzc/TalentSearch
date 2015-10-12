@@ -1,0 +1,1095 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Requisition Summary</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+
+    <!--24July,2014-->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/multi-select/bootstrap-multiselect.css" />
+
+    <!--29July,2014-->
+    <link href="../assets/plugins/multi-select/multiple-select.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+<link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top orange4border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="requisitions_view.html">Requisitions</a> <i class="icon-angle-right"></i></li>
+<li>Requisition Summary</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW-->
+
+<div class="portlet box">
+<div class="portlet-title orange4border">
+<div class="caption">Product Manager (160096)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled no-margin">
+<li class="span3 no-margin"><span>Project Name:</span> UNIX Ops Systems Administrator</li>
+<li class="span3 no-margin"><span>Duration:</span> 23-Jan-14 - 23-Jun-2015</li>
+<li class="span3 no-margin"><span>Submit Proposals By:</span>23-Jan-14</li>
+<li class="span3 no-margin"><span>Status:</span> <span class="status">Open</span></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<!--<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View Requisition Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">-->
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>ZeroChaos Contact:</span>John Doe</li>
+<li class="span3 no-margin"><span>ZeroChaos E-mail:</span><a href="">myname@mycompany.com</a></li>
+<li class="span3 no-margin"><span>Req PO Number:</span> 12345</li>
+<li class="span3 no-margin"><span>Req Ref Number:</span> 12345</li>
+<li class="span3 no-margin"><span>Education Level:</span> Bachelor's Degree</li>
+<li class="span3 no-margin"><span>Background Check Reqd:</span>  Yes</li>
+<li class="span3 no-margin"><span>Drug Screen Reqd:</span> No</li>
+<li class="span3 no-margin"><span>Requisition Source Type:</span> 123456</li>
+<li class="span3 no-margin"><span>Accept Proposals:</span> No</li>
+
+<li class="span11 no-margin"><span>Description:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</li>
+<li class="span11 no-margin"><span>Requirements:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+<li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+</ul></li>
+</ul>
+
+<!--</div>
+</div>
+</div>
+</div> end accordian-->                                 
+<div class="clear"></div>
+</div><!-- END PORLET BODY--> 
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title orange4border"><div class="caption">Pricing</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Reqstd Qty/Max Submits: </span> 2/0</li>
+<li class="span3 no-margin redtext"><span>Max Bill Rate:</span> 46.00 USD</li>
+<li class="span3 no-margin redtext"><span>Lowest Bill Rate Submitted:</span> 37.00 USD</li>
+<li class="span3 no-margin"><span>Overtime Allowed:</span>No</li>
+<li class="span3 no-margin"><span>Expense Allowed:</span>No</li>
+</ul>
+<li class="span3 no-margin redtext"><span>High Zindex Submitted:</span> 100 <i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Help body goes here! Help body goes here!" data-original-title="Help header"></i></li>
+<li class="span3 no-margin redtext"><span>Average Zindex Submitted:</span> 79.71 <i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="Help body goes here! Help body goes here!" data-original-title="Help header"></i></li>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<ul class="nav nav-tabs req_candidate">
+<li class="active"><a href="#portlet_tab1" data-toggle="tab">Submissions</a></li>
+<li><a href="#portlet_tab2" data-toggle="tab">Submit Candidates</a></li>
+<li><a href="resource_add_candidates.html" >Add New Candidate</a></li>
+</ul>
+
+
+<div class="tab-content req_candidate_content">
+
+<div class="tab-pane active" id="portlet_tab1">
+<div class="portlet box">
+<div class="portlet-body">
+
+<!--------------------------------->
+
+
+
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Candidates</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+ <table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Interview</th>
+<th>Zindex</th>
+<th>Submit Date</th>
+<th>Resource Pay Rate</th>
+<th>Suplier Bill Rate</th>
+<th>Difference</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../manager/requisitions_candidate_details.html">Stephen Quincy</a></td>
+<td>Submitted</td>
+<td>Yes</td>
+<td>96</td>
+<td>15-Oct-2015</td>
+<td>34.50 USD</td>
+<td>46.00 USD</td>
+<td>+8.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Submit</a><br/>
+<a href='#resume' data-toggle='modal'><i class='icon-search'></i>  View Resume</a><br/>
+<a href='#attachment' data-toggle='modal'><i class='icon-search'></i>  View Attachment</a><br/>
+<a href='#counter' data-toggle='modal'><i class='icon-bar-chart'></i>  Track Activity</a><br/>
+<a href='#'><i class='icon-external-link'></i>  Withdraw</a><br/>
+<a href='#'><i class='icon-edit'></i>  Modify</a><br/>
+<a href='#'><i class='icon-paper-clip'></i> Add Notes</a><br/>
+<a href='#'><i class='icon-user'></i> Request Interview</a><br/>
+<a href='#'><i class='icon-ok'></i> Accept</a><br/>
+<a href='#'><i class='icon-search'></i> View Notes</a><br/>
+<a href='#'><i class='icon-rotate-left'></i> History Tracks</a><br/>
+<a href='#'><i class='icon-thumbs-up'></i> Stand with Current Rate</a><br/>
+<a href='#'><i class='icon-plus'></i> Propose New Rate</a><br/>
+
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td><a href="../manager/requisitions_candidate_details.html">Jean DePetro</a></td>
+<td>Submitted</td>
+<td>No</td>
+<td>88</td>
+<td>14-Oct-2015</td>
+<td>33.00 USD</td>
+<td>446.00 USD</td>
+<td>+6.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Submit</a><br/>
+<a href='#resume' data-toggle='modal'><i class='icon-search'></i>  View Resume</a><br/>
+<a href='#attachment' data-toggle='modal'><i class='icon-search'></i>  View Attachment</a><br/>
+<a href='#counter' data-toggle='modal'><i class='icon-bar-chart'></i>  Track Activity</a><br/>
+<a href='#'><i class='icon-external-link'></i>  Withdraw</a><br/>
+<a href='#'><i class='icon-edit'></i>  Modify</a><br/>
+<a href='#'><i class='icon-paper-clip'></i> Add Notes</a><br/>
+<a href='#'><i class='icon-user'></i> Request Interview</a><br/>
+<a href='#'><i class='icon-ok'></i> Accept</a><br/>
+<a href='#'><i class='icon-search'></i> View Notes</a><br/>
+<a href='#'><i class='icon-rotate-left'></i> History Tracks</a><br/>
+<a href='#'><i class='icon-thumbs-up'></i> Stand with Current Rate</a><br/>
+<a href='#'><i class='icon-plus'></i> Propose New Rate</a><br/>
+
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+<td><a href="../manager/requisitions_candidate_details.html">Kylie Monroe</a></td>
+<td><a href="#submission" data-toggle="modal">Requested</a></td>
+<td>No</td>
+<td>81</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#resume' data-toggle='modal'>View Resume</a><br/>
+<a href='#submit_cand' data-toggle='modal'>Submit Candidate</a>
+<a href='#' >Withdraw</a><br/>
+<a href='#history' data-toggle='modal'>History Track</a><br/>
+<a href='#notes' data-toggle='modal'>Add Notes</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+</tr>
+<tr>
+<td><a href="../manager/requisitions_candidate_details.html">Claudia Shatt</a></td>
+<td>Pending</td>
+<td>No</td>
+<td>67</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Submit</a><br/>
+<a href='#resume' data-toggle='modal'><i class='icon-search'></i>  View Resume</a><br/>
+<a href='#attachment' data-toggle='modal'><i class='icon-search'></i>  View Attachment</a><br/>
+<a href='#counter' data-toggle='modal'><i class='icon-bar-chart'></i>  Track Activity</a><br/>
+<a href='#'><i class='icon-external-link'></i>  Withdraw</a><br/>
+<a href='#'><i class='icon-edit'></i>  Modify</a><br/>
+<a href='#'><i class='icon-paper-clip'></i> Add Notes</a><br/>
+<a href='#'><i class='icon-user'></i> Request Interview</a><br/>
+<a href='#'><i class='icon-ok'></i> Accept</a><br/>
+<a href='#'><i class='icon-search'></i> View Notes</a><br/>
+<a href='#'><i class='icon-rotate-left'></i> History Tracks</a><br/>
+<a href='#'><i class='icon-thumbs-up'></i> Stand with Current Rate</a><br/>
+<a href='#'><i class='icon-plus'></i> Propose New Rate</a><br/>
+
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+</div>
+<!--END PORTLET BODY --> 
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Competencies</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Min Yrs Exp</th>
+<th>Competency</th>
+<th>Preferred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Java</td>
+<td>5</td>
+<td>Expert</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Mongo</td>
+<td>6</td>
+<td>Expert</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>5</td>
+<td>Expert</td>
+<td>Yes</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--END PORTLET BODY --> 
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Certifications</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+
+ <table class="table table-striped table-bordered table-hover table-full-width">
+    <thead>
+<tr>
+<th>Certification Name</th>
+<th>Preferred</th>
+<th>Require Attachment</th>
+<th>Require Cert Number</th>
+<th>Require Issue Date</th>
+<th>Require Expiration Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example cert name</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Example cert name</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Example cert name</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--END PORTLET BODY --> 
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title orange4border"><div class="caption">Custom Fields</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+<ul class="unstyled no-margin">
+<li class="span11 no-margin"><span>UDF 1:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 2:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 3:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 4:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+<li class="span11 no-margin"><span>UDF 5:</span>  Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+</ul>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Work Schedule</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body"> 
+
+ <table class="table table-striped table-bordered table-hover table-full-width">
+  <thead>
+<tr>
+<th class="span1">Mon</th>
+<th class="span1">Tue</th>
+<th class="span1">Wed</th>
+<th class="span1">Thu</th>
+<th class="span1">Fri</th>
+<th class="span1">Sat</th>
+<th class="span1">Sun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Hours Per Day:</span>8 </li>
+<li class="span3 no-margin"><span>Hours Per Week:</span> 40</li>
+<li class="span3 no-margin"><span>Start Time:</span>8:00 a.m. EST </li>
+<li class="span3 no-margin"><span>End Time:</span>5:00 p.m. EST </li>
+<li class="span3 no-margin"><span>Travel Reqd:</span>Yes </li>
+<li class="span3 no-margin"><span>Travel %:</span>20 </li>
+<li class="span3 no-margin"><span>Work Remote:</span>No </li>
+</ul>
+<div class="clear"></div>
+</div><!--END PORTLET BODY --> 
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title orange4border"><div class="caption">Work Location</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Work Location:</span>123 My Street </li>
+<li class="span3 no-margin"><span>City:</span>My City</li>
+<li class="span3 no-margin"><span>State:</span>My State</li>
+<li class="span3 no-margin"><span>Zip Code:</span>12345</li>
+<li class="span3 no-margin"><span>Country:</span>US</li>
+
+</ul>
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title orange4border"><div class="caption">Managers</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Owner Name</th>
+<th>Active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#">John Doe</a></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="#">John Doe</a></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title orange4border"><div class="caption">Notes & Attachments</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+
+<ul class="unstyled">
+<li class="span5 no-margin"><span>Attachments</span>
+<ul class="unstyled no-margin">
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li> 
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>    
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+<li>123456789099876543211234567890.doc<a href="#" class="leftmargin"><i class="icon-trash"></i></a> </li>  
+</ul></li>
+
+
+<li class="span6 no-margin"><span>Notes:</span><br/>  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here</li>
+</ul>
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<!-------------------------------->
+
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+
+</div>	<!--end tab1-->										
+											
+<div class="tab-pane" id="portlet_tab2">
+<div class="portlet box">
+<div class="portlet-body">
+
+<!--------------------------------->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Search Candidates</div>
+</div>
+
+<div class="portlet-body">
+
+<!--filter-->
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+                    <option value="0">Select...</option>
+                    <option value="1">Name</option>
+                    <option value="2">Email</option>
+                    <option value="3">Phone</option>                      
+<option value="12">Candidate Score</option> 
+<option value="13">Scheduled Hours</option> 
+<option value="14">Keywords</option> 
+
+                    <option value="4">Locations</option>
+                    <option value="5">Date Available</option>
+                    <option value="6">ZC Bill Rate</option>
+                    <option value="7">Pay Rate</option>
+                	  <option value="8">Units</option>
+                    <option value="9">Submits</option>
+                    <option value="10">Offer Accepted</option>
+             		  <option value="11">Status</option>
+</select>
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Email</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Phone</span><br /><input type="text" class="m-wrap small"  ></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>Locations</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ 
+ 
+ <div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="8" class="hiddenMenu">
+ <li class="span3 no-margin"><span>Units</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  
+  
+  <div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+  <div id="10" class="hiddenMenu">
+   <li class="span3 no-margin"><span>Offer Accepted</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+  <div id="11" class="hiddenMenu">
+   <li class="span3 no-margin"><span>Status</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+  <div id="12" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="13" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+  <div id="14" class="hiddenMenu">
+   <li class="span3 no-margin"><span>Keywords</span><br /><input type="text" class="m-wrap small">
+</li>
+
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+</ul><!--end hidden ul-->
+
+<div class="clear"></div>
+</div><!--END PORTLET body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+</div>
+<!--end portlet box-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Search Results</div>
+</div>
+
+<div class="portlet-body">
+
+ <table class="table table-striped table-bordered table-hover table-full-width" id="engage_3" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Candidate Score</th>
+        <th>Schedule</th>
+        <th>Scheduled Hours</th>
+        <th>Locations</th>
+        <th>Date Available</th>
+        <th>ZC Bill Rate</th>
+        <th>Pay Rate</th>
+        <th>Units</th>
+        <th>Submits</th>
+        <th>Offer Accepted</th>
+        <th>Status</th>
+        <th class="no-sort">Action</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>        
+<td><a href="">John Doe</a></td>
+<td>myemail@mycompany.com</td>
+<td>123-456-7890</td>
+<td>100%</td>
+<td>No</td>
+<td>0</td>
+<td>CA USA</td>
+<td>08-Aug-14</td>
+<td>30.00 USD</td>
+<td>25.00 USD</td>
+<td>Hourly</td>
+<td>12</td>
+<td>1</td>
+<td>Submitted</td>
+<td><a href="#submit_cand" data-toggle="modal">Submit</a></td>
+</tr>  
+</tbody>
+</table>
+</div><!--end portlet body-->
+</div>
+<!--end portlet box-->
+<!-------------------------------->
+
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+</div><!--end tab 2-->
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+  
+
+<!--MOdals-->
+<!--counter modal-->
+<div id="counter" class="modal hide fade" tabindex="-1" style="min-width:700px" >
+<div class="modal-header"><h3>Track Activity</h3></div>
+<div class="modal-body">
+
+<ul class="unstyled no-margin span8">
+<li><span>Req Name:</span> UNIX Ops Systems Administrator</li>
+<li><span>Project Name:</span> UNIX Ops Systems Administrator</li>
+<li><span>Lowest Bill Rate Submitted:</span> 54.00 USD</li>
+<li><span>Work Location:</span>My street, My City, My State Zip Country</li>
+</ul>
+<ul class="unstyled no-margin span4">
+<li><span>Start Date:</span> 23-Jan-14</li>
+<li><span>End Date:</span> 23-Jan-14</li>
+<li ><span>Target Rate:</span> 55.00 USD</li>
+<li><span>Reqstd Qty/Max Submits: </span> 1/0</li>
+</ul>
+<div class="clear"></div>
+
+<hr/>
+<h4>Counter Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th class="span3">Proposed Rate</th>
+<th>Additional Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110.00 USD</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </td>
+</tbody>
+</table>
+
+<div class="modal-footer">
+<button type="button" class="bluebtn">Action</button>
+<button type="submit" class="greenbtn" >Action</button>
+</div>
+
+
+</div><!-- end body-->
+</div><!--end modal-->
+<!--resume modal-->
+<div id="resume" class="modal hide fade" tabindex="-1" >
+<div class="modal-header"><h3>Candidate Resume</h3></div>
+<div class="modal-body">
+<p>Human resources manager with solid skills in HR administration, policy and procedure development, traditional and electronic recruiting, hiring, training, employee relations, corporate communications, contract management, and affirmative action.
+<ul>
+<li>Effective change manager with record of success managing people and projects in fast-paced, high pressure environments.</li>
+<li>Solid knowledge of state and federal employment / unemployment laws, EEOC, ADA, and OSHA regulations.</li>
+<li>Well-developed interpersonal and communication skills.</li>
+<li>Proficient with Windows, Microsoft Word, Microsoft Excel, and HRIS systems.</li>
+</ul>
+
+Experience
+
+WEST REHAB - West Creek, Mississippi 
+Human Resources Manager 
+Directed and managed staffing for 22 facilities. Recruited, hired, and trained staff. Supervised five staffing coordinators and handled all HR management functions.
+<ul>
+<li>Successfully improved company profits through effective management of human resources.</li>
+<li>Conducted interviews, screened applicants, and provided new hire orientations. </li>
+<li>Authored employee handbooks for three companies. </li>
+<li>Implemented custom HRIS system to coordinate resource allocation and staff scheduling.</li>
+<li>Developed and implemented policies, procedures, and initiatives that improved customer relations and dramatically reduced staff turnover.</li>
+</ul>
+</p>
+<div class="clear"></div>
+<a href="#" class="pull-right">Download</a>
+<div class="clear"></div>
+
+</div><!-- end body-->
+</div><!--end modal-->
+<!--attachment modal-->
+<div id="attachment" class="modal hide fade" tabindex="-1" >
+<div class="modal-header"><h3>Attachments</h3></div>
+<div class="modal-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+</div><!-- end body-->
+</div><!--end modal-->
+<!--submit_cand modal-->
+<div id="submit_cand" class="modal hide fade" tabindex="-1" >
+<div class="modal-header"><h3>Candidate Information</h3></div>
+<div class="modal-body">
+
+<ul class="unstyled">
+<li class="span12 no-margin"><span>Candidate Name:</span>John Doe</li>
+
+<li class="span6 no-margin"><span>Select Supplier Manager</span> <br/>
+<select class="m-wrap span10">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+
+<li class="span6 no-margin"><span>Submitted Markup<span class="required">*</span></span><br/> <input class="m-wrap span10" type="text" placeholder="0.00%" disabled=""></li>
+<li class="span6 no-margin"><span>Client Bill Rate<span class="required">*</span></span> <br/><input type="text" class="m-wrap span10" /></li>
+<li class="span6 no-margin"><span>Resource Pay Rate<span class="required">*</span></span><br/> <input type="text" class="m-wrap span10" /></li>
+<li class="span12 no-margin"><span>Notes</span> <br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+</li>
+
+
+</ul>
+
+<div class="clear"></div>
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Submit</button>
+</div>
+
+</div><!-- end body-->
+</div><!--end modal-->
+<!--submission-->
+<div id="submission" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Submission History</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Status</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Reason</th>
+<th>Notes</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+<td>Submitted</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>Some Reason Here</td>
+<td>Misc note goes here</td>
+  </tr>
+
+  </tbody>
+</table>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--history-->
+<div id="history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:40%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>History Track</h3></div>
+
+<div class="modal-body">
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Modified By</th>
+<th>Modified Date</th>
+<th>Created By</th>
+<th>Created Date</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name here</td>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+</tr>
+</tbody>
+</table>
+
+<!-- changed 2.25 ticket 3661
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<thead>
+<tr>
+<th>Name</th>
+<th>Modified On</th>
+<th>Modified By</th>
+<th>Created On</th>
+<th>Created By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+</tr>
+<tr>
+<td>Name here</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>John Doe</td>
+</tr>
+
+</tbody>
+</table>
+-->
+
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--notes-->
+<div id="notes" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:50%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Add Notes</h3></div>
+
+<div class="modal-body">
+<h4>Add Notes</h4>
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+<li class="no-margin span3"><span>Share with Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>Share with Manager</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Manager</span><input type="checkbox" value=""></li>
+
+</ul>
+<div class="clear"></div>
+<br/>
+<div class="alert alert-success" style="padding: 20px;" >
+<strong>Confirm</strong>&nbsp;-&nbsp; Are you sure you want to save?
+<div class="pull-right">
+<a href="#" class="greenbtn"> <i class="icon-save saveicon"></i> Save</a> 
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<hr/>
+<h4>View Notes</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="span5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td><a href="#"><i class="icon-trash bicn"></i> Delete</a></td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" --> 

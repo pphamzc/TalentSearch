@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Compliance Documents </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/wizard/css/wizard.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+    <!--expand details-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#compliance_doc tr:odd").addClass("odd");
+            $("#compliance_doc tr:not(.odd)").hide();
+            $("#compliance_doc tr:first-child").show();
+
+            $("#compliance_doc tr.odd").click(function () {
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });
+    </script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="breadcrumb">
+                            <li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+                            <li><a href="index.html">Supplier Dashboard</a> <i class="icon-angle-right"></i></li>
+                            <li>View Compliance Documents</li>
+                        </ul>
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW PAGE HEADER-->
+
+
+
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="portlet box">
+                            <div class="portlet-title blue3border">
+                                <div class="caption">Supporting Documents</div>
+                            </div>
+                            <!--end title-->
+
+                            <div class="portlet-body ">
+
+                                
+
+
+
+                                <div class="row-fluid">
+                                    <div class="span12">
+<ul class="unstyled">
+<li><span>Master Supplier:</span> 123456</li>
+<li><span>Country:</span> EU</li>
+</ul>
+                                        <table class="table table-bordered table-hover table-full-width" id="compliance_doc">
+
+                                    <thead>
+                                        <tr>
+                                            <th class="aligncenter">
+                                                <button class="btn tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down'></i></button>
+                                            </th>
+                                            <th>ID</th>
+                                            <th>Document Name</th>                                            
+                                            <th>Expiration Date</th>
+                                            <th>Status</th>                                            
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow' style="margin-right: 10px;"></i><span>View Files</span></td>
+                                            <td>2503</td>
+                                            <td>Artical of Incorporation </td>                                            
+                                            <td></td>
+<td>
+<a href="#" class="popovers" data-trigger="hover"  data-placement="top" data-html="true" data-original-title="Status History" data-content="
+Submitted 01-Jun-14<br/>
+Approved 21-Jun-14">Approved</a>
+</td>
+<td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#Attachmentmodal' data-toggle='modal'><i class='icon-view'></i> Attach File</a><br/> <a href='#'><i class='icon-view'></i> Do Not Have</a>" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+
+                                        </tr>
+                                        <!--hidden-->
+                                        <tr class="">
+                                            <td colspan="9">
+                                                <ul class="unstyled no-margin">
+                                                    <li class="span7 no-margin"><span>Document Files</span>
+                                                        <ul class="no-margin">
+                                                            <li class="span3 no-margin"><a href="#">mydf.pdf</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a></li>
+                                                            <li class="span3 no-margin"><a href="#">myotherdoc.doc</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            <li class="span3 no-margin"><a href="#">anotherone.xls</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            <li class="span3 no-margin"><a href="#">andonemore.png</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            <li class="span3 no-margin"><a href="#">myotherdoc.doc</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            <li class="span3 no-margin"><a href="#">anotherone.xls</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            <li class="span3 no-margin"><a href="#">andonemore.png</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow' style="margin-right: 10px;"></i><span>View Files</span></td>
+                                            <td>2504</td>
+                                            <td>Business License or document required by your local Municipality</td>                                            
+                                            <td>25-Aprl-2014</td>
+<td>
+<a href="#" class="popovers" data-trigger="hover"  data-placement="top" data-html="true" data-original-title="Status History" data-content="
+Submitted 01-Jun-14<br/>
+Approved 21-Jun-14">Expired</a>
+</td>
+                                            <td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-view'></i> Attach File</a> <br/> <a href='#'><i class='icon-view'></i> Do Not Have</a>" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+
+                                        </tr>
+
+                                        <tr class="">
+                                            <td colspan="9">
+                                                <ul class="unstyled no-margin">
+                                                    <li class="span7 no-margin"><span>Document Files</span>
+                                                        <ul class="no-margin">
+                                                            <li class="span3 no-margin"><a href="#">mydf.pdf</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a></li>
+                                                            <li class="span3 no-margin"><a href="#">myotherdoc.doc</a><a class="leftmargin" href="#"><i class="icon-trash"></i></a> </li>
+                                                            
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow' style="margin-right: 10px;"></i><span>View Files</span></td>
+                                            <td>2506</td>
+                                            <td>Business License</td>                                            
+                                            <td>25-Aprl-2014</td>
+                                            <td><a href="#">Do Not Have</a></td>
+                                            <td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-view'></i> Attach File</a> <br/> <a href='#'><i class='icon-view'></i> Do Not Have</a>" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+
+
+                                    </div>
+
+                                </div>
+
+                                
+
+
+
+
+                            </div>
+                            <!-- END PORLET BODY-->
+                        </div>
+                        <!--END PORTLET BOX BLUE-->
+
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW -->
+
+
+
+            </div>
+            <!--END CONTAINER FLUID-->
+        </div>
+        <!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_save_as.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->
+    <div id="Attachmentmodal" class="modal hide fade" tabindex="-1" role="modal" aria-labelledby="myModalLabel" aria-hidden="false">
+       
+            <div class="modal-header">
+                <h3 id="myModalLabel">Attached Required Files to Document Name</h3>
+            </div>
+            <div class="modal-body">
+                <ul class="unstyled no-margin" style="height:120px;">
+                    <li class="span4"><span>Attachment</span><br />
+                        <div class="fileupload fileupload-new  no-margin" data-provides="fileupload">
+                            <div class="input-append">
+                                <div class="uneditable-input attach">
+                                    <i class="icon-file fileupload-exists"></i>
+                                    <span class="fileupload-preview"></span>
+                                </div>
+                                <span class="btn-file">
+                                    <span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+                                    <span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+                                    <input type="file" class="default" />
+                                </span>
+                                <a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+            <!--end modal body-->
+
+
+            <div class="modal-footer">
+                <div class="pull-right">                    
+                  <a class="bluebtn" href="#"><i class="icon-remove"></i>Cancel</a>
+                   <a class="greenbtn" href="#"><i class="icon-check"></i>Submit</a>
+
+                </div>
+                <!--<button type="submit" class="submitbtn">Attach</button>-->
+            </div>
+        
+
+
+    </div>

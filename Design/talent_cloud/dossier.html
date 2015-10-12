@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Dossier</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap-switch/stylesheets/bootstrap-switch-zc.css" rel="stylesheet" type="text/css"/>
+
+	<link rel="shortcut icon" href="../favicon.ico" />
+<style type="text/css">
+.talent_table, .talent_table td, .talent_table tr, .talent_table tbody {border: none }
+.talent_table h1 {font-size:18px; display:inline}
+.row_border {   border-bottom: 2px solid #ddd!important;}
+.star2 {font-size:14px;   padding-top: 5px;   color: #007DCC;  }
+.projecttitle{font-size:16px; font-weight:bold}
+
+</style>
+
+
+
+<!--expand details-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">  
+        $(document).ready(function(){
+            $("#report tr:odd").addClass("odd");
+            $("#report tr:not(.odd)").hide();
+            $("#report tr:first-child").show();
+            
+            $("#report tr.odd").click(function(){
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });
+    </script>        
+
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><a href="#" class="toppadding"><i class="icon-arrow-left"></i>  Back To Search Results</a></li>
+<br/>
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Dossier </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#dossier" data-toggle="tab">My Dossier</a></li>
+<li><a href="#edit" data-toggle="tab">Edit Dossier</a></li>
+<li><a href="#settings" data-toggle="tab">Settings</a></li>
+<li><a href="#mobile" data-toggle="tab">Mobile</a></li>
+</ul>
+
+
+<div class="tab-content">
+
+<!--tab_1_1 persoanl dossier-->
+<div class="tab-pane active" id="dossier">
+
+<div class="row-fluid">
+<div class="span9">
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Career Goals / Objective</div>
+<div class="pull-right copybtn"><a href="#">More</a>&nbsp;</div>
+</div><!--end title-->
+
+<div class="portlet-body">
+
+<div class="row-fluid">
+
+<div class="span3" style="border-right:1px solid #f1f1f1">
+<div class="profile-usertitle"><div class="profile-usertitle-name">John Doe</div></div>
+<div class="profile-userpic"><img src="../assets/img/avatar.jpg" class="avatar"></div>
+<div class="clear"></div>
+</div><!--end span3-->
+
+
+<div class="span8">
+<h4><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</i></h4>
+<hr/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+<div class="clear"></div>
+</div><!--end span-->
+
+</div><!--end row-->
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Summary</div>
+</div><!--end title-->
+
+<div class="portlet-body">
+
+<div class="row-fluid">
+
+<div class="span2" style="border-right:1px solid #f1f1f1">
+<ul class="unstyled profile-stat">
+<li>Active Projects<span class="floatright">4</span></li>
+<li>Past Projects<span class="floatright">4</span></li>
+<li>Submissions<span class="floatright">3</span></li>
+
+</ul>
+<!--
+<div class="uppercase profile-stat-title margin-top-20">4</div>
+<div class="uppercase profile-stat-text">Active Projects</div>
+<div class="uppercase profile-stat-title">4</div>
+<div class="uppercase profile-stat-text">Historical Projects</div>
+<div class="uppercase profile-stat-title">3</div>
+<div class="uppercase profile-stat-text">Submissions</div>-->
+<hr/>
+<div class="uppercase profile-stat-title">24</div>
+<div class="uppercase profile-stat-text">Reviews</div>
+<div class="star">
+<i class="icon-star"></i>
+<i class="icon-star"></i>
+<i class="icon-star-half-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div>
+
+<div class="clear"></div>
+</div><!--end span2-->
+
+<span class="span4">
+<h4>Skills & Experience</h4>
+
+<ul class="list-inline sidebar-tags">
+<li>Keyword 1</li>
+<li>Another Keyword 2</li>
+<li>Keyword 2 </li>
+<li>Keyword</li>
+<li>Another Keyword 3</li>
+<li>Keyword 4 </li>
+<li>Another Keyword</li>
+<li>Keyword 5 </li>
+<li>Another Keyword 1 </li>
+</ul>
+</span><!--end span4-->
+
+<span class="span5">
+<h4>Work Experience</h4>
+<div class="profile-bar-title "><a href="#work" data-toggle="tab">2015 - Sr. Business Analyst </a>
+<div class="profile-bar-text floatright">3 Years</div></div>
+<div class="progress progress-striped active"><div style="width: 30%;" class="bar"></div></div>
+
+<div class="profile-bar-title"><a href="#work" data-toggle="tab">2012 - Data Administration</a>
+<div class="profile-bar-text floatright">6 Years</div></div>
+<div class="progress progress-striped active"><div style="width: 60%;" class="bar"></div></div>
+
+<div class="profile-bar-title "><a href="#work" data-toggle="tab">2011 - Sr. Business Analyst </a>
+<div class="profile-bar-text floatright">1 Year</div></div>
+<div class="progress progress-striped active"><div style="width: 30%;" class="bar"></div></div>
+
+</span><!--end span7-->
+
+
+</div><!--end row-->
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+</div><!--end span-->
+
+<div class="span3">
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Contact Information</div>
+<div class="pull-right copybtn"><a href="#">More</a>&nbsp;</div>
+</div><!--end title-->
+<div class="portlet-body">
+<div class="margin-top-10 profile-desc-link"><i class="icon-home"></i><a href="">Orlando, FL 12345</a></div>
+<div class="margin-top-10 profile-desc-link"><i class="icon-envelope"></i><a href="">myemail@mycompany.com</a></div>
+<div class="margin-top-10 profile-desc-link"><i class="icon-phone"></i><a href="">123-456-7890</a></div>
+<div class="margin-top-10 profile-desc-link"><i class="icon-globe"></i><a href="">www.mysite.com</a></div>
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title">
+<div class="caption">Highest Education</div>
+<div class="pull-right copybtn"><a href="#">More</a>&nbsp;</div>
+</div><!--end title-->
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span12 no-margin">Masters Degrees</li>
+<li class="span12 no-margin">Engineering</li>
+<li class="span12 no-margin">Purdue University</li>
+<li class="span12 no-margin">01-Jan-2000 - 01-Jan-2004</li>
+</ul>
+<div class="clear"></div>
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Languages</div>
+<div class="pull-right copybtn"><a href="#">More</a>&nbsp;</div>
+</div><!--end title-->
+<div class="portlet-body">
+<ul class="unstyled">
+<li><span>Primary:</span> English</li>
+<li><span>Language 2:</span> German</li>
+<li><span>Language 3:</span> Yiddish</li>
+</ul>
+<div class="clear"></div>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+</div><!--end span-->
+
+</div><!--end row-->
+
+<div class="tabbable tabbable-custom">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#personal" data-toggle="tab">Personal Information</a></li>
+<li><a href="#job" data-toggle="tab">Job Preference</a></li>
+<li><a href="#req" data-toggle="tab">Requsition Submissions</a></li>
+<li><a href="#projects" data-toggle="tab">Project Reviews</a></li>
+<li><a href="#work" data-toggle="tab">Work Experience</a></li>
+<li><a href="#skills" data-toggle="tab">Skills & Certs</a></li>
+<li><a href="#att" data-toggle="tab">Resume & Attachments</a></li>
+<li><a href="#education" data-toggle="tab">Education</a></li>
+
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="personal"> <!--#include file="_dossier_personal.html" --></div>
+<div class="tab-pane" id="job"> <!--#include file="_dossier_job.html" --></div>
+<div class="tab-pane" id="work"> <!--#include file="_dossier_work.html" --></div>
+<div class="tab-pane" id="req"> <!--#include file="_dossier_req.html" --></div>
+<div class="tab-pane" id="projects"> <!--#include file="_dossier_projects.html" --></div>
+<div class="tab-pane" id="skills"> <!--#include file="_dossier_skills.html" --></div>
+<div class="tab-pane" id="att"> <!--#include file="_dossier_att.html" --></div>
+<div class="tab-pane" id="education"> <!--#include file="_dossier_ed.html" --></div>
+</div><!--end sub content-->
+</div><!--END sub TABS-->
+
+</div><!--end MAIN  tab pane-->
+
+<!--tab_1_2 edit dossier-->
+<div class="tab-pane" id="edit">
+<div class="pull-right copybtn">
+<a href="" class="rightmargin"><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>
+</div>
+
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Career Goals / Objective</div>
+</div><!--end title-->
+
+<div class="portlet-body">
+
+<div class="row-fluid">
+
+<div class="span3" style="border-right:1px solid #f1f1f1">
+<div class="profile-userpic">
+<img src="../assets/img/avatar.jpg" class="avatar">
+<a href="#" class="profile-edit">Add / Edit Photo</a>
+</div>
+<div class="clear"></div>
+</div><!--end span3-->
+
+
+<div class="span6" style="border-right:1px solid #f1f1f1">
+<ul class="unstyled">
+<li class="span12 no-margin"><span>Career Goals / Objective</span><br/><textarea class="span11 m-wrap" rows="3"></textarea></li>
+<li class="span12 no-margin"><span>Aspiring Quote</span><br/><input class="m-wrap span11" type="text" value="" /></li>
+</ul>
+<div class="clear"></div>
+</div><!--end span6-->
+
+<div class="span3">
+<div class="list-separated profile-stat">
+<div class="profile-stat-title">Profile Completeness <div class="profile-stat-text floatright">80%</div></div>
+<div class="progress progress-striped active"><div style="width: 80%;" class="bar"></div></div>
+
+<ul class="complete">
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Personal Information</div></div>
+</div></div>
+<div class="col2"><div class="percent"><i class="icon-check gicn"></i></div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Job Preference</div></div>
+</div></div>
+<div class="col2"><div class="percent">10%</div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Work Experience </div></div>
+</div></div>
+<div class="col2"><div class="percent"><i class="icon-check gicn"></i></div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Skills & Certifications</div></div>
+</div></div>
+<div class="col2"><div class="percent"><i class="icon-check gicn"></i></div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">JResume & Attachements</div></div>
+</div></div>
+<div class="col2"><div class="percent">10%</div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Education</div></div>
+</div></div>
+<div class="col2"><div class="percent"><i class="icon-check gicn"></i></div></div>
+</a></li>
+
+</ul>
+</div><!-- END profile progress -->
+
+<div class="clear"></div>
+</div><!--end span3-->
+
+</div><!--end row-->
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<div class="tabbable tabbable-custom">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#personal_e" data-toggle="tab">Personal Information</a></li>
+<li><a href="#job_e" data-toggle="tab">Job Preference</a></li>
+<li><a href="#work_e" data-toggle="tab">Work Experience</a></li>
+<li><a href="#skills_e" data-toggle="tab">Skills & Certs</a></li>
+<li><a href="#att_e" data-toggle="tab">Resume & Attachments</a></li>
+<li><a href="#education_e" data-toggle="tab">Education</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="personal_e"> <!--#include file="_dossier_personal_e.html" --></div>
+<div class="tab-pane" id="job_e"> <!--#include file="_dossier_job_e.html" --></div>
+<div class="tab-pane" id="work_e"> <!--#include file="_dossier_work_e.html" --></div>
+<div class="tab-pane" id="skills_e"> <!--#include file="_dossier_skills_e.html" --></div>
+<div class="tab-pane" id="att_e"> <!--#include file="_dossier_att_e.html" --></div>
+<div class="tab-pane" id="education_e"> <!--#include file="_dossier_ed_e.html" --></div>
+</div><!--end sub content-->
+</div><!--END sub TABS-->
+
+</div><!--end tab-pane-->
+
+
+<!--tab_1_3 settings-->
+<div class="tab-pane" id="settings">
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Password</div></div><!--end title-->
+
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Current Password</span><br/><input type="password" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>New Password</span><br/><input type="password" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Re-type New Password</span><br/><input type="password" class="m-wrap span11" /></li>
+</ul>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Cancel</a> 
+<a href="#" class="bluebtn"> Save</a> 
+</div>
+</div>
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Security Questions</div></div><!--end title-->
+
+<div class="portlet-body">
+<ul class="unstyled">
+
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+</ul>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Cancel</a> 
+<a href="#" class="bluebtn"> Save</a> 
+</div>
+</div>
+</div><!-- END PORLET BOX-->
+
+<div class="portlet box">
+<div class="portlet-title"><div class="caption">Email Preferences</div></div><!--end title-->
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Email Preferences</th>
+<th>Individual</th>
+<th>Daily Digest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Cancel</a> 
+<a href="#" class="bluebtn"> Save</a> 
+</div>
+</div>
+</div><!-- END PORLET BOX-->
+</div><!--end tab-pane-->
+
+<!--tab_1_4 mobile-->
+<div class="tab-pane" id="mobile">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Device Name</th>
+<th>Device Type</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Type</td>
+<td>Action</td>
+</tr>
+<tr>
+<td><input type="text" name="input"  class="m-wrap  span11"/></td>
+<td><input type="text" name="input"  class="m-wrap  span11"/></td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn">Cancel</a> 
+<a href="#" class="bluebtn"> Save</a> 
+</div>
+</div>
+
+</div><!--end tab-pane-->
+
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--Competencies modal-->
+<div id="competencies" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Competencies</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+<hr/>
+<ul class="unstyled">
+<li class="span12">Minimum Years Experience (for all selected)&nbsp; <input type="text" name="input2"  class="m-wrap  span3"/></li>
+</ul>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+<!--Certifications modal-->
+<div id="certifications" class="modal hide fade" tabindex="-1"  style="width:40%">
+<div class="modal-header"><h3>Certifications</h3></div>
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 1</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li>
+<li><h4>Option Group 2</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 3</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 4</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 5</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Option 6</label></li>
+</ul>
+
+<ul class="unstyled span4 no-margin">
+<li><h4>Option Group 6</h4></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Select All</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 1</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 2</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 3</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 4</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 5</label></li>
+<li><label class="checkbox"><div class="checker"><span><input type="checkbox" value=""></span></div> Another Differant Option 6</label></li>
+</ul>
+
+
+
+<div class="clear"></div>
+</div><!-- end body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Select</button>
+</div>
+</div><!--end modal-->
+<!--interview-->
+<div id="interview" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Interview</h3></div>
+
+<div class="modal-body">
+<h4>Interview Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Type</th>
+<th>Date / Time</th>
+<th>Duration</th>
+<th>Location / Phone</th>
+<th>Interviewer Name</th>
+<th>Notes</th>
+<th>Last Modified</th>
+<th>Status</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Person</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>60 Minutes</td>
+<td>Main St Office 122L</td>
+<td>John Doe</td>
+<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td>Client requested</td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr/>
+
+<h4>Counter Details</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Proposed Rate</th>
+<th>Notes</th>
+<th>Actions</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100.00 USD</td>
+<td>Some misc notes go here</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-search'></i> Actions not provided</a><br/>
+<a href='#'><i class='icon-trash'></i> Need Actions</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+
+<hr/>
+
+<h4>Request Interview</h4>
+<ul class="unstyled">
+<li class="no-margin"><span>Interviewer Name<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="no-margin"><span>Interview Type<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+
+<li class="span6 no-margin"><span>Interview Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap date-picker" name="text2"   placeholder="DD/MM/YYYY"></li>
+
+<li class="no-margin"><span>Interview Duration</span><br/><input type="text" name=""  class="m-wrap"/></li>
+
+<li class="no-margin"><span>Interview Time</span><br/><input type="text" name=""  class="m-wrap"/></li>
+
+<li class="no-margin"><span>Interview Time Zone<span class="required">*</span></span><br>
+<select class="m-wrap" name="select2" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="no-margin"><span>Interview Location / Phone</span><br/><input type="text" name=""  class="m-wrap "/></li>
+<li class="no-margin"><span>Notes</span><br/><textarea class="m-wrap span6" rows="3"></textarea></li>
+
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Please Confirm</strong></h4>
+<div class="alert alert-info">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Interview Date:</span> 13-Aug-14</li>
+<li class="span3 no-margin"><span>Interview Time:</span> 1:00 AM</li>
+<li class="span3 no-margin"><span>Interview Time Zone:</span> EST</li>
+<li class="span3 no-margin"><span>Interview Type:</span>In Person</li>
+</ul>
+<div class="clear"></div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Reset</button>
+<button type="submit" class="greenbtn">Send</button>
+<button type="submit" class="greenbtn">OK</button>
+</div>
+
+</div><!--end modal-->
+<!--counter-->
+<div id="counter" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Counter Offer</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>New Proposed Rate</span><br/><input type="text" name="text1"  class="m-wrap"/></li>
+<li class="no-margin"><span>Notes</span><br/><textarea class="m-wrap span5" rows="3"></textarea></li>
+
+</ul>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Send</button>
+</div>
+
+</div><!--end modal-->
+<!--activity-->
+<div id="activity" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>View Transaction Activity</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="span6 no-margin"><span>Req Name:</span>Project Coordinator</li>
+<li class="span6 no-margin"><span>Project Name:</span>Micron DIMM</li>
+<li class="span6 no-margin"><span>Start Date:</span>14-Jun-14</li>
+<li class="span6 no-margin"><span>End Date:</span>14-Jun-15</li>
+<li class="span6 no-margin"><span>Work Location:</span>Sunnydale, CA</li>
+<li class="span6 no-margin"><span>Supplier:</span>TalentBurst</li>
+<li class="span6 no-margin"><span>Candidate Name:</span>John Doe</li>
+<li class="span6 no-margin"><span>Target Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Max Rate:</span>35.00 USD (hourly)</li>
+<li class="span6 no-margin"><span>Lowest Bill Rate Submitted:</span>35.00 USD</li>
+<li class="span6 no-margin"><span>Max Markeup:</span>38.00%</li>
+<li class="span6 no-margin"><span>Markup:</span>35.00%</li>
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+<!--notes-->
+<div id="notes" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true"  style="width:40%"  >
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button><h3>Add Notes</h3></div>
+
+<div class="modal-body">
+<h4>View Notes</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Notes</th>
+<th>Created By</th>
+<th>Created On</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="span5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+</td>
+<td>John Doe</td>
+<td>12-Mar-14 11:54:31 AM EST</td>
+<td><a href="#"><i class="icon-trash bicn"></i> Delete</a></td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+<hr/>
+<h4>Add Notes</h4>
+<ul class="unstyled">
+<li class="no-margin span12 "><span>Notes</span><br/><textarea class="m-wrap span5" rows="3"></textarea></li>
+
+<li class="no-margin span3"><span>Share with Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>Share with Manager</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Supplier</span><input type="checkbox" value=""></li>
+<li class="no-margin span3"><span>E-mail Manager</span><input type="checkbox" value=""></li>
+
+</ul>
+<div class="clear"></div>
+
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+<!--cert history-->
+<div id="cert_history" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Certification History</h3></div>
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>Cadidate</span>John Doe</li>
+<li class="no-margin"><span>Certification</span>CISSP</li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width ">
+    <thead>
+      <tr>
+     <th>Certification Attachment</th>
+        <th>Certification Number</th>
+        <th>Expiration Date</th>
+        <th>Status</th>
+        <th>Modified By</th>
+        <th>Modified On</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><a href="#">somerandomdocname.doc</a></td>
+        <td>123456789</td>
+        <td>14-Jun-14</td>
+        <td>Pending</td>
+        <td>John Doe</td>
+        <td>14-Jun-14</td>
+      </tr>
+    </tbody>
+  </table>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Export to Excel</button>
+</div>
+</div><!--end modal-->
+<!--add_cert-->
+<div id="add_cert" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Add / Edit Certification</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+<li class="no-margin"><span>Certification Name:</span> Some name here</li>
+<li class="no-margin"><span>Effective Date:</span> 11-Jun-!4</li>
+<li class="no-margin"><span>Issuing Authority</span><br>
+<input type="text" class="m-wrap span8" /></li>
+<li class="no-margin"><span>Certificaiton Number</span><br>
+<input type="text" class="m-wrap span8" /></li>
+
+<li><span>Certfication Attachment</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+<span style="font-size:10px">Valid file types are .doc  .pdf  .docx  .htm  .rtf  .efx  .jfx</span>
+</li>
+
+<li class="no-margin"><span>Issued Date</span><br>
+<input type="text" class="m-wrap datepicker span8" placeholder="DD-MM-YYYY" /></li>
+<li class="span8 no-margin"><span>Never Expires</span><input type="checkbox" value=""></li>
+<li class="no-margin"><span>Expiration Date</span><br>
+<input type="text" class="m-wrap datepicker span8" placeholder="DD-MM-YYYY" /></li>
+
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="bluebtn">Add New</button>
+
+<button type="submit" class="greenbtn">Update</button>
+</div>
+
+</div><!--end modal-->
+
+<!--#include file="_action_decline.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

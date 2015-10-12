@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Compliance Requisition Details - Supportg Documents</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="requisitions_compliance_view.html">Compliance Requisitions</a> <i class="icon-angle-right"></i> </li>
+<li>Compliance Details</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requistion Name (ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+
+<li class="span3 no-margin"><span>Requsition Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Evaluation Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Req ID</span>12345</li>
+<li class="span3 no-margin"><span>Customer Name</span>Net App</li>
+<li class="span3 no-margin"><span>Business Unit:</span>1some unit</li>
+<li class="span3 no-margin"><span>Engagement Name:</span>Request for Proposal</li>
+<li class="span3 no-margin"><span>Estimated Cost:</span>40,000.00 USD</li>
+<li class="span3 no-margin"><span>Requisition Type Group:</span>SOW</li>
+<li class="span3 no-margin"><span>Service Class:</span>some class here</li>
+<li class="span3 no-margin"><span>Estimated Start Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Estimated End Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Service Provider:</span>provider name</li>
+<li class="span3 no-margin"><span>Location of Project:</span>CA US</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span3 no-margin"><span>Master Supplier:</span>Jane Doe & Associates <a href="">(12345)</a></li>
+<li class="span3 no-margin"><span>Country:</span>United States</li>
+<li class="span3 no-margin"><span>Requsition:</span><a href="">(12345)</a> Requisition Name Here 123</li>
+
+<div class="clear"></div>
+
+</ul>
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="requisitions_compliance_details.html">Requisitions</a></li>
+<li class="active"><a href="requisitions_compliance_details_2.html"> Supporting Documents</a></li>
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+
+
+
+<table class="table table-striped table-bordered table-hover table-full-width" id= "engage_3">
+<thead>
+<tr>
+<th>ID</th>
+<th>Document Name</th>
+<th>Expiration Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12345</td>
+<td>some name goes here</td>
+<td>06-Jun-14</td>
+<td><a href="#">Approved</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>some name goes here</td>
+<td>06-Jun-14</td>
+<td><a href="#">Approved</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>some name goes here</td>
+<td>06-Jun-14</td>
+<td><a href="#">Approved</a></td>
+</tr>
+<tr>
+<td>12345</td>
+<td>some name goes here</td>
+<td>06-Jun-14</td>
+<td><a href="#">Approved</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+
+</form>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--confirm modal-->
+<div id="confirm" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true">
+<form class="form-horizontal">
+<div class="modal-header"><h3>Confirm</h3></div>
+<div class="modal-body">
+<p>Submitting this decision....Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+</div><!--end modal body-->
+
+<div class="modal-footer">
+<button type="button" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Submit</button>
+</div>
+</form>
+</div><!--end modal-->
+
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

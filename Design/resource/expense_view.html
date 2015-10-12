@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Resource View Expense</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+
+<li>View Expense Report</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">View Expense</div>
+</div>
+<!--end title-->
+
+<div class="portlet-body "> 
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+<div class="btn-group pull-right"  style="margin-right:5px;"> <a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+
+<div class="btn-group pull-right" >
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+<li class="divider"></li>
+<li>
+<ul id="saved-views">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</li>
+<li class="divider"></li>
+<li class="leftmargin"><b>System Views</b></li>
+<li class="active"><a href=""> Timesheet View 1</a></li>
+<li><a href=""> Timesheet View 2</a></li>
+<li><a href="">Timesheet View 3</a></li>
+</ul>
+
+
+
+</div>
+
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download Doc</a></li>
+</ul>
+</div>
+<div class="btn-group pull-right" > <a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label><input type="checkbox" checked data-column="0">Expense ID</label>
+<label><input type="checkbox" checked data-column="1">Project</label>
+<label><input type="checkbox" checked data-column="2">Description</label>
+<label><input type="checkbox" checked data-column="3">Status</label>
+<label><input type="checkbox" checked data-column="4">Submit Date</label>
+<label><input type="checkbox" checked data-column="5">Amount</label>
+<label><input type="checkbox" checked data-column="6">Will Pay Amount</label>
+<label><input type="checkbox" checked data-column="7">Project ID</label>
+<label><input type="checkbox" checked data-column="8">Spend %</label>
+
+</div>
+
+</div>
+<!--END buttons/actions--> 
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+<tr>
+<th ><i class="icon-filter column-filter" data-title="ID Contains"></i>Expense ID</th>
+<th ><i class="icon-filter column-filter" data-title="Project Contains"></i>Project</th>
+<th ><i class="icon-filter column-filter" data-title="Description Contains"></i>Description</th>
+<th ><i class="icon-filter column-filter" data-title="Status Contains"></i>Status</th>
+<th ><i class="icon-filter column-filter" data-title="Submit Date Equals "></i>Submit Date</th>
+<th ><i class="icon-filter column-filter" data-title="Amount Equals"></i>Amount</th>
+<th ><i class="icon-filter column-filter" data-title="Will Pay Amount Equals"></i>Will Pay Amount</th>
+<th ><i class="icon-filter column-filter" data-title="Project ID Contains"></i>Project ID</th>
+<th ><i class="icon-filter column-filter" data-title="Spend Contains"></i>Spend %</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="expense_view_details.html">33456</a></td>
+      <td>ATT</td>
+      <td>UVerse Time and Motion Study</td>
+      <td>Saved</td>
+      <td>17-Mar-2014</td>      
+      <td>$123.45</td>
+      <td>123.45</td>
+      <td><a href="project_details.html">33456</a></td>
+      <td><div class="progress sm_margin progress-striped"><div style="width: 70%;" class="bar">70%</div></div></td>
+    </tr>
+    <tr>
+      <td><a href="expense_view_details.html">77568</a></td>
+      <td>Verizon</td>
+      <td>Verizon Time and Motion Study</td>
+      <td>Draft</td>
+      <td>07-Feb-2014</td>
+      <td>$67.89</td>
+      <td>$67.89</td>
+      <td><a href="project_details.html">77568</a></td>
+      <td><div class="progress sm_margin progress-striped"><div style="width: 30%;" class="bar">30%</div></div></td>
+      </tr>
+    <tr>
+      <td><a href="expense_view_details.html">47734</a></td>
+      <td>Sprint</td>
+      <td>Sprint Time and Motion Study</td>
+      <td>Saved</td>
+      <td>17-Jan-2014</td>      
+      <td></label>$90.12</td>
+      <td>$90.12</td>
+      <td><a href="project_details.html">47734</a></td>
+	<td><div class="progress sm_margin progress-striped"><div style="width: 50%;" class="bar">50%</div></div></td>     
+     </tr>
+    <tr>
+      <td><a href="expense_view_details.html">79092</a></td>
+      <td>Aio</td>
+      <td>Aio Time and Motion Study</td>
+      <td>Saved</td>
+      <td>05-Mar-2014</td>      
+      <td></label>$456.78</td>
+      <td></label>$456.78</td>
+      <td><a href="project_details.html">79092</a></td>
+		<td><div class="progress sm_margin progress-striped"><div style="width: 20%;" class="bar">20%</div></div></td>
+      </tr>
+  </tbody>
+</table>
+<!--END TABLE--> 
+
+</div>
+<!-- END PORLET BODY--></div>
+<!--END PORTLET BOX BLUE--> 
+
+</div>
+<!--END SPAN--> 
+</div>
+<!-- END ROW --> 
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_save_as.html" -->
+<!--#include file="_edit_views.html" -->
+<!--#include file="_ticket.html" -->
+
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

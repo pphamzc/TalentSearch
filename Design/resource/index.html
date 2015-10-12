@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Resource Dashboard</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    
+   
+   
+
+</head>
+
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Resource Dashboard </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box ">
+<div class="portlet-title blue2border"><div class="caption">Timesheets</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+  <thead>
+<tr>
+<th >  Status </th>
+<th > Timesheet</th>
+<th > Ending Date</th>
+<th > Hours</th>
+<th >Amount</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="status">Need Manager Approval</span></td>
+      <td><a href="timesheet_view_hourly_biweekly.html">95347</a></td>
+      <td>12 Jan 2012</td>
+      <td>120</td>
+      <td>$1000.00</td>
+      </tr>
+    <tr>
+      <td><span class="status">Fully Paid</span></td>
+      <td><a href="timesheet_view_hourly_biweekly.html">12345</a></td>
+      <td>1 Decr 2015</td>
+      <td>20</td>
+      <td>$800.00</td>
+      </tr>
+    <tr>
+      <td><span class="status">In Progress</span></td>
+      <td><a href="timesheet_view_hourly_biweekly.html">56890</a></td>
+      <td>28 Oct 2013</td>
+      <td>75</td>
+      <td>$100.00</td>
+      </tr>
+    <tr>
+      <td><span class="status">Approved</span></td>
+      <td><a href="timesheet_view_hourly_biweekly.html">33456</a></td>
+      <td>30 Jul 2014</td>
+      <td>120</td>
+      <td>$1200.00</td>
+      </tr>
+    <tr>
+      <td><span class="status">Rejected</span></td>
+      <td><a href="timesheet_view_hourly_biweekly.html">77568</a></td>
+      <td>5 Mar 2011</td>
+      <td>80</td>
+      <td>$40.57</td>
+      </tr>
+  </tbody>
+</table>
+<!--END TABLE-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-plus saveicon"></i> Add</a> 
+<a href="#" class="submitbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+
+</div>
+<div class="clear"></div>
+
+</div><!--end body-->
+</div><!--end span-->
+ 
+ 
+ <div class="span6">
+
+<div class="portlet box">
+<div class="portlet-title blue3border"><div class="caption">Expenses</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-striped table-bordered table-hover table-full-width">
+  <thead>
+<tr>
+<th >  Status </th>
+<th > Expense</th>
+<th > Submit Date</th>
+<th >Amount</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Need Manager Approval</td>
+      <td><a href="timesheet_view_hourly_biweekly.html">95347</a></td>
+      <td>12 Jan 2012</td>
+      <td>$1000.00</td>
+      </tr>
+    <tr>
+      <td>Fully Paid</td>
+      <td><a href="timesheet_view_hourly_biweekly.html">12345</a></td>
+      <td>1 Decr 2015</td>
+      <td>$800.00</td>
+      </tr>
+    <tr>
+      <td>In Progress</td>
+      <td><a href="timesheet_view_hourly_biweekly.html">56890</a></td>
+      <td>28 Oct 2013</td>
+      <td>$100.00</td>
+      </tr>
+    <tr>
+      <td>Approved</td>
+      <td><a href="timesheet_view_hourly_biweekly.html">33456</a></td>
+      <td>30 Jul 2014</td>
+      <td>$1200.00</td>
+      </tr>
+    <tr>
+      <td>Rejected</td>
+      <td><a href="timesheet_view_hourly_biweekly.html">77568</a></td>
+      <td>5 Mar 2011</td>
+      <td>$40.57</td>
+      </tr>
+  </tbody>
+</table>
+<!--END TABLE-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="savebtn"> <i class="icon-plus saveicon"></i> Add</a> 
+<a href="#" class="submitbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+
+</div>
+<div class="clear"></div>
+</div><!--end body-->
+
+</div><!--end span-->
+
+             
+</div><!--end row-->
+
+<div class="row-fluid">
+<div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orangeborder"><div class="caption">Pay History</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<table class="table table-bordered table-full-width">
+  <thead>
+<tr>
+  <th > Pay Date</th>
+<th colspan="3" >Net vs Gross Pay</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12 Jan 2012</td>
+<td width="50%" >
+<div class="progress sm_margin progress-striped">
+<div style="width: 60%;" class="bar">$3956.87</div> <p>$5674.98</p>
+</div>
+</td>
+      <td>(USD)</td>
+      <td><a href="#">View </a></td>
+      </tr>
+    <tr>
+      <td>1 Decr 2015</td>
+<td width="50%" >
+<div class="progress sm_margin progress-striped">
+<div style="width: 60%;" class="bar">$3956.87</div> <p>$5674.98</p>
+</div>
+</td>
+      <td>(USD)</td>
+      <td><a href="#">View </a></td>
+      </tr>
+    <tr>
+      <td>30 Jul 2014</td>
+  <td width="50%" >
+  <div class="progress sm_margin progress-striped">
+  <div style="width: 80%;" class="bar">$3956.87</div> <p>$1274.98</p>
+  </div>
+  </td>
+      <td>(USD)</td>
+      <td><a href="#">View </a></td>
+    </tr>
+    <tr>
+      <td>5 Mar 2011</td>
+<td width="50%" >
+<div class="progress sm_margin progress-striped">
+<div style="width: 30%;" class="bar">$3956.87</div> <p>$5674.98</p>
+</div>
+</td>
+      <td>(USD)</td>
+      <td><a href="#">View </a></td>
+      </tr>
+    <tr>
+      <td>5 Mar 2011</td>
+      <td ><div class="progress sm_margin progress-striped">
+        <div style="width: 70%;" class="bar">$956.87</div>
+        <p>$674.98</p>
+      </div></td>
+      <td>(USD)</td>
+      <td><a href="#">View </a></td>
+    </tr>
+  </tbody>
+</table>
+<!--END TABLE-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="submitbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+
+</div>
+<div class="clear"></div>
+</div><!--end body-->
+
+</div><!--end span-->
+
+
+ 
+ 
+ <div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orange2border"><div class="caption">Projects</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+
+<div class="controls span10">
+<select class="small m-wrap" >
+<option value="">Choose Project</option>
+<option value="Category 1">Project 1 Name | Project ID | Amendment #</option>
+<option value="Category 2">Project 2 Name | Project ID | Amendment #</option>
+<option value="Category 3">Project 3 Name | Project ID | Amendment #</option>
+<option value="Category 4">Project 4 Name | Project ID | Amendment #</option>
+</select>
+</div>
+<div class="clear"></div>
+
+<hr/>
+<h4>Project 1 Name | Project ID | Amendment #</h4>
+<table class="table table-margin">
+<tbody>
+<tr>
+<td >Start Date 2013-02-26</td>
+<td width="50%"><div class="progress sm_margin progress-striped"><div style="width: 65%;" class="bar">65%</div> <p>35%</p></div>
+</td>
+<td>End Date 2014-02-26</td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE-->
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="submitbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+
+</div>
+<div class="clear"></div>
+</div><!--end body-->
+
+</div><!--end span-->
+             
+</div><!--end row-->
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+<!--#include file="_save_as.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->
+

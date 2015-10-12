@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Engagement Details</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+
+    <!--24July,2014-->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/multi-select/bootstrap-multiselect.css" />
+
+    <!--29July,2014-->
+    <link href="../assets/plugins/multi-select/multiple-select.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+<link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!--hide show # of records dd-->
+    <!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    };
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top orangeborder">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="engagements_view.html">Engagements</a> <i class="icon-angle-right"></i></li>
+<li>Engagement Details</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW-->
+
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+<div class="caption">Engagement Name (Engagement ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled no-margin">
+<li class="span6"><span>Engagement Description:</span>some engagement description here some engagement description here some engagement description here some engagement description here some engagement description here some engagement description here some engagement description here</li>
+<li class="span3"><span>Customer:</span> NetApp</li>
+<li class="span3"><span>Engagement Status:</span> <span class="status">Open</span></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View Engagement Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled">
+<li class="span4"><span>Requisition ID:</span><a href="#">12345678</a></li>
+<li class="span4 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span4 no-margin"><span>Business Classification:</span> Service Vendor</li>
+<li class="span4 no-margin"><span>Customer Manager:</span> John Doe</li>
+<li class="span4 no-margin"><span>Track Code:</span> 1234567890987654321</li>
+<li class="span4 no-margin"><span>Start Date:</span> 05-Jul-14</li>
+<li class="span4 no-margin"><span>End Date:</span>  05-Jul-14</li>
+<li class="span4 no-margin"><span>Project Location:</span> State, Country, Postal Code</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span4 no-margin"><span>Service Provider:</span> IBM</li>
+<li class="span4 no-margin"><span>Service Provider Contact:</span>John Doe (<a href="#update-contact" data-toggle="modal" >Update Contact</a>)</li>
+<li class="span4 no-margin"><span>Service Provider Telephone:</span>123-456-7890</li>
+<li class="span4 no-margin"><span>Service Provider Email:</span>myemail@mycompany.com</li>
+<li class="span4 no-margin"><span>Service Provider Currency:</span> USD</li>
+<li class="span4 no-margin"><span>Service Provider Location:</span> State, Country, Postal Code</li>
+
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+</div><!-- END PORLET BODY--> 
+</div><!-- END PORLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+<div class="caption">Service Invoices</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a href="invoice_service_add.html" class="greenbtn_sm">Create a Service Invoice</a>
+<!--<a href="#" class="greenbtn_sm">Print</a>
+<a href="#" class="greenbtn_sm">Edit</a>-->
+</div>
+
+</div>
+<div class="portlet-body">
+<h4>Invoice Activity</h4>
+ <table class="table table-striped table-bordered table-hover table-full-width"  id="engage_1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Invoice Number</th>
+        <th>Engagement Item ID</th>
+        <th>PO Number</th>
+        <th>Description</th>
+        <th>Invoice Amount</th>
+        <th>Approved Amount</th>
+        <th>Status</th>
+        <th>Line Item Vetos</th>
+       <th class="no-sort">Actions</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>
+        <td><a href="#">123</a></td>
+        <td>ABC-123</td>
+        <td>98</td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>12,345.67 USD</td>
+        <td>12,345.67 USD</td>
+        <td>Fully Paid</td>
+        <td>0</td>
+       <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash trashsmall'></i>  Delete</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+         <td><a href="#">123</a></td>
+        <td>ABC-123</td>
+        <td>98</td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>12,345.67 USD</td>
+        <td>12,345.67 USD</td>
+        <td>Fully Paid</td>
+        <td>0</td>
+       <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash trashsmall'></i>  Delete</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+        <td><a href="#">123</a></td>
+        <td>ABC-123</td>
+        <td>98</td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>Las Vegas Insight Conference Advocates Video Shoot 1 </td>
+        <td>12,345.67 USD</td>
+        <td>12,345.67 USD</td>
+        <td>Fully Paid</td>
+        <td>0</td>
+       <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash trashsmall'></i>  Delete</a><br/>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>      
+      
+    </tbody>
+  </table>
+<hr/>
+<h4>Invoice Totals</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+    <thead>
+      <tr>
+        <th>Invoiced</th>
+        <th>Approved</th>
+        <th>Amount Pending Approval</th>
+        <th>Amount Available for Invoicing</th>
+        <th>Amount Rejected</th>
+        <th>Approved Expenses</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>
+        <td>1,234.56 USD</td>
+        <td>1,234.56 USD</td>
+        <td>1,234.56 USD</td>
+        <td>1,234.56 USD</td>
+        <td>1,234.56 USD</td>
+        <td>1,234.56 USD</td>
+       
+</tr>      
+      
+    </tbody>
+  </table>
+  
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+  <div class="caption">Workers</div>
+   <div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+<div class="portlet-body">
+<h4>Available Workers</h4>
+ <table class="table table-striped table-bordered table-hover table-full-width"  id="engage_2">
+    <thead>
+      <tr>
+        <th>IDggg</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>Telephone</th>
+        <th>On Engagement</th>
+        <th>Type</th>
+        <th>Actions</th>
+        </tr>
+        
+    </thead>
+<tbody>
+<tr>        
+        <td><a href="#">123</a></td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>myemail@myconpamy.com</td>
+        <td>123-456-7890</td>
+        <td>Yes</td>
+        <td>Service Provider Worker</td>
+        <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Add to Engagements</a>
+<hr/>
+<div class='btn-group'><a class='btn' href='#'>Add All to Engagements</a></div> " data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+<tr>
+        <td><a href="#">123</a></td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>myemail@myconpamy.com</td>
+        <td>123-456-7890</td>
+        <td>No</td>
+        <td>Service Provider Worker</td>
+        <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Add to Engagements</a>
+<hr/>
+<div class='btn-group'><a class='btn' href='#'>Add All to Engagements</a></div> " data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+
+</tr>
+<tr>
+        <td><a href="#">123</a></td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>myemail@myconpamy.com</td>
+        <td>123-456-7890</td>
+        <td>Yes</td>
+        <td>Service Provider Worker</td>
+        <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#'><i class='icon-plus'></i> Add to Engagements</a>
+<hr/>
+<div class='btn-group'><a class='btn' href='#'>Add All to Engagements</a></div> " data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>      
+    </tbody>
+  </table>
+
+<div class="clear"></div>
+<hr/>
+<h4>Selected Workers</h4>
+ <table class="table table-striped table-bordered table-hover table-full-width " id="engage_3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Type</th>
+        <th>Service Category</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Location Type</th>
+        <th>Rate</th>
+        <th>UOM</th>
+        <th>Provisioning Status</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>        
+        <td><a href="#">123</a></td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>Service Provider Worker</td>
+<td><select class="m-wrap span12">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select>
+</td>
+<td><input type="text" class="m-wrap small date-picker" value="DD/MMM/YY"></td>
+<td><input type="text" class="m-wrap small date-picker" value="DD/MMM/YY"></td>
+<td><select class="m-wrap span12">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select>
+</td>
+        <td><input type="text" class="m-wrap xsmall" /></td>
+<td><select class="m-wrap span12">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select>
+</td>
+        <td>Provisioned</td>
+        <td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a href='#provision' data-toggle='modal' ><i class='icon-edit'></i>  Provision</a><br/>
+<a href='#'><i class='icon-trash'></i> Remove From Enagement</a><br/>
+<a href='#'><i class='icon-remove'></i> De-Provision</a><br/>
+<a href='#'><i class='icon-search'></i> Edit/View Provisioning</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>      
+    </tbody>
+  </table>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Custom Fields</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body"> 
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span>UDF1:</span> <br/><input type="text" class="m-wrap span11" /></li>
+<li class="span3 no-margin"><span>UDF2:</span><br/> <select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span3 no-margin"><span>UDF3:</span> <br/>
+<input class="m-wrap span11 m-ctrl-medium date-picker"  type="text"  /></li>
+<li class="span3 no-margin"><span>UDF4:</span> <br/> <input type="checkbox" value="">  Checkbox 1</li>
+</ul>
+
+
+<ul class="unstyled span12 no-margin">
+<li><span>UDF5:</span><br/>
+<textarea class="m-wrap span11" rows="3"></textarea></li>
+</ul>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Attachments</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span6 no-margin "><span>Attachment Description</span><br /><input type="text" class="m-wrap span11" /></li>
+
+<li class="span6"><span>Attach a File</span><br />
+<div class="fileupload fileupload-new  no-margin" data-provides="fileupload">
+<div class="input-append">
+<div class="uneditable-input attach">
+<i class="icon-file fileupload-exists"></i>
+<span class="fileupload-preview"></span>
+</div>
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+</ul>
+<div class="clear"></div>
+<br/>
+<table class="table table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>File Name</th>
+<th>Origin</th>
+<th>Uploaded Date</th>
+<th>Description</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#">Zerochaos Teco COI.pdf</a></td>
+<td>Requisition</td>
+<td>26-Mar-2014</td>
+<td>Some file description here</td>
+<td><a href="#"> <i class="icon-trash"></i> Delete</a></td>
+</tr>
+</tbody>
+</table>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blueborder"><div class="caption">Notes</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="no-margin"><span>Add Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+</ul>
+<button type="button" class="greenbtn pull-right">Send Note</button>
+<div class="clear"></div>
+<hr/>
+<table class="table table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Note</th>
+<th class="span2">Uploaded Date</th>
+<th class="span2">Uploaded By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here</td>
+<td>26-Mar-2014</td>
+<td>John Doe</td>
+</tr>
+</tbody>
+</table>
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+<div class="clear"></div>
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="greenbtn">Save</button>
+</div>
+</div>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+  
+
+<!--update contact modal-->
+<div id="update-contact" class="modal hide fade" tabindex="-1" >
+<form class="form-horizontal">
+<div class="modal-header"><h3>Update Contact</h3></div>
+<div class="modal-body">
+
+<ul class="unstyled">
+<li><span>Primary Contact</span><br/>
+<select name="select" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</select>
+</li>
+</ul>
+
+<div class="clear"></div>
+<hr/>
+<p>**If the contact you are looking for is not in the drop down, please contact ZeroChaos Support at <a href="#">helpemail@company.com</a></p>
+<div class="modal-footer">
+<button type="button" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn" >Save</button>
+</div>
+
+</div><!-- end body-->
+</form>
+</div><!--end modal-->
+
+<!--provision modal-->
+<div id="provision" class="modal hide fade" tabindex="-1" >
+<form class="form-horizontal">
+<div class="modal-header"><h3>Provisioning</h3></div>
+<div class="modal-body">
+<h4>Provisioning Request</h4>
+<ul class="unstyled">
+<li class="span5 no-margin"><span>Name:</span>John Doe</li>
+<li class="span5 no-margin"><span>Status:</span> Active</li>
+<li class="span5 no-margin"><span>Start Date:</span> 01-JUL-2014</li>
+<li class="span5 no-margin"><span>End Name:</span> 01-JUL-2014</li>
+</ul>
+<div class="clear"></div>
+<hr/>
+
+<h4>Custom Fields</h4>
+<ul class="unstyled no-margin">
+<li class="span6 no-margin"><span>Is Badge Needed:</span> <br/>
+<select class="m-wrap">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+
+<li class="span6 no-margin"><span>Office Location:</span><br/> 
+<select class="m-wrap">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+<li class="span6 no-margin"><span>Contractor Status:</span> <br/>
+<select class="m-wrap">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+
+<li class="span6 no-margin"><span>Netowrk Access Needed:</span><br/> 
+<select class="m-wrap">
+<option value="0">Option 1</option>
+<option value="1">Option 2</option>
+<option value="2">Option 3</option>
+</select></li>
+<li class="span12 no-margin"><span>Additional Information:</span> <br/><input type="text" class="m-wrap small" /></li>
+
+
+</ul>
+
+<div class="clear"></div>
+<hr/>
+<h4>History</h4>
+<table class="table table-striped table-bordered table-hover table-full-width" >
+  <thead>
+<tr>
+<th>Status</th>
+<th>Updated</th>
+<th>Action Completed By</th>
+<th>Role</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Active</td>
+      <td>01-JUL-2014</td>
+      <td>John Doe</td>
+      <td>Admin</td>
+      </tr>
+          <tr>
+      <td>Active</td>
+      <td>01-JUL-2014</td>
+      <td>John Doe</td>
+      <td>Admin</td>
+      </tr>
+
+    <tr>
+      <td>Active</td>
+      <td>01-JUL-2014</td>
+      <td>John Doe</td>
+      <td>Admin</td>
+      </tr>
+
+    <tr>
+      <td>Active</td>
+      <td>01-JUL-2014</td>
+      <td>John Doe</td>
+      <td>Admin</td>
+      </tr>
+
+  </tbody>
+</table>
+
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Request Provisioning</button>
+<button type="submit" class="greenbtn" >Request De-Provisioning</button>
+</div>
+
+</div><!-- end body-->
+</form>
+</div><!--end modal-->
+
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" --> 

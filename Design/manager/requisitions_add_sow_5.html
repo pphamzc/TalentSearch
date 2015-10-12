@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add SOW Requisition - Questionaire</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"   />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<form action="#" class="form-horizontal" id="form_sample_1">
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Progress</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul id="progressbar">
+<li class="sowli visited bar"><a href="requisitions_add_sow.html">Specifiy Requisition Details</a></li>
+<li class="sowli visited bar"><a href="requisitions_add_sow_2.html">Add Track Codes</a></li>
+<li class="sowli visited bar"><a href="requisitions_add_sow_3.html">Add Service Provider</a></li>
+<li class="sowli visited bar"><a href="requisitions_add_sow_4.html">Attach SOW</a></li>
+<li class="sowli active"><a href="requisitions_add_sow_5.html">Take Questionaire</a></li>
+<li class="sowli next"><a href="">Review & Submit</a></li>
+</ul>
+<div class="clear"></div>
+
+ </div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+           
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requistion Name (ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Requsition Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Evaluation Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Service Class:</span>some class here</li>
+<li class="span3 no-margin"><span>Business Unit:</span>1some unit</li>
+<li class="span3 no-margin"><span>Engagement Name:</span>Request for Proposal</li>
+<li class="span3 no-margin"><span>Estimated Cost:</span>40,000.00 USD</li>
+<li class="span3 no-margin"><span>Requisition Type Group:</span>SOW</li>
+<li class="span3 no-margin"><span>Location of Project:</span>CA US</li>
+<li class="span3 no-margin"><span>Estimated Start Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Estimated End Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Service Provider:</span>provider name</li>
+<li class="span3 no-margin"><span>ZeroChaos Contact:</span>John Doe</li>
+<div class="clear"></div>
+</ul>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="requisitions_add_sow.html">Requisitions</a></li>
+<li><a href="requisitions_add_sow_2.html">Track Codes</a></li>
+<li><a href="requisitions_add_sow_3.html">Service Provider</a></li>
+<li><a href="requisitions_add_sow_4.html">Attachments</a></li>
+<li class="active"><a href="requisitions_add_sow_5.html">Questionnaire</a></li>
+<li><a href="requisitions_add_sow_6.html">Approvals</a></li>
+<li><a href="requisitions_add_sow_7.html">Supporting Documents</a></li>
+<li><a href="requisitions_add_sow_8.html">Evaluation Notes</a></li>
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<div class="pull-right copybtn">
+<a href="#">Print<i class="icon-print blueicon"></i></a>&nbsp;
+</div>
+
+<ol>
+<li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span> <br/>
+<input type="text" class="m-wrap span6" />
+</li>
+
+<li><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span><br/> 
+<select class="m-wrap span6">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select>
+    <ul class="unstyled margin-left-25">
+    <li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span> <br/><input type="text" class="m-wrap span6" /></li>
+    </ul>
+</li>
+
+<li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</span> <br/>
+    <ul class="unstyled">
+      <li class="no-margin"><input type="checkbox" value="">  Checkbox 1</li>
+      <li class="no-margin"><input type="checkbox" value="">  Checkbox 2</li> 
+      <li class="no-margin"><input type="checkbox" value="">  Checkbox 3</li> 
+      <li class="no-margin"><input type="checkbox" value="">  Checkbox 4</li> 
+      <li class="no-margin"><input type="checkbox" value="">  Checkbox 5</li>
+   </ul>
+</li>
+
+<li><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</span><br/>
+<textarea class="m-wrap span6" rows="3"></textarea>
+</li>
+
+</ol>
+<div class="clear"></div>
+
+
+
+<div class="clear"></div>
+<div class="alert alert-error hide">
+<button class="close" data-dismiss="alert"></button>You have some form errors. Please check above.
+</div>
+
+<div class="alert alert-success hide">
+<button class="close" data-dismiss="alert"></button>Your form validation is successful!
+</div>
+
+</div><!--end portlet box-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="requisitions_add_sow_4.html"><button  type="button" class="bluebtn">Back</button></a>
+<button  type="button" class="greenbtn">Save</button>
+<a href="requisitions_add_sow_6.html"><button  type="button" class="bluebtn">Next</button></a>
+<button  type="button" class="bluebtn" data-toggle="modal" href="#cancelreq">Cancel Requisition</button>
+<button  type="submit" class="greenbtn">Submit Requisition</button>
+</div>
+</div>
+
+</div><!--end portlet body-->
+
+</form>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_cancelreq.html" -->
+
+<!--#include file="_closereq.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

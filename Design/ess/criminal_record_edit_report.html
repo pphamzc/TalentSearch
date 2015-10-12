@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Criminal Report</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugin s/select2/select2_zc.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+	<link  href="../assets/plugins/jquery-multi-select/css/multi-select-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+				
+				
+</script>
+
+<!--show/hide everify-->
+<script type="text/javascript" language="JavaScript"><!--
+
+//--></script>
+
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i>Home</a> <i class="icon-angle-right"></i></li>
+<li>Edit Criminal Report</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Report</div>
+<div class="pull-right rightmargin">
+<div class="alert alert-info" style="margin-bottom:3px!important"><strong>Last Updated On:</strong> 01-Jan-2015 10:00:35AM EST</div>
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span3 no-margin"><span> Applicant:</span><a href="">John Doe</a></li>
+<li class="span3 no-margin"><span> SSN:</span>*****1234</li>
+<li class="span3 no-margin"><span> DOB:</span>01-Jan-1960</li>
+<li class="span3 no-margin"><span> Client ID:</span>12345678</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span3 no-margin"><span> State:</span>FL</li>
+<li class="span3 no-margin"><span> County:</span>Orange</li>
+<li class="span3 no-margin"><span> District:</span>123</li>
+<li class="span3 no-margin"><span> Country:</span>USA</li>
+<li class="span3 no-margin"><span>Jurisdiction</span>Lorem ipsum</li>
+<li class="span3 no-margin"><span>Record Status:</span>Open</li>
+<li class="span3 no-margin"><span>Case #:</span>1234567890</li>
+<li class="span3 no-margin"><span>Charge:</span>Felony</li>
+<li class="span3 no-margin"><span>Degree:</span>1</li>
+<li class="span3 no-margin"><span>Sentence:</span>2</li>
+<li class="span3 no-margin"><span>Cost & Fines:</span>100.00 USD</li>
+<li class="span3 no-margin"><span>Arrest Date:</span>01-Jan-2015</li>
+<li class="span3 no-margin"><span>Filing of Information Date:</span>01-Jan-2015</li>
+<li class="span3 no-margin"><span>Disposition:</span>Lorem ipsum </li>
+<li class="span3 no-margin"><span>Disposition Date:</span>01-Jan-2015</li>
+<li class="span3 no-margin"><span>Tracking Number:</span>123456789</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span3 no-margin"><span>Name:</span>John Doe</li>
+<li class="span3 no-margin"><span>DOB:</span>01-Jan-2015</li>
+<li class="span3 no-margin"><span>SSN:</span>*****1234</li>
+<li class="span3 no-margin"><span>Address:</span>123 My Street	</li>
+<li class="span3 no-margin"><span>Sex:</span>M</li>
+<li class="span3 no-margin"><span>Race:</span>C</li>
+<li class="span3 no-margin"><span>Weight:</span>150</li>
+<li class="span3 no-margin"><span>Height:</span>6'1"</li>
+<li class="span3 no-margin"><span>Eyes:</span>Blue</li>
+<li class="span3 no-margin"><span>Hair:</span>Blond</li>
+<li class="span3 no-margin"><span>Scars/Tattoos:</span>None</li>
+<li class="span12 no-margin"><span>Additional Information:</span>Lorem ipsum dolor sit ame orem ipsum dolor sit ame ipsum dolor sit ame</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span12 no-margin"><span>No Record Found</span></li>
+
+</ul>
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Edit Report</div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>State:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>County:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>District:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Country:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Jurisdiction</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+
+<li class="span4 no-margin"><span>Record Status:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Case #:</span><br/><input type="text" class="m-wrap span11"/></li>
+
+<li class="span4 no-margin"><span>Charge:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Degree:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Sentence:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Cost & Fines:</span><br/><input type="text" class="m-wrap span11" /></li>
+
+<li class="span4 no-margin"><span>Arrest Date:</span><br/><input type="text" class="m-wrap span11 datepicker" /></li>
+<li class="span4 no-margin"><span>Filing of Information Date:</span><br/><input type="text" class="m-wrap span11 datepicker" /></li>
+<li class="span4 no-margin"><span>Disposition:</span><br/><select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>Disposition Date:</span><br/><input type="text" class="m-wrap span11 datepicker" /></li>
+<li class="span4 no-margin"><span>Tracking Number:</span><br/><input type="text" class="m-wrap span11"/></li>
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span4 no-margin"><span>Name:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>DOB:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>SSN:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Address:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Sex:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Race:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Weight:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Height:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Eyes:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Hair:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Scars/Tattoos:</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span12 no-margin"><span>Additional Information:</span><br/><textarea class="m-wrap span11" rows="2" ></textarea></li>
+ </ul>
+
+
+<div class="clear"></div>
+
+</div><!-- END PORLET BODY-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Cancel</a> 
+<a href="#" class="greenbtn">Update</a> 
+</div>
+</div>
+</div><!--END PORTLET BOX-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--Modals-->
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_save_as.html" -->
+
+</div><!-- END CONTAINER -->
+
+  
+<!--#include file="_footer.html" -->

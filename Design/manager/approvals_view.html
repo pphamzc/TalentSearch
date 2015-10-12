@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Approvals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Approvals</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<ul class="nav nav-tabs approvals">
+<li class="active"><a href="#portlet_tab1" data-toggle="tab">Timesheets</a></li>
+<li><a href="#portlet_tab2" data-toggle="tab">Expense Reports </a></li>
+<li><a href="#portlet_tab3" data-toggle="tab">Requisitions <span class="badge"></span></a> </li>
+<li><a href="#portlet_tab4" data-toggle="tab">SOW Requisitions</a></li>
+<li><a href="#portlet_tab5" data-toggle="tab">Submissions</a></li>
+<li><a href="#portlet_tab6" data-toggle="tab">Projects<span class="badge">6</span></a></li>
+<li><a href="#portlet_tab7" data-toggle="tab">Adjustments</a></li>
+<li><a href="#portlet_tab8" data-toggle="tab">Engagements</a></li>
+<li><a href="#portlet_tab9" data-toggle="tab">Invoices<span class="badge">12</span></a></li>
+<li><a href="#portlet_tab10" data-toggle="tab">Service Invoices</a></li>
+
+
+</ul>
+
+<div class="portlet box">
+<!-- <div class="caption">Approvls</div>-->
+
+<div class="portlet-body">
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<!--next filer id # is 104-->
+
+<div class="tab-content approvals_content">
+
+<div class="tab-pane active" id="portlet_tab1">
+<h4>Approve Timesheets</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_timesheet.html" -->
+</div>	<!--end tab 1-->										
+											
+<div class="tab-pane" id="portlet_tab2">
+<h4>Approve Expense Reports</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_expense.html" -->
+</div><!--end tab 2-->
+
+<div class="tab-pane" id="portlet_tab3">
+<h4>Approve Requsitions</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_req.html" -->
+</div><!--end tab 3-->
+
+<div class="tab-pane" id="portlet_tab4">
+<h4>Approve Statement of Work Requsitions</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_req_sow.html" -->
+</div><!--end tab 4-->
+
+<div class="tab-pane" id="portlet_tab5">
+<h4>Approve Requsitions Submissions</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_req_sub.html" -->
+</div><!--end tab 5-->
+
+<div class="tab-pane" id="portlet_tab6">
+<h4>Approve Projects</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_projects.html" -->
+</div><!--end tab 6-->
+
+
+<div class="tab-pane" id="portlet_tab7">
+<h4>Approve Adjustments</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_adjustments.html" -->
+</div><!--end tab 7-->
+
+<div class="tab-pane" id="portlet_tab8">
+<h4>Approve Statement of Work Engagements </h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_engagements_sow.html" -->
+</div><!--end tab 8-->
+
+<div class="tab-pane" id="portlet_tab9">
+<h4>Approve Consolidated Invoices</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_invoice_con.html" -->
+</div><!--end tab 9-->
+
+<div class="tab-pane" id="portlet_tab10">
+<h4>Approve Statement of Work Service Invoices</h4>
+<div class="clear"></div>
+<hr/>
+<!--#include file="_approvals_invoice_sow.html" -->
+</div><!--end tab 10-->
+
+
+
+</div><!--end tab content-->
+</div><!-- END TAB PORTLET-->
+
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+
+
+
+<!--MOdals-->
+
+<!--BEGIN MODAL CONTENT-->
+<div id="actions" class="modal hide fade"  tabindex="-1" style="width:40%">
+
+<div class="modal-body" style="overflow: scroll!important;max-height: 400px">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+<h4>Approve</h4>
+
+<div class="alert alert-success">
+The following approvals were successful:</li>
+<li>Susie Smith</li>
+<li>Barbara Johnson</li>
+</ul>
+</div>
+
+<div class="alert alert-error">
+The following approvals have errors:
+<ul style="unstyled">
+<li>John Doe</li>
+<li>Susie Smith</li>
+<li>Barbara Johnson</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+<hr/>
+<h4>Decline</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Name</th>
+<th>Object ID</th>
+<th>Object Date</th>
+<th>Decline Reason</th>
+<th>Additional Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Doe</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">Something</option>
+<option value="Category 2">Something else</option>
+<option value="Category 3">Another reason</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>John Doe</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">Something</option>
+<option value="Category 2">Something else</option>
+<option value="Category 3">Another reason</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>John Doe</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">Something</option>
+<option value="Category 2">Something else</option>
+<option value="Category 3">Another reason</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>John Doe</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">Something</option>
+<option value="Category 2">Something else</option>
+<option value="Category 3">Another reason</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+
+</tbody>
+</table><!--END TABLE-->
+
+<div class="clear"></div>
+<hr/>
+<h4>Need More Info</h4>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Name</th>
+<th>Object ID</th>
+<th>Object Date</th>
+<th>Note/Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suzie Smith</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">John Doe</option>
+<option value="Category 2">Suzie Smith</option>
+<option value="Category 3">Luke Skywalker</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>Suzie Smith</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">John Doe</option>
+<option value="Category 2">Suzie Smith</option>
+<option value="Category 3">Luke Skywalker</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>Suzie Smith</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">John Doe</option>
+<option value="Category 2">Suzie Smith</option>
+<option value="Category 3">Luke Skywalker</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+<tr>
+<td>Suzie Smith</td>
+<td>12345</td>
+<td>06-Dec-14</td>
+<td>
+<select class="m-wrap span6" tabindex="1">
+<option value="Category 1">John Doe</option>
+<option value="Category 2">Suzie Smith</option>
+<option value="Category 3">Luke Skywalker</option>
+</select>
+</td>
+<td><textarea class="span12 m-wrap" rows="1"></textarea></td>
+</tr>
+
+</tbody>
+</table><!--END TABLE-->
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="greenbtn">Submit</button>
+</div>
+</form>
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_save_as.html" -->
+<!--#include file="_edit_views.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

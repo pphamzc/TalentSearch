@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Miscellaneous Documents</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+
+    <!--24July,2014-->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/multi-select/bootstrap-multiselect.css" />
+
+    <!--29July,2014-->
+    <link href="../assets/plugins/multi-select/multiple-select.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+<link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+<!--hide show # of records dd-->
+    <!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    };
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="invoice_misc_docs.html">Miscellaneous Documents</a> <i class="icon-angle-right"></i></li>
+<li>Miscellaneous Documents Details</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW-->
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Miscellaneous Document (Misc Doc ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Name:</span> John Doe (12345)</li>
+<li class="span3 no-margin"><span>Bill Amount:</span> 5000.00 USD </li>
+<li class="span3 no-margin"><span>Pay Amount:</span>5000.00 USD  </li>
+<li class="span3 no-margin"><span>Status:</span><span class="status">Approved</span>  </li>
+</ul>
+
+<div class="clear"></div>
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Customer Amount:</span>5000.00 USD </li>
+<li class="span3 no-margin"><span>Customer Invoice Number:</span>12345 </li>
+<li class="span3 no-margin"><span>Resource Name (ID):</span> John Doe <a href="#">(12345)</a></li>
+<li class="span3 no-margin"><span>Resource Class:</span> SNP</li>
+<li class="span3 no-margin"><span>Resource Status:</span><span class="status">Active</span> </li>
+<li class="span6 no-margin"><span>Project Name (ID):</span> Learning & Development Project Manager Delivery Specialist <a href="#">(12345)</a> </li>
+<li class="span12 no-margin"><hr></li>
+<li class="span12 no-margin"><span>WFL Only</span></li>
+<li class="span3 no-margin"><span>Company:</span>12345 </li>
+<li class="span3 no-margin"><span>Department:</span>12345 </li>
+<li class="span3 no-margin"><span>Account:</span>12345 </li>
+<li class="span3 no-margin"><span>Product:</span>12345 </li>
+<li class="span3 no-margin"><span>IC:</span>12345 </li>
+<li class="span3 no-margin"><span>Location Code:</span>12345 </li>
+<li class="span3 no-margin"><span>Is this an extensiton?:</span>Yes</li>
+<li class="span3 no-margin"><span>Contractor Status:</span>New Hire </li>
+<li class="span3 no-margin"><span>Provisioning NDA Rcvd:</span>24-Aug-14</li>
+
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+
+</div><!-- END PORLET BODY--> 
+</div><!-- END PORLET BOX-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Miscellaneous Documents List </div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+<div class="pull-right copybtn">
+<a href="#" class="greenbtn_sm">Print</a>
+<a href="#" class="greenbtn_sm">Edit</a>
+</div>
+
+</div>
+<div class="portlet-body">
+<h4>Custom Fields</h4>
+<ul class="unstyled">
+<li class="span3 no-margin"><span>UDF 1:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 2:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 3:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 4:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 5:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 6:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 7:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 8:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 9:</span> Lorem Ipsum </li>
+<li class="span3 no-margin"><span>UDF 10:</span> Lorem Ipsum </li>
+</ul>
+<div class="clear"></div>
+<hr>
+
+ <table class="table table-striped table-bordered table-hover table-full-width">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Detail Type</th>
+        <th>UDF 1</th>
+        <th>UDF 2</th>
+        <th>UDF 3</th>
+        <th>UDF 4</th>
+        <th>UDF 5</th>
+        <th>Units</th>
+        <th>End Customer Bill Rate</th>
+        <th>Customer Bill Rate</th>
+        <th>Pay Rate</th>
+       <th class="no-sort">End Resource Pay Rate</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>
+        <td>05-Feb-14 B1 Fee</a></td>
+        <td>Background Investigation Fee</td>
+        <td>Lorem Ipsum</td>
+        <td>Lorem Ipsum</td>
+        <td>Lorem Ipsum</td>
+        <td>Lorem Ipsum</td>
+        <td>Lorem Ipsum</td>
+        <td>1.00</td>
+        <td>99.00 USD</td>
+        <td>99.99 USD</td>
+        <td>0.00</td>
+       <td>0.00</td>
+</tr>      
+      
+    </tbody>
+  </table>
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Miscellaneous Documents Status Track</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+
+</div>
+<div class="portlet-body">
+
+ <table class="table table-striped table-bordered table-hover table-full-width" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Change Time</th>
+        <th>New Status</th>
+        </tr>
+    </thead>
+<tbody>
+<tr>
+        <td>John Doe</td>
+        <td>Admin</td>
+        <td>06-Jul-14</td>
+        <td>Approved</td>
+        </tr>      
+      
+    </tbody>
+  </table>
+
+
+<div class="clear"></div>
+</div><!--end porlet body-->
+</div><!--end portlet box-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+  
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" --> 

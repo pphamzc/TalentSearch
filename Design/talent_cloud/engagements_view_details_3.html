@@ -1,0 +1,792 @@
+﻿ <!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Engagements Details - Milestones</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"  type="text/css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="engagements_view.html">Engagements</a></li>
+<li>Engagement Details</li>
+
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Engagement Details</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="#modify" class="greenbtn_sm">Modify Engagement</a>&nbsp;
+<a href="#" class="greenbtn_sm">Close Engagement</a>&nbsp;
+
+</div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Engagement:</span>Engagement Name <a href="#">(12345)</a></li>
+<li class="span3 no-margin"><span>Service Provider:</span>True North</li>
+<li class="span3 no-margin"><span>Status:</span><span class="status">Pending</span></li>
+<li class="span3 no-margin"><span>Requisition ID:</span><a href="#">12345</a></li>
+</ul>
+
+<div class="clear"></div>
+
+
+<div class="accordion toppadding" id="accordion1">
+<div class="accordion-group2">
+<div class="accordion-heading2">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">View More Details<i class="icon-angle-down" style="padding-left:5px"></i></a>
+</div>
+<div id="collapse_1" class="accordion-body collapse">
+<div class="accordion-inner">
+<ul class="unstyled no-margin">
+<li class="span3 no-margin"><span>Description:</span>Epic Video Productions</li>
+<li class="span3 no-margin"><span>Business Unit:</span>Corporate</li>
+<li class="span3 no-margin"><span>Service Class:</span>Contractor</li>
+<li class="span3 no-margin"><span>Customer Manager:</span>John Doe (12345)</li>
+<li class="span3 no-margin"><span>Service Provider Contact:</span>Suzie Smith</li>
+<li class="span3 no-margin"><span>Track Code Name:</span>1234567890-098765</li>
+<li class="span3 no-margin"><span>Start Date:</span>01-Jun-14</li>
+<li class="span3 no-margin"><span>End Date:</span>03-Jun-2014</li>
+<li class="span3 no-margin"><span>Approved Budget:</span>10,000.00 USD</li>
+<li class="span3 no-margin"><span>Project Location:</span>Timbucktoo</li>
+<li class="span3 no-margin"><span>Country:</span>US</li>
+<li class="span3 no-margin"><span>State:</span>Alaska</li>
+<li class="span3 no-margin"><span>Postal Code:</span>12345</li>
+<div class="clear"></div>
+</ul>
+</div>
+</div>
+</div>
+</div> <!--end accordian-->                                 
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="engagements_view_details.html" >Details</a></li>
+<li><a href="engagements_view_details_1.html" >Engagement Owners</a></li>
+<li><a href="engagements_view_details_2.html" >Approvals</a></li>
+<li class="active"><a href="engagements_view_details_3.html" >Milestones</a></li>
+<li><a href="engagements_view_details_4.html" >Notes & Attachments</a></li>
+<li><a href="engagements_view_details_5.html" >Track Codes</a></li>
+<li><a href="engagements_view_details_6.html" >History</a></li>
+<li><a href="engagements_view_details_7.html" >Service Invoices</a></li>
+<li><a href="engagements_view_details_8.html" >Workers</a></li>
+<li><a href="engagements_view_details_9.html" >Service Invoice Admin</a></li>
+<li><a href="engagements_view_details_10.html" >Reductions</a></li>
+<li><a href="engagements_view_details_11.html" >Accruals</a></li>
+
+</ul>
+
+<div class="portlet box">
+<div class="portlet-body">
+<!------------------------------------------->
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Engagement Items</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="#engagement_item" class="greenbtn_sm">Add Engagement Items</a>&nbsp;
+<a data-toggle="modal" href="#import" class="greenbtn_sm">Import Engagement Items</a>&nbsp;
+<a href="#" class="greenbtn_sm">Download Import Template</a>&nbsp;
+</div>
+
+</div>
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>ID</th>
+<th>Line Item Name</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Unallocated Amount</th>
+<th>Total Invoiced</th>
+<th>Available for Invoicing</th>
+<th>Actions</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="">1234</a></td>
+<td>Some line item name here</td>
+<td>Misc engagement item description here</td>
+      <td>75,000.00 USD</td>
+      <td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding">
+<a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal'  href='#engagement_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-signin'></i>  Import Line Item</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a></td>
+</tr>
+  </tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="portlet-title orange2border">
+<div class="caption">Line Item #1234</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+<div class="pull-right copybtn">
+<a data-toggle="modal" href="#line_item" class="greenbtn_sm">Add Line Items</a>&nbsp;
+</div>
+
+</div>
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+<thead>
+<tr>
+<th>ID</th>
+<th>Line Item Name</th>
+<th>Description</th>
+<th>Track Code Name</th>
+<th>Tax Code Name</th>
+<th>Start Date</th>
+<th>Est Completion Date</th>
+<th>Actual Complete Date</th>
+<th>Amount</th>
+<th>% Complete</th>
+<th>Available for Invoicing</th>
+<th>Amount Invoiced</th>
+<th>Remaining Amount</th>
+<th>Actions</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+      <td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+      <td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+      <td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+      <td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>&nbsp;</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>&nbsp;</td>
+      <td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+    <tr>
+      <td><a data-toggle="modal" href="#po_line_item">1234</a></td>
+      <td>Some line item name here</td>
+      <td>Misc engagement item description here</td>
+<td>1234567890</td>
+<td>1234567890</td>
+<td>15-Jun-14</td>
+       <td>15-Jun-14</td>
+<td>15-Jun-14</td>
+      <td>75,000.00 USD</td>
+<td>10,00</td>
+<td>10.00 USD</td>
+      <td>100.00 USD</td>
+      <td>50,000.00 USD</td>
+<td class="toppadding"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+<a data-toggle='modal' href='#line_item'><i class='icon-edit'></i>  Edit</a><br/>
+<a href='#'><i class='icon-trash'></i>  Delete</a><br/>
+<a href='#'><i class='icon-copy'></i>  Copy</a>
+" data-original-title="Choose an Action"> <i class="icon-plus greenicon"></i></a>
+</td>
+      </tr>
+
+  </tbody>
+</table>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX --> 
+
+<div class="portlet box">
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Open Engagement</a> 
+</div>
+</div>
+</div>
+
+
+<!---------------------------------------->
+</div><!--end portlet box-->
+</div><!--end portlet body-->
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+
+<!---------------------MOdals--------------------->
+<!--modify-->
+<div id="modify" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Modify Engagement</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+
+<li class="span6 no-margin"><span>Start Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap  span11 date-picker"  placeholder="DD/MM/YYYY"></li>
+
+<li class="span6 no-margin"><span>End Date<span class="required">*</span> </span><br/><input type="text" class="m-wrap  span11 date-picker"   placeholder="DD/MM/YYYY"></li>
+
+<li class="span6 no-margin"><span>Additional Funds Request</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span6 no-margin"><span>Business Unit<span class="required">*</span></span><br>
+<select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="span6 no-margin"><span>Service Class</span><br>
+<select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span6 no-margin"><span>Address 1</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Address 2</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>City</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Postal Code</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span6 no-margin"><span>Country</span><br/>
+<select class="m-wrap span11" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+
+<li class="span6 no-margin"><span>State / Province</span><br/>
+<select class="m-wrap span11" >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+
+
+<li class="no-margin span11 "><span>Justification<span class="required">*</span> </span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+
+</ul>
+<div class="clear"></div>
+<hr/>
+<h4>Please Confirm</strong></h4>
+<div class="alert alert-info">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+<div class="clear"></div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">OK</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+<!--add engagement item-->
+<div id="engagement_item" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Add / Edit Engagement Items</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+
+<li class="span4 margin"><span>ID:</span>12345</li>
+<li class="span4 no-margin"><span>Last Updated:</span>14-Jun-14</li>
+<li class="span4 no-margin"><span>Last Updated By:</span>John Doe</li>
+
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span6 no-margin"><span>PO Number<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span6 no-margin"><span>Description<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+
+<li class="span6 no-margin"><span>Track Code Name<span class="required">*</span></span><br/> <select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span6 no-margin"><span>Amount<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span6 no-margin"><span>UDF 1:</span> <br><input type="text" class="m-wrap span11"></li>
+<li class="span6 no-margin"><span>UDF 2:</span><br> <select class="m-wrap span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span6 no-margin"><span>UDF 3:</span> <br> <div class="checker"><span><input type="checkbox" value=""></span></div>  Checkbox 1</li>
+</ul>
+<div class="clear"></div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+<!--import-->
+<div id="import" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:75%; left:30%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Import PO Line Items</h3></div>
+
+<div class="modal-body">
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Title</th>
+<th>Description</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOW 12345</td>
+<td> Some description here</td>
+<td>!00.00 USD</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul class="unstyled">
+<li class="span7 no-margin"><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new " data-provides="fileupload">
+
+<div class="input-append">
+<div class="uneditable-input attach span5">
+<i class="icon-file fileupload-exists"></i> 
+<span class="fileupload-preview"></span>
+</div>
+
+<span class="btn-file">
+<span class="fileupload-new "><i class="icon-search attachicon"></i></span>
+<span class="fileupload-exists"><i class="icon-paperclip attachicon"></i></span>
+<input type="file" class="default" />
+</span>
+<a href="#" class="fileupload-exists" data-dismiss="fileupload"><i class="icon-remove attachicon"></i></a>
+</div>
+</div>
+</li>
+</ul>
+<div class="clear"></div>
+<span style="font-size:10px">Valid file types are .doc  .pdf  .docx  .htm  .rtf  .efx  .jfx</span>
+ 
+<div class="clear"></div>
+
+<div class="alert alert-success">
+<p>Pass filetype.</p>
+<div class="clear"></div>
+</div>
+
+<div class="alert alert-error">
+<p>Fail filetype.</p>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Line Item Name</th>
+<th>Description</th>
+<th><strong>Track Code</strong></th>
+<th><strong>Tax Track Code</strong></th>
+<th>Amount</th>
+<th>Start Date</th>
+<th>Est Complete Date</th>
+<th>Actual Complete Date</th>
+<th>% Complete</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="m-wrap span11" /></td>
+      <td><input type="text" class="m-wrap span11" /></td>
+<td>&nbsp;</td>
+      <td><select class="m-wrap">
+<option value="1"> Select...</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></td>
+<td><input type="text" class="m-wrap span11" /></td>
+      <td><input type="text" class="m-wrap span11 datepicker" placeholder="MM-DD-YYYY"/></td>
+       <td><input type="text" class="m-wrap span11 datepicker" placeholder="MM-DD-YYYY" /></td>
+      <td><input type="text" class="m-wrap span11" /></td>
+      <td><input type="text" class="m-wrap span11" /></td>
+      </tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+<hr/>
+<div class="alert alert-success">
+<p>Engagement line item(s) submitted successfully.</p>
+<div class="clear"></div>
+</div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Clear</button>
+<button type="submit" class="greenbtn">Save</button>
+<button type="submit" class="greenbtn">Submit</button>
+
+</div>
+</div><!--end modal-->
+
+<!--add line item-->
+<div id="line_item" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Add / Edit Line Items</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+
+<li class="span4 margin"><span>ID:</span>12345</li>
+<li class="span4 no-margin"><span>Last Updated:</span>14-Jun-14</li>
+<li class="span4 no-margin"><span>Last Updated By:</span>John Doe</li>
+
+<li class="span12 no-margin"><hr/></li>
+
+<li class="span4 no-margin"><span>Line Item Name<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span4 no-margin"><span>Description<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span4 no-margin"><span>Track Code Name<span class="required">*</span></span><br/><select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+<li class="span4 no-margin"><span>Tax Code Name<span class="required">*</span></span><br/><select class="m-wrap  span11"  >
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></li>
+
+
+<li class="span4 no-margin"><span>Amount<span class="required">*</span></span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+<li class="span4 no-margin"><span>Start Date</span><br/><input class="m-wrap span11 m-ctrl-medium date-picker"  type="text"  /></li>
+
+<li class="span4 no-margin"><span>Est Completion Date</span><br/><input class="m-wrap span11 m-ctrl-medium date-picker"  type="text"  /></li>
+
+<li class="span4 no-margin"><span>Actual Completion Date</span><br/><input class="m-wrap span11 m-ctrl-medium date-picker"  type="text"  /></li>
+
+<li class="span4 no-margin"><span>% Complete</span><br/><input type="text" name=""  class="m-wrap  span11"/></li>
+
+
+<li class="span4 no-margin"><span>UDF1:</span> <br><input type="text" class="m-wrap  span11"></li>
+<li class="span4 no-margin"><span>UDF2:</span> <br>
+<input class="m-wrap  span11 m-ctrl-medium date-picker" type="text"></li>
+<li class="span4 no-margin"><span>UDF3:</span><br> <select class="m-wrap  span11">
+<option value="1"> 1</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></li>
+<li class="span4 no-margin"><span>UDF4:</span> <br> <div class="checker"><span><input type="checkbox" value=""></span></div>  Checkbox 1</li>
+
+</ul>
+<div class="clear"></div>
+
+</div><!--end modal body-->
+<div class="modal-footer">
+<button type="submit" class="bluebtn">Cancel</button>
+<button type="submit" class="greenbtn">Save</button>
+</div>
+
+</div><!--end modal-->
+
+<!--PO line item-->
+<div id="po_line_item" class="modal hide fade" tabindex="-1" role="modal" aria-hidden="true" style="width:45%">
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h3>Line Item</h3></div>
+
+<div class="modal-body">
+<ul class="unstyled">
+
+<li class="span4 margin"><span>ID:</span>12345</li>
+<li class="span4 no-margin"><span>Last Updated:</span>14-Jun-14</li>
+<li class="span4 no-margin"><span>Last Updated By:</span>John Doe</li>
+<li class="span12 no-margin"><hr/></li>
+<li class="span4 no-margin"><span>Line Item Name:</span>Quarterly Deliverables</li>
+<li class="span4 no-margin"><span>Description:</span>Some random description here</li>
+<li class="span4 no-margin"><span>Track Code Name:</span>123456789-09875</li>
+<li class="span4 no-margin"><span>Tax Code Name:</span>Some name here</li>
+<li class="span4 no-margin"><span>Amount:</span>100.00 USD</li>
+<li class="span4 no-margin"><span>Start Date:</span>14-Jun-14 </li>
+<li class="span4 no-margin"><span>Est Completion Date:</span>14-Jun-14 <li>
+<li class="span4 no-margin"><span>Actual Completion Date:</span>14-Jun-14 </li>
+<li class="span4 no-margin"><span>% Complete:</span>27%</li>
+</ul>
+<div class="clear"></div>
+</div><!--end modal body-->
+</div><!--end modal-->
+
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Manager View Timesheet Hourly Weekly</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="../favicon.ico" />
+<style type="text/css">
+.no-sort { background: none!important; pointer-events: none; cursor: default;}
+</style>
+    
+</head>
+
+
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb ">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li><a href="#">View Timesheet</a> <i class="icon-angle-right"></i></li>
+<li>Timesheet Details</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Timesheet (ID #) for EMPLOYEE NAME</div>
+<div class="pull-right copybtn">
+<a href="#">Print<i class="icon-print blueicon rightmargin"></i></a>
+<a href="#">Edit<i class="icon-edit blueicon rightmargin"></i></a>
+<a href="#">Pay Statement<i class="icon-money blueicon rightmargin"></i></a>
+
+<a href="#" class="tooltips" data-container="body" data-placement="top" data-original-title="Re-allocate Track Codes">Allocate<i class="icon-bullseye blueicon rightmargin"></i></a>
+<a href="#">Next<i class="icon-arrow-right blueicon rightmargin"></i></a>
+
+<a href="#">Approve<i class="icon-ok greenicon rightmargin"></i></a>
+<a data-toggle="modal" href="#decline">Decline<i class="icon-remove redicon rightmargin"></i></a>&nbsp;
+</div>
+</div>
+
+<div class="portlet-body"> 
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Project Name:</span> ML-Addecco BOA ASp Conversion  (<a href="#">1999864</a>)</li>
+<li class="span4 no-margin"><span>Last Timesheet?</span> <div class="checker disabled"><span class="checked"><input type="checkbox" value="" disabled="" checked=""></span></div></li>
+<li class="span4 no-margin"><span>Status:</span> <span class="status">Pending</span></li>
+<li class="span4 no-margin"><span>Timesheet Ending Date:</span> 20-Nov-2013</li>
+<li class="span4 no-margin"><span>Approval Manager:</span> John Doe</li>
+<li class="span4 no-margin"><span>Approval Date:</span> 20-Feb-2013</li>
+</ul>
+
+<ul class="unstyled"><li class="span8 no-margin"><span>Search:</span>
+<i class="icon-question-sign popovers" data-trigger="hover" data-container="body" data-placement="top" data-content="To filter this list, type in the name of the Track Code, Pay Code, or Units that you want to filter it by. To remove the filter, remove the text you entered." data-original-title="Search Help"></i>
+<input type="text" aria-controls="engage_2" class="m-wrap span4" placeholder="To filter the list, enter a name"></li></ul>
+
+<div class="clear"></div>
+
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width " id="engage_2">
+<thead>
+<tr>
+<th>Track Code</th>
+<th>Pay Code</th>
+<th>Units</th>
+<th class="no-sort">Mon 02-Jan</th>
+<th class="no-sort">Tues 03-Jan</th>
+<th class="no-sort">Wed 04-Jan</th>
+<th class="no-sort">Thu 05-Jan</th>
+<th class="no-sort">Fri 06-Jan</th>
+<th class="no-sort">Sat 07-Jan</th>
+<th class="no-sort">Sun 08-Jan</th>
+<th class="no-sort">Supplier Rate </th>
+<th class="no-sort">Customer Rate </th>
+<th class="no-sort">Total Units</th>
+<th class="no-sort">Total Supplier Amount</th>
+<th class="no-sort">Total Customer Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TC1</td>
+<td>Regular Time</td>
+<td>Hourly</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+<td>10.00</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+</tr>
+<tr>
+<td>TC1</td>
+<td>OverTime</td>
+<td>Hourly</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+<td>10.00</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+</tr>
+
+<tr>
+<td>TC1</td>
+<td>Double Time</td>
+<td>Hourly</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+<td>10.00</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td class="totals">TOTAL</td>
+  <td class="totals">20.00</td>
+  <td class="totals">20.00 USD</td>
+  <td class="totals">20.00 USD</td>
+  </tr>
+
+</tbody>
+
+
+</table>
+<!--END TABLE--> 
+
+<table class="table table-striped table-bordered table-hover table-full-width" >
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td class="totals">TOTAL</td>
+  <td class="totals">20.00</td>
+  <td class="totals">20.00 USD</td>
+  <td class="totals">20.00 USD</td>
+  </tr>
+</table>
+
+
+<hr/>
+<h4>Total Time</h4>
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width ">
+  <thead>
+    <tr>
+      <th>Track Code</th>
+      <th>Pay Code</th>
+      <th>Units</th>
+      <th>Supplier Rate</th>
+      <th>Customer Rate</th>
+      <th>Total Units</th>
+      <th>Total Supplier Amount</th>
+      <th>Total Customer Amount</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC1</td>
+      <td>Regular Time</td>
+      <td>Hourly</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      <td>7</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      </tr>
+    <tr>
+      <td>TC2</td>
+      <td>Over Time</td>
+      <td>Hourly</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      <td>3</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      </tr>
+    <tr>
+      <td>TC3</td>
+      <td>Double Over Time</td>
+      <td>Hourly</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      <td>1</td>
+      <td>25.00 USD</td>
+      <td>25.00 USD</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="totals">TOTAL</td>
+  <td class="totals">20.00</td>
+  <td class="totals">20.00 USD</td>
+  <td class="totals">20.00 USD</td>
+    </tr>
+  </tbody>
+</table>
+<!--END TABLE--> 
+
+
+
+
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Adjustment Summary</div>
+</div>
+
+<div class="portlet-body"> 
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width ">
+<thead>
+<tr>
+<th>Status</th>
+<th>Date</th>
+<th>Type</th>
+<th>Pay Code</th>
+<th>Units</th>
+<th>Total Units</th>
+<th>Total Supplier  Amount</th>
+<th>Total Customer Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Active</td><td>20-Nov-2013</td>
+<td>Unit Adjustment</td>
+<td>Regular Time</td>
+<td>Hourly</td>
+<td>7</td>
+<td>25.00 USD</td>
+<td>25.00 USD</td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE--> 
+
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Will Pay Amount</div>
+</div>
+
+<div class="portlet-body">
+ <!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width ">
+<thead>
+<tr>
+<th>Deduction Description</th>
+<th>Will Pay Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Records to Display</td>
+<td>$200.00</td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE--> 
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border"><div class="caption">Miscellaneous Information</div>
+</div>
+
+<div class="portlet-body"> 
+<div class="row-fluid">
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Resource Name:</span> John Doe <a href="#">(12345)</a></li>
+<li class="span4 no-margin"><span>Resource Email:</span> <a href="#">myemail@mycompany.com</a></li>
+<li class="span4 no-margin"><span>PO Number:</span> 123456</li>
+<li class="span4 no-margin"><span>External ID:</span> 32792</li>
+<li class="span4 no-margin"><span>First Day:</span> 20-Feb-2013</li>
+<li class="span4 no-margin"><span>Project Start Date:</span> 02-Jan-2014</li>
+<li class="span4 no-margin"><span>Project End Date:</span> 02-Feb-2014</li>
+<li class="span4 no-margin"><span>Submit Date:</span> 20-Nov-2013</li>
+<li class="span4 no-margin"><span>Region:</span> US / CA/ Fresno</li>
+</ul>
+<div class="clear"></div>
+</div><!--end row-->
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+<div class="portlet box">
+<div class="portlet-title">
+  <div class="caption">Notes &amp; Attachments </div></div>
+
+<div class="portlet-body">
+
+
+<ul class="unstyled">
+<li class="span5 no-margin"><span>Attachments</span>
+<ul class="unstyled no-margin">
+<li>123456789099876543211234567890.doc</li>  
+<li>123456789099876543211234567890.doc</li>  
+<li>123456789099876543211234567890.doc</li> 
+<li>123456789099876543211234567890.doc</li>    
+<li>123456789099876543211234567890.doc</li>  
+<li>123456789099876543211234567890.doc</li>  
+</ul></li>
+
+
+<li class="span6 no-margin"><span>Notes:</span><br/>  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here  misc notes goes here</li>
+<li class="span6 no-margin"></li>
+<li class="span6 no-margin"><span>Rejection Reason:</span>  reason goes here reason goes here reason goes here</li>
+</ul>
+
+
+<div class="clear"></div>
+
+</div><!--end porlet body-->
+</div><!--end portlet box--><div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">Customer Defined Fields</div>
+</div>
+
+<div class="portlet-body"> 
+
+<div class="span12">
+
+<ul class="unstyled no-margin">
+<li class="span3"><span>UDF 1:</span> some UDF goes here</li>
+<li class="span3"><span>UDF 2:</span> some UDF goes here</li>
+<li class="span3"><span>UDF 3:</span> some UDF goes here</li>
+<li class="span3"><span>UDF 4:</span> some UDF goes here</li>
+</ul>
+<ul class="unstyled no-margin">
+<li class="span10"><span>UDF 1:</span>some UDF goes here some UDF goes here some UDF goes here some UDF goes here some UDF goes here some UDF goes here some UDF goes here some UDF goes here</li>
+</ul>
+
+
+<div class="clear"></div>
+<hr/>
+<h4>Custom Project User Defined Fields</h4>
+<ul class="unstyled no-margin">
+<li class="span3"><span>UDF 1:</span> Custom project user defined field</li><li class="span3"><span>UDF 2:</span> Custom project user defined field</li>
+<li class="span3"><span>UDF 3:</span> Custom project user defined field</li>
+<li class="span3"><span>UDF 4:</span> Custom project user defined field</li>
+</ul>
+<ul class="unstyled no-margin">
+<li class="span10"><span>UDF 1:</span>Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field Custom project user defined field</li>
+</ul>
+
+
+</div>
+<div class="clear"></div>
+</div><!-- END PORLET BODY-->
+</div><!--END PORTLET BOX--> 
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+</div><!-- END CONTAINER -->
+
+<!--MOdals-->
+<!--#include file="_action_approve.html" -->
+<!--#include file="_action_decline.html" -->
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+<!--#include file="_footer.html" -->

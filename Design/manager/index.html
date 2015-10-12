@@ -1,0 +1,1240 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Manager Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+.dataTables_scrollBody::-webkit-scrollbar { width: 5px;}
+.dataTables_scrollBody::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}
+.dataTables_scrollBody::-webkit-scrollbar-thumb { background-color: #707070;}
+
+/*.dataTables_scrollHeadInner{width:auto!important}*/
+.dataTable {margin-top: 0;}
+.table.table-full-width {margin: 0; }
+</style>
+
+<!--kendo-->
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.903/js/kendo.all.min.js"></script>
+
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="breadcrumb">
+                            <li><i class="icon-home"></i>Home</a> </li>
+                        </ul>
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW PAGE HEADER-->
+
+<div class="row-fluid">
+ <div class="span6 ">
+
+<div class="portlet box" >
+<div class="portlet-title blue2border">
+  <div class="caption">Approvals</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body" >
+<!--<div id="treeMap" style="height: 290px; font-size: 12px;"></div>-->
+<div class="emptydashlette">
+<h3>Congratulations!</h3>
+You currently have no items to approve.
+<div class="number">0</div>
+</div>
+<div class="clear"></div>
+</div><!--end body-->
+
+<div class="form-actions" style="height:22px">
+<div class="pull-right">
+<!--**************** 
+DISPLAY THIS BUTTON DYNAMICALLY IF THERE ARE ANY APPROVALS BOXES
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+*******************-->
+</div>
+</div>
+
+</div><!--end box-->
+</div><!--end span-->
+
+<div class="span6 ">
+
+<div class="portlet box">
+
+<div class="portlet-title blue3border">
+<div class="caption">Open Requisitions</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_1" data-toggle="tab">New Candidates</a></li>
+<li><a href="#tab_1_2" data-toggle="tab">Evaluations <span class="badge">11</span> </a> </li>
+<li><a href="#tab_1_3" data-toggle="tab">Eval Decision</a></li>
+<li><a href="#tab_1_4" data-toggle="tab">Pending Approvals<span class="badge">2</span> </a></li>
+
+</ul>
+
+<div class="tab-content">
+
+<!--tab_1_1-->
+<div class="tab-pane active row-fluid" id="tab_1_1" >
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_1">
+  <thead>
+<tr>
+<th>Requisition</th>
+<th>Start Date</th>
+<th>Requested</th>
+<th>Hired</th>
+<th>New</th>
+</tr>
+  </thead>
+  <tbody>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+<tr>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td>15-Aug-14</td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Quantity Requested"> 5</span></td>
+<td><span class="tooltips" data-container="body" data-placement="top" data-original-title="Accepted Offers"> 5</span></td>
+<td>5 <a href="">  View</a></td>
+</tr>
+
+  </tbody>
+</table>
+<!--END TABLE-->
+</div><!--end tab-pane-->
+<!--tab_1_2-->
+<div class="tab-pane row-fluid" id="tab_1_2">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_2">
+  <thead>
+<tr>
+<th>Requisition Name</th>
+<th>Est. Start</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+        <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>Active</td>
+      <td><a href="#"><i class="icon-envelope"></i>  Send Note</a></td>
+    </tr>
+
+  </tbody>
+</table><!--END TABLE-->
+</div><!--end tab-pane-->
+<!--tab_1_3-->
+<div class="tab-pane row-fluid" id="tab_1_3">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_3">
+  <thead>
+<tr>
+<th>Requisition Name</th>
+<th>Created</th>
+<th>Est. Start</th>
+<th>Est. End</th>
+<th>Action</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html#"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>21-Jan-14</td>
+      <td><a href="requisitions_compliance_details.html"><i class="icon-edit"></i>  Provide Decision</a></td>
+    </tr>
+
+  </tbody>
+</table><!--END TABLE-->
+</div><!--end tab-pane-->
+
+<!--tab_1_4-->
+<div class="tab-pane row-fluid" id="tab_1_4">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_4">
+  <thead>
+<tr>
+<th>Requisition</th>
+<th>Start Date</th>
+<th>Creation Date</th>
+<th>Approver</th>
+<th>Contact</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+    <tr>
+      <td>Requistion Name <a href="#">(12345)</a></td>
+      <td>15-Aug-14</td>
+      <td>21-Jan-14</td>
+      <td>Susie Johnson</td>
+      <td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+    </tr>
+  </tbody>
+</table><!--END TABLE-->
+</div><!--end tab-pane-->
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+
+</div><!--end span-->
+ 
+ 
+             
+</div><!--end row-->
+
+<div class="row-fluid">
+
+ <div class="span6">
+
+<div class="portlet box">
+<div class="portlet-title orangeborder">
+  <div class="caption">Hiring</div>
+  <div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_5" data-toggle="tab">Scheduled Interviews</a></li>
+<li><a href="#tab_1_6" data-toggle="tab">Pending Offers</a></li>
+<li><a href="#tab_1_7" data-toggle="tab">Enrollment</a></li>
+<li><a href="#tab_1_8" data-toggle="tab">Pending RFP's</a></li>
+
+</ul>
+
+<div class="tab-content">
+
+<!--tab_1_5-->
+<div class="tab-pane active row-fluid" id="tab_1_5" >
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_5">
+  <thead>
+<tr>
+<th>Candidate</th>
+<th>Requsition</th>
+<th>Interviewer</th>
+<th>When</th>
+<th>Type</th>
+<th>Resume</th>
+
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    <tr>
+      <td><a href="#">Susie Johnson</a></td>
+      <td>ReqName <a href="">(12345678)</a></td>
+      <td>John Doe</td>
+      <td>31-Sep-14  1:00:00 EST</td>
+      <td>Person</td>
+      <td class="textaligncenter"><a href="#"><i class="icon-file padding-sides"></i></a></td>
+    </tr>
+    </tr>
+
+  </tbody>
+</table>
+<!--END TABLE-->
+</div><!--end tab-pane-->
+
+<!--tab_1_6-->
+<div class="tab-pane row-fluid" id="tab_1_6">
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_6">
+<thead>
+<tr>
+<th class="span3">Candidate</th>
+<th class="span3">Requisition</th>
+<th class="span3">Offered Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+<tr>
+<td class="span3"><a href="#">Susie Johnson</a></td>
+<td class="span3">Requistion Name <a href="#">(12345)</a></td>
+<td class="span3">31-Sep-14</td>
+</tr>
+
+  </tbody>
+</table>
+<!--END TABLE-->
+
+</div><!--end tab-pane-->
+
+
+<!--tab_1_7-->
+<div class="tab-pane row-fluid" id="tab_1_7" >
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_7">
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Requisition</th>
+<th>Start Date</th>
+<th>Status</th>
+<th >Days Pending</th>
+<th >Contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+<tr>
+<td ><a href="#">Susie Johnson</a></td>
+<td>Requistion Name <a href="#">(12345)</a></td>
+<td >31-Sep-14</td>
+<td >Active</td>
+<td ><span class="tooltips" data-container="body" data-placement="top" data-original-title="Number of days in this status"> 27</span></td>
+<td class="textaligncenter span1"><a href="#"><i class="icon-envelope"></i></a></td>
+</tr>
+</tbody>
+</table>
+<!--END TABLE-->
+
+</div><!--end tab-pane-->
+
+
+<!--tab_1_8-->
+<div class="tab-pane row-fluid" id="tab_1_8" >
+<table class="table table-striped table-bordered table-hover table-full-width" id="example_8">
+<thead>
+<tr>
+<th>RFP Name</th>
+<th>Submitted</th>
+<th>Bid Close</th>
+<th>Est Start </th>
+<th >Status</th>
+<th >Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awaiting Response</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Bidding Closed</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awarded</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awaiting Response</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Bidding Closed</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awarded</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awaiting Response</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Bidding Closed</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awarded</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awaiting Response</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Bidding Closed</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+<tr>
+<td >RFP Name <a href="#">12345</a></td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >31-Sep-14</td>
+<td >Awarded</td>
+<td><a href="#"><i class="icon-cog"></i> Manage</a></td>
+</tr>
+
+</tbody>
+</table>
+<!--END TABLE-->
+
+</div><!--end tab-pane-->
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+
+
+<div class="clear"></div>
+</div><!--end body-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="greenbtn"><i class="icon-zoom-in submiticon"></i>View More</a> 
+</div>
+</div>
+</div><!--end box-->
+</div><!--end span-->
+
+
+<div class="span6 ">
+
+<div class="portlet box">
+<div class="portlet-title orange3border">
+  <div class="caption">Projects & Engagements</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+<div class="portlet-body">
+
+
+
+
+<!--BEGIN TABS-->
+<div class="tabbable tabbable-custom tabbable-full-width">
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1_9" data-toggle="tab">Projects</a></li>
+<li><a href="#tab_1_10" data-toggle="tab">Engagements</a></li>
+</ul>
+
+<div class="tab-content">
+
+<!--tab_1_9-->
+<div class="tab-pane active row-fluid" id="tab_1_9" >
+<div class="tiles">
+
+<a href="">
+<div class="tile double bg-blue">
+<div class="tile-body"><i class="icon-dollar"></i>Total Spend<br/>at or > 80%</div>
+<div class="tile-object">
+<div class="number">0</div>
+</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="tile bg-green">
+<div class="tile-body"><i class="icon-dollar"></i>Timesheet Spend<br/>at or > 80%</div>
+<div class="tile-object">
+<div class="number">31</div>
+</div>
+</div>
+</a>
+
+<a href="">
+<div class="tile bg-orange">
+<div class="tile-body"> <i class="icon-dollar"></i>Expense Spend<br/>at or > 80%</div>
+<div class="tile-object">
+<div class="number">23</div>
+</div>
+</div>
+</a>
+
+<a href="">
+<div class="tile double bg-yellow">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>0-30 Days</div>
+<div class="tile-object">
+<div class="number">3</div>
+</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="tile bg-red">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>31-60 Days</div>
+<div class="tile-object">
+<div class="number">0</div>
+</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="tile bg-purple">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>61-90 Days</div>
+<div class="tile-object">
+<div class="name"></div>
+<div class="number">26</div>
+</div>
+</div>
+</a>
+
+
+
+</div><!--end tiles-->
+
+</div><!--end tab-pane-->
+
+<!--tab_1_10-->
+<div class="tab-pane row-fluid" id="tab_1_10">
+<div class="tiles">
+
+<a href=""><div class="tile double bg-blue"><div class="tile-body"><i class="icon-dollar"></i>Total Spend<br/>at or > 80%</div><div class="tile-object">
+<div class="number">0</div>
+</div>
+</div>
+   </a>
+
+<a href="">
+<div class="tile bg-green">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>0-30 Days</div>
+<div class="tile-object">
+<div class="number">3</div>
+</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="tile bg-yellow">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>31-60 Days</div>
+<div class="tile-object">
+<div class="number">5</div>
+</div>
+</div>
+</a>
+
+<a href="">
+<div class="tile bg-orange">
+<div class="tile-body"><i class="icon-calendar"></i>Ending In<br/>61-90 Days</div>
+<div class="tile-object">
+<div class="number">5</div>
+</div>
+</div>
+</a>
+
+<a href="">
+<div class="tile bg-purple">
+<div class="tile-body"><i class="icon-calendar"></i>Past End date</div>
+<div class="tile-object">
+<div class="name"></div>
+<div class="number">26</div>
+</div>
+</div>
+</a>
+</div><!--end tiles-->
+
+</div><!--end tab-pane-->
+
+</div><!--END TAB Content--> 
+</div><!-- end tabbable-->
+
+
+<div class="clear"></div>
+</div><!--end body-->
+
+</div><!--end box-->
+</div><!--end span-->
+
+</div><!--end row-->
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_ticket.html" -->
+        <!--#include file="_save_as.html" -->
+<!--kendo-->
+<script>$.noConflict();
+jQuery( document ).ready(function( $ ) {
+        function createTreeMap() {
+            $("#treeMap").kendoTreeMap({
+                dataSource: {
+                    transport: {
+                        read: {
+                            url: "../content/dataviz/js/population-usa.json",
+                            dataType: "json"
+                        }
+                    },
+                    schema: {
+                        model: {
+                            children: "items"
+                        }
+                    }
+                },
+                valueField: "value",
+                textField: "name",
+              	colors: ["#CF6900", "#B55C00", "#8F4900", "#693500", "#007DCC", "#006282", "#004E7F", "#004E7F", "#002740", "#78BF55","#4CB21A", "#367F13", "#CCCA14", "#B2B009", "#7F7E06"]
+            });
+        }
+
+        $(document).ready(function() {
+            createTreeMap();
+            $(document).bind("kendo:skinChange", createTreeMap);
+            $(".options").bind("change", refresh);
+        });
+
+        function refresh() {
+            $("#treeMap").getKendoTreeMap().setOptions({
+                type: $("input[name=type]:checked").val()
+            });
+        }
+});
+    </script><!--end kenod-->
+    
+
+</div><!-- END CONTAINER -->
+
+   
+    <!--#include file="_footer.html" -->

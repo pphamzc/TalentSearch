@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD --><head>
+	<meta charset="utf-8" />
+	<title>Resource View Timesheet</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->        
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style_1.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+	<link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css"/>
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+    <!--show/hide filter input fields-->
+    <script type="text/javascript">
+        var lastDiv = "";
+        function showDiv(divName) {
+            // hide last div
+            if (lastDiv) {
+                document.getElementById(lastDiv).className = "hiddenMenu";
+            }
+            //if value of the box is not nothing and an object with that name exists, then change the class
+            if (divName && document.getElementById(divName)) {
+                document.getElementById(divName).className = "visibleMenu";
+                lastDiv = divName;
+            }
+        }
+</script>
+
+
+</head>
+<!-- END HEAD -->    
+    
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+<!-- BEGIN HEADER -->   
+<div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+<!--#include file="_header.html" -->
+</div><!-- END HEADER -->
+        
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!--#include file="_menu.html" -->
+
+<!-- BEGIN PAGE -->
+<div  class="page-content">
+<div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb ">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>View Timesheet</li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<div class="portlet box">
+<div class="portlet-title orange4border">
+<div class="caption">Filter Timesheets</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+
+
+
+<div class="portlet-body ">
+
+<div class="row-fluid filter_row_1">
+    <div class="span12">
+
+<ul class="unstyled span3">
+<li class="no-margin span12"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" id="filterby" >
+                    <option value="-1">-- Select --</option>
+                    <option value="1">ID</option>
+                    <option value="2">Period End</option>
+                    <option value="3">Billed Units</option>
+                    <option value="4">Status</option>
+                    <option value="5">Net Pay</option>
+                    <option value="6">Gross Pay</option>
+                    <option value="7">Manager</option>
+                    <option value="8">Project ID</option>
+                    <option value="9">Project Name</option>
+                    <option value="10">Pay Amount</option>
+                    <option value="11">Submit Date</option>
+                    <option value="12">Vendor</option>
+                    <option value="13">Pay Period</option>
+                    <option value="14">Duration</option>
+                    <option value="15">Updated</option>
+                    <option value="16">Customer</option>
+                    <option value="17">Adjusted</option>    
+</select>
+</li>
+</ul>
+<!-- start hidden ul-->
+<ul class="unstyled span9 ml0">
+
+<div id="1" class="hiddenMenu">
+
+<li class="span3 no-margin"><span>ID</span><br />
+  
+    <ul class="list-filter1">        
+       <li class="list-filter-listing"><input type="checkbox" /> Option1</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option5</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option9</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option10</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option11</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option12</li>
+    </ul>
+    </li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small error" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small error" value="" placeholder="Maximum"></li>
+    <li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+    <li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>Status</span><br />
+<!--<input type="text" class="span12 filter-search" /><br />-->
+    <ul class="list-filter-group">
+        <li class="list-filter-listing">
+            <input type="checkbox" /> <strong>All Active</strong>
+            <ul>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+            </ul>
+        </li>
+        <li class="list-filter-listing">
+            <input type="checkbox" /> <strong>All Closed</strong>
+            <ul>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+                <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+            </ul>
+        </li>
+    </ul>
+</li>
+    <li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="5" class="hiddenMenu">
+
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+    <li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Manager</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter border">        
+       <li class="list-filter-listing"><input type="checkbox" /> Option1</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option5</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option9</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option10</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option11</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option12</li>
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="9" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Project Name</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter border">        
+       <li class="list-filter-listing"><input type="checkbox" /> Option1</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option5</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option9</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option10</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option11</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option12</li>
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="10" class="hiddenMenu">
+
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+
+</div>
+
+<div id="11" class="hiddenMenu">
+<li class="span3 no-margin"><span>Date Min</span><br /><input type="text" class="m-wrap small date-picker" value="" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Date Max</span><br /><input type="text" class="m-wrap small date-picker" value="" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="12" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Vendor</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter dnone">        
+       <li class="list-filter-listing"><input type="checkbox" /> Option1</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option5</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option9</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option10</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option11</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option12</li>
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+    
+<div id="13" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Pay Period</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter dnone">        
+       <li class="list-filter-listing"><input type="checkbox" /> Annually</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Bi-weekly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Daily</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Hourly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Monthly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Quarterly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Semi-Monthly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Weekly</li>
+        
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="14" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Duration</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter dnone">        
+       <li class="list-filter-listing"><input type="checkbox" /> Annually</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Bi-weekly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Daily</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Hourly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Monthly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Quarterly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Semi-Monthly</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Weekly</li>
+        
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="15" class="hiddenMenu">
+
+<li class="span3 no-margin"><span>Min</span><br /><input type="text" class="m-wrap small" value="" placeholder="Minimum"></li>
+<li class="span3 no-margin"><span>Max</span><br /><input type="text" class="m-wrap small" value="" placeholder="Maximum"></li>
+ <li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+
+</div>
+
+<div id="16" class="hiddenMenu">
+<li class="span3 no-margin prel"><span>Customer</span><br />
+    <input type="text" class="span12 filter-search" /><br />
+<ul class="list-filter">        
+        <li class="list-filter-listing"> <input type="checkbox" /> Option1</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option2</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option3</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option4</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option5</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option6</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option7</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option8</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option9</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option10</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option11</li>
+        <li class="list-filter-listing"> <input type="checkbox" /> Option12</li>
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+</div>
+
+<div id="17" class="hiddenMenu">
+
+<li class="span3 no-margin prel"><span>Adjusted</span><br />
+    <!--<input type="text" class="span12 " /><br />-->
+<ul class="tf">        
+        <li class="list-filter-listing"> <input type="radio" name="adjusted" value="0"> True <span class="leftmargin"></span> <input type="radio" name="adjusted" value="1"> False</li>
+        <!--<li class="list-filter-listing"> <input type="radio" name="adjusted" value="1"> True</li>-->
+    </ul>
+</li>
+<li class="span2"><span>Action</span><br /><a href="#"><i class="icon-trash mt5"></i><span class="leftmargin">Delete</span></a></li>
+
+</div>     
+
+</ul><!--end hidden ul-->
+        
+
+</div>
+    <div class="clear"></div>
+    <div class="alert alert-error hide">
+        <button class="close" data-dismiss="alert"></button>You have some form errors. Please check above.
+    </div>
+    <div class="alert alert-success hide">
+        <button class="close" data-dismiss="alert"></button>Your form validation is successful!
+    </div>
+</div>
+
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="savebtn">Refresh</a> 
+<a href="#" class="savebtn">Clear All</a>
+<a href="#" class="submitbtn" id="applyfilter">Apply</a> 
+</div>
+</div>
+
+
+</div><!-- END PORLET BODY-->
+
+
+</div>
+
+
+<div class="portlet box">
+<div class="portlet-title blue2border">
+<div class="caption">View Timesheet</div>
+</div>
+<!--end title-->
+
+<div class="portlet-body "> 
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+<div class="btn-group pull-right"  style="margin-right:5px;"> <a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+<div class="btn-group pull-right" >
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul id="saved-views" class="dropdown-menu pull-right">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</div>
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download Doc</a></li>
+</ul>
+</div>
+<div class="btn-group pull-right">
+<a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label><input type="checkbox" checked data-column="1">ID</label>
+<label><input type="checkbox" checked data-column="2">Period End</label>
+<label><input type="checkbox" checked data-column="3">Billed Units</label>
+<label><input type="checkbox" checked data-column="4">Status</label>
+<label><input type="checkbox" checked data-column="5">Net Pay</label>
+<label><input type="checkbox" checked data-column="6">Gross Pay</label>
+<label><input type="checkbox" checked data-column="7">Manager</label>
+<label><input type="checkbox" checked data-column="8">Project ID</label>
+<label><input type="checkbox" checked data-column="9">Project Name</label>
+<label><input type="checkbox" checked data-column="10">Pay Amount</label>
+<label><input type="checkbox" checked data-column="11">Submit Date</label>
+<label><input type="checkbox" checked data-column="12">Vendor</label>
+<label><input type="checkbox" checked data-column="13">Pay Period</label>
+<label><input type="checkbox" checked data-column="14">Duration</label>
+<label><input type="checkbox" checked data-column="15">Updated</label>
+<label><input type="checkbox" checked data-column="16">Customer</label>
+<label><input type="checkbox" checked data-column="17">Adjusted</label>
+</div>
+</div>
+<!--END buttons/actions--> 
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+<tr>
+<th width="2%" class="no-sort aligncenter">
+<a href="#" id="" class="tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down arrow'></i></a></th>
+<th > <i class="" data-title="ID Contains"></i>ID</th>
+<th > <i class="" data-title="Period End Equals"></i>Period End</th>
+<th > <i class="" data-title="Billed Units Equal"></i>Billed Units</th>
+<th > <i class="" data-title="Status Contains"></i>Status </th>
+<th > <i class="" data-title="Net Pay Contains"></i>Net Pay </th>
+<th > <i class="" data-title="Gross Pay Contains"></i>Gross Pay </th>
+<th > <i class="" data-title="Manager Contains"></i>Manager</th>
+<th class="hidden-default"> <i class="" data-title="Project ID Contains"></i>Project ID </th>
+<th class="hidden-default"> <i class="" data-title="Project Name Contains"></i>Project Name </th>
+<th class="hidden-default"> <i class="" data-title="Pay Amount Contains"></i> Pay Amount</th>
+<th class="hidden-default"><i class="" data-title="Submit Date Contains"></i>Submit Date </th>
+<th class="hidden-default"> <i class="" data-title="VendorContains"></i> Vendor</th>
+<th class="hidden-default"> <i class="" data-title="Pay Period Contains"></i> Pay Period</th>
+<th class="hidden-default"> <i class="" data-title="Duration Contains"></i> Duration</th>
+<th class="hidden-default"> <i class="" data-title="Updated Contains"></i> Updated</th>
+<th class="hidden-default"> <i class="" data-title="Customer Contains"></i>Customer </th>
+<th class="hidden-default"> <i class="" data-title="Adjusted Contains"></i>Adjusted </th>
+<th class="no-sort">Actions </th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">95347</a></td>
+      <td>12 January 2012</td>
+      <td>120</td>
+      <td>Need Manager Approval</td>
+      <td>120</td>
+      <td>120</td>
+      <td>John Doe</td>
+	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>$200.00 </td>
+    <td>20 July 2014</td>
+    <td>IBM</td>
+    <td>20 July 2014</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+      </tr>
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">12345</a></td>
+      <td>1-December-15</td>
+      <td>20</td>
+      <td>Rejected</td>
+      <td>20</td>
+      <td>20</td>
+      <td>Jane Smith</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>20-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+
+      </tr>
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">56890</a></td>
+      <td>28-October-13</td>
+      <td>75</td>
+      <td>In Progress</td>
+      <td>75</td>
+      <td>75</td>
+      <td>Kevin Hart</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>20-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+
+      </tr>
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">33456</a></td>
+      <td>30-July-14</td>
+      <td>120</td>
+      <td>Approved</td>
+      <td>120</td>
+      <td>120</td>
+      <td>Bob Sagat</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>2-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+
+      </tr>
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">77568</a></td>
+      <td>5-March-11</td>
+      <td>80</td>
+      <td>Approved</td>
+      <td>80</td>
+      <td>80</td>
+      <td>Tony McCrackin</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>20-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+
+      </tr>
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">47734</a></td>
+      <td>28-February-08</td>
+      <td>30</td>
+      <td>Rejected</td>
+      <td>30</td>
+      <td>30</td>
+      <td>Sam Smith</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>20-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+      </tr>
+
+    <tr>
+      <td class="aligncenter">
+            <div class="accordion-group2">
+                <div class="accordion-heading2">
+                    <a class="accordion-toggle2 collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                        <i class='icon-chevron-down arrow'></i></a>
+                </div>
+
+                <!--heading-->
+            </div>
+        </td>
+      <td><a href="timesheet_view_hourly_biweekly.html">79092</a></td>
+      <td>1 January 2011</td>
+      <td>10</td>
+      <td>Need Manager Approval</td>
+      <td>10</td>
+      <td>10</td>
+      <td>Rick Rice</td>
+      	<td><a href="#">12345</a></td>
+    <td>Name of Project</td>
+    <td>200.00 USD </td>
+    <td>20-July-14</td>
+    <td>IBM</td>
+    <td>20-July-14</td>
+    <td>10</td>
+    <td>Yes</td>
+    <td>Disney</td>
+    <td>Yes</td>
+    <td><a href="#">Edit</a></td>
+
+      </tr>
+  </tbody>
+</table>
+<!--END TABLE--> 
+
+</div>
+<!-- END PORLET BODY--></div>
+
+
+
+
+
+				
+
+
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals--><!--#include file="_save_as.html" -->
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+    <!--#include file="_footer_1.html" --> 

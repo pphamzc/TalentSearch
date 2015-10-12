@@ -1,0 +1,786 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Talent Cloud - User Input</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/profile.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    
+    	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+	<link href="../assets/plugins/bootstrap-switch/stylesheets/bootstrap-switch-zc.css" rel="stylesheet" type="text/css"/>
+
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+</head><!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed page-full-width">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top blueborder">
+<!--#include file="_header.html" -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+<!-- BEGIN PAGE -->
+<div class="page-content">
+<div class="container-fluid">
+
+<div class="row-fluid">
+<div class="span12">
+</div><!--END SPAN-->
+</div><!-- END ROW -->
+
+
+<div class="profile-sidebar">
+<div class="portlet light profile-sidebar-portlet">
+<a href="#" class="profile-edit">Add Photo</a>
+<div class="profile-userpic"><img src="../assets/img/avatar.jpg" class="img-responsive" alt=""></div>
+
+<div class="profile-usertitle">
+<div class="profile-usertitle-name">John Doe</div>
+<div class="profile-usertitle-job">Business Analyst</div>
+</div><!-- END USER TITLE -->
+
+<div class="profile-usermenu">
+<ul class="nav">
+<li class="active"><a href="#tab_1" data-toggle="tab">Personal Information </a></li>
+<li><a href="#tab_2" data-toggle="tab">Job Preference</a></li>
+<li><a href="#tab_3" data-toggle="tab">Work Experience</a></li>
+<li><a href="#tab_4" data-toggle="tab">Credentials</a></li>
+<li><a href="#tab_5" data-toggle="tab">Education</a></li>
+<li><a href="#tab_6" data-toggle="tab">Security & Preferences</a></li>
+</ul>
+</div><!-- END userMENU -->
+</div><!--end sidebar-->
+
+<div class="profile-sidebar">
+<div class="portlet light">
+<div class="list-separated profile-stat">
+<div class="profile-stat-title">Profile Completeness <div class="profile-stat-text floatright">60%</div></div>
+<div class="progress progress-striped active"><div style="width: 60%;" class="bar"></div></div>
+
+<ul class="complete">
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Verify Your Identity</div></div>
+</div></div>
+<div class="col2"><div class="percent">10%</div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Personal Information</div></div>
+</div></div>
+<div class="col2"><div class="percent">10%</div></div>
+</a></li>
+<li><a href="#">
+<div class="col1"><div class="cont">
+<div class="cont-col2"><div class="desc">Employment Information</div></div>
+</div></div>
+<div class="col2"><div class="percent">20%</div></div>
+</a></li>
+
+</ul>
+</div><!-- END profile -->
+</div><!-- END PORTLET -->
+
+
+</div><!-- END PORTLET -->
+
+</div><!--end sidebar-->
+
+<div class="profile-content">  
+<div class="tab-content">
+
+<div class="tab-pane active" id="tab_1">
+<div class="portlet box" >
+<div class="portlet-title ">
+  <div class="caption">Personal Information </div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+</div>
+<div class="portlet-body" >
+<ul class="unstyled">
+<li class="span4 no-margin"><span>First Name</span><br/><input type="text" name="name"  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>Middle Name</span><br/><input type="text" class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>Last Name</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+
+<li class="span4 no-margin"><span>Last 5 of National ID</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>Month of Birth</span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>
+
+<li class="span4 no-margin"><span>Day of Birth</span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>
+
+
+<li class="span4 no-margin"><span>E-mail</span><br/><input type="text" name="name"  class="m-wrap span10"/></li>
+
+<li class="span4 no-margin"><span>Phone</span><br/>
+<input type="text" name=""  class="m-wrap span7"/> 
+<select class="m-wrap span3" tabindex="1">
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+</li>
+<li class="span4 no-margin"><span>Alternate Phone</span><br/>
+<input type="text" name=""  class="m-wrap span7"/> 
+<select class="m-wrap span3" tabindex="1">
+<option value="Category 1">Mobile</option>
+<option value="Category 2">Office</option>
+<option value="Category 3">Work</option>
+<option value="Category 4">Home</option>
+</select>
+</li>
+<li class="span4 no-margin"><span>Address 1</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>Address 2</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>Postal Code</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>City</span><br/><input type="text" name=""  class="m-wrap span10"/></li>
+<li class="span4 no-margin"><span>State</span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+<li class="span4 no-margin"><span>Country</span><br/>
+<select class="m-wrap span10" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select>
+</li>
+<li class="span4 no-margin"><span>Preferred Time Zone</span><br>
+<select class="m-wrap span10">
+<option value="0">1</option>
+<option value="1">2</option>
+<option value="2">3</option>
+</select></li>
+
+<div class="clear"></div>
+</ul>
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+
+</div><!-- END PORTLET BOX -->
+</div><!--end tab 1-->
+
+<div class="tab-pane fade" id="tab_2">
+<div class="portlet box" >
+<div class="portlet-title">
+  <div class="caption">Job Preference</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+</div>
+<div class="portlet-body" >
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Status</span><br/>
+<select class="m-wrap span11" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Date Available</span><br/><input class="m-wrap date-picker span11" type="text" value="" /></li>
+
+<li class="span3 no-margin"><span>Hire Preference</span><br/>
+<select class="m-wrap span11" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select></li>
+
+<li class="span3 no-margin"><span>Preferred Pay</span><br/><input class="m-wrap date-picker span11" type="text" value="" /></li>
+
+<li class="span12 no-margin"><div class="clear"></div></li>
+
+<li class="span12 no-margin"><span>Job Category</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Administrative/Clerical</option>
+<option value="Category 2">Human resources</option>
+<option value="Category 3">Information Technology</option>
+<option value="Category 4">Legal</option>
+<option value="Category 5">Manufacturing</option>
+</select></li>
+
+<li class="span12 no-margin"><span>Job Classification</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Administrative Assistant</option>
+<option value="Category 2">Attorney/Lawyer</option>
+<option value="Category 3">Business Analyst</option>
+<option value="Category 4">Product Test Engineer</option>
+<option value="Category 5">Staffing and Employment</option>
+</select></li>
+
+<li class="span12 no-margin"><span>Industry</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Healthcare</option>
+<option value="Category 2">Telecommunications</option>
+<option value="Category 3">Retail</option>
+<option value="Category 4">Finance and Banking</option>
+<option value="Category 5">Construction</option>
+</select></li>
+<li class="span12 no-margin"><span>Role Category</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Choose all that apply">
+<option value="Category 1">Junior</option>
+<option value="Category 2">Manager</option>
+<option value="Category 3">Senior Manager</option>
+<option value="Category 4">Director</option>
+<option value="Category 5">Vice President</option>
+</select></li>
+
+<div class="clear"></div>
+</ul>
+
+<div class="clear"></div>
+
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+
+</div><!-- END PORTLET BOX -->
+
+</div><!--end tab 2-->
+
+ 
+  
+<div class="tab-pane fade" id="tab_3">
+<div class="portlet box" >
+<div class="portlet-title">
+  <div class="caption">Work Experience</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+</div>
+<div class="portlet-body" >
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Client Association</span><br/>
+<select class="m-wrap span11" name="">
+<option value="">Select...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">5</option>
+<option value="4">4</option>
+</select></li>
+
+<li class="span4 no-margin"><span>Company Name</span><br/><input class="m-wrap span11" type="text" value="" /></li>
+<li class="span4 no-margin"><span>JOb Title / Role</span><br/><input class="m-wrap span11" type="text" value="" /></li>
+
+<li class="span4 no-margin"><span>Dates</span><br/>
+<input class="m-wrap date-picker span5" type="text" placeholder="Start Date"/>
+&nbsp;&nbsp;-&nbsp;&nbsp;
+<input class="m-wrap date-picker span5" type="text"  placeholder="End Date"/>
+</li>
+
+
+<li class="span4 no-margin"><span>Current ZC Projects</span><br/><input class="m-wrap span11" type="text" value="" /></li>
+<li class="span4 no-margin"><span>Current ZC Submissions</span><br/><input class="m-wrap span11" type="text" value="" /></li>
+<li class="span12 no-margin"><span>Description of Work</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+<li class="span12 no-margin"><span>Requisition Notes</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+<li class="span12 no-margin"><span>Summary Text</span><br/><textarea class="m-wrap span12" rows="3"></textarea></li>
+
+<div class="clear"></div>
+</ul>
+
+<div class="clear"></div>
+
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+</div><!-- END PORTLET BOX -->
+</div><!--end tab 3-->
+
+
+
+<div class="tab-pane fade" id="tab_4">
+<div class="portlet box" >
+<div class="portlet-title">
+  <div class="caption">Credentials</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+
+</div>
+<div class="portlet-body" >
+<ul class="unstyled">
+<li class="no-margin"><span>Competencies</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select all competencies that apply" >
+
+<optgroup label="Group Type 1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 2">
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+</optgroup>
+
+<optgroup label="Group Type 3">
+<option value="Category 8">Second one - random string of text and letters </option>
+</optgroup>
+
+<optgroup label="Group Type 4">
+<option value="Category 1">Another Option 1</option>
+<option value="Category 2">Another Option 2</option>
+<option value="Category 3">Another Option 3</option>
+<option value="Category 4">Another Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 5">
+<option value="Category 5">Red</option>
+<option value="Category 6">Yellow</option>
+<option value="Category 7">Green</option>
+<option value="Category 7">blue</option>
+</optgroup>
+
+<optgroup label="Group Type 6">
+<option value="Category 8">Another random string of text and letters </option>
+</optgroup>
+
+</select>
+</li>
+</ul>
+<div class="clear"></div>
+
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Competency Name</th>
+<th>Minimum Years Experience</th>
+<th>Competency Required</th>
+<th class="span1"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Comp Name Here</td>
+<td>2 yrs</td>
+<td>Yes</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td>Some Comp Name Here</td>
+<td>2 yrs</td>
+<td>Yes</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Some Comp Name Here</td>
+<td>2 yrs</td>
+<td>Yes</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Some Comp Name Here</td>
+<td>2 yrs</td>
+<td>Yes</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>                                                  
+<div class="clear"></div>
+<hr/>
+
+<ul class="unstyled">
+<li class="no-margin"><span>Certifications</span><br/>
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select all certifications that apply" >
+
+<optgroup label="Group Type 1">
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 2">
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+</optgroup>
+
+<optgroup label="Group Type 3">
+<option value="Category 8">Second one - random string of text and letters </option>
+</optgroup>
+
+<optgroup label="Group Type 4">
+<option value="Category 1">Another Option 1</option>
+<option value="Category 2">Another Option 2</option>
+<option value="Category 3">Another Option 3</option>
+<option value="Category 4">Another Option 4</option>
+</optgroup>
+
+<optgroup label="Group Type 5">
+<option value="Category 5">Red</option>
+<option value="Category 6">Yellow</option>
+<option value="Category 7">Green</option>
+<option value="Category 7">blue</option>
+</optgroup>
+
+<optgroup label="Group Type 6">
+<option value="Category 8">Another random string of text and letters </option>
+</optgroup>
+
+</select>
+</li>
+</ul>
+
+<div class="clear"></div>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Certification Name</th>
+<th>Issuing Authority</th>
+<th>Certification Number</th>
+<th>Issue Date</th>
+<th>Expiration Date</th>
+<th class="span1"></th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Cert Name Here</td>
+<td>Some Name Here</td>
+<td>12345</td>
+<td>08-Aug-14</td>
+<td>08-Aug-15</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td>Some Cert Name Here</td>
+<td>Some Name Here</td>
+<td>12345</td>
+<td>08-Aug-14</td>
+<td>08-Aug-15</td>
+<td>
+<div class="btn-group">
+<a class="btn grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="#">Actions <i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#"><i class="icon-user"></i> Action</a></li>
+<li><a href="#"><i class="icon-cog"></i> Another action</a></li>
+<li><a href="#"><i class="icon-edit"></i> Something else here</a></li>
+</ul>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+<div class="clear"></div>
+<hr/>
+
+<ul class="unstyled span6 no-margin">
+
+<li class="no-margin"><span>Attach A File</span><br/>
+<div class="fileupload fileupload-new" data-provides="fileupload">
+												<div class="input-append">
+													<div class="uneditable-input">
+														<i class="icon-file fileupload-exists"></i> 
+														<span class="fileupload-preview"></span>
+													</div>
+													<span class="btn btn-file">
+													<span class="fileupload-new"><i class="icon-search rightmargin5"></i>Select file</span>
+													<span class="fileupload-exists"><i class="icon-refresh rightmargin5"></i>Change</span>
+													<input type="file" class="default">
+													</span>
+													<a href="#" class="btn fileupload-exists" data-dismiss="fileupload" style="padding:8px!important; margin-left: 3px; border-left:thin solid #ccc;"><i class="icon-remove rightmargin5"></i>Remove</a>
+												</div>
+											</div>
+ </li>
+ </ul>
+
+<ul class="unstyled span5 no-margin">
+<li><span>Attachments</span></li>    
+
+<li class="span9 no-margin">my_resume_name_12345.doc <a href="#" class="input-icon"><i class="icon-trash "></i> </a> </li>    
+<li class="span9 no-margin">my_doc_name_12345.doc<a href="#"  class="input-icon"><i class="icon-trash"></i></a> </li>    
+<li class="span9 no-margin">some_other_upload_fle_name_here.doc<a href="#"  class="input-icon"><i class="icon-trash"></i></a> </li>    
+</ul>
+
+<div class="clear"></div>
+<hr/>
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Links</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Links</span><br/><input type="text" name=""  class="m-wrap span11"/></li>
+<li class="span4 no-margin"><span>Links</span><br/><input type="text" name=""  class="m-wrap span11"/><a href="#" class="input-icon"><i class="icon-plus "></i> </a></li> 
+<li class="span12 no-margin"><span>Keywords</span><br/><textarea class="m-wrap span11" rows="2"></textarea></li>
+<li class="span4 no-margin"><span>Languages</span><br/>
+<select class="chosen m-wrap span11"  multiple="multiple" cname="select" data-placeholder="Select all languages that apply" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Another random string of text and letters </option>
+</select>
+</li>
+</ul>
+
+<div class="clear"></div>
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+
+</div><!-- END PORTLET BOX -->
+
+</div><!--end tab 4-->
+
+
+
+<div class="tab-pane fade" id="tab_5">
+<div class="portlet box" >
+<div class="portlet-title">
+  <div class="caption">Education</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+
+</div>
+<div class="portlet-body" >
+
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Insitution Name</span><br/><input type="text" class="m-wrap span11" ></li>
+
+<li class="span4 no-margin"><span>Dates</span><br/>
+<input class="m-wrap date-picker span5" type="text" placeholder="Start Date"/>
+&nbsp;&nbsp;-&nbsp;&nbsp;
+<input class="m-wrap date-picker span5" type="text"  placeholder="End Date"/>
+</li>
+<li class="span4 no-margin"><span>Degree or Certification</span><br/><input type="text" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Field of Study</span><br/><input type="text" class="m-wrap span11" /></li>
+</ul>
+<div class="clear"></div>
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+
+</div><!-- END PORTLET BOX -->
+
+</div><!--end tab 5-->
+        
+
+<div class="tab-pane fade" id="tab_6">
+<div class="portlet box" >
+<div class="portlet-title">
+  <div class="caption">Security & Preferences</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+  <div class="pull-right copybtn"><a href=""><i class="icon-linkedin-sign rightmargin5" style="font-size:16px"></i>Import From LinkedIn</a>&nbsp;</div>
+
+</div>
+<div class="portlet-body" >
+<ul class="unstyled">
+<li class="span4 no-margin"><span>Current Password</span><br/><input type="password" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>New Password</span><br/><input type="password" class="m-wrap span11" /></li>
+<li class="span4 no-margin"><span>Re-type New Password</span><br/><input type="password" class="m-wrap span11" /></li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<ul class="unstyled">
+
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+
+<li class="span4 no-margin"><span>Security Question</span><br/>
+<select class="m-wrap span11" tabindex="1">
+<option value="Category 1">Mothers maiden name</option>
+<option value="Category 2">City you were born in</option>
+<option value="Category 3">Fathers middles name</option>
+</select><br/>
+<span>Security Question Answer</span><br/><input class="m-wrap span11" />
+</li>
+</ul>
+<div class="clear"></div>
+<hr/>
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Email Preferences</th>
+<th>Individual</th>
+<th>Daily Digest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+<tr>
+<td>Some Email Option Here</td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+<td>	<div class="switch switch-mini"><input type="checkbox" checked class="toggle"/></div></td>
+</tr>
+
+</tbody>
+</table>
+
+
+</div><!--end  PORTLET Body-->
+<div class="form-actions">
+<div class="pull-right">
+<button type="button" class="graybtn">Cancel </button>
+<button  type="submit" class="bluebtn">Save</button>
+</div>
+</div>
+
+</div><!-- END PORTLET BOX -->
+
+</div><!--end tab 6-->
+
+</div><!--end tab content--> 
+</div><!--end profile content-->
+ 
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->

@@ -1,0 +1,151 @@
+<div class="portlet box">
+<div class="portlet-title blueborder">
+<div class="caption"><h4>Search Requisitions Submissions</h4></div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div>
+
+<div class="portlet-body">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+
+<option value="49">Requisition Name </option>
+<option value="50">Requisition ID</option>
+<option value="51">Candidate Name</option>
+<option value="52">Start Date</option>
+<option value="53">End Date</option>
+<option value="54">Target Rate</option>
+<option value="55">Submitted Rate</option>
+</select>
+</li>
+</ul>
+        
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="49" class="hiddenMenu">
+<li class="span3 no-margin"><span>Requisition Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="50" class="hiddenMenu">
+<li class="span3 no-margin"><span>Requisition ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="51" class="hiddenMenu">
+<li class="span3 no-margin"><span>Candidate Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="52" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="53" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="54" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+<div id="55" class="hiddenMenu">
+<li class="span3 no-margin"><span>Number Minimum</span><br /><input type="text" class="m-wrap small" placeholder="Minimum" ></li>
+<li class="span3 no-margin"><span>Number Maximum</span><br /><input type="text" class="m-wrap small" placeholder="Maximum"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+</ul><!--end hidden ul-->
+
+<div class="clear"></div>
+
+<div class="form-actions">
+  <div class="pull-right">
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a> 
+</div>
+</div>
+
+</div><!-- END body-->
+</div><!--END PORTLET BOX-->
+
+<div class="clear"></div>
+<hr/>
+<!--TABLE-->
+<table class="table table-striped table-bordered table-hover table-full-width" id="approve_5">
+<thead>
+<tr>
+<th>Requisition Name (ID)</th>
+<th>Candidate Name </th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Target Rate</th>
+<th>Submitted Rate</th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-ok gicn tooltips" data-placement="top" data-original-title="Approve"></i> <br><input type="checkbox" value=""> </th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-remove ricn tooltips" data-placement="top" data-original-title="Decline"></i> <br>  <input type="checkbox" value=""> </th>
+<th style="background-image:none!important; width:1%" class="textaligncenter"><i class="icon-question-sign bicn tooltips" data-placement="top" data-original-title="Request More Info"></i> <br> <input type="checkbox" value=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John Doe <a href="">(12345)</a></td>
+<td>Suzie Smith</td>
+<td>01-Jun-14</td>
+<td>01-Jun-14</td>
+<td>55.00 USD</td>
+<td>55.00 USD</td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+<td class="textaligncenter"><input type="checkbox" value=""></td>
+</tr>
+
+</tbody>
+</table><!--END TABLE-->
+
+<div class="clear"><br/></div>
+
+<div class="form-actions">
+<div class="pull-right">
+<a data-toggle="modal" href="#actions" class="greenbtn">Apply</a> 
+</div>
+</div>

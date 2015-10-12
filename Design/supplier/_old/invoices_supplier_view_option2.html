@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>View Supplier Invoice</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //$('table thead tr th i ').live('hover', function () {
+        //    $(this).tooltip('toggle')
+
+
+        //});
+        $(document).ready(function () {
+            $("#sample_21 tr:odd").addClass("odd");
+            $("#sample_21 tr:not(.odd)").hide();
+            $("#sample_21 tr:first-child").show();
+
+            $("#sample_21 tr.odd").click(function () {
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            
+        });
+    </script>
+    
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue2border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+            <div class="container-fluid">
+
+
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="breadcrumb">
+                            <li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+                            <!--<li><a href="index.html">Supplier Dashboard</a> <i class="icon-angle-right"></i></li>-->
+                            <li>View Supplier Invoice</li>
+                        </ul>
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW PAGE HEADER-->
+
+
+
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="portlet box">
+                            <div class="portlet-title blue2border">
+                                <div class="caption">View Payment</div>
+                            </div>
+                            <!--end title-->
+
+                            <div class="portlet-body ">
+
+                                <!--START buttons/actions-->
+                                <div class="btn-group pull-right">
+                                    <button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+                                </div>
+                                <div class="btn-group pull-right" style="margin-right: 5px;"><a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+                                <div class="btn-group pull-right">
+                                    <button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#edit_view" data-toggle="modal"><b>Edit Views</b></a></li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <ul id="saved-views">
+                                                <li><a data-view="" href="#">Default View</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="leftmargin"><b>System Views</b></li>
+                                        <li><a href="#">Timesheet View 1</a></li>
+                                        <li><a href="#">Timesheet View 2</a></li>
+                                        <li><a href="#">Timesheet View 3</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group pull-right">
+                                    <button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">Download CSV</a></li>
+                                        <li><a href="#">Download PDF</a></li>
+                                        <li><a href="#">Download DOC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group pull-right">
+                                    <a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+                                    <div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                                        <!--<label>
+                                            <input type="checkbox" checked data-column="0"><button class="btn tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down'></i> </button></label>                                        -->
+                                        <!--<label>
+                                            <input type="checkbox" checked data-column="0">Invoice Num</label>-->
+                                        <!--<label>
+                                            <input type="checkbox" checked data-column="1">Invoice Description</label>-->
+                                        <!--<label>
+                                            <input type="checkbox" checked data-column="2">Invoice Date</label>-->
+                                        <!--<label>
+                                            <input type="checkbox" checked data-column="3">Amount</label>-->
+                                        <label>
+                                            <input type="checkbox" checked data-column="1">Status</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="2">Remittance Details (Check Number/EFT)</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="3">Check Date</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="4">Est Due Date</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="5">Updated Due Date</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="6">Timesheet ID</label>
+                                        <label>
+                                            <input type="checkbox" data-column="7">Service Invoice ID</label>
+                                        <label>
+                                            <input type="checkbox" data-column="8">Service Invoice Num</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="9">Supplier Invoice</label>
+                                        <label>
+                                            <input type="checkbox" checked data-column="10">Action</label>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <!--END buttons/actions-->
+                                <!--TABLE-->
+                                <table class="table table-striped table-bordered table-hover table-full-width" id="sample_21">
+                                    <thead>
+                                        <tr>
+                                            <th width="2%" class="aligncenter"><button class="btn tooltips" data-placement="top" data-original-title="Expand All"><i class='icon-chevron-down'></i> </button></th>
+                                            <!--<th><i class="icon-filter column-filter" data-title="Invoice Num"></i>Invoice Num</th>-->
+                                            <!--<th><i class="icon-filter column-filter" data-title="Invoice Description Equal"></i>Invoice Description</th>-->
+                                            <!--<th><i class="icon-filter column-filter" data-title="Invoice Date"></i>Invoice Date</th>    -->                                        
+                                            <!--<th><i class="icon-filter column-filter" data-title="Amount(Currency)"></i>Amount</th> -->                                           
+                                            <th><i class="icon-filter column-filter" data-title="Status"></i>Status</th>                                            
+                                            <th>
+                                                <i class="icon-filter column-filter"></i><span>Remittance Details</span>
+                                                </th>                                            
+                                            <th>
+                                                <i class="icon-filter column-filter" data-title="Check Date"></i>
+                                                Check Date</th>                                            
+                                            <th>
+                                                <i class="icon-filter column-filter" data-title="Est Due Date"></i>
+                                                Est Due Date</th>
+                                            <th>
+                                                <i class="icon-filter column-filter" data-title="Updated Due Date"></i>
+                                                Updated Due Date</th>
+                                            <th>
+                                                <i class="icon-filter column-filter" data-title="Timesheet ID"></i>
+                                                Timesheet ID</th> 
+                                            <th class="hidden-default">
+                                                <i class="icon-filter column-filter" data-title="Service Invoice ID"></i>
+                                                Service Invoice ID</th> 
+                                            <th class="hidden-default">
+                                                <i class="icon-filter column-filter" data-title="Service Invoice Num "></i>
+                                                Service Invoice Num </th>                                            
+                                            <th><i class="icon-filter column-filter" data-title="Supplier Invoice"></i>Supplier Invoice</th>                                            
+                                            <th><i class="" data-title="Action"></i>Action</th>                                            
+                                        </tr>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow'></i></td>
+                                            
+                                            <!--<td><a href="#">ZNST04451594</a></td>-->
+                                            <!--<td>6/29/2014 Dreon,Vivian</td>-->
+                                            <!--<td>28-Jun-14</td>-->
+                                            <!--<td>1,094.80 USD</td>-->
+                                            <td>Waiting for client Payment</td>
+                                            <td>EFTGJ01933970</td>
+                                            <td>08-Jul-14</td>
+                                            <td>20-Jul-14</td> 
+                                            <td>07-Jul-14</td>
+                                            <td><a href="../supplier/timesheet_view.html">9301145</a></td>
+                                            <td><a href="#">1212</a></td>     
+                                            <td>Generic_123_May_2014</td>                                      
+                                            <td><input type="text" value="" size="16" class="m-wrap small"></td>                                            
+                                            <td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+                                                &lt;a href='#'&gt;&lt;i class='icon-save'&gt;&lt;/i&gt;  Save&lt;/a&gt;&lt;br/&gt;
+                                                &lt;a href='#'&gt;&lt;i class='icon-edit'&gt;&lt;/i&gt;  Edit&lt;/a&gt;&lt;br/&gt;"
+                                                data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a></td>
+                                           
+                                        </tr>
+                                        <!--hidden-->
+                                            <tr class="" style="display: none;">
+                                                <td colspan="11">
+                                                    <ul class="unstyled lineitem span3">
+                                                        <li><span>Invoice Num: </span><a href="#">ZNST04451594</a></li>
+                                                        <li><span>Invoice Description:</span> 6/29/2014 Dreon,Vivian</li>
+                                                        <li><span>Invoice Date:</span>28-Jun-14</li>
+                                                        <li><span>Amount:</span>1,094.80 USD</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <!--end-->
+                                            <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow'></i></td>
+                                            <!--<td><a href="#">ZNST04453187</a></td>
+                                            <td>6/29/2014 Ansari,Farhan</td>
+                                            <td>28-Jun-14</td>
+                                            <td>3,910.00 USD</td>-->
+                                            <td>Waiting for client Payment</td>
+                                            <td>EFTGJ01933971</td>
+                                            <td>08-Jul-14</td>
+                                            <td>20-Jul-14</td>                                            
+                                            <td>07-Jul-14</td>
+                                            <td><a href="../supplier/timesheet_view.html">9301145</a></td>
+                                            <td><a href="#">1212</a></td>    
+                                            <td>Generic_123_May_2014</td>
+                                            <td><input type="text" value="" size="16" class="m-wrap small"></td>                                            
+                                            <td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+                                                &lt;a href='#'&gt;&lt;i class='icon-save'&gt;&lt;/i&gt;  Save&lt;/a&gt;&lt;br/&gt;
+                                                &lt;a href='#'&gt;&lt;i class='icon-edit'&gt;&lt;/i&gt;  Edit&lt;/a&gt;&lt;br/&gt;"
+                                                data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a></td>
+                                           
+                                        </tr>
+                                        <!--hidden-->
+                                            <tr class="" style="display: none;">
+                                                <td colspan="11">
+                                                    <ul class="unstyled lineitem span3">
+                                                        <li><span>Invoice Num: </span><a href="#">ZNST04453187</a></li>
+                                                        <li><span>Invoice Description:</span> 6/29/2014 Ansari,Farhan</li>
+                                                        <li><span>Invoice Date:</span>28-Jun-14</li>
+                                                        <li><span>Amount:</span>3,910.00 USD</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <!--end-->
+                                        <tr>
+                                            <td class="aligncenter"><i class='icon-chevron-down arrow'></i></td>
+                                            <!--<td><a href="#">ZNST04453187</a></td>
+                                            <td>6/29/2014 Ansari,Farhan</td>
+                                            <td>28-Jun-14</td>
+                                            <td>3,910.00 USD</td>-->
+                                            <td>Waiting for client Payment</td>
+                                            <td>EFTGJ01933972</td>
+                                            <td>08-Jul-14</td>
+                                            <td>20-Jul-14</td>                                            
+                                            <td>07-Jul-14</td>
+                                            <td><a href="../supplier/timesheet_view.html">9301145</a></td>
+                                            <td><a href="#">1212</a></td>    
+                                            <td>Generic_123_May_2014</td>
+                                            <td><input type="text" value="" size="16" class="m-wrap small"></td>                                            
+                                            <td class="td_ext"><a href="javascript:void(0);" class="inlinebtn popovers" data-toggle="popover" data-placement="left" data-html="true" data-content="
+                                                &lt;a href='#'&gt;&lt;i class='icon-save'&gt;&lt;/i&gt;  Save&lt;/a&gt;&lt;br/&gt;
+                                                &lt;a href='#'&gt;&lt;i class='icon-edit'&gt;&lt;/i&gt;  Edit&lt;/a&gt;&lt;br/&gt;"
+                                                data-original-title="Choose an Action"><i class="icon-plus greenicon"></i></a></td>
+                                           
+                                        </tr>
+                                        <!--hidden-->
+                                            <tr class="" style="display: none;">
+                                                <td colspan="11">
+                                                    <ul class="unstyled lineitem span3">
+                                                        <li><span>Invoice Num: </span><a href="#">ZNST04453187</a></li>
+                                                        <li><span>Invoice Description:</span>6/29/2014 Ansari,Farhan</li>
+                                                        <li><span>Invoice Date:</span>28-Jun-14</li>
+                                                        <li><span>Amount:</span>3,910.00 USD</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        <!--end--> 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                                <!--END TABLE-->
+
+                            </div>
+                            <!-- END PORLET BODY-->
+                        </div>
+                        <!--END PORTLET BOX BLUE-->
+
+                    </div>
+                    <!--END SPAN-->
+                </div>
+                <!-- END ROW -->
+
+
+
+
+            </div>
+            <!--END CONTAINER FLUID-->
+        </div>
+        <!-- END PAGE CONTENT-->
+
+        <!--MOdals-->
+        <!--#include file="_advanced_search.html" -->
+        <!--#include file="_save_as.html" -->
+        <!--#include file="_edit_views.html" -->
+        <!--#include file="_ticket.html" -->
+
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!--#include file="_footer.html" -->

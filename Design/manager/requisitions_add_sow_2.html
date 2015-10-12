@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Add SOW Requisition - Track Codes</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN table STYLES -->
+    <link rel="stylesheet" href="../assets/plugins/data-tables/DT_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/select2/select2_zc.css" />
+   	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"   />
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.css" />
+    	<link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link href="../assets/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+   <link href="../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css"  />
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+
+<!-- BEGIN FILTER OPTIONS  -->   
+<link rel="stylesheet" type="text/css" href="../assets/plugins/chosen-bootstrap/chosen/chosen.css" />
+
+<!--show/hide filter input fields-->
+<script type="text/javascript">
+    var lastDiv = "";
+    function showDiv(divName) {
+        // hide last div
+        if (lastDiv) {
+            document.getElementById(lastDiv).className = "hiddenMenu";
+        }
+        //if value of the box is not nothing and an object with that name exists, then change the class
+        if (divName && document.getElementById(divName)) {
+            document.getElementById(divName).className = "visibleMenu";
+            lastDiv = divName;
+        }
+    }
+</script>
+
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed ">
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-inverse navbar-fixed-top blue3border">
+        <!--#include file="_header.html" -->
+    </div>
+    <!-- END HEADER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!--#include file="_menu.html" -->
+
+        <!-- BEGIN PAGE -->
+        <div class="page-content">
+        <div class="container-fluid">
+
+
+
+<div class="row-fluid">
+<div class="span12">
+<ul class="breadcrumb">
+<li><i class="icon-home"></i><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+<li>Add Requisition </li>
+</ul>
+</div><!--END SPAN-->
+</div><!-- END ROW PAGE HEADER-->
+
+<form action="#" class="form-horizontal" id="form_sample_1">
+
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requisition Progress</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+
+<ul id="progressbar">
+<li class="sowli visited bar"><a href="requisitions_add_sow.html">Specifiy Requisition Details</a></li>
+<li class="sowli active"><a href="requisitions_add_sow_2.html">Add Track Codes</a></li>
+<li class="sowli next"><a href="requisitions_add_sow_3.html">Add Service Provider</a></li>
+<li class="sowli next"><a href="requisitions_add_sow_4.html">Attach SOW</a></li>
+<li class="sowli next"><a href="requisitions_add_sow_5.html">Take Questionaire</a></li>
+<li class="sowli next"><a href="">Review & Submit</a></li>
+</ul>
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+           
+<div class="portlet box">
+<div class="portlet-title blue3border">
+<div class="caption">Requistion Name (ID)</div>
+<div class="tools"><a href="javascript:;" class="collapse"></a></div>
+</div><!--end title-->
+<div class="portlet-body ">
+<ul class="unstyled">
+<li class="span3 no-margin"><span>Requsition Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Evaluation Status:</span><span class="status">Active</span></li>
+<li class="span3 no-margin"><span>Service Class:</span>some class here</li>
+<li class="span3 no-margin"><span>Business Unit:</span>1some unit</li>
+<li class="span3 no-margin"><span>Engagement Name:</span>Request for Proposal</li>
+<li class="span3 no-margin"><span>Estimated Cost:</span>40,000.00 USD</li>
+<li class="span3 no-margin"><span>Requisition Type Group:</span>SOW</li>
+<li class="span3 no-margin"><span>Location of Project:</span>CA US</li>
+<li class="span3 no-margin"><span>Estimated Start Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Estimated End Date:</span>14-Jun-14</li>
+<li class="span3 no-margin"><span>Service Provider:</span>provider name</li>
+<li class="span3 no-margin"><span>ZeroChaos Contact:</span>John Doe</li>
+<div class="clear"></div>
+</ul>
+
+</div><!--END PORTLET BODY-->
+</div><!-- END PORLET BOX-->
+
+
+
+<ul class="nav nav-tabs approvals">
+<li><a href="requisitions_add_sow.html">Requisitions</a></li>
+<li class="active"><a href="requisitions_add_sow_2.html">Track Codes</a></li>
+<li><a href="requisitions_add_sow_3.html">Service Provider</a></li>
+<li><a href="requisitions_add_sow_4.html">Attachments</a></li>
+<li><a href="requisitions_add_sow_5.html">Questionnaire</a></li>
+<li><a href="requisitions_add_sow_6.html">Approvals</a></li>
+<li><a href="requisitions_add_sow_7.html">Supporting Documents</a></li>
+<li><a href="requisitions_add_sow_8.html">Evaluation Notes</a></li>
+</ul>
+
+
+<div class="portlet box">
+<div class="portlet-body"> 
+
+<div class="portlet box">
+<div class="portlet-title orange2border"><div class="caption">Create and Edit Track Codes</div></div>
+
+<div class="portlet-body"> 
+<table class="table table-striped table-bordered table-hover table-full-width">
+<thead>
+<tr>
+<th>Track Code ID</th>
+<th>Track Code</th>
+<th>Track Code Name</th>
+<th>Description</th>
+<th>UDF 1</th>
+<th>UDF 2</th>
+<th>UDF 3</th>
+<th>UDF 4</th>
+<th>UDF 5</th>
+<th>Effective  Start Date</th>
+<th>Effective End Date</th>
+<th>Active</th>
+<th>Financial Tracking</th>
+
+</tr>
+</thead>
+  <tbody>
+    <tr>
+      <td>12345</td>
+      <td><input type="text" class="m-wrap" /></td>
+      <td><input type="text" class="m-wrap" /></td>
+<td><input type="text" class="m-wrap" /></td>
+      <td><input type="text" class="m-wrap" /></td>
+      <td><select class="m-wrap">
+<option value="1"> Select</option>
+<option value="2"> 2</option>
+<option value="3"> 3</option>
+<option value="4"> 4</option>
+</select></td>
+      <td><input class="m-wrap m-ctrl-medium date-picker" type="text"  placeholder="DD/MMM/YY" /></td>
+      <td><input type="text" class="m-wrap" /></td>
+      <td><input type="text" class="m-wrap" /></td>
+      <td><input class="m-wrap m-ctrl-medium date-picker" type="text"  placeholder="DD/MMM/YY" /></td>
+      <td><input class="m-wrap m-ctrl-medium date-picker" type="text"  placeholder="DD/MMM/YY"  /></td>
+
+      <td><input type="checkbox" value=""> </td>
+            <td><input type="checkbox" value=""> </td>
+
+  </tr>
+  </tbody>
+</table>
+
+<div class="clear"></div>
+</div><!-- END PORLET BOX-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="savebtn">  Save</a> 
+<a href="#" class="submitbtn">Create & Assign</a> 
+</div>
+</div>
+
+</div><!--END PORTLET BOX--> 
+
+
+<div class="portlet box ">
+<div class="portlet-title greenborder"><div class="caption">Search Track Codes</div></div>
+<div class="portlet-body ">
+<ul class="unstyled span3">
+<li class="no-margin"><span>Filter By</span><br />
+<select class="m-wrap small" onchange="showDiv(this.value);" >
+<option value="0">Select...</option>
+<option value="1">Track Code ID</option>
+<option value="2">Track Code</option>
+<option value="3">Track Code Name</option>
+<option value="4">UDF</option>
+<option value="5">Effective Start Date</option>
+<option value="6">Effective End Date</option>
+<option value="7">Active</option>
+<option value="8">Assigned</option>
+<option value="9">Financial Tracking</option>
+
+
+</select>
+</li>
+</ul>
+<!-- start hidden ul-->
+<ul class="unstyled span9">
+
+<div id="1" class="hiddenMenu">
+<li class="span3 no-margin"><span>Track Code ID</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="2" class="hiddenMenu">
+<li class="span3 no-margin"><span>Track Code</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ <div id="3" class="hiddenMenu">
+<li class="span3 no-margin"><span>Track Code Name</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+ <div id="4" class="hiddenMenu">
+<li class="span3 no-margin"><span>UDF</span><br />
+<select class="chosen m-wrap"  multiple="multiple" cname="select" data-placeholder="Select One or More Options" >
+<option value="Category 1">Option 1</option>
+<option value="Category 2">Option 2</option>
+<option value="Category 3">Option 3</option>
+<option value="Category 4">Option 4</option>
+<option value="Category 5">Apple</option>
+<option value="Category 6">Corndog</option>
+<option value="Category 7">Test This</option>
+<option value="Category 8">Some random string of text and letters for you to play with</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="5" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="6" class="hiddenMenu">
+<li class="span3 no-margin"><span>Minimum Date </span><br/><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span3 no-margin"><span>Maximum Date</span><br /><input type="text" class="m-wrap small date-picker" placeholder="DD/MMM/YY"></li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+<div id="7" class="hiddenMenu">
+<li class="span3 no-margin"><span>Active</span><br />
+<select class="m-wrap"  >
+<option value="0">Select...</option>
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+<div id="8" class="hiddenMenu">
+<li class="span3 no-margin"><span>Active</span><br />
+<select class="m-wrap"  >
+<option value="0">Select...</option>
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+<div id="9" class="hiddenMenu">
+<li class="span3 no-margin"><span>Assigned</span><br />
+<select class="m-wrap"  >
+<option value="0">Select...</option>
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+<div id="10" class="hiddenMenu">
+<li class="span3 no-margin"><span>Financial Tracking</span><br />
+<select class="m-wrap"  >
+<option value="0">Select...</option>
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</li>
+<li class="span2"><span>Action</span><br /><a class="" href="#"><i class="icon-trash"></i> Delete </a></li>
+</div>
+
+
+
+</ul><!--end hidden ul-->
+
+<div class="clear"></div>
+
+</div><!--END PORTLET BODY-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn">Refresh</a> 
+<a href="#" class="bluebtn">Clear All</a> 
+<a href="#" class="greenbtn">Apply</a>
+ 
+</div>
+</div>
+
+</div><!-- END boX-->
+
+
+<div class="portlet box">
+<div class="portlet-title orange2border"><div class="caption">View and Manage Track Codes</div></div>
+<div class="portlet-body"> 
+
+<!--START buttons/actions-->
+<div class="btn-group pull-right">
+<button class="btn btnsmall tooltips" data-placement="top" data-original-title="Refresh"><i class="icon-refresh"></i></button>
+</div>
+<div class="btn-group pull-right"  style="margin-right:5px;"> <a href="#save-view-as-modal" class="btn btnsmall" data-toggle="modal">Save As</a> </div>
+<div class="btn-group pull-right" >
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">View <i class="icon-angle-down"></i></button>
+<ul id="saved-views" class="dropdown-menu pull-right">
+<li><a data-view="" href="#">Default View</a></li>
+</ul>
+</div>
+<div class="btn-group pull-right">
+<button class="btn btnsmall dropdown-toggle" data-toggle="dropdown">Download <i class="icon-angle-down"></i></button>
+<ul class="dropdown-menu pull-right">
+<li><a href="#">Download CSV</a></li>
+<li><a href="#">Download PDF</a></li>
+<li><a href="#">Download Doc</a></li>
+</ul>
+</div>
+<div class="btn-group pull-right" > <a class="btn btnsmall" href="#" data-toggle="dropdown">Columns <i class="icon-angle-down"></i></a>
+<div id="sample_2_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+<label style="display:none"><input type="checkbox" data-column="0" ></label>
+<label><input type="checkbox" checked data-column="1">Track Code ID</label>
+<label><input type="checkbox" checked data-column="2">Track Code</label>
+<label><input type="checkbox" checked data-column="3">Track Code Name</label>
+<label><input type="checkbox" checked data-column="4">Description</label>
+<label><input type="checkbox" checked data-column="5">UDF 1</label>
+<label><input type="checkbox" checked data-column="6">UDF 2</label>
+<label><input type="checkbox" checked data-column="7">UDF 3</label>
+<label><input type="checkbox" checked data-column="8">UDF 4</label>
+<label><input type="checkbox" checked data-column="9">UDF 5</label>
+<label><input type="checkbox" checked data-column="10">Effective Start Date</label>
+<label><input type="checkbox" checked data-column="11">Effective End Date</label>
+<label><input type="checkbox" checked data-column="12">Active</label>
+<label><input type="checkbox" checked data-column="13">Assigned</label>
+<label><input type="checkbox" checked data-column="14">Action</label>
+
+
+</div>
+</div>
+<!--END buttons/actions--> 
+
+  <table class="table table-striped table-bordered table-hover table-full-width" id="sample_2">
+  <thead>
+<tr>
+
+
+<th class="no-sort" ><a href="#" class="tooltips" data-placement="top" data-original-title="Select All"><input type="checkbox" value=""></a></th>
+<th>Financial Tracking</th>
+<th>Track Code ID</th>
+<th>Track Code</th>
+<th>Track Code Name</th>
+<th>Description</th>
+<th>UDF 1</th>
+<th>UDF 2</th>
+<th>UDF 3</th>
+<th>UDF 4</th>
+<th>UDF 5</th>
+<th>Effective Start Date</th>
+<th>Effective End Date</th>
+<th>Active</th>
+<th>Assigned</th>
+<th class="no-sort">Action</th>
+
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="checkbox" value=""></td>
+       <td><input type="checkbox" value="" disabled></td>
+      <td>95347</td>
+      <td>TC1</td>
+      <td>Track Code Name</td>
+<td>Track code description here</td>
+      <td>Item 1</td>
+<td>Item 2</td>
+<td>Item 3</td>
+<td>Item 4</td>
+<td>Item 5</td>
+      <td>12-Aug-14</td>
+      <td>12-Aug-14</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td><a href="#"><i class="icon-edit"></i>  Edit</a></td>
+  </tr>
+    <tr>
+      <td><input type="checkbox" value=""></td>
+     <td></td>
+<td>95347</td>
+      <td>TC2</td>
+      <td>Track Code Name</td>
+<td>Track code description here</td>
+      <td>Item 1</td>
+<td>Item 2</td>
+<td>Item 3</td>
+<td>Item 4</td>
+<td>Item 5</td>
+      <td>12-Aug-14</td>
+      <td>12-Aug-14</td>
+      <td>No</td>
+      <td>No</td>
+      <td><a href="#"><i class="icon-edit"></i>  Edit</a></td>
+  </tr>
+    <tr>
+      <td><input type="checkbox" value=""></td>
+     <td></td>
+      <td>56890</td>
+      <td>TC3</td>
+      <td>Track Code Name</td>
+<td>Track code description here</td>
+      <td>Item 1</td>
+<td>Item 2</td>
+<td>Item 3</td>
+<td>Item 4</td>
+<td>Item 5</td>
+      <td>12-Aug-14</td>
+      <td>12-Aug-14</td>
+      <td>No </td>
+      <td>No </td>
+      <td><a href="#"><i class="icon-edit"></i>  Edit</a></td>
+  </tr>
+    <tr>
+      <td><input type="checkbox" value=""></td>
+     <td><input type="checkbox" value="" disabled checked></td>
+      <td>33456</td>
+      <td>TC4</td>
+      <td>Track Code Name</td>
+<td>Track code description here</td>
+      <td>Item 1</td>
+<td>Item 2</td>
+<td>Item 3</td>
+<td>Item 4</td>
+<td>Item 5</td>
+      <td>12-Aug-14</td>
+      <td>12-Aug-14</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td><a href="#"><i class="icon-edit"></i>  Edit</a></td>
+  </tr>
+  </tbody>
+</table>
+<div class="clear"></div>
+
+</div><!-- END PORLET BODY-->
+
+<div class="form-actions">
+<div class="pull-right">
+<a href="#" class="bluebtn"> Deactivate</a> 
+<a href="#" class="bluebtn"> Unassign</a> 
+<a href="#" class="greenbtn"> Assign</a> 
+<a href="#" class="greenbtn">Save Tracking</a> 
+
+</div>
+</div>
+
+</div><!--END PORTLET BOX --> 
+<div class="clear"></div>
+<div class="alert alert-error hide">
+<button class="close" data-dismiss="alert"></button>You have some form errors. Please check above.
+</div>
+
+<div class="alert alert-success hide">
+<button class="close" data-dismiss="alert"></button>Your form validation is successful!
+</div>
+
+</div><!--end portlet box-->
+<div class="form-actions">
+<div class="pull-right">
+<a href="requisitions_add_sow.html"><button  type="button" class="bluebtn">Back</button></a>
+<button  type="button" class="greenbtn">Save</button>
+<a href="requisitions_add_sow_3.html"><button  type="button" class="bluebtn">Next</button></a>
+<button  type="button" class="bluebtn" data-toggle="modal" href="#cancelreq">Cancel Requisition</button>
+<button  type="submit" class="greenbtn">Submit Requisition</button>
+</div>
+</div>
+
+</div><!--end portlet body-->
+
+</form>
+
+</div><!--END CONTAINER FLUID-->
+</div><!-- END PAGE CONTENT-->
+
+<!--MOdals-->
+<!--#include file="_cancelreq.html" -->
+
+<!--#include file="_advanced_search.html" -->
+<!--#include file="_ticket.html" -->
+
+
+</div><!-- END CONTAINER -->
+
+<!--#include file="_footer.html" -->
